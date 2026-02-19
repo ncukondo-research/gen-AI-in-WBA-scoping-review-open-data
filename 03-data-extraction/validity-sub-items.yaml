@@ -1,0 +1,196 @@
+# Validity Evidence Sub-item Definitions
+# Extracted from extraction-codebook.md v1.5 (2026-02-18)
+# Used by integrate_extractions.py to generate the sub-item distribution table.
+#
+# Fields:
+#   validity_source  – Downing's validity evidence category
+#   evidence_type    – Sub-item label for the table
+#   description      – Sub-item definition from the codebook (extractor instructions removed)
+#   what_to_look_for – Corresponding bullet from the parent category's "What to look for"
+#   parent_key       – YAML key of the parent validity category in extraction data
+#   sub_key          – YAML key of the sub-item in extraction data
+
+sub_items:
+  # ---- D1: Content ----
+  - validity_source: Content
+    evidence_type: Prompt-rubric alignment
+    description: >-
+      How the AI prompt was designed in relation to the assessment rubric
+      or competency framework, and whether alignment was checked.
+    what_to_look_for: >-
+      Was the prompt designed to align with a specific rubric or competency
+      framework?
+    parent_key: D1_content
+    sub_key: D1b_prompt_rubric_alignment
+
+  - validity_source: Content
+    evidence_type: Content coverage
+    description: >-
+      Whether the study evaluated whether the AI adequately covered the
+      intended assessment domains or competencies.
+    what_to_look_for: >-
+      Was the AI's coverage of assessment domains evaluated?
+    parent_key: D1_content
+    sub_key: D1c_content_coverage
+
+  - validity_source: Content
+    evidence_type: Expert review of content
+    description: >-
+      Whether expert review was conducted on the AI's output for content
+      appropriateness.
+    what_to_look_for: >-
+      Did experts review the AI prompt or output for content appropriateness?
+    parent_key: D1_content
+    sub_key: D1d_expert_review
+
+  # ---- D2: Response Process ----
+  - validity_source: Response Process
+    evidence_type: AI reasoning transparency
+    description: >-
+      Whether the study examined or reported on the quality of the AI's
+      reasoning process (e.g., chain-of-thought, rationale for scores).
+      Using chain-of-thought prompting alone is not sufficient; the study
+      must evaluate the reasoning output.
+    what_to_look_for: >-
+      Was chain-of-thought reasoning or explanation of AI decisions examined?
+    parent_key: D2_response_process
+    sub_key: D2b_reasoning_transparency
+
+  - validity_source: Response Process
+    evidence_type: Hallucination assessment
+    description: >-
+      Whether the study assessed or reported instances of AI-generated
+      content not grounded in the source data (hallucinations or fabricated
+      information), including false-positive analysis as an indirect proxy.
+    what_to_look_for: >-
+      Was the presence or absence of hallucinations (fabricated information)
+      reported?
+    parent_key: D2_response_process
+    sub_key: D2c_hallucination_assessment
+
+  - validity_source: Response Process
+    evidence_type: Data security and privacy
+    description: >-
+      Whether data security, patient privacy, or de-identification
+      procedures related to AI processing were addressed.
+    what_to_look_for: >-
+      Were data security or privacy considerations addressed?
+    parent_key: D2_response_process
+    sub_key: D2d_data_security
+
+  - validity_source: Response Process
+    evidence_type: Quality assurance procedures
+    description: >-
+      Whether procedures for checking or ensuring the quality of AI outputs
+      before use were described.
+    what_to_look_for: >-
+      Was there a description of quality control procedures for AI outputs?
+    parent_key: D2_response_process
+    sub_key: D2e_quality_assurance
+
+  # ---- D3: Internal Structure ----
+  - validity_source: Internal Structure
+    evidence_type: Reproducibility (test-retest)
+    description: >-
+      Whether the same input was processed multiple times to assess output
+      consistency, with quantitative metrics such as ICC, kappa, or
+      percentage agreement. This is particularly relevant for LLMs, whose
+      probabilistic generation means identical prompts can yield different
+      outputs across runs.
+    what_to_look_for: >-
+      Was reproducibility of AI outputs tested (same input, multiple runs)?
+    parent_key: D3_internal_structure
+    sub_key: D3b_reproducibility
+
+  - validity_source: Internal Structure
+    evidence_type: Inter-model agreement
+    description: >-
+      Whether different AI models were compared on the same data with
+      agreement metrics reported.
+    what_to_look_for: >-
+      Was inter-model agreement assessed (different AI models on same data)?
+    parent_key: D3_internal_structure
+    sub_key: D3c_inter_model_agreement
+
+  - validity_source: Internal Structure
+    evidence_type: Internal consistency
+    description: >-
+      Whether internal consistency of AI scoring across multiple assessment
+      dimensions was assessed, such as whether items measuring the same
+      construct yielded correlated scores.
+    what_to_look_for: >-
+      Was internal consistency of AI scoring reported?
+    parent_key: D3_internal_structure
+    sub_key: D3d_internal_consistency
+
+  - validity_source: Internal Structure
+    evidence_type: Bias and fairness
+    description: >-
+      Whether the study examined whether AI assessment outputs differed
+      systematically across demographic groups (gender, race/ethnicity,
+      language background, training level) in a way that constitutes
+      statistical bias, including DIF-equivalent analyses or subgroup
+      comparisons.
+    what_to_look_for: >-
+      Was bias or fairness across demographic groups examined
+      (DIF-equivalent analysis)?
+    parent_key: D3_internal_structure
+    sub_key: D3f_bias_fairness
+
+  # ---- D4: Relationship to Other Variables ----
+  - validity_source: Relationship to Other Variables
+    evidence_type: AI-human agreement
+    description: >-
+      Whether agreement between AI and human assessments was quantified
+      using metrics such as kappa, ICC, correlation, percentage agreement,
+      or sensitivity/specificity.
+    what_to_look_for: >-
+      Was AI output compared to human expert ratings/assessments? Were
+      agreement metrics reported?
+    parent_key: D4_relationship_to_other_variables
+    sub_key: D4b_ai_human_agreement
+
+  - validity_source: Relationship to Other Variables
+    evidence_type: Discriminant ability
+    description: >-
+      Whether the study assessed whether AI could distinguish between
+      different learner performance levels or known groups (e.g., high vs.
+      low performers, different PGY levels).
+    what_to_look_for: >-
+      Did the AI distinguish between different performance levels
+      (discriminant ability)?
+    parent_key: D4_relationship_to_other_variables
+    sub_key: D4d_discriminant_ability
+
+  # ---- D5: Consequences ----
+  - validity_source: Consequences
+    evidence_type: Impact on learner performance
+    description: >-
+      Whether the study measured whether AI-based assessment improved
+      learner performance, learning, or feedback uptake.
+    what_to_look_for: >-
+      Was the impact of AI-generated feedback on learner performance or
+      behavior measured?
+    parent_key: D5_consequences
+    sub_key: D5b_learner_performance_impact
+
+  - validity_source: Consequences
+    evidence_type: Stakeholder acceptability
+    description: >-
+      Whether learner or faculty perceptions of AI assessment were
+      reported, including satisfaction or trust measures.
+    what_to_look_for: >-
+      Were learner or faculty perceptions, satisfaction, or trust in AI
+      assessment reported?
+    parent_key: D5_consequences
+    sub_key: D5c_stakeholder_acceptability
+
+  - validity_source: Consequences
+    evidence_type: Unintended consequences
+    description: >-
+      Whether unintended consequences, risks, or ethical concerns of AI
+      use in assessment were identified based on empirical data.
+    what_to_look_for: >-
+      Were unintended consequences or risks identified?
+    parent_key: D5_consequences
+    sub_key: D5d_unintended_consequences

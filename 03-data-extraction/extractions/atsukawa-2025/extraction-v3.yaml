@@ -1,0 +1,127 @@
+study_id: Atsukawa-2025
+extraction_date: '2026-02-17'
+extractor: ai:codex-gpt-5
+A1_country: Japan
+A2_specialty: Radiology
+A3_participants:
+  A3a_type: Radiology residents
+  A3b_training_level: First-year radiology residents
+  A3c_sample_size: '9'
+  A3d_num_documents: '7376 reports collected; subsets used: 40 (prompt tuning), 100 (model selection), 900 (resident skill evaluation)'
+A4_study_design: 'Observational: retrospective cohort / analysis'
+A5_study_aim: '“This study aimed to assess the effectiveness of LLMs in revising radiology reports by comparing them with reports verified by board-certified radiologists and to analyze the progression
+  of resident''s reporting skills over time.”
+
+  The Introduction similarly states the purpose was to evaluate revisions using LLMs versus finalized radiologist-confirmed reports and investigate resident skill growth over time.
+
+  '
+B1_ai_models: ChatGPT-4 Omni (GPT-4o; GPT-4o API [gpt-4o-2024-08-06]); Claude-3.5 Sonnet; Claude-3 Opus
+B2_api_or_interface: 'API; Unclear: access mode for Claude models not explicitly specified'
+B3_prompt_design:
+  B3a_prompt_reported: Yes (full text provided)
+  B3b_engineering_techniques: Prompt tuning on 40 reports; explicit rubric-style six criteria; structured tabular output requirement; brief rationale requested per criterion
+  B3c_prompt_iteration: 'Yes: prompt tuning performed using 40 randomly selected reports (20 CT, 20 MRI) before model-selection phase'
+B4_ai_role: 'Scoring / grading; Report comparison / discrepancy detection; Other: longitudinal tracking of resident reporting-skill progression'
+B5_input_data: Radiology reports (initial resident report vs finalized board-certified radiologist-confirmed report), specifically findings and diagnosis/impression sections; Japanese text
+B6_output_data: Categorization / classification labels (binary 1/0 for each of 6 criteria) with brief rationale; aggregate revised-rate summaries over time
+B7_comparator: 'Expert human raters (number: 2 board-certified radiologists) for independent criterion scoring in model-selection phase; Faculty evaluations (existing) via finalized reports confirmed by
+  board-certified radiologists'
+B8_model_customization: Off-the-shelf (no customization)
+C1_wba_tools: Radiology report review
+C2_assessment_context: 'Retrospective educational assessment of first-year radiology residents’ CT/MRI reporting within one institution.
+
+  Initial resident reports were compared with finalized attending-confirmed reports across six revision criteria, including longitudinal first-term vs last-term comparison.
+
+  Unclear: formally labeled formative vs summative in the manuscript.
+
+  '
+D1_content:
+  D1a_evidence_present: 'Yes'
+  D1b_prompt_rubric_alignment: Prompts were developed via a prompt-tuning phase specifically around six predefined evaluation criteria (C1–C6) for report revision.
+  D1c_content_coverage: The study operationalized assessment content as six domains of report revision (missing positives, deletion, negative findings, expression, interpretation/diagnosis, additional tests/treatments)
+    and evaluated all reports on these domains.
+  D1d_expert_review: Two experienced board-certified radiologists independently reviewed 100 reports using the same six criteria, and LLM outputs were compared against these expert evaluations.
+D2_response_process:
+  D2a_evidence_present: 'Yes'
+  D2b_reasoning_transparency: LLM outputs included a brief rationale for each criterion; however, reasoning quality was not independently evaluated.
+  D2c_hallucination_assessment: 'Yes (indirect: false-positive analysis as proxy) via disagreement/error patterns against radiologist judgments (kappa/accuracy by criterion), though not explicitly labeled
+    hallucination.'
+  D2d_data_security: Patient identifiers (name, age, gender, hospital ID) were not input; only findings and diagnosis/impression text were provided to LLMs.
+  D2e_quality_assurance: Model-selection quality assurance included repeated runs (three times per model with majority answer used) and independent dual-radiologist review for comparison.
+D3_internal_structure:
+  D3a_evidence_present: 'No'
+  D3b_reproducibility: No evidence reported
+  D3c_inter_model_agreement: No evidence reported
+  D3d_internal_consistency: No evidence reported
+  D3e_parameter_effects: No evidence reported
+  D3f_bias_fairness: No evidence reported
+D4_relationship_to_other_variables:
+  D4a_evidence_present: 'Yes'
+  D4b_ai_human_agreement: 'AI-human agreement was quantified with kappa and accuracy for each criterion.
+
+    GPT-4o vs Radiologist 1: kappa C1=0.72, C2=0.67, C3=0.40, C4=0.41, C5=0.29, C6=0.74 (accuracies 0.86, 0.89, 0.73, 0.69, 0.80, 0.98).
+
+    GPT-4o vs Radiologist 2: kappa C1=0.70, C2=0.67, C3=0.43, C4=0.42, C5=0.43, C6=0.74 (accuracies 0.85, 0.89, 0.75, 0.69, 0.84, 0.98).
+
+    Inter-radiologist kappas ranged 0.84–1.00.
+
+    '
+  D4c_human_raters: 'Board-certified radiologists: 2 expert raters (11 and 16 years’ experience) for independent scoring in model selection; finalized reports in the larger dataset were confirmed by board-certified
+    radiologists (23 total).'
+  D4d_discriminant_ability: 'Yes: using selected GPT-4o evaluations, the study detected significant first-term vs last-term differences for C1–C3 (P<0.001, P=0.023, P=0.004), and described differing improvement
+    patterns across residents.'
+  D4e_comparison_other_measures: No evidence reported
+D5_consequences:
+  D5a_evidence_present: 'No'
+  D5b_learner_performance_impact: No evidence reported
+  D5c_stakeholder_acceptability: No evidence reported
+  D5d_unintended_consequences: No evidence reported
+D_summary: 'Primary: D4 (quantitative AI-human agreement and known-groups/temporal discrimination); Secondary: D1 (prompt-criteria alignment and expert content review), D2 (privacy handling and quality
+  assurance workflow); Absent: D3 (no direct inter-model agreement or reproducibility/internal-structure metrics reported), D5 (no empirical impact, acceptability, or unintended-consequence data).'
+E1_limitations: '- Not all residents completed residency at the same institution, limiting consistent longitudinal evaluation.
+
+  - Multiple revisions within a single report for the same criterion were counted once, potentially reducing fidelity of skill measurement.
+
+  - The six criteria may be insufficient to fully evaluate resident reporting quality.
+
+  - No fine-tuning of LLMs was performed.
+
+  - Classification by clinical importance/frequency of missed findings was not performed.
+
+  - Agreement for C3–C5 was only fair to moderate, creating reliability concerns for those criteria.
+
+  '
+E2_future_research: '- Apply fine-tuning or improved future LLM versions to increase evaluation accuracy.
+
+  - Expand/customize evaluation criteria for broader and more comprehensive report assessment.
+
+  - Incorporate classification by importance and frequency of missed findings (e.g., critical vs minor findings).
+
+  - Further develop LLM-based feedback systems to support resident education and reduce mentor workload.
+
+  '
+E3_funding_coi: Funding reported from Guerbet and Iida Group Holdings; authors declared no conflict of interest.
+F1_key_findings_summary: 'In a retrospective single-institution study of first-year radiology residents’ reports, GPT-4o showed the highest agreement with board-certified radiologists among tested LLMs
+  (vs Claude-3.5 Sonnet and Claude-3 Opus) and was selected for longitudinal evaluation. Using six predefined revision criteria, significant reductions in revision rates from first to last term were found
+  for missing positive findings, deletion of findings, and addition of negative findings (C1–C3), while C4–C6 were not statistically significant. The authors conclude LLMs may provide objective feedback
+  on commonly revised report elements and potentially reduce supervisory workload.
+
+  '
+F2_rq3_relevance: 'Methodological gaps relevant to RQ3 include limited reproducibility reporting: although each model was run three times with majority-vote selection, no quantitative test-retest consistency
+  metrics were reported. The study shows criterion-dependent validity (stronger agreement for simpler revision categories, weaker for interpretation/expression), highlighting generative-AI-specific sensitivity
+  to task complexity. No empirical subgroup bias/fairness analyses (D3f) and no empirical consequences/acceptability outcomes (D5) were reported. Single-specialty, single-site design also limits generalizability
+  across workplace-based assessment contexts.
+
+  '
+F3_confidence:
+  F3a_overall: 'Medium: most fields are explicitly reported, but some coding boundaries (especially D3c and indirect D2c mapping) require interpretive judgment.'
+  F3b_items_for_verification: 'Addressed issues: D3c (major reclassified to ''No evidence reported''); D3a (major changed to ''No''); D_summary updated for D3 consistency. Addressed minor issues: retained
+    D2e as quality assurance and retained D3b as ''No evidence reported'' (codebook requires exact phrase for absent D-subitems). Disagreed with minor recommendation to add ''Temperature was set to 0''
+    to D2e because this was not stated in the provided full text. D3c rephrase minors were superseded by the major D3c reclassification.'
+  F3c_uncertain_flags: B2_api_or_interface; D2c_hallucination_assessment; D3c_inter_model_agreement
+abbreviations:
+  AI: artificial intelligence
+  API: 'Not defined in text (likely: Application Programming Interface)'
+  CT: computed tomography
+  LLM: Large language model
+  MRI: magnetic resonance imaging

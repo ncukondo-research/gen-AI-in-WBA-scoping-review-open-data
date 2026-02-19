@@ -1,0 +1,138 @@
+study_id: Preiksaitis-2025
+extraction_date: '2026-02-17'
+extractor: ai:codex-gpt-5
+A1_country: United States
+A2_specialty: Emergency Medicine
+A3_participants:
+  A3a_type: Emergency medicine residents
+  A3b_training_level: 'PGY1-PGY4 (4 graduating classes: 2020-2023)'
+  A3c_sample_size: '62'
+  A3d_num_documents: 244,255 emergency department encounters (clinical documentation analyzed)
+A4_study_design: 'Observational: retrospective cohort / analysis'
+A5_study_aim: '"This study aimed to (1) quantify how EM residents acquire clinical topic exposure over the course of training, (2) evaluate variation in exposure patterns across residents and classes, and
+  (3) assess changes in workload and case complexity over time to inform the discussion on optimal program length."
+
+  '
+B1_ai_models: Google Gemini 1.5 Flash (Health Insurance Portability and Accountability Act-compliant instance)
+B2_api_or_interface: application programming interface
+B3_prompt_design:
+  B3a_prompt_reported: 'No'
+  B3b_engineering_techniques: Retrieval-augmented generation framework; specific prompt engineering details not reported
+  B3c_prompt_iteration: Not reported
+B4_ai_role: Clinical experience tracking; Feedback analysis / coding
+B5_input_data: 'Clinical notes / medical records (resident documentation: history of present illness, medical decision-making, ED course narratives)'
+B6_output_data: Categorization / classification labels (mapping to 895 MCPEM subcategories); Structured report / summary (topic exposure curves and coverage metrics)
+B7_comparator: 'Expert human raters (number: 4) via manual review of 500 randomly selected encounters; expert consensus used as reference'
+B8_model_customization: 'Retrieval-augmented generation: multistage IR->IE->classification pipeline with intermediate SNOMED CT mapping before MCPEM classification'
+C1_wba_tools: 'Clinical learning logs / portfolios; Other: electronic health record clinical documentation-based topic exposure mapping used for residency assessment and competency monitoring'
+C2_assessment_context: 'Residency workplace data from ED encounters at Stanford Hospital (primary training site), with artificial intelligence/NLP used to track longitudinal clinical exposure and complexity
+  across PGY1-4.
+
+  Unclear: formative vs summative use is not explicitly labeled; authors describe use for individualized assessment, coaching, and competency committee input.
+
+  '
+D1_content:
+  D1a_evidence_present: 'Yes'
+  D1b_prompt_rubric_alignment: 'The artificial intelligence pipeline was explicitly aligned to a competency framework by mapping resident documentation to the "895 clinical subcategories of the 2022 Model
+    for Clinical Practice of Emergency Medicine (MCPEM)," with intermediate SNOMED CT mapping to preserve clinical detail.
+
+    '
+  D1c_content_coverage: 'Content coverage was empirically quantified as cumulative coverage of MCPEM topics by PGY (e.g., mean 376.7 topics in PGY1 to 565.9 in PGY4; 63.2% of 895 topics by PGY4).
+
+    '
+  D1d_expert_review: 'Expert review was conducted through manual review of 500 randomly selected encounters by 4 board-certified emergency physicians, with classifications compared to expert consensus.
+
+    '
+D2_response_process:
+  D2a_evidence_present: 'Yes'
+  D2b_reasoning_transparency: No evidence reported
+  D2c_hallucination_assessment: 'Yes (indirect: false-positive analysis as proxy): 43/420 (10.24%) artificial intelligence classifications disagreed with expert consensus in the validation sample.'
+  D2d_data_security: 'Data were deidentified and analyzed in a secure Health Insurance Portability and Accountability Act-compliant environment; no identifiable information left the repository; IRB approval
+    and waiver of informed consent were reported.
+
+    '
+  D2e_quality_assurance: 'Quality assurance included manual validation of model outputs on 500 random encounters, with reported agreement against expert consensus and physician interrater reliability.
+
+    '
+D3_internal_structure:
+  D3a_evidence_present: 'No'
+  D3b_reproducibility: No evidence reported
+  D3c_inter_model_agreement: No evidence reported
+  D3d_internal_consistency: No evidence reported
+  D3e_parameter_effects: No evidence reported
+  D3f_bias_fairness: No evidence reported
+D4_relationship_to_other_variables:
+  D4a_evidence_present: 'Yes'
+  D4b_ai_human_agreement: artificial intelligence classifications agreed with expert consensus 89.76% (377/420) in the manual validation sample.
+  D4c_human_raters: 4 board-certified emergency physicians (CP, WD, JH, RK) reviewed 500 randomly selected encounters; expert consensus served as comparator.
+  D4d_discriminant_ability: 'Unclear: artificial intelligence-derived exposure metrics differed by PGY level (e.g., increasing topic coverage and acuity across training years), but the study did not explicitly
+    frame this as known-groups validity testing of an assessment score.
+
+    '
+  D4e_comparison_other_measures: 'artificial intelligence-derived topic exposure trajectories were analyzed alongside external clinical complexity variables (ESI scores and admission rates), showing concurrent
+    progression across PGY levels.
+
+    '
+D5_consequences:
+  D5a_evidence_present: 'No'
+  D5b_learner_performance_impact: No evidence reported
+  D5c_stakeholder_acceptability: No evidence reported
+  D5d_unintended_consequences: No evidence reported
+D_summary: 'Primary: D4 (artificial intelligence-human agreement against physician expert consensus); Secondary: D1 (framework alignment and coverage), D2 (privacy/security, quality assurance validation,
+  and indirect false-positive analysis as hallucination proxy); Absent: D3 (no reproducibility/internal consistency/parameter/bias analyses), D5 (no empirical impact, acceptability, or unintended-consequence
+  data).'
+E1_limitations: '- Single-institution study; generalizability to other settings and 3-year programs may be limited.
+
+  - Excluded additional affiliated training sites (about 30%-35% of ED training time) and off-service rotations.
+
+  - Study period overlapped with COVID-19, which may have affected case mix/volumes.
+
+  - NLP performance depends on completeness/quality of resident documentation, which may vary across individuals and time.
+
+  '
+E2_future_research: '- Apply the approach across multiple institutions to build a broader, data-driven map of emergency medicine practice and inform future MCPEM revisions.
+
+  - Use exposure-gap detection for targeted educational interventions (for example, simulation for underexposed high-acuity/low-frequency topics).
+
+  - Conduct future error analyses focused on retrieval scope and information-extraction phenomena (negation/temporality) in the NLP pipeline.
+
+  '
+E3_funding_coi: 'No external funding reported; conflicts of interest: none declared.'
+F1_key_findings_summary: 'In 62 emergency medicine residents, a retrieval-augmented generative artificial intelligence pipeline mapped electronic health record documentation to 895 MCPEM topics across 244,255
+  encounters. Topic exposure rose from a mean of 376.7 topics in PGY1 to 565.9 in PGY4, with a 9.9% increase from PGY3 to PGY4, and substantial individual variability in plateau timing. Clinical workload
+  and complexity also increased across training years (higher volumes, lower mean ESI, and more high-acuity cases). Manual validation showed 89.76% agreement of artificial intelligence classifications with
+  physician expert consensus.
+
+  '
+F2_rq3_relevance: 'This study highlights a scalable retrieval-augmented generation-based method for longitudinal workplace exposure tracking from clinical notes, but key methodological gaps remain for artificial
+  intelligence-in-workplace-based assessment evidence synthesis: no prompt transparency, no reproducibility testing across repeated runs/model versions, no inter-model agreement testing, and no subgroup
+  bias/fairness (differential item functioning-equivalent) analysis. Consequential evidence is also missing (no learner impact or stakeholder acceptability data). These gaps are directly relevant to Downing-based
+  validity mapping beyond simple artificial intelligence-human agreement.
+
+  '
+F3_confidence:
+  F3a_overall: 'Medium-High: most extraction items are explicitly reported; some validity mapping judgments (especially D4d and C1 framing as workplace-based assessment tool type) are interpretive.'
+  F3b_items_for_verification: 'D1d: Expert review was used for classification accuracy; verify whether this should be weighted primarily under D4 rather than D1 in final synthesis.
+
+    D4d: Known-groups/discriminant interpretation is not explicitly labeled by authors and may be coded differently across extractors.
+
+    C1_wba_tools: Mapping this study to specific workplace-based assessment instrument categories is partly inferential because the source focuses on exposure tracking from documentation rather than a named
+    standard workplace-based assessment form.
+
+    Human verification (2026-02-18): D2c recoded from ''No evidence reported'' to ''Yes (indirect: false-positive analysis as proxy)'' per codebook Rule #8; 43/420 (10.24%) artificial intelligence-expert
+    disagreements constitute indirect false-positive evidence. D_summary updated to reflect D2 hallucination proxy. This aligns with coding applied to 7+ other studies in the corpus.
+
+    '
+  F3c_uncertain_flags: D4d; C1_wba_tools; D1d
+abbreviations:
+  COVID-19: 'Not defined in text (likely: Coronavirus disease 2019)'
+  ED: Emergency department
+  EM: Emergency medicine
+  ESI: Emergency Severity Index
+  IE: Information extraction
+  IR: Information retrieval
+  IRB: Institutional Review Board
+  MCPEM: Model for Clinical Practice of Emergency Medicine
+  NLP: Natural language processing
+  PGY: Postgraduate year
+  SNOMED CT: Systematized Nomenclature of Medicine–Clinical Terms

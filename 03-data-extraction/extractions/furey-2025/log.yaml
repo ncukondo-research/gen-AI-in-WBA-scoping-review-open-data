@@ -1,0 +1,17 @@
+article_id: furey-2025
+iterations:
+- round: 1
+  extraction_file: extraction-v1.yaml
+  review_file: review-v1.yaml
+  verdict: approve
+  major_issues: 0
+  minor_issues: 6
+- round: 2
+  extraction_file: extraction-v2.yaml
+  review_file: review-v2.yaml
+  verdict: revise
+  major_issues: 8
+  minor_issues: 17
+final_status: approved
+final_round: 2
+final_file: extraction-final.yaml

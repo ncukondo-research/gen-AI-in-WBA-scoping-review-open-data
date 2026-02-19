@@ -1,0 +1,93 @@
+study_id: "Partin-2025"
+extraction_date: "2026-02-17"
+extractor: "ai:codex-gpt-5"
+doi: "10.22454/FamMed.2025.363712"
+published_year: "2025"
+
+A1_country: "United States"
+A2_specialty: "Family Medicine"
+A3_participants:
+  A3a_type: "Family medicine residents"
+  A3b_training_level: "PGY-1 to PGY-3"
+  A3c_sample_size: "24"
+  A3d_num_documents: "24 resident-level compiled faculty feedback datasets; number of individual assessment records/comments not reported"
+A4_study_design: "Observational: retrospective cohort / analysis"
+A5_study_aim: |
+  "This study aimed to assess the feasibility of utilizing a large language model (ChatGPT) in family medicine residency evaluation by comparing the agreement between ChatGPT and the CCC for the ACGME family medicine milestone levels and examining potential biases in milestone assignment."
+
+B1_ai_models: "ChatGPT 4o-mini"
+B2_api_or_interface: "Web interface"
+B3_prompt_design:
+  B3a_prompt_reported: "Yes (full text provided)"
+  B3b_engineering_techniques: "Standardized sequential prompting; CARE framework; rubric inclusion (ACGME milestone text pasted verbatim); role/task specification; structured scoring instruction with fractional levels allowed"
+  B3c_prompt_iteration: "No"
+B4_ai_role: "Scoring / grading; Competency mapping / milestone assignment"
+B5_input_data: "Narrative feedback / free-text comments; milestone rubric text (ACGME subcompetency descriptors)"
+B6_output_data: "Numerical scores / ratings (milestone levels 1-5, including fractional scores)"
+B7_comparator: "Faculty evaluations (existing): CCC-assigned ACGME milestone levels from New Innovations (2022 submission)"
+B8_model_customization: "Off-the-shelf (no customization)"
+
+C1_wba_tools: "Milestone assessment (ACGME or equivalent); Narrative feedback forms (New Innovations end-of-rotation evaluations and formative one-time shift cards); Competency committee review"
+C2_assessment_context: |
+  Retrospective residency assessment workflow in an academic medical center family medicine program.
+  De-identified faculty narrative comments from multiple clinical rotations/settings were compiled per resident and submitted to ChatGPT for milestone assignment across 11 ACGME subcompetencies, then compared with CCC-assigned milestone levels submitted to ACGME.
+  Context includes formative workplace feedback inputs and summative CCC milestone decisions.
+
+D1_content:
+  D1a_evidence_present: "Yes"
+  D1b_prompt_rubric_alignment: "Prompts explicitly instructed ChatGPT to assign milestone levels using the rubric above; ACGME milestone language for 11 subcompetencies was pasted verbatim before scoring, and prompt required that all behaviors in a level be met."
+  D1c_content_coverage: "Coverage evaluated at scope level: 11/19 family medicine subcompetencies were intentionally selected as common feedback/remediation domains; SBP and PBLI subcompetencies were excluded."
+  D1d_expert_review: "No evidence reported"
+D2_response_process:
+  D2a_evidence_present: "Yes"
+  D2b_reasoning_transparency: "No evidence reported"
+  D2c_hallucination_assessment: "No evidence reported"
+  D2d_data_security: "Manual de-identification of resident/faculty names and pronouns; removal of discoverable clinical scenarios/PHI; random IDs used; outputs stored in password-protected spreadsheet."
+  D2e_quality_assurance: "Standardized sequential process used for each resident (same prompts, same order), and a new chat was opened for each case to reduce carryover/confounding from prior chats."
+D3_internal_structure:
+  D3a_evidence_present: "Yes"
+  D3b_reproducibility: "No evidence reported"
+  D3c_inter_model_agreement: "No evidence reported"
+  D3d_internal_consistency: "No evidence reported"
+  D3e_parameter_effects: "No evidence reported"
+  D3f_bias_fairness: "Subgroup analyses compared AI-CCC relationships by gender, PGY, and word-count groups. Reported no significant gender differences in correlation/mean difference (overlapping CIs), with noted descriptive female-male difference in professionalism correlation; PGY analyses suggested potential score inflation in PGY-1 and deflation in PGY-3."
+D4_relationship_to_other_variables:
+  D4a_evidence_present: "Yes"
+  D4b_ai_human_agreement: "Yes: Pearson correlations mostly strong (15/16 domains 0.6-1.0; ICS1=0.57 moderate), concordance correlation moderate-strong in 13/16 domains (weak in ICS1, ICS2, aggregate ICS), mean difference overall 0.58, paired t test significant in most domains (all but PC3 and PC5). Spearman correlations also reported in subgroup analyses."
+  D4c_human_raters: "Clinical Competency Committee (residency faculty and leadership) served as human comparator; exact number of raters not reported."
+  D4d_discriminant_ability: "Known-groups style analyses by PGY showed differing AI-CCC relationships (weakest in PGY-1, strongest in PGY-2, moderate-high in PGY-3) and differing mean differences across training levels."
+  D4e_comparison_other_measures: "No evidence reported"
+D5_consequences:
+  D5a_evidence_present: "No"
+  D5b_learner_performance_impact: "No evidence reported"
+  D5c_stakeholder_acceptability: "No evidence reported"
+  D5d_unintended_consequences: "No evidence reported"
+
+D_summary: "Primary: D4 (extensive AI-CCC association/agreement metrics). Secondary: D1 (prompt-rubric alignment), D2 (de-identification/process controls), D3 (limited to D3f subgroup bias/fairness analyses; reproducibility/reliability/internal consistency/parameter effects sub-items absent). Absent: D5 (consequences evidence)."
+
+E1_limitations: |
+  - Single institution and one semester (limited generalizability).
+  - Reproducibility concern acknowledged: milestone levels may vary across repeated queries despite same input.
+  - Evaluation focused on numerical milestone assignment only; summative/longitudinal feedback capabilities not assessed.
+  - Time-savings/administrative burden reduction not quantified.
+E2_future_research: |
+  - Test reproducibility/precision (integrity) of AI milestone assignment with repeated-use designs.
+  - Evaluate impact on administrative burden/time saved, especially in larger programs.
+  - Integrate ChatGPT into real-time CCC workflow and assess efficacy.
+  - Study utility for predicting longitudinal resident trajectories and suggesting improvement areas.
+  - Study utility in residency remediation and individualized learning plans.
+  - Examine effects of number/quality/specificity of faculty comments on AI-CCC alignment.
+E3_funding_coi: "Not reported"
+
+F1_key_findings_summary: |
+  In this retrospective single-institution study of 24 family medicine residents, ChatGPT 4o-mini assigned ACGME milestone levels from de-identified faculty comments and was compared with CCC-assigned levels. The study found generally strong AI-CCC correlations and moderate-to-strong concordance in most domains, with weaker agreement in interpersonal/communication domains (ICS1/ICS2/aggregate ICS). Subgroup analyses found no significant gender- or word-count-based differences, though descriptive differences were noted in some domains and PGY-specific patterns suggested possible inflation for junior and deflation for senior residents. Authors conclude feasibility for AI-assisted residency evaluation while emphasizing the need for further reproducibility and implementation research.
+F2_rq3_relevance: |
+  - Highlights a core generative-AI methodological issue: prompt/rubric dependence and input-text quality affecting outputs.
+  - Identifies an evidence gap in reproducibility: authors note possible query-to-query variation but provide no quantitative test-retest metrics (important D3 gap).
+  - Shows that bias/fairness can be examined via subgroup analyses (gender/PGY/word count), but stronger DIF-equivalent designs remain needed.
+  - Demonstrates that strong AI-human correlation can coexist with domain-specific weakness (communication competencies), suggesting limits of text-only WBA inputs for certain constructs.
+  - Consequences evidence gap: no empirical data on learner outcomes, acceptability, or actual administrative time savings.
+F3_confidence:
+  F3a_overall: "High: Most fields were explicitly reported with clear quantitative results and methods; a few coding choices required interpretation of framework mapping."
+  F3b_items_for_verification: "B2_api_or_interface (interface inferred from 'new chat in ChatGPT'); D2e (standardization/new-chat procedure interpreted as QA); D3f vs D4d boundary (subgroup analyses mapped to bias/fairness and known-groups evidence)."
+  F3c_uncertain_flags: "None"

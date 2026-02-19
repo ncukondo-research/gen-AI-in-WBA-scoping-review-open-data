@@ -1,0 +1,94 @@
+article_id: Kondo2025-jx
+round: 1
+reviewers:
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  framework-reviewer:
+    verdict: revise
+    confidence: medium
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: revise
+issues:
+- item: B4_ai_role
+  severity: minor
+  type: consistency
+  current_value: Clinical experience tracking; Competency mapping / milestone assignment
+  recommended_value: Clinical experience tracking
+  rationale: The study primarily extracts experienced items from logs; 'Competency
+    mapping / milestone assignment' may overstate the role since no actual milestone/competency
+    levels are assigned. However, mapping experiences to MCC goals could be considered
+    competency mapping. Borderline - keep current coding but flag for team discussion.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D3a
+  severity: major
+  type: reclassify
+  current_value: 'No'
+  recommended_value: 'Unclear: verify whether preliminary model comparison constitutes
+    inter-model agreement evidence'
+  rationale: 'The extraction states D3a=No, but the fulltext describes preliminary
+    comparison of GPT-4-turbo, Gemini, and Claude on trial prompts before selecting
+    GPT-4-turbo as the final model. Per Rule #6, mentioning reproducibility as a model
+    selection criterion without reporting quantitative metrics does NOT meet the threshold.
+    However, the codebook D3c definition asks whether ''different AI models were compared
+    on the same data'' and requests ''which models and agreement metrics.'' If any
+    quantitative comparison metrics exist in the fulltext for the model selection
+    phase, this could qualify as D3c. The fulltext states models were compared but
+    does not report specific inter-model metrics. Current coding as No is likely correct,
+    but should be verified against the full article to ensure no quantitative comparison
+    data was missed.'
+  source_passage: fulltext Methods section on model selection
+  raised_by: framework-reviewer
+- item: B1_ai_models
+  severity: minor
+  type: rephrase
+  current_value: ChatGPT (OpenAI; GPT-4-turbo, gpt-4-0125-preview); Gemini (version
+    not specified, preliminary comparison); Claude (version not specified, preliminary
+    comparison)
+  recommended_value: GPT-4 Turbo (gpt-4-0125-preview, OpenAI); Gemini (version not
+    specified, preliminary comparison only); Claude (version not specified, preliminary
+    comparison only)
+  rationale: 'Minor: the primary model used was GPT-4-turbo; Gemini and Claude were
+    only used in preliminary comparison and not for the main analysis. Clarifying
+    this distinction improves accuracy.'
+  source_passage: Methods section describing model selection
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: consistency-reviewer
+  text: All required YAML fields present and correctly structured.
+- reviewer: consistency-reviewer
+  text: D sub-items correctly use 'No evidence reported'.
+- reviewer: consistency-reviewer
+  text: D4c appropriately flags comparator weakness (student self-report).
+- reviewer: consistency-reviewer
+  text: Good specificity in D4b metrics (Jaccard, kappa, sensitivity, specificity
+    with CIs).
+- reviewer: framework-reviewer
+  text: 'D4c correctly flags comparator as weaker because ground truth is student
+    self-report per Rule #9'
+- reviewer: framework-reviewer
+  text: 'D2c correctly coded as indirect via false-positive proxy per Rule #8'
+- reviewer: framework-reviewer
+  text: D1 mapping for MCC template alignment is appropriate
+- reviewer: fidelity-reviewer
+  text: Accurate extraction of all quantitative metrics (Jaccard 0.59, kappa 0.65,
+    sensitivity 62.39%, specificity 99.34%)
+- reviewer: fidelity-reviewer
+  text: Correct identification that the comparator was student self-report (weaker
+    ground truth)
+- reviewer: fidelity-reviewer
+  text: Good capture of the three patterns of missed items in findings
+notes:
+- reviewer: consistency-reviewer
+  text: D2c indirect hallucination proxy coding is consistent with other files. Clean
+    structure overall.
+- reviewer: framework-reviewer
+  text: The major issue is borderline. If no quantitative inter-model metrics exist
+    in the fulltext, D3a=No is correct and this becomes a minor clarification. Recommend
+    verification.
+- reviewer: fidelity-reviewer
+  text: The extraction accurately reflects the fulltext. No hallucinated data points
+    identified.

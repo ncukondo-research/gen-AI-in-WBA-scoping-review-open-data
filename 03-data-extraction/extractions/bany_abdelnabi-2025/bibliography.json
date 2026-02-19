@@ -1,0 +1,66 @@
+[
+  {
+    "id": "bany_abdelnabi-2025",
+    "type": "article-journal",
+    "title": "Usefulness of Large Language Models (LLMs) for Student Feedback on H&amp;P During Clerkship: Artificial Intelligence for Personalized Learning",
+    "author": [
+      {
+        "family": "Bany Abdelnabi",
+        "given": "Ahmad A"
+      },
+      {
+        "family": "Soykan",
+        "given": "Bulent"
+      },
+      {
+        "family": "Bhatti",
+        "given": "Danish"
+      },
+      {
+        "family": "Rabadi",
+        "given": "Ghaith"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          23
+        ]
+      ]
+    },
+    "container-title": "ACM Transactions on Computing for Healthcare",
+    "container-title-short": "ACM Trans. Comput. Healthcare",
+    "DOI": "10.1145/3712298",
+    "ISSN": "2637-8051",
+    "URL": "http://dx.doi.org/10.1145/3712298",
+    "abstract": "<jats:p>Large Language Models (LLMs) notably GPT-4, demonstrate exceptional language generation and comprehension abilities, and they have potential uses in clinical practice, learning, and medical research. In this study, we explore practical use of Large Language Models (LLMs) in enhancing case-based learning in medical education. The study employes a designed mixed-methods approach, combining quantitative metrics with qualitative feedback from 100 medical students, providing comprehensive insights into both the technical performance and educational value of LLM-based feedback systems. Our results indicate that LLMs can enhance medical students’ History and Physical (H&amp;P) skills by providing personalized insights, fostering critical thinking, and improving their abilities to analyze, diagnose, and present clinical cases. This study has surfaced significant insights into the potential benefits and limitations of integrating LLMs into medical education. Our findings show the positive impact of LLMs on enhancing personalized learning experiences, critical thinking, and the effectiveness of case-based learning aids and highlighting its limitations.</jats:p>",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "custom": {
+      "uuid": "874774da-e009-4be5-8929-92a50e7bb09c",
+      "created_at": "2026-02-13T11:33:47.055Z",
+      "timestamp": "2026-02-17T07:12:52.376Z",
+      "attachments": {
+        "directory": "bany_abdelnabi-2025-874774da",
+        "files": [
+          {
+            "filename": "fulltext.pdf",
+            "role": "fulltext"
+          },
+          {
+            "filename": "fulltext.md",
+            "role": "fulltext"
+          }
+        ]
+      },
+      "check": {
+        "checked_at": "2026-02-17T07:12:51.719Z",
+        "status": "ok",
+        "findings": []
+      }
+    },
+    "source": "Crossref",
+    "language": "en"
+  }
+]

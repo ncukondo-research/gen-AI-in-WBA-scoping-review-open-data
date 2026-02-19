@@ -1,0 +1,146 @@
+[
+  {
+    "id": "Kondo2025-jx",
+    "type": "article-journal",
+    "title": "AI's accuracy in extracting learning experiences from clinical practice logs: Observational study",
+    "author": [
+      {
+        "family": "Kondo",
+        "given": "Takeshi"
+      },
+      {
+        "family": "Nishigori",
+        "given": "Hiroshi"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          15
+        ]
+      ]
+    },
+    "container-title": "JMIR Med. Educ.",
+    "volume": "11",
+    "issue": "v11i1e68697",
+    "page": "e68697",
+    "DOI": "10.2196/68697",
+    "PMID": "41092407",
+    "ISSN": "2369-3762",
+    "URL": "http://dx.doi.org/10.2196/68697",
+    "abstract": "Background: Improving the quality of education in clinical settings requires an understanding of learners' experiences and learning processes. However, this is a significant burden on learners and educators. If learners' learning records could be automatically analyzed and their experiences could be visualized, this would enable real-time tracking of their progress. Large language models (LLMs) may be useful for this purpose, although their accuracy has not been sufficiently studied. Objective: This study aimed to explore the accuracy of predicting the actual clinical experiences of medical students from their learning log data during clinical clerkship using LLMs. Methods: This study was conducted at the Nagoya University School of Medicine. Learning log data from medical students participating in a clinical clerkship from April 22, 2024, to May 24, 2024, were used. The Model Core Curriculum for Medical Education was used as a template to extract experiences. OpenAI's ChatGPT was selected for this task after a comparison with other LLMs. Prompts were created using the learning log data and provided to ChatGPT to extract experiences, which were then listed. A web application using GPT-4-turbo was developed to automate this process. The accuracy of the extracted experiences was evaluated by comparing them with the corrected lists provided by the students. Results: A total of 20 sixth-year medical students participated in this study, resulting in 40 datasets. The overall Jaccard index was 0.59 (95% CI 0.46-0.71), and the Cohen κ was 0.65 (95% CI 0.53-0.76). Overall sensitivity was 62.39% (95% CI 49.96%-74.81%), and specificity was 99.34% (95% CI 98.77%-99.92%). Category-specific performance varied: symptoms showed a sensitivity of 45.43% (95% CI 25.12%-65.75%) and specificity of 98.75% (95% CI 97.31%-100%), examinations showed a sensitivity of 46.76% (95% CI 25.67%-67.86%) and specificity of 98.84% (95% CI 97.81%-99.87%), and procedures achieved a sensitivity of 56.36% (95% CI 37.64%-75.08%) and specificity of 98.92% (95% CI 96.67%-100%). The results suggest that GPT-4-turbo accurately identified many of the actual experiences but missed some because of insufficient detail or a lack of student records. Conclusions: This study demonstrated that LLMs such as GPT-4-turbo can predict clinical experiences from learning logs with high specificity but moderate sensitivity. Future improvements in AI models, providing feedback to medical students' learning logs and combining them with other data sources such as electronic medical records, may enhance the accuracy. Using artificial intelligence to analyze learning logs for assessment could reduce the burden on learners and educators while improving the quality of educational assessments in medical education.",
+    "publisher": "JMIR Publications Inc.",
+    "custom": {
+      "uuid": "471a1359-e157-41f2-9a7c-770644f52c03",
+      "created_at": "2026-02-09T01:09:41.236Z",
+      "timestamp": "2026-02-17T07:12:52.375Z",
+      "tags": [
+        "_Published"
+      ],
+      "paperpile": {
+        "_id": "5c0876c1-8f47-0f7e-a1d2-96d5aa49c72b",
+        "accessed": {
+          "year": "2025",
+          "month": "10",
+          "day": "17"
+        },
+        "attachments": [
+          {
+            "_id": "3c3a5f5b-dc21-4793-bf2a-d644ec3962fc",
+            "article_pdf": 1,
+            "created": 1760691080.098,
+            "filename": "All Papers/_Published/Kondo and Nishigori 2025 - AI's accuracy in extracting learning experiences from clinical practice logs - Observational study.pdf",
+            "filesize": 270851,
+            "gdrive_id": "1F1dyvzUhK-UycPwAz-l_plRD27TIY_sL",
+            "mimeType": "application/pdf",
+            "pub_id": "5c0876c1-8f47-0f7e-a1d2-96d5aa49c72b",
+            "source_filename": "mededu-2025-1-e68697.pdf"
+          }
+        ],
+        "autoCleaned": 1,
+        "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.2196/68697",
+        "citekey": "Kondo2025-jx",
+        "created": 1760691072.7570002,
+        "dup_sha1": "e91dc150b4d78d5ddac0a52877b58d251ca26de7",
+        "folders": [
+          "acf7458a-3501-09f4-805c-3ac45313cad3"
+        ],
+        "id_list": [
+          "sha1:9b6c10bd968b3d781e95923b8d1582820b878d6f",
+          "dup_sha1:e91dc150b4d78d5ddac0a52877b58d251ca26de7",
+          "doi:10.2196/68697",
+          "pmid:41092407",
+          "url:http://dx.doi.org/10.2196/68697",
+          "url:https://mededu.jmir.org/2025/1/e68697",
+          "url:https://www.ncbi.nlm.nih.gov/pubmed/41092407"
+        ],
+        "incomplete": 0,
+        "kind": "Research Article",
+        "labels": [],
+        "owner": "806F1DCECFEA11EAAB12182C9D9F4BF5",
+        "pdf_restricted": 0,
+        "pubtype": "PP_ARTICLE",
+        "sha1": "9b6c10bd968b3d781e95923b8d1582820b878d6f",
+        "subfolders": [
+          "All Papers/K"
+        ]
+      },
+      "attachments": {
+        "directory": "Kondo2025-jx-PMID41092407-471a1359",
+        "files": [
+          {
+            "filename": "fulltext.pdf",
+            "role": "fulltext"
+          },
+          {
+            "filename": "fulltext.md",
+            "role": "fulltext"
+          }
+        ]
+      },
+      "check": {
+        "checked_at": "2026-02-17T07:12:44.346Z",
+        "status": "metadata_outdated",
+        "findings": [
+          {
+            "type": "metadata_outdated",
+            "message": "Remote metadata has been updated since import",
+            "details": {
+              "updated_fields": [
+                "title",
+                "container-title",
+                "page",
+                "issue"
+              ],
+              "field_diffs": [
+                {
+                  "field": "title",
+                  "local": "AI's accuracy in extracting learning experiences from clinical practice logs: Observational study",
+                  "remote": "AI’s Accuracy in Extracting Learning Experiences From Clinical Practice Logs: Observational Study"
+                },
+                {
+                  "field": "container-title",
+                  "local": "JMIR Med. Educ.",
+                  "remote": "JMIR Medical Education"
+                },
+                {
+                  "field": "page",
+                  "local": "e68697",
+                  "remote": "e68697-e68697"
+                },
+                {
+                  "field": "issue",
+                  "local": "v11i1e68697",
+                  "remote": null
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "language": "en"
+  }
+]

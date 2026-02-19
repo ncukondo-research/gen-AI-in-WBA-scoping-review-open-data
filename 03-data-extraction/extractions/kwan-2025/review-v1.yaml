@@ -1,0 +1,135 @@
+article_id: kwan-2025
+round: 1
+reviewers:
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  framework-reviewer:
+    verdict: approve
+    confidence: medium
+  fidelity-reviewer:
+    verdict: approve
+    confidence: medium
+overall_verdict: approve
+issues:
+- item: study_id
+  severity: minor
+  type: standardize
+  current_value: Kwan-2025
+  recommended_value: Kwan-2025
+  rationale: Title case, consistent with most other files. No change needed.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D2b_reasoning_transparency
+  severity: minor
+  type: consistency
+  current_value: CoT prompting techniques used but reasoning quality not independently
+    examined.
+  recommended_value: CoT prompting techniques used but reasoning quality not independently
+    examined.
+  rationale: Uses the exact codebook-specified phrase. Consistent with bany_abdelnabi-2025.
+    Good.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D3a
+  severity: minor
+  type: clarification
+  current_value: 'No'
+  recommended_value: 'Confirm No: multiple prompting techniques and fine-tuning were
+    compared, but this represents D4 optimization, not D3 internal structure'
+  rationale: 'The study compares multiple prompting strategies (zero-shot, modified,
+    task decomposition, CoT) and fine-tuning. This could be interpreted as examining
+    model parameter/configuration effects on outputs. However, per Rule #6, comparing
+    model configurations without reporting quantitative reproducibility/reliability
+    metrics does not meet D3 threshold. The comparison of F1 scores across techniques
+    is a D4 accuracy optimization exercise, not a D3 internal structure analysis.
+    Current coding is correct.'
+  source_passage: fulltext Methods and Results
+  raised_by: framework-reviewer
+- item: D2b
+  severity: minor
+  type: clarification
+  current_value: CoT prompting techniques used but reasoning quality not independently
+    examined.
+  recommended_value: Current coding is correct per codebook D2b note
+  rationale: CoT was used as a prompting strategy but reasoning quality was evaluated
+    only via classification accuracy (F1), not independent examination of the reasoning
+    process itself. Correctly coded.
+  source_passage: 'fulltext Methods: Chain-of-Thought technique'
+  raised_by: framework-reviewer
+- item: D4b_ai_human_agreement
+  severity: minor
+  type: correct_value
+  current_value: 'AI outputs were evaluated against human-rated QuAL ground truth
+    using F1. Best reported results: fine-tuned GPT-3.5 Evidence 0.827, Suggestion
+    0.949, Connection 0.933; GPT-4 best Suggestion 0.902 and Connection 0.882, lower
+    Evidence performance (up to 0.554 with modified prompt).'
+  recommended_value: 'AI outputs were evaluated against human-rated QuAL ground truth
+    using F1. Best reported results: fine-tuned GPT-3.5 Evidence 0.827, Suggestion
+    0.949, Connection 0.933 (holdout test set); GPT-4 best Suggestion 0.902 (baseline)
+    and Connection 0.882 (modified prompt), Evidence up to 0.554 (modified prompt).
+    All non-fine-tuned results on training set.'
+  rationale: The extraction should clarify that fine-tuned results were on the holdout
+    test set while prompt engineering results were on the training set, as this distinction
+    matters for interpretation.
+  source_passage: 'Methods: ''Fine-tuning on the training dataset and LLM performance
+    evaluation on the test dataset were performed.'' Table 2 caption.'
+  raised_by: fidelity-reviewer
+- item: A5c_sample_size
+  severity: minor
+  type: rephrase
+  current_value: Not reported
+  recommended_value: Not reported (first-year residents in general surgery, orthopedic
+    surgery, urology, and obstetrics/gynecology at Queen's University 2017-2022; exact
+    number of residents not stated)
+  rationale: Adding the contextual detail that the program includes multiple surgical
+    specialties' first-year residents, even though the exact count is not given.
+  source_passage: 'Methods: Dataset section'
+  raised_by: fidelity-reviewer
+- item: D3a_evidence_present
+  severity: minor
+  type: rephrase
+  current_value: 'No'
+  recommended_value: 'No'
+  rationale: Confirming this is correct. While multiple prompt strategies are compared,
+    these are model-optimization experiments, not reproducibility/reliability metrics
+    as defined by the codebook D3 threshold. The coding is accurate.
+  source_passage: Table 2 and Results sections
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: consistency-reviewer
+  text: All required YAML fields present.
+- reviewer: consistency-reviewer
+  text: D2b uses exact codebook phrase for CoT-without-evaluation scenario.
+- reviewer: consistency-reviewer
+  text: B8 correctly captures both fine-tuned and off-the-shelf models.
+- reviewer: consistency-reviewer
+  text: Good specificity in D4b with per-dimension F1 scores.
+- reviewer: framework-reviewer
+  text: D4 mapping correctly uses F1 as the primary metric and reports per-dimension
+    performance
+- reviewer: framework-reviewer
+  text: D1 mapping with QuAL rubric alignment and expert-constructed ground truth
+    is well done
+- reviewer: framework-reviewer
+  text: D2d privacy handling (OpenAI API enterprise policy, data not retained) correctly
+    captured
+- reviewer: fidelity-reviewer
+  text: Accurate extraction of all F1 scores from Table 2
+- reviewer: fidelity-reviewer
+  text: Good capture of the fine-tuning hyperparameters (learning rate 2, batch size
+    2, epochs 3)
+- reviewer: fidelity-reviewer
+  text: Correct identification that prompts are in appendices not fully available
+- reviewer: fidelity-reviewer
+  text: Appropriate flagging of confidence as Medium due to appendix dependency
+notes:
+- reviewer: consistency-reviewer
+  text: Clean, well-structured extraction. One of the few studies with fine-tuning.
+- reviewer: framework-reviewer
+  text: Appendix access limitations are appropriately flagged in F3b. Overall framework
+    mapping is sound.
+- reviewer: fidelity-reviewer
+  text: The extraction references prompt details in appendices that were not available
+    in the fulltext file, which is appropriately noted. No hallucinated statistics
+    found.

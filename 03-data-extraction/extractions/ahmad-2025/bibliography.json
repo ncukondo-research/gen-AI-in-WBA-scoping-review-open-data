@@ -1,0 +1,69 @@
+[
+  {
+    "id": "ahmad-2025",
+    "type": "article-journal",
+    "title": "Evaluating Resident Feedback Using a Large Language Model: Are We Missing Core Competencies?",
+    "author": [
+      {
+        "family": "Ahmad",
+        "given": "Syed Ameen"
+      },
+      {
+        "family": "Armache",
+        "given": "Maria"
+      },
+      {
+        "family": "Trakimas",
+        "given": "Danielle R."
+      },
+      {
+        "family": "Chen",
+        "given": "Jenny X."
+      },
+      {
+        "family": "Galaiya",
+        "given": "Deepa"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          27
+        ]
+      ]
+    },
+    "container-title": "The Laryngoscope",
+    "container-title-short": "The Laryngoscope",
+    "volume": "135",
+    "issue": "11",
+    "page": "4119-4124",
+    "DOI": "10.1002/lary.32368",
+    "ISSN": "0023-852X",
+    "URL": "http://dx.doi.org/10.1002/lary.32368",
+    "abstract": "<jats:title>ABSTRACT</jats:title>\n                  <jats:sec>\n                    <jats:title>Objectives</jats:title>\n                    <jats:p>Use a large language model (LLM) to examine the content and quality of narrative feedback provided to residents through: (1) an app collecting workplace‐based assessments of surgical performance (SIMPL‐OR), (2) Objective Structured Assessment of Technical Skills (OSATS), and (3) end‐of‐rotation (EOR) evaluations.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>Narrative feedback provided to residents at a single institution from 2017 to 2021 was examined. Sixty entries (20 of each format) were evaluated by two faculty members on whether they were encouraging, corrective, or specific, and whether they addressed the Core Competencies outlined by the Accreditation Council for Graduate Medical Education. ChatGPT4o was tested on these 60 entries before evaluating the remaining 776 entries.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Results</jats:title>\n                    <jats:p>\n                      ChatGPT evaluated entries with 90% concordance with faculty (\n                      <jats:italic>κ</jats:italic>\n                       = 0.94). Within the 776 feedback entries evaluated by ChatGPT, competencies addressed included: patient care (\n                      <jats:italic>n</jats:italic>\n                       = 491, 97% vs. 77% vs. 36% for SIMPL‐OR, OSATS, EOR respectively,\n                      <jats:italic>p</jats:italic>\n                       &lt; 0.001), practice‐based learning (\n                      <jats:italic>n</jats:italic>\n                       = 175, 32% vs. 23% vs. 16%,\n                      <jats:italic>p</jats:italic>\n                       &lt; 0.001), professionalism (\n                      <jats:italic>n</jats:italic>\n                       = 168, 1% vs. 6% vs. 40%,\n                      <jats:italic>p</jats:italic>\n                       &lt; 0.001), medical knowledge (\n                      <jats:italic>n</jats:italic>\n                       = 95, 7% vs. 8% vs. 17%,\n                      <jats:italic>p</jats:italic>\n                       &lt; 0.001), interpersonal and communication skills (\n                      <jats:italic>n</jats:italic>\n                       = 59, 3% vs. 3% vs. 12%,\n                      <jats:italic>p</jats:italic>\n                       &lt; 0.001), and systems‐based practice (\n                      <jats:italic>n</jats:italic>\n                       = 31, 4% vs. 2% vs. 5%,\n                      <jats:italic>p</jats:italic>\n                       = 0.387). Feedback was “encouraging” in 93% of both SIMPL‐OR and OSATS, as compared to 84% of EOR (\n                      <jats:italic>p</jats:italic>\n                       &lt; 0.001). Feedback was “corrective” in 71% of SIMPL‐OR versus 44% of OSATS versus 24% of EOR (\n                      <jats:italic>p</jats:italic>\n                       &lt; 0.001), and “specific” in 97% versus 53% versus 15%, respectively (\n                      <jats:italic>p</jats:italic>\n                       &lt; 0.001).\n                    </jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusion</jats:title>\n                    <jats:p>Different instruments provided feedback of differing content and quality and a multimodal feedback approach is important.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Level of Evidence</jats:title>\n                    <jats:p>N/A</jats:p>\n                  </jats:sec>",
+    "publisher": "Wiley",
+    "custom": {
+      "uuid": "696b8efb-a6e0-414d-b0a4-692c5b921651",
+      "created_at": "2026-02-15T03:52:21.857Z",
+      "timestamp": "2026-02-17T07:12:52.375Z",
+      "attachments": {
+        "directory": "ahmad-2025-696b8efb",
+        "files": [
+          {
+            "filename": "fulltext.md",
+            "role": "fulltext"
+          }
+        ]
+      },
+      "check": {
+        "checked_at": "2026-02-17T07:12:44.346Z",
+        "status": "ok",
+        "findings": []
+      }
+    },
+    "source": "Crossref",
+    "language": "en"
+  }
+]

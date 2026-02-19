@@ -1,0 +1,96 @@
+article_id: Zhou2025-fj
+round: 3
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: revise
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'RQ3: ''Not defined in text (likely: Research question 3)'''
+  recommended_value: (remove or retain)
+  rationale: RQ3 appears in F2 value text. Defensible.
+  source_passage: F2_rq3_relevance
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: major
+  type: remove
+  current_value: 'LLMs: ''Large language models'''
+  recommended_value: (remove; if LLM is used in field values, add as LLM instead)
+  rationale: 'Only the plural ''LLMs'' is listed but not the base form ''LLM''. Scanning
+    field values: E2 uses ''LLMs'', E1 uses ''LLMs''. The abbreviation entry should
+    use the base form. However, if only ''LLMs'' appears in field values, it could
+    be kept. Let me check if ''LLM'' (singular) appears: F2 uses ''LLM'' in... no.
+    The issue is that ''LLMs'' as a separate entry from ''LLM'' is inconsistent with
+    other articles. Most articles list ''LLM'' as the base abbreviation. This is a
+    cross-article consistency issue.'
+  source_passage: 'E2: ''Fine-tune LLMs''; E1: ''Limited data supplied to GPT-3.5'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (absent)
+  recommended_value: 'WBA: ''Not defined in text (likely: Workplace-based assessment)'''
+  rationale: WBA appears in F2 field value.
+  source_passage: 'F2: ''WBA-AI studies'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'PII: Not defined in text (likely: Personally identifiable information)'
+  recommended_value: 'PII: Not defined in text (likely: Personally identifiable information)'
+  rationale: 'Confirmed: the fulltext uses ''automated PII removal using the Presidio
+    Python library'' (line 78) without spelling out PII. However, checking if PII
+    appears in extraction field values - it appears in D2d. Current ''Not defined
+    in text'' coding is correct.'
+  source_passage: Line 78 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'PGY: Not defined in text (likely: Postgraduate year)'
+  recommended_value: 'PGY: Not defined in text (likely: Postgraduate year)'
+  rationale: 'Confirmed: checking the fulltext, PGY is used but not defined with parenthetical
+    expansion. Current coding is correct.'
+  source_passage: fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'LLMs: Large language models'
+  recommended_value: 'LLM: Large language model (or consolidate LLMs to LLM)'
+  rationale: 'Minor: typically a single entry for the abbreviation stem is sufficient.'
+  source_passage: N/A
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content drift.
+- reviewer: framework-reviewer
+  text: Good abbreviation list with CBME, EPA, GPT, PII, PGY, LLMs.
+- reviewer: consistency-reviewer
+  text: Clean and focused abbreviation list
+- reviewer: consistency-reviewer
+  text: PII properly included
+- reviewer: fidelity-reviewer
+  text: Accurate definitions for EPA, CBME, GPT, API.
+- reviewer: fidelity-reviewer
+  text: Correct identification of PII and PGY as not explicitly defined.
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. doi/published_year removed, abbreviation block added.
+- reviewer: consistency-reviewer
+  text: The main issue is the LLMs vs LLM convention. Recommend changing to base form
+    'LLM' for cross-article consistency.
+- reviewer: fidelity-reviewer
+  text: No major issues. Clean abbreviation list.
+- reviewer: team-lead
+  text: 'Lightweight post-fix review: Replaced LLMs with base form LLM; added LLM
+    definition. Fixes verified, validate_yaml.py passes. Approved.'

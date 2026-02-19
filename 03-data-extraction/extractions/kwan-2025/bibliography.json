@@ -1,0 +1,80 @@
+[
+  {
+    "id": "kwan-2025",
+    "type": "article-journal",
+    "title": "Leveraging Large Language Models to Evaluate the Quality of Narrative Feedback for Surgery Residents in Competency-Based Medical Education",
+    "author": [
+      {
+        "family": "Kwan",
+        "given": "Benjamin Y.M."
+      },
+      {
+        "family": "Zhou",
+        "given": "Zier"
+      },
+      {
+        "family": "Rogoza",
+        "given": "Nick"
+      },
+      {
+        "family": "Aghaei",
+        "given": "Nikoo"
+      },
+      {
+        "family": "de Vries",
+        "given": "Ingrid"
+      },
+      {
+        "family": "Hanmore",
+        "given": "Tessa"
+      },
+      {
+        "family": "Zevin",
+        "given": "Boris"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          9,
+          24
+        ]
+      ]
+    },
+    "container-title": "Annals of Surgery Open",
+    "volume": "6",
+    "issue": "4",
+    "page": "e608",
+    "DOI": "10.1097/as9.0000000000000608",
+    "ISSN": "2691-3593",
+    "URL": "http://dx.doi.org/10.1097/AS9.0000000000000608",
+    "abstract": "<jats:sec>\n            <jats:title>Objective:</jats:title>\n            <jats:p>This study aimed to investigate large language model (LLM) performance in evaluating narrative feedback quality in the entrustable professional activities (EPAs) assessments within a Surgical Foundations program.</jats:p>\n          </jats:sec>\n          <jats:sec>\n            <jats:title>Background:</jats:title>\n            <jats:p>Transitioning to competency-based medical education (CBME) has increased the volume of narrative feedback for surgery residents. However, evaluating narrative feedback quality is time-consuming, requiring manual review by humans. LLMs show potential for automating this process.</jats:p>\n          </jats:sec>\n          <jats:sec>\n            <jats:title>Methods:</jats:title>\n            <jats:p>An existing dataset of 2229 deidentified comments from EPA assessments for surgery residents in an academic program (2017–2022) was analyzed using generative pre-trained transformer (GPT)-3.5-turbo-1106 and GPT-4-1106-preview. LLM-generated scores were compared to Quality of Assessment for Learning (QuAL) scores assigned by human raters. F1 score was the primary metric for model accuracy. Performance improvements were measured for each LLM by comparing F1 scores across different prompting techniques and fine-tuning strategies against baseline performance.</jats:p>\n          </jats:sec>\n          <jats:sec>\n            <jats:title>Results:</jats:title>\n            <jats:p>GPT-3.5 and GPT-4 performance varied significantly across prompting techniques due to differences in model architecture. GPT-4 achieved the highest F1 scores for Suggestion (0.901) and Connection (0.882) but underperformed in the Evidence dimension (0.554) of the QuAL score. Fine-tuning was not available for GPT-4 during the study, although fine-tuned GPT-3.5 showed improved LLM performance with high F1 scores for Evidence (0.827), Suggestion (0.949), and Connection (0.933).</jats:p>\n          </jats:sec>\n          <jats:sec>\n            <jats:title>Conclusions:</jats:title>\n            <jats:p>Fine-tuned GPT-3.5 demonstrated strong potential for automating the evaluation of narrative feedback quality for surgery residents. However, LLM performance depends on the task and how well task structure aligns with the LLM architecture. LLM use in CBME may facilitate continuous quality improvement, providing faculty with automated feedback on their feedback.</jats:p>\n          </jats:sec>",
+    "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+    "custom": {
+      "uuid": "b9712e22-82eb-4665-973c-35b477e7055f",
+      "created_at": "2026-02-12T08:52:32.138Z",
+      "timestamp": "2026-02-17T07:12:52.374Z",
+      "attachments": {
+        "directory": "kwan-2025-b9712e22",
+        "files": [
+          {
+            "filename": "fulltext.pdf",
+            "role": "fulltext"
+          },
+          {
+            "filename": "fulltext.md",
+            "role": "fulltext"
+          }
+        ]
+      },
+      "check": {
+        "checked_at": "2026-02-17T07:12:42.272Z",
+        "status": "ok",
+        "findings": []
+      }
+    },
+    "source": "Crossref",
+    "language": "en"
+  }
+]

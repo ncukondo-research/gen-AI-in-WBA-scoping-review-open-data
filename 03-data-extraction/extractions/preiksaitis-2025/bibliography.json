@@ -1,0 +1,99 @@
+[
+  {
+    "id": "preiksaitis-2025",
+    "type": "article-journal",
+    "title": "Quantifying Emergency Medicine Residency Learning Curves Using Natural Language Processing: Retrospective Cohort Study",
+    "author": [
+      {
+        "family": "Preiksaitis",
+        "given": "Carl"
+      },
+      {
+        "family": "Hughes",
+        "given": "Joshua"
+      },
+      {
+        "family": "Kabeer",
+        "given": "Rana"
+      },
+      {
+        "family": "Dixon",
+        "given": "William"
+      },
+      {
+        "family": "Rose",
+        "given": "Christian"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          9
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          14
+        ]
+      ]
+    },
+    "container-title": "JMIR medical education",
+    "container-title-short": "JMIR Med Educ",
+    "volume": "11",
+    "page": "e82326",
+    "DOI": "10.2196/82326",
+    "PMID": "41364786",
+    "PMCID": "PMC12688050",
+    "ISSN": "2369-3762",
+    "publisher-place": "Canada",
+    "custom": {
+      "uuid": "9ab02917-8853-4ae2-9a4e-3e422992a549",
+      "created_at": "2026-02-15T03:49:57.363Z",
+      "timestamp": "2026-02-17T07:12:52.375Z",
+      "attachments": {
+        "directory": "preiksaitis-2025-PMID41364786-9ab02917",
+        "files": [
+          {
+            "filename": "fulltext.md",
+            "role": "fulltext"
+          }
+        ]
+      },
+      "check": {
+        "checked_at": "2026-02-17T07:12:42.272Z",
+        "status": "metadata_outdated",
+        "findings": [
+          {
+            "type": "metadata_outdated",
+            "message": "Remote metadata has been updated since import",
+            "details": {
+              "updated_fields": [
+                "container-title",
+                "page"
+              ],
+              "field_diffs": [
+                {
+                  "field": "container-title",
+                  "local": "JMIR medical education",
+                  "remote": "JMIR Medical Education"
+                },
+                {
+                  "field": "page",
+                  "local": "e82326",
+                  "remote": "e82326-e82326"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "source": "PubMed"
+  }
+]

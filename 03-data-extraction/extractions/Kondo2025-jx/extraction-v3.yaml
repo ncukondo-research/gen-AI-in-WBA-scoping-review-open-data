@@ -1,0 +1,132 @@
+study_id: Kondo-2025
+extraction_date: '2026-02-17'
+extractor: ai:codex-gpt-5
+A1_country: Japan
+A2_specialty: General / non-specialty-specific
+A3_participants:
+  A3a_type: Medical students
+  A3b_training_level: Sixth-year medical students (final year)
+  A3c_sample_size: '20'
+  A3d_num_documents: 40 datasets (weekly learning-log datasets)
+A4_study_design: 'Observational: retrospective cohort / analysis'
+A5_study_aim: '"This study aimed to explore the accuracy of predicting the actual clinical experiences of medical students from their learning log data during clinical clerkship using LLMs."
+
+  Research question: "how accurately can an LLM predict experiences related to the goals defined by the MCC from the records that students keep for learning during clinical clerkships?"
+
+  '
+B1_ai_models: GPT-4 Turbo (gpt-4-0125-preview, OpenAI); Gemini (version not specified, preliminary comparison only); Claude (version not specified, preliminary comparison only)
+B2_api_or_interface: API; Web interface
+B3_prompt_design:
+  B3a_prompt_reported: Yes (full text provided)
+  B3b_engineering_techniques: Rubric/template inclusion (MCC symptoms/examinations/procedures list); structured output as listed experience items
+  B3c_prompt_iteration: 'Unclear: Trial prompts were used in preliminary model comparison, but explicit iterative refinement of the final prompt was not clearly described.'
+B4_ai_role: Clinical experience tracking
+B5_input_data: Learning logs / clinical experience records; Narrative free-text reflections in an electronic portfolio
+B6_output_data: Categorization / classification labels; Structured report / summary (list of extracted symptoms, examinations, procedures)
+B7_comparator: 'Learner self-report (number: 20) via student-corrected experience lists'
+B8_model_customization: Off-the-shelf (no customization)
+C1_wba_tools: Clinical learning logs / portfolios
+C2_assessment_context: 'Undergraduate participatory clinical clerkship (final-year medical students) at Nagoya University School of Medicine/Hospital.
+
+  AI analyzed weekly electronic portfolio learning logs to infer experienced clinical activities against MCC goals.
+
+  Formative vs summative status: Not reported.
+
+  '
+D1_content:
+  D1a_evidence_present: 'Yes'
+  D1b_prompt_rubric_alignment: Prompt and extraction template were aligned to the Model Core Curriculum (MCC) list of expected symptoms, examinations, and procedures for clerkship.
+  D1c_content_coverage: The study evaluated extraction performance across intended MCC content domains (symptoms, examinations, procedures) and reported category-level sensitivity/specificity.
+  D1d_expert_review: No evidence reported
+D2_response_process:
+  D2a_evidence_present: 'Yes'
+  D2b_reasoning_transparency: No evidence reported
+  D2c_hallucination_assessment: 'Yes (indirect: false-positive analysis as proxy) via mismatch analysis and high specificity reporting against student-corrected lists.'
+  D2d_data_security: Ethics approval reported; participants could opt out; data were fully anonymized and handled to prevent identification.
+  D2e_quality_assurance: Pre-use model/output validity checks were described (format match, expected-item match, reproducibility in preliminary comparisons), and extracted lists were checked against student-corrected
+    lists.
+D3_internal_structure:
+  D3a_evidence_present: 'No'
+  D3b_reproducibility: No evidence reported
+  D3c_inter_model_agreement: No evidence reported
+  D3d_internal_consistency: No evidence reported
+  D3e_parameter_effects: No evidence reported
+  D3f_bias_fairness: No evidence reported
+D4_relationship_to_other_variables:
+  D4a_evidence_present: 'Yes'
+  D4b_ai_human_agreement: Jaccard index 0.59 (95% CI 0.46-0.71); Cohen kappa 0.65 (95% CI 0.53-0.76); sensitivity 62.39% (95% CI 49.96%-74.81%); specificity 99.34% (95% CI 98.77%-99.92%); category-specific
+    sensitivity/specificity also reported.
+  D4c_human_raters: Medical students themselves (n=20) who corrected extracted experience lists; weaker comparator than independent expert raters.
+  D4d_discriminant_ability: No evidence reported
+  D4e_comparison_other_measures: No evidence reported
+D5_consequences:
+  D5a_evidence_present: 'No'
+  D5b_learner_performance_impact: No evidence reported
+  D5c_stakeholder_acceptability: No evidence reported
+  D5d_unintended_consequences: No evidence reported
+D_summary: 'Primary: D4 (agreement/association with student-corrected reference using kappa, Jaccard, sensitivity/specificity). Secondary: D1 (MCC template alignment and domain coverage), D2 (indirect false-positive
+  proxy, anonymization/privacy handling, quality checks). Absent: D3 (no quantitative reproducibility/internal-structure metrics reported; preliminary qualitative model comparison noted in F2), D5 (no empirical
+  impact/acceptability/consequences data).'
+E1_limitations: '- Single-university setting; limited generalizability to other institutions/clerkships.
+
+  - Short data-collection window (1 month), potentially missing full experience range/seasonality.
+
+  - Extraction accuracy may depend on quality and quantity of student log entries.
+
+  - Only MCC-based template examined; other templates/criteria not tested.
+
+  - Record quality was not quantitatively evaluated (only record length correlations assessed).
+
+  - No strict criteria for what counted as an "experience" in student corrections.
+
+  - Ground truth relied on students'' subjective self-report (possible overreporting/omissions); supervisors did not continuously monitor.
+
+  '
+E2_future_research: '- Improve LLM accuracy as models evolve to reduce missed predictable experiences.
+
+  - Improve documentation quality in student learning logs, potentially via feedback using AI-extracted lists.
+
+  - Combine learning logs with other data sources (eg, electronic health records) to improve extraction accuracy.
+
+  - Conduct larger multi-institution, longer-duration studies for broader generalizability.
+
+  - Test alternative extraction templates/evaluation criteria beyond MCC.
+
+  - Develop more objective criteria for verifying actual experiences and reducing subjective bias.
+
+  - Develop approaches that address privacy concerns for cloud-based LLM workflows.
+
+  '
+E3_funding_coi: 'Supported by Japan Society for the Promotion of Sciences Grants-in-Aid for Scientific Research (23K27816 and 25K06542). Conflicts of interest: None declared. ChatGPT was used in part for
+  initial English translation of the manuscript.'
+F1_key_findings_summary: 'In 20 sixth-year medical students (40 weekly datasets), GPT-4-turbo extracted clerkship experiences from learning logs with moderate agreement versus student-corrected lists (Jaccard
+  0.59; kappa 0.65). Specificity was very high (99.34%), while sensitivity was moderate (62.39%), indicating missed true experiences despite relatively few false positives. Missed items followed three patterns:
+  predictable but not extracted, ambiguous/insufficient log detail, and experiences not documented in logs. The authors conclude AI-supported log analysis may support workplace-based assessment while reducing
+  burden, but accuracy depends strongly on documentation quality and potentially additional data sources.
+
+  '
+F2_rq3_relevance: '- Demonstrates a generative-AI workflow for extracting workplace-based assessment-relevant experiences from free-text learning logs without model fine-tuning (prompt/template-driven approach).
+
+  - Reproducibility was mentioned in model selection criteria but no quantitative internal-structure metrics were reported (clear D3 evidence gap).
+
+  - Comparator was student self-correction rather than independent expert raters, highlighting ground-truth quality challenges for AI validation in workplace-based assessment.
+
+  - No empirical bias/fairness subgroup analysis and no empirical consequences/acceptability outcomes were provided (D3f and D5 gaps).
+
+  - Prompt/content dependence and record-quality dependence emerged as methodological challenges specific to LLM-enabled extraction.
+
+  - Privacy concerns for cloud-based LLM deployment were discussed as an implementation gap.
+
+  '
+F3_confidence:
+  F3a_overall: 'High: Most required fields are explicitly reported in Methods/Results/Discussion; validity mapping is direct for D1, D2, and D4.'
+  F3b_items_for_verification: 'Addressed issues: B1_ai_models (rephrased to emphasize GPT-4 Turbo as primary model and Gemini/Claude as preliminary comparison only), B4_ai_role (restricted to Clinical experience
+    tracking), D3a (R1: updated to Unclear; R2: standardized to No for cross-corpus consistency since all D3b-D3f sub-items are ''No evidence reported'' and no quantitative inter-model metrics were reported
+    per codebook Rule #6; qualitative model comparison noted in F2), D_summary (updated for D3a consistency). No minor-issue disagreements.'
+  F3c_uncertain_flags: B3c_prompt_iteration (trial prompts reported, but extent of iterative refinement of final prompt is not explicit).
+abbreviations:
+  AI: Artificial intelligence
+  API: Application Programming Interface
+  CI: 'Not defined in text (likely: Confidence interval)'
+  LLM: large language model
+  MCC: Model Core Curriculum for Medical Education

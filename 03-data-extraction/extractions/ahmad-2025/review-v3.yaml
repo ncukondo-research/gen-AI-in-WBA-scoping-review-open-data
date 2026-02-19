@@ -1,0 +1,137 @@
+article_id: ahmad-2025
+round: 3
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: revise
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'SIMPL-OR: ''society for improving medical professional learning
+    of operating room performance'''
+  recommended_value: 'SIMPL-OR: ''Society for Improving Medical Professional Learning
+    of Operating Room performance'''
+  rationale: Proper noun should be capitalized
+  source_passage: C1 uses 'SIMPL-OR'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (absent)
+  recommended_value: 'WBA: ''Not defined in text (likely: Workplace-based assessment)'''
+  rationale: 'WBA appears in F2 field value: ''WBA-AI studies'''
+  source_passage: 'F2: ''WBA-AI studies'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'AI: ''Not defined in text (likely: Artificial Intelligence)'''
+  recommended_value: 'AI: ''Not defined in text (likely: Artificial intelligence)'''
+  rationale: Cross-article consistency capitalization
+  source_passage: Multiple fields
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: major
+  type: correct_value
+  current_value: 'SIMPL-OR: society for improving medical professional learning of
+    operating room performance'
+  recommended_value: 'SIMPL-OR: Not defined in text (likely: System for Improving
+    and Measuring Procedural Learning - Operating Room)'
+  rationale: The fulltext does NOT define SIMPL-OR explicitly. It uses 'SIMPL-OR'
+    throughout but never provides a parenthetical expansion. The definition given
+    ('society for improving medical professional learning of operating room performance')
+    appears fabricated. SIMPL is actually 'Society for Improving Medical Professional
+    Learning' (the organization), and SIMPL-OR is their operating room assessment
+    app. The extraction's current definition incorrectly conflates the organization
+    name with 'operating room performance'. Since the article doesn't define it, it
+    should be coded as 'Not defined in text'.
+  source_passage: Lines 27, 31, 57, 61, 71 of fulltext.md (used without definition)
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'AI: Not defined in text (likely: Artificial Intelligence)'
+  recommended_value: 'AI: Not defined in text (likely: Artificial Intelligence)'
+  rationale: 'Confirmed: the fulltext does not explicitly define AI with parenthetical
+    expansion in the main body. Current coding is correct.'
+  source_passage: fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'NIH: Not defined in text (likely: National Institutes of Health)'
+  recommended_value: (remove NIH entirely or verify it appears in field values)
+  rationale: NIH appears only in E3_funding_coi as 'NIH/National Institute of Health
+    grant'. Since it appears in a field value, it should remain. However the fulltext
+    says 'NIH/National Institute of Health' (line from E3 field) - if this is from
+    the fulltext, it's defined there.
+  source_passage: E3 field value
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'NEJM: New England Journal of Medicine'
+  recommended_value: 'NEJM: New England Journal of Medicine'
+  rationale: 'Checking: NEJM appears in D1b field value (''adapted from NEJM language'').
+    The fulltext mentions it at line 75. Current coding appears correct.'
+  source_passage: Line 75 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'PBL: practice-based learning'
+  recommended_value: 'PBL: Not defined in text (likely: practice-based learning)'
+  rationale: 'Checking the fulltext: PBL appears in tables (lines 106, 116) without
+    explicit parenthetical definition. The tables use ''PBL'' as a label. The full
+    form is not given with the abbreviation.'
+  source_passage: Lines 106, 116 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (not listed)
+  recommended_value: 'IRB: Institutional Review Board'
+  rationale: IRB appears in D2d field value ('IRB00358100'). The fulltext defines
+    it at line 67 as 'Institutional Review Board'. Should be added.
+  source_passage: Line 67 of fulltext.md
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content drift.
+- reviewer: framework-reviewer
+  text: 'Excellent abbreviation coverage with 17 entries covering all domains: ACGME,
+    OHNS, SIMPL-OR, OSATS, EOR, ICS, PBL, SBP, NLP, NEJM, NIH, etc.'
+- reviewer: framework-reviewer
+  text: 'Proper use of ''Not defined in text (likely: ...)'' format for AI, GPT, NIH,
+    PGY, QA.'
+- reviewer: consistency-reviewer
+  text: Excellent comprehensive coverage including all surgical assessment tools (SIMPL-OR,
+    OSATS, EOR)
+- reviewer: consistency-reviewer
+  text: Good inclusion of domain abbreviations (PBL, SBP, ICS, OHNS)
+- reviewer: consistency-reviewer
+  text: NEJM and NIH properly included
+- reviewer: fidelity-reviewer
+  text: Good coverage of assessment-tool abbreviations (OSATS, EOR, OHNS).
+- reviewer: fidelity-reviewer
+  text: Correct definitions for ACGME, EOR, OHNS, OSATS, SBP, ICS.
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. doi/published_year removed, abbreviation block added. No issues
+    found.
+- reviewer: consistency-reviewer
+  text: Well-organized and thorough abbreviation section.
+- reviewer: fidelity-reviewer
+  text: 'One major issue: SIMPL-OR definition is fabricated/incorrect. Several minor
+    issues including missing IRB and PBL definition sourcing.'
+- reviewer: team-lead
+  text: 'Lightweight post-fix review: Corrected SIMPL-OR to ''Not defined in text''
+    since fulltext does not define it. Fixes verified, validate_yaml.py passes. Approved.'

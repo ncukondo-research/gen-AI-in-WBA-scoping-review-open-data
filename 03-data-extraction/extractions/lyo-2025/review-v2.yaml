@@ -1,0 +1,97 @@
+article_id: lyo-2025
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (absent)
+  recommended_value: 'DIF: ''Not defined in text (likely: Differential item functioning)'''
+  rationale: DIF appears in F2 field value. Other articles with DIF in F2 include
+    it.
+  source_passage: Not applicable - retracted
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'F1: ''Not defined in text (likely: F1 score)'''
+  recommended_value: 'F1: ''Not defined in text (likely: F1 score)'''
+  rationale: Already consistent. No change needed.
+  source_passage: D4b uses F1
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'API: Not defined in text (likely: Application Programming Interface)'
+  recommended_value: 'API: Not defined in text (likely: Application Programming Interface)'
+  rationale: 'Confirmed: the fulltext uses ''GPT-4 Turbo API'' and ''OpenAI GPT4-1104-preview''
+    (line 34) without spelling out API. Current coding is correct.'
+  source_passage: Line 34 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'CoT: Chain of thought'
+  recommended_value: 'CoT: Not defined in text (likely: Chain of thought)'
+  rationale: The fulltext uses 'zero-shot CoT' (line 73) and 'chain-of-thought' in
+    passing, but does not formally define 'CoT' as an abbreviation with parenthetical
+    expansion. The abbreviation appears without explicit definition. However, the
+    term 'thought generation/zero-shot CoT' at line 73 provides reasonable contextual
+    definition.
+  source_passage: Line 73 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'CV: Not defined in text (likely: Coefficient of variation)'
+  recommended_value: 'CV: Not defined in text (likely: Coefficient of variation)'
+  rationale: 'Confirmed: the fulltext uses ''coefficient of variance = 0.35'' (line
+    187) but abbreviates it as CV only in the extraction. The extraction uses ''CV''
+    but the fulltext spells it out without abbreviating. Current coding is correct.'
+  source_passage: Line 187 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'F1: Not defined in text (likely: F1 score)'
+  recommended_value: 'F1: F1 score'
+  rationale: The fulltext uses 'F1 score' explicitly in table headers (lines 144,
+    146, 157). While no parenthetical definition is given, the term is used as its
+    own definition. The 'Not defined in text' coding is defensible but 'F1 score'
+    is directly used.
+  source_passage: Lines 144-157 of fulltext.md
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content drift.
+- reviewer: framework-reviewer
+  text: 'Excellent abbreviation list with proper handling of definitions: ICC, CoT,
+    CV, F1, RAG, ReXVal all present in field values and correctly defined.'
+- reviewer: consistency-reviewer
+  text: Excellent coverage including study-specific abbreviation ReXVal
+- reviewer: consistency-reviewer
+  text: Good inclusion of CV and ICC
+- reviewer: consistency-reviewer
+  text: Well-structured and comprehensive
+- reviewer: fidelity-reviewer
+  text: Accurate definitions for ICC, IRB, RAG, ReXVal.
+- reviewer: fidelity-reviewer
+  text: Good identification of abbreviations from all domains.
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. doi/published_year removed, abbreviation block added. No issues
+    found.
+- reviewer: consistency-reviewer
+  text: One of the better-organized abbreviation sections. No major issues found.
+- reviewer: fidelity-reviewer
+  text: No major issues. Minor CoT and F1 definition sourcing notes.

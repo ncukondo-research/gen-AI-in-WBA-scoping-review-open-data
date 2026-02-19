@@ -1,0 +1,87 @@
+study_id: "Kwan-2025"
+extraction_date: "2026-02-17"
+extractor: "ai:codex-gpt-5"
+doi: "10.1097/AS9.0000000000000608"
+published_year: "2025"
+
+A1_country: "Canada"
+A2_specialty: "Surgery"
+A3_participants:
+  A3a_type: "Residents (Surgical Foundations program)"
+  A3b_training_level: "First-year residents (general surgery; orthopedic surgery; urology; obstetrics and gynecology)"
+  A3c_sample_size: "Not reported"
+  A3d_num_documents: "2229 deidentified narrative feedback comments from EPA assessments (final preprocessed dataset: 1644 comments)"
+A4_study_design: "Observational: retrospective cohort / analysis"
+A5_study_aim: |
+  "This study aimed to investigate the performance of OpenAI LLM models (GPT-3.5 and GPT-4) in evaluating the quality of narrative feedback comments documented in the assessments of EPAs within the Surgical Foundations curriculum at Queen's University, Canada, from 2017 to 2022."
+
+B1_ai_models: "GPT-3.5-turbo-1106; GPT-4-1106-preview; fine-tuned GPT-3.5-turbo-1106"
+B2_api_or_interface: "API"
+B3_prompt_design:
+  B3a_prompt_reported: "Partially (key elements described)"
+  B3b_engineering_techniques: "Zero-shot baseline prompt; Modified Prompt; Task Decomposition; Chain-of-Thought (rationale requested); fine-tuning with baseline prompt"
+  B3c_prompt_iteration: "Yes: prompts were iteratively modified and compared across techniques; Evidence-dimension definition variants were developed with an experienced human rater before selecting a final modified prompt"
+B4_ai_role: "Scoring / grading; Feedback analysis / coding"
+B5_input_data: "Narrative feedback / free-text comments (EPA assessment comments)"
+B6_output_data: "Categorization / classification labels (QuAL dimension ratings); Numerical scores / ratings (dimension-level performance via F1)"
+B7_comparator: "Expert human raters (number: 2) using QuAL scores as ground truth"
+B8_model_customization: "Fine-tuned: GPT-3.5-turbo-1106 fine-tuned on training split (OpenAI fine-tuning UI; learning rate multiplier 2, batch size 2, epochs 3); Off-the-shelf (no customization): GPT-4-1106-preview and baseline GPT-3.5 runs"
+
+C1_wba_tools: "EPA (Entrustable Professional Activities); Narrative feedback forms (general / institution-specific: EPA narrative comments); Other: QuAL scoring of workplace narrative comments"
+C2_assessment_context: "Narrative feedback quality evaluation in CBME EPA assessments for Surgical Foundations residents at a single academic program (Queen's University, 2017-2022); Unclear: formative vs summative use for the analyzed dataset not explicitly specified"
+
+D1_content:
+  D1a_evidence_present: "Yes"
+  D1b_prompt_rubric_alignment: "Prompts were based on original QuAL definitions (Evidence, Suggestion, Connection), and modified prompt variants for Evidence were developed to improve alignment with the classification task."
+  D1c_content_coverage: "The AI evaluated all three QuAL domains (Evidence, Suggestion, Connection), with domain-specific performance reported across prompting techniques and fine-tuning."
+  D1d_expert_review: "Two independent human raters established QuAL-labeled ground truth; modified Evidence definitions were constructed in collaboration with an experienced QuAL human rater (Ingrid de Vries)."
+D2_response_process:
+  D2a_evidence_present: "Yes"
+  D2b_reasoning_transparency: "CoT prompting techniques used but reasoning quality not independently examined."
+  D2c_hallucination_assessment: "No evidence reported"
+  D2d_data_security: "Study used deidentified comments and OpenAI API/Enterprise privacy setting; authors report API data were not retained or used to train models and were processed under stricter privacy/confidentiality requirements."
+  D2e_quality_assurance: "Data preprocessing removed nulls, duplicates, and encoding errors; only rater-agreed labels were retained; stratified train/test split with holdout test evaluation after fine-tuning."
+D3_internal_structure:
+  D3a_evidence_present: "No"
+  D3b_reproducibility: "No evidence reported"
+  D3c_inter_model_agreement: "No evidence reported"
+  D3d_internal_consistency: "No evidence reported"
+  D3e_parameter_effects: "No evidence reported"
+  D3f_bias_fairness: "No evidence reported"
+D4_relationship_to_other_variables:
+  D4a_evidence_present: "Yes"
+  D4b_ai_human_agreement: "AI outputs were evaluated against human-rated QuAL ground truth using F1. Best reported results: fine-tuned GPT-3.5 Evidence 0.827, Suggestion 0.949, Connection 0.933; GPT-4 best Suggestion 0.902 and Connection 0.882, lower Evidence performance (up to 0.554 with modified prompt)."
+  D4c_human_raters: "Two independent human raters (using QuAL) provided/validated labels for ground truth; comparator is strong expert-rater reference within the program."
+  D4d_discriminant_ability: "No evidence reported"
+  D4e_comparison_other_measures: "No evidence reported"
+D5_consequences:
+  D5a_evidence_present: "No"
+  D5b_learner_performance_impact: "No evidence reported"
+  D5c_stakeholder_acceptability: "No evidence reported"
+  D5d_unintended_consequences: "No evidence reported"
+
+D_summary: "Primary: D4 (AI-human comparison against QuAL ground truth with F1 metrics). Secondary: D1 (prompt/QuAL alignment and domain coverage), D2 (privacy/data handling and workflow quality controls). Absent: D3 (no reproducibility/reliability/bias analyses), D5 (no empirical impact/acceptability/unintended consequences outcomes)."
+
+E1_limitations: |
+  - Additional hyperparameter adjustment may be needed by task; requires technical expertise and resource planning.
+  - Uncertain transferability/generalizability across datasets and tasks; model performance was task-dependent.
+  - Single-institution Canadian surgery dataset limits external generalizability.
+  - GPT-4 fine-tuning was unavailable during study period.
+E2_future_research: |
+  - Evaluate fine-tuned GPT-4 in this task context.
+  - Test LLM performance on similar classification tasks across other medical specialties/datasets.
+  - Further examine model-task alignment and prompt-strategy effects for classification performance.
+E3_funding_coi: "Conflicts of interest: authors state they have nothing to disclose. Funding: Not reported."
+
+F1_key_findings_summary: |
+  The study compared GPT-3.5 and GPT-4 for automated QuAL scoring of EPA narrative feedback comments in a Surgical Foundations program. Performance varied by prompt strategy and model, with persistent difficulty in the Evidence domain for non-fine-tuned runs. Fine-tuned GPT-3.5 achieved the strongest overall performance on the holdout test set (F1: Evidence 0.827, Suggestion 0.949, Connection 0.933). The authors conclude that LLM support is promising for feedback-quality evaluation, but strongly task- and prompt-dependent.
+F2_rq3_relevance: |
+  - Highlights prompt sensitivity and model-task alignment as central methodological challenges for generative AI in WBA.
+  - Demonstrates that comparing models/techniques alone is insufficient for internal-structure validity without reproducibility/reliability metrics (D3 gap).
+  - Includes CoT prompting use without independent reasoning-quality evaluation (response-process gap).
+  - No empirical bias/fairness subgroup analysis (D3f gap) and no empirical consequences/acceptability outcomes (D5 gap).
+  - Single-institution, specialty-specific dataset underscores generalizability constraints for WBA AI studies.
+F3_confidence:
+  F3a_overall: "Medium: extraction is well supported by the main text, but some prompt details are located in appendices not included in the provided fulltext file."
+  F3b_items_for_verification: "B3a (extent of full prompt availability in Appendix A); D1d (depth of expert review of AI outputs vs prompt design); D2b (CoT rationale output may be detailed in appendices); D4b (whether any additional agreement metrics beyond F1 are reported in appendices)."
+  F3c_uncertain_flags: "B3a; D1d; D2b; D4b"

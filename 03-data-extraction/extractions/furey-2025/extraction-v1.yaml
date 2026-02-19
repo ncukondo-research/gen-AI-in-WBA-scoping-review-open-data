@@ -1,0 +1,101 @@
+study_id: "furey-2025"
+extraction_date: "2026-02-17"
+extractor: "ai:codex-gpt-5"
+doi: "10.1016/j.jss.2025.01.029"
+published_year: "2025"
+
+A1_country: "Unclear: Data came from six regional medical campuses and a national SIMPL dataset, but study-country for all assessment records was not explicitly stated."
+A2_specialty: "Surgery"
+A3_participants:
+  A3a_type: "Medical students; Surgical residents"
+  A3b_training_level: "Surgery clerkship students; surgical residents"
+  A3c_sample_size: "Not applicable (document-level analysis)"
+  A3d_num_documents: "83 original feedback statements; 99 finalized statements analyzed by blinded reviewers"
+A4_study_design: "Qualitative"
+A5_study_aim: |
+  "The aims of this study were to assess the ability of AI to assist in changing fixed mindset feedback statements (FSs) into statements with GML and evaluate blinded reviewer identification of AI use in FSs."
+
+B1_ai_models: "Google Chrome 'Help me write' (Generative AI; underlying model version not specified)"
+B2_api_or_interface: "Browser extension"
+B3_prompt_design:
+  B3a_prompt_reported: "Yes (full text provided)"
+  B3b_engineering_techniques: "Direct instruction rewrite prompt: 'rewrite using growth mindset language:' followed by the original statement"
+  B3c_prompt_iteration: "Yes: more complex statements were slightly altered for AI integration/uniformity; outputs were post-processed and 10 AI outputs excluded for context/content drift"
+B4_ai_role: "Mindset language transformation"
+B5_input_data: "Narrative feedback / free-text comments"
+B6_output_data: "Written feedback text"
+B7_comparator: "Expert human raters (number: 2) trained in growth mindset language; adjudication by original coder"
+B8_model_customization: "Off-the-shelf (no customization)"
+
+C1_wba_tools: "Narrative feedback forms (general / institution-specific); Other: SIMPL inguinal hernia evaluation feedback statements"
+C2_assessment_context: "Formative and summative written feedback statements for surgery clerkship students and surgical residents (including national SIMPL operative evaluation feedback), analyzed after AI rewriting of fixed-mindset statements."
+
+D1_content:
+  D1a_evidence_present: "Yes"
+  D1b_prompt_rubric_alignment: "Prompt explicitly targeted growth mindset transformation; original coder used a pre-developed growth vs fixed language codebook to classify statements and assess transformed outputs."
+  D1c_content_coverage: "Coverage of intended construct (GML vs FML) was evaluated via blinded coding of statement type; AI outputs that altered context/content were identified and excluded (10 statements)."
+  D1d_expert_review: "Two blinded surgical resident reviewers trained in GML concepts reviewed statements; disagreements were adjudicated by the original coder."
+D2_response_process:
+  D2a_evidence_present: "Yes"
+  D2b_reasoning_transparency: "No evidence reported"
+  D2c_hallucination_assessment: "Yes: authors reported AI context/content fabrication; 10 of 42 AI-generated outputs were excluded because content/context changed and could add untrue information."
+  D2d_data_security: "Deidentified feedback statements were used; study was deemed nonhuman-subject research and IRB-exempt."
+  D2e_quality_assurance: "Manual QA steps were described: problematic AI terms ('presenter'/'presentation') were edited before review, and substantially altered AI outputs were excluded from the final dataset."
+D3_internal_structure:
+  D3a_evidence_present: "No"
+  D3b_reproducibility: "No evidence reported"
+  D3c_inter_model_agreement: "No evidence reported"
+  D3d_internal_consistency: "No evidence reported"
+  D3e_parameter_effects: "No evidence reported"
+  D3f_bias_fairness: "No evidence reported"
+D4_relationship_to_other_variables:
+  D4a_evidence_present: "Yes"
+  D4b_ai_human_agreement: "Human reviewers agreed 17/18 (94.4%) AI-modified FML->GML statements were GML; original GML agreement 37/41 (90.2%); original FML agreement 26/26 (100%). For AI-use detection, agreement was 18/32 (56.3%) for AI-modified statements and 30/67 (44.8%) for originals; sensitivity 75%, specificity 65%."
+  D4c_human_raters: "Two blinded surgical resident reviewers trained in GML concepts; original coder adjudicated disagreements."
+  D4d_discriminant_ability: "No evidence reported"
+  D4e_comparison_other_measures: "No evidence reported"
+D5_consequences:
+  D5a_evidence_present: "No"
+  D5b_learner_performance_impact: "No evidence reported"
+  D5c_stakeholder_acceptability: "No evidence reported"
+  D5d_unintended_consequences: "No evidence reported"
+
+D_summary: |
+  Primary: D4 (comparison of AI-transformed statements with blinded human ratings, with agreement/sensitivity/specificity metrics).
+  Secondary: D1 (construct-aligned prompting and expert content review), D2 (hallucination/context-drift observations, deidentification, QA filtering/editing).
+  Absent: D3 (no reproducibility/reliability/internal psychometric or fairness analyses), D5 (no empirical learner-impact or stakeholder-acceptability outcomes).
+
+E1_limitations: |
+  - AI sometimes failed to preserve context, introducing terms like "presenter/presentation."
+  - Ten AI-generated statements were excluded because AI changed both context and content (possible fabrication risk).
+  - AI may not reliably infer learner level (student vs resident/fellow) without explicit prompt context.
+  - Authors note AI cannot replace formal faculty training in growth mindset concepts.
+E2_future_research: |
+  - Include clearer contextual details in prompts to improve output fidelity.
+  - Continue human review of AI-generated feedback before verbatim use.
+  - Study faculty utilization rates and recipient impact of AI-enhanced feedback.
+  - Conduct further quantitative and qualitative studies on AI to enhance feedback processes.
+E3_funding_coi: |
+  Funding: None.
+  COI/Disclosure: One author (Dr. Hoffman) is an Associate Editor for the journal and was recused from peer review/editorial decisions; editor recusal also noted for institutional conflict.
+  AI declaration: Google Chrome "Help me write" was used in study methodology, not for manuscript writing; authors reviewed/edited outputs and took responsibility.
+
+F1_key_findings_summary: |
+  This qualitative proof-of-concept study found that Google Chrome "Help me write" could transform fixed mindset feedback into growth mindset language, with blinded reviewers classifying 17/18 (94.4%) AI-modified FML->GML statements as GML. Reviewers had limited ability to detect AI authorship (56.3% agreement on AI-modified items; sensitivity 75%, specificity 65%), suggesting AI-written feedback often appeared human-like. The study also identified fidelity risks: some AI outputs altered context/content, leading to exclusion of 10 generated statements. Authors conclude AI may be a useful adjunct for faculty feedback writing but not a substitute for faculty development in growth mindset principles.
+F2_rq3_relevance: |
+  - Demonstrates a generative-AI-specific workflow for linguistic transformation of feedback (fixed-to-growth mindset), which is distinct from conventional scoring/classification applications.
+  - Highlights prompt sensitivity/context dependence: insufficient context can cause semantic drift and fabricated additions, requiring human QA before use.
+  - Exposes evidence gaps under Downing domains: no internal-structure psychometrics (reproducibility, parameter effects, fairness) and no empirical consequential validity (learner outcomes/acceptability).
+  - Suggests implementation challenge of balancing AI efficiency with educator oversight and mindset training.
+F3_confidence:
+  F3a_overall: "Medium: Most fields are directly reported, but country provenance for all records and boundary between document counts (83 source vs 99 finalized) require cautious interpretation."
+  F3b_items_for_verification: |
+    - A3_country: Country of all data sources was not explicitly stated despite U.S.-based affiliations/context.
+    - A5d_num_documents: Both 83 original and 99 finalized statements are reported; confirm preferred extraction convention.
+    - D2c_hallucination_assessment: Fabrication/context drift is explicit, but term "hallucination" is partly discussed as limitation; mapping should be verified for consistency.
+    - D4b_ai_human_agreement: Metrics are agreement against intended/coded statement categories rather than classic AI-vs-expert scoring in WBA.
+  F3c_uncertain_flags: |
+    - A3_country
+    - A5d_num_documents
+    - D2c_hallucination_assessment
+    - D4b_ai_human_agreement

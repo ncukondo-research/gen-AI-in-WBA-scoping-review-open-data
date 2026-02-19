@@ -1,0 +1,84 @@
+article_id: lyo-2025
+round: 1
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: D5c
+  severity: minor
+  type: clarification
+  current_value: Expert radiologists rated LLM-generated teaching points as relevant
+    in 84.5% of cases...
+  recommended_value: Clarify that this is expert evaluation of output quality/relevance
+    rather than stakeholder acceptability of implementation
+  rationale: The teaching point relevance ratings are from expert radiologists evaluating
+    AI outputs in a research context, not stakeholders evaluating acceptability of
+    AI-in-assessment implementation. This is a borderline D5c case. The coding is
+    defensible as expert perception data, but the evidence is somewhat closer to D4
+    (expert evaluation of output quality) than D5c (stakeholder acceptability). Maintaining
+    current coding for pragmatic reasons since it does represent expert perception.
+  source_passage: 'fulltext Results: ''indicated that the teaching points generated
+    by the LLM were relevant in 84.5% of cases'''
+  raised_by: framework-reviewer
+- item: A2_year
+  severity: minor
+  type: rephrase
+  current_value: '2024'
+  recommended_value: 2024 (epub 2024-08-19; print publication in 2025 volume 38 issue
+    2)
+  rationale: The bibliography.json shows epub-date 2024-08-19 and volume 38 issue
+    2 (2025). The extraction uses 2024 which aligns with the epub/online-first date.
+    Adding a note clarifies the year assignment.
+  source_passage: 'Bibliography.json: epub-date 2024-08-19; Journal of Imaging Informatics
+    in Medicine Vol 38(2)'
+  raised_by: fidelity-reviewer
+- item: D3b_reproducibility
+  severity: minor
+  type: rephrase
+  current_value: 'Reproducibility tested via five repeated runs per report: discrepancy
+    count ICC(2,1)=0.690 and coefficient of variation=0.35; maximal severity Fleiss''
+    kappa=0.718 and weighted kappa=0.94.'
+  recommended_value: 'Reproducibility tested via five repeated runs per report (600
+    total samples): discrepancy count ICC(2,1)=0.690 and coefficient of variation=0.35;
+    maximal severity Fleiss'' kappa=0.718 and weighted kappa=0.94.'
+  rationale: Adding the total sample size for the reproducibility analysis (600 samples)
+    provides useful context.
+  source_passage: 'Reproducibility Analysis section: ''Discrepancy detection and discrepancy
+    severity classification were repeated 5x, resulting in 600 samples for reproducibility
+    analysis.'''
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: 'D3b reproducibility is one of the strongest in the corpus: ICC(2,1)=0.690,
+    CV=0.35, Fleiss kappa=0.718, weighted kappa=0.94'
+- reviewer: framework-reviewer
+  text: D4 mapping with dual datasets (synthetic + ReXVal) and multiple metrics is
+    thorough
+- reviewer: framework-reviewer
+  text: D2d data governance constraints correctly captured as contextual factor
+- reviewer: framework-reviewer
+  text: D_summary correctly identifies D3 reproducibility as primary evidence
+- reviewer: fidelity-reviewer
+  text: Excellent capture of the reproducibility metrics (ICC, CV, Fleiss' kappa,
+    weighted kappa)
+- reviewer: fidelity-reviewer
+  text: Accurate extraction of both synthetic and ReXVal dataset results
+- reviewer: fidelity-reviewer
+  text: Good identification of teaching-point relevance rating (84.5%) and correlation
+    with severity
+- reviewer: fidelity-reviewer
+  text: Correct capture of the data governance constraint explanation
+notes:
+- reviewer: framework-reviewer
+  text: This is the only study in the corpus with formal quantitative reproducibility
+    testing (D3b), making it particularly important for the review's D3 synthesis.
+    Framework mapping is exemplary.
+- reviewer: fidelity-reviewer
+  text: One of the strongest extractions in the set. All statistics verified against
+    fulltext. The D3 evidence is accurately captured, which is notable since many
+    studies lack this evidence entirely.

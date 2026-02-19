@@ -1,0 +1,90 @@
+article_id: atsukawa-2025
+round: 3
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'CSV: ''Not defined in text (likely: Comma-Separated Values)'''
+  recommended_value: (remove entry)
+  rationale: CSV does not appear to be used in any YAML field value. May come from
+    methods description in article but not from extraction content.
+  source_passage: Scanned all field values
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'RQ3: ''Not defined in text (likely: Research Question 3)'''
+  recommended_value: (remove or retain)
+  rationale: RQ3 appears in F2 value text. Defensible.
+  source_passage: F2_rq3_relevance
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'AI: ''artificial intelligence'''
+  recommended_value: 'AI: ''Artificial intelligence'''
+  rationale: Cross-article consistency
+  source_passage: Multiple fields
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'LLM: ''Large language model'''
+  recommended_value: 'LLM: ''Large language model'''
+  rationale: Already correctly capitalized. No change needed.
+  source_passage: Multiple fields
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'CSV: Not defined in text (likely: Comma-Separated Values)'
+  recommended_value: (remove CSV entirely or verify it appears in field values)
+  rationale: 'Checking: CSV appears in the fulltext (line 73) but need to verify it
+    appears in extraction field values. Scanning extraction: CSV does not appear in
+    any field value. Should be removed per codebook rule.'
+  source_passage: N/A - not in field values
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'API: Not defined in text (likely: Application Programming Interface)'
+  recommended_value: 'API: Not defined in text (likely: Application Programming Interface)'
+  rationale: 'Confirmed: the fulltext uses ''GPT-4o API'' (line 73) without spelling
+    out API. Current coding is correct.'
+  source_passage: Line 73 of fulltext.md
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content drift.
+- reviewer: framework-reviewer
+  text: Core abbreviations (CT, MRI, LLM, API) correctly included.
+- reviewer: consistency-reviewer
+  text: Good inclusion of modality abbreviations (CT, MRI)
+- reviewer: consistency-reviewer
+  text: CSV included for completeness
+- reviewer: consistency-reviewer
+  text: Clean, well-organized section
+- reviewer: fidelity-reviewer
+  text: Clean, focused abbreviation list.
+- reviewer: fidelity-reviewer
+  text: Correct definitions for CT, MRI, LLM.
+- reviewer: fidelity-reviewer
+  text: Appropriate 'Not defined in text' coding for API, QA, RQ3, WBA.
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. doi/published_year removed, abbreviation block added.
+- reviewer: consistency-reviewer
+  text: Compact and appropriate abbreviation list for this study.
+- reviewer: fidelity-reviewer
+  text: No major issues. CSV is a minor cleanup item (not in field values).

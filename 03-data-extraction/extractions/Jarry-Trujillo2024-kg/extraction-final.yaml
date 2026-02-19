@@ -1,0 +1,194 @@
+study_id: Jarry-Trujillo-2024
+extraction_date: '2026-02-17'
+extractor: ai:codex-gpt-5
+A1_country: Chile
+A2_specialty: Surgery (General Surgery; laparoscopic cholecystectomy)
+A3_participants:
+  A3a_type: Not applicable (document-level analysis); evaluators included general surgery residents, experienced surgeons, one clinical expert, and one education expert
+  A3b_training_level: General surgery residents (individual postgraduate year not reported)
+  A3c_sample_size: Not applicable (document-level analysis)
+  A3d_num_documents: 20 written surgical scenarios as AI/surgeon input; 56 feedback outputs evaluated (14 error-containing scenarios x 4 evaluators)
+A4_study_design:
+  A4a_data_collection: Cross-sectional
+  A4b_analytical_approach: Quantitative
+A5_study_aim: '"The purpose of this study is to assess ChatGPT’s ability to provide feedback based on surgical scenarios."
+
+  The study evaluated whether ChatGPT could identify technical errors and generate useful, good-quality feedback comparable to surgeons using real laparoscopic cholecystectomy-derived scenarios.
+
+  '
+B1_ai_models: ChatGPT 4.0 (commercial version, August 2023)
+B2_api_or_interface: Not reported
+B3_prompt_design:
+  B3a_prompt_reported: Partially (key elements described)
+  B3b_engineering_techniques: Role/task instruction; rubric inclusion (OPRS for laparoscopic cholecystectomy); constrained output (identify/name error, provide brief concise feedback, no comment if no error)
+  B3c_prompt_iteration: 'Unclear: Prompt was described as meticulously designed, but explicit iterative refinement steps were not reported.'
+B4_ai_role: 'Feedback generation; Other: error identification/naming in scenario-based surgical performance descriptions'
+B5_input_data: Clinical scenarios / vignettes (constructed for the study)
+B6_output_data: Written feedback text; Categorization / classification labels (error present/absent and error naming)
+B7_comparator: 'Expert human raters (number: 3) for parallel output generation; Expert review of AI outputs (number: 2, CE+EE); Learner self-report/ratings (number: 4 residents) for usefulness/quality'
+B8_model_customization: Off-the-shelf (no customization)
+C1_wba_tools: 'Other: scenario-based assessment of laparoscopic cholecystectomy technical performance and feedback quality'
+C2_assessment_context: 'Formative feedback context in surgical training. Real operative situations from laparoscopic cholecystectomy were converted into brief neutral text scenarios; ChatGPT and surgeons
+  identified errors and generated feedback, then residents and experts rated usefulness and quality in a blinded workflow.
+
+  '
+D1_content:
+  D1a_evidence_present: 'Yes'
+  D1b_prompt_rubric_alignment:
+    approach: Rubric-based prompt design
+    key_finding: Prompt required error identification and concise feedback grounded in clinical experience and Operative Performance Rating System criteria for cholecystectomy.
+    detail: 'The prompt explicitly instructed identification/naming of errors and brief feedback "based on clinical experience and the Operative Performance Rating System (OPRS) scale"
+      for laparoscopic cholecystectomy.
+
+      '
+  D1c_content_coverage:
+    approach: Domain-specific coverage evaluation
+    key_finding: Twenty scenarios were purposefully sampled to cover relevant, common, risky, and desirable technical movements in laparoscopic cholecystectomy.
+    detail: 'Scenario set was intentionally selected to represent "relevant mistakes, common mistakes, risky situations, and desirable movements," indicating planned coverage of key procedural
+      content domains.
+
+      '
+  D1d_expert_review:
+    approach: Dual expert content review
+    key_finding: Clinical and education experts reviewed usefulness, quality, and error naming, providing specialized appraisal of output appropriateness.
+    detail: 'Outputs were reviewed by human experts: a Clinical Expert assessed usefulness, quality, and error naming (EDR), and an Education Expert assessed feedback quality; this provided expert
+      appraisal of AI content appropriateness.
+
+      '
+D2_response_process:
+  D2a_evidence_present: 'Yes'
+  D2b_reasoning_transparency: No evidence reported
+  D2c_hallucination_assessment:
+    approach: False-positive analysis as proxy
+    key_finding: All 14 error scenarios and all 6 non-error scenarios were correctly classified, indicating no observed fabricated error detections.
+    detail: 'Yes (indirect: false-positive analysis as proxy). AI and surgeons correctly classified all 6 non-error scenarios as "no error detected," and identified all 14 predefined
+      error scenarios; this functions as indirect grounding/error analysis.
+
+      '
+  D2d_data_security: No evidence reported
+  D2e_quality_assurance:
+    approach: Multi-step quality assurance
+    key_finding: Scenario selection calibration, independent validation of text transformation, and identical instructions to surgeons and ChatGPT supported comparison fidelity.
+    detail: 'Quality-control steps included calibration/standardization of scenario selection by trained surgeons, validation of scenario text transformation by a second surgeon, and identical
+      instruction delivery to surgeons and ChatGPT for equitable comparison.
+
+      '
+D3_internal_structure:
+  D3a_evidence_present: 'No'
+  D3b_reproducibility: No evidence reported
+  D3c_inter_model_agreement: No evidence reported
+  D3d_internal_consistency: No evidence reported
+  D3e_parameter_effects: No evidence reported
+  D3f_bias_fairness: No evidence reported
+D4_relationship_to_other_variables:
+  D4a_evidence_present: 'Yes'
+  D4b_ai_human_agreement:
+    approach: Multi-metric agreement analysis
+    key_finding: Resident usefulness reached 96.43%, resident median feedback quality was 8 (p=0.163), and Clinical Expert error detection rate for ChatGPT was 85.71%.
+    detail: 'AI performance was compared against human evaluators with quantitative outcomes: residents rated ChatGPT feedback useful 96.43% of the time (comparable to surgeons B/C); median
+      feedback quality was 8 (no significant difference vs surgeons in resident ratings, p=0.163). Clinical Expert EDR for ChatGPT was 85.71% (vs surgeons A 85.71%, B 100%, C 71.40%). Education Expert rated
+      ChatGPT FQ significantly higher than surgeons A and B (p=0.019; p=0.033).
+
+      '
+  D4c_human_raters: 'Human comparators included 3 experienced surgeons (weekly resident proctoring in laparoscopic cholecystectomy), 4 general surgery residents (feedback utility/quality ratings), 1 Clinical
+    Expert surgeon with educational background, and 1 Education Expert with technology-mediated feedback expertise.
+
+    '
+  D4d_discriminant_ability:
+    approach: Performance-level discrimination
+    key_finding: Error-containing and non-error scenarios were perfectly separated, with 14 of 14 errors detected and 6 of 6 non-errors rejected.
+    detail: 'The system distinguished error-containing from non-error scenarios: all 14 predefined error scenarios were identified and all 6 non-error scenarios were correctly labeled as
+      no error.
+
+      '
+  D4e_comparison_other_measures:
+    approach: Cross-instrument comparison
+    key_finding: Prompting referenced the Operative Performance Rating System, but no formal statistical comparison against external instrument scores was reported.
+    detail: 'AI prompting referenced OPRS, but no formal comparison of AI outputs against an established external assessment instrument score was reported.
+
+      '
+D5_consequences:
+  D5a_evidence_present: 'Yes'
+  D5b_learner_performance_impact: No evidence reported
+  D5c_stakeholder_acceptability:
+    approach: Mixed stakeholder survey
+    key_finding: Residents rated ChatGPT feedback useful in 96.43% of assessments, and blinded raters frequently misidentified ChatGPT outputs as human-written.
+    detail: 'Empirical acceptability/perception data were reported. Residents judged ChatGPT feedback useful in 96.43% of assessments; experts and residents provided quality ratings,
+      and source-blinding results showed ChatGPT outputs were often perceived as human (residents 33.9%, CE 28.5%, EE 14.3%).
+
+      '
+  D5d_unintended_consequences: No evidence reported
+D_summary: 'Primary: D4 (quantitative AI-human comparative performance evidence) and D5 (stakeholder acceptability/perception). Secondary: D1 (prompt-rubric alignment and expert content review), D2 (indirect
+  hallucination proxy and quality assurance procedures). Absent: D3 (no reproducibility, internal consistency, parameter sensitivity, or bias/fairness analyses).'
+E1_limitations: '- Single-procedure scope: only laparoscopic cholecystectomy scenarios, potentially limiting generalizability to higher-variability procedures.
+
+  - Limited scenario dataset: 20 scenarios total, with feedback analysis based on 14 error-containing scenarios.
+
+  - Prompt dependence/context sensitivity acknowledged; performance may vary with prompt/request design.
+
+  - Text-only modality; no multimodal (video/frame) AI assessment tested.
+
+  - Feedback quality measured with a simple 1-10 scale; authors note lack of validated scales for LLM-feedback contexts.
+
+  '
+E2_future_research: '- Apply the methodology across multiple disciplines to benchmark LLM feedback against reference trainers.
+
+  - Develop/validate feedback quality assessment tools suitable for LLM-mediated contexts.
+
+  - Conduct multidimensional AI validation (accuracy, reliability, bias, cost-effectiveness).
+
+  - Investigate textual cues that reveal AI vs human feedback origin.
+
+  - Expand to multimodal AI (text + image/video) for richer scenario analysis and feedback.
+
+  - Study algorithms linking image/video recognition with predefined written situations to improve relevance of LLM feedback.
+
+  '
+E3_funding_coi: 'Funding: FONDECYT Regular 2022, Grant No. 1221490.
+
+  conflict of interest: Not reported.
+
+  AI-in-writing disclosure: Authors reported using ChatGPT 4.0 during manuscript preparation for grammar checking and translation of supplementary scenarios, with subsequent human review/editing.
+
+  '
+F1_key_findings_summary:
+  summary: ChatGPT 4.0 identified surgical errors and generated feedback from written laparoscopic cholecystectomy scenarios at rates comparable to experienced surgeons, with 96.43% resident-rated usefulness and median feedback quality of 8/10.
+  detail: 'In this cross-sectional exploratory study using 20 real-scenario-derived surgical vignettes, ChatGPT 4.0 identified technical errors at rates comparable to experienced surgeons
+    and generated feedback generally rated as useful and good quality by residents and experts. Resident-rated usefulness for ChatGPT feedback was 96.43%, and median feedback quality was similar to surgeons
+    in resident assessments. Education-expert ratings favored ChatGPT over two surgeons, while clinical-expert ratings were comparable to surgeons A/C and below surgeon B. Blinded source identification showed
+    ChatGPT feedback was frequently perceived as human-written.
+
+    '
+F2_rq3_relevance: 'The study highlights key generative-AI methodological gaps relevant to RQ3: strong dependence on prompt design/context, limited reproducibility reporting (no repeat-run stability metrics),
+  and absence of formal bias/fairness subgroup testing despite discussion of bias as an important future validation target. It also illustrates a practical comparative design (LLM vs expert trainers using
+  identical instructions and blinded multi-rater output evaluation) that could be reused in future workplace-based assessment studies.
+
+  '
+F3_confidence:
+  F3a_overall: 'Medium: Most fields were directly extractable, but optical character recognition/formatting artifacts in the prompt figure and incomplete metadata on interface details introduce minor uncertainty.'
+  F3b_items_for_verification: '- B2_api_or_interface: ChatGPT access modality (web interface vs application programming interface) not explicitly stated.
+
+    - B3a_prompt_reported: Figure text is partially garbled in available fulltext rendering; may affect whether this should be coded as full vs partial prompt reporting.
+
+    - D2c_hallucination_assessment: coded via indirect false-positive proxy mapping per rule #8; verify consistency with review team conventions.
+
+    - A5 participant framing: study is document/scenario-based but includes multiple human evaluator groups; confirm preferred coding convention for A5a/A5c.
+
+    '
+  F3c_uncertain_flags: '- B3c_prompt_iteration
+
+    - C1_wba_tools
+
+    - D4e_comparison_other_measures
+
+    '
+abbreviations:
+  AI: Artificial intelligence
+  CE: Clinical-Expert
+
+  EDR: Error Detection Rate
+  EE: Education-Expert
+  FONDECYT: 'Not defined in text (likely: Fondo Nacional de Desarrollo Científico y Tecnológico)'
+  FQ: Feedback Quality
+  LLM: large language models
+  OPRS: Operative Performance Rating System

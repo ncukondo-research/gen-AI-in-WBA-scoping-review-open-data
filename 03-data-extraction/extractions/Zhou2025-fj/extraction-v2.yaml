@@ -1,0 +1,85 @@
+study_id: "Zhou-2025"
+extraction_date: "2026-02-17"
+extractor: "ai:codex-gpt-5"
+doi: "10.1067/j.cpradiol.2025.02.002"
+published_year: "2025"
+
+A1_country: "Canada"
+A2_specialty: "Radiology"
+A3_participants:
+  A3a_type: "Radiology residents (assessed); radiology faculty (evaluators/raters)"
+  A3b_training_level: "Diagnostic Radiology residency (PGY level not reported)"
+  A3c_sample_size: "10 residents"
+  A3d_num_documents: "110 parsed human feedback sentences analyzed; 110 synthetic GPT-3.5 comments generated (220 total for source-classification and quality-comparison tasks)"
+A4_study_design: "Observational: retrospective cohort / analysis"
+A5_study_aim: |
+  The study objective was to assess the performance of humans and GPT-3.5 in distinguishing human-written versus GPT-generated narrative comments in a radiology residency program, and to examine how the two feedback types differ in structure, content, and style.
+
+B1_ai_models: "GPT-3.5; ChatGPT 3.5"
+B2_api_or_interface: "API"
+B3_prompt_design:
+  B3a_prompt_reported: "Partially (key elements described)"
+  B3b_engineering_techniques: "Style/tone/length matching to seed comments; sentiment conditioning (negative comment framing); constraint for gender-neutral language; single-call per comment classification prompt"
+  B3c_prompt_iteration: "Not reported"
+B4_ai_role: "Feedback generation; Feedback analysis / coding"
+B5_input_data: "Narrative feedback / free-text comments (EPA Global Feedback and Next Steps; de-identified and sentence-parsed)"
+B6_output_data: "Written feedback text; Categorization / classification labels"
+B7_comparator: "Expert human raters (number: 2)"
+B8_model_customization: "Off-the-shelf (no customization)"
+
+C1_wba_tools: "EPA (Entrustable Professional Activities); Narrative feedback forms (institution-specific: Elentra EPA Global Feedback/Next Steps)"
+C2_assessment_context: "Narrative feedback in CBME diagnostic radiology residency EPA assessments; source-differentiation task using mixed human and AI comments (formative/summative status not explicitly stated)."
+
+D1_content:
+  D1a_evidence_present: "No"
+  D1b_prompt_rubric_alignment: "No evidence reported"
+  D1c_content_coverage: "No evidence reported"
+  D1d_expert_review: "No evidence reported"
+D2_response_process:
+  D2a_evidence_present: "Yes"
+  D2b_reasoning_transparency: "No evidence reported"
+  D2c_hallucination_assessment: "Yes (indirect: false-positive analysis as proxy): In source-classification, GPT-3.5 had 50.0% accuracy, 18.2% recall for AI-generated comments, and 81.8% specificity for human-written comments, indicating frequent source-misattribution errors."
+  D2d_data_security: "Comments were de-identified manually and with Presidio PII removal before AI processing; ethics board approval reported."
+  D2e_quality_assurance: "No evidence reported"
+D3_internal_structure:
+  D3a_evidence_present: "No"
+  D3b_reproducibility: "No evidence reported"
+  D3c_inter_model_agreement: "No evidence reported"
+  D3d_internal_consistency: "No evidence reported"
+  D3e_parameter_effects: "No evidence reported"
+  D3f_bias_fairness: "No evidence reported"
+D4_relationship_to_other_variables:
+  D4a_evidence_present: "Yes"
+  D4b_ai_human_agreement: |
+    Agreement between GPT-3.5 and human raters was low (overall Fleiss' kappa reported as -0.237). Human-human agreement was moderate (Cohen's kappa = 0.502). Human raters had mean accuracy 80.5% versus GPT-3.5 accuracy 50.0%, with GPT recall 18.2% and specificity 81.8%.
+  D4c_human_raters: "Two independent radiology faculty raters (expert human comparators)."
+  D4d_discriminant_ability: "No evidence reported"
+  D4e_comparison_other_measures: "No evidence reported"
+D5_consequences:
+  D5a_evidence_present: "No"
+  D5b_learner_performance_impact: "No evidence reported"
+  D5c_stakeholder_acceptability: "No evidence reported"
+  D5d_unintended_consequences: "No evidence reported"
+
+D_summary: "Primary: D4 (AI-human comparison with kappa/accuracy/recall/specificity). Secondary: D2 (privacy/de-identification; indirect source-misattribution proxy). Absent: D1 (no prompt-rubric alignment/content-coverage or expert content-review evidence), D3 (no reproducibility/internal psychometric evidence), D5 (no empirical consequences/acceptability/impact evidence)."
+
+E1_limitations: |
+  - Limited data supplied to GPT-3.5, contributing to repetitive synthetic content and poor source-classification performance.
+  - Small sample of residents from a single radiology department.
+  - Limited generalizability to other programs/institutions.
+E2_future_research: |
+  - Fine-tune LLMs with larger datasets to improve context-specific feedback quality and comparative conclusions.
+  - Evaluate more advanced models (e.g., GPT-4) for radiology education tasks.
+  - Develop more sophisticated algorithms before broad integration into residency programs.
+  - Maintain human oversight and regular review during implementation.
+  - Explore extension to other specialties and training levels.
+E3_funding_coi: "Funding: Queen's University Department of Radiology Research Grant; Canadian Radiological Foundation 2024 Radiology Research Summer Studentship Award. Conflicts: none declared."
+
+F1_key_findings_summary: |
+  In a Canadian radiology residency dataset, GPT-3.5-generated feedback was generally shorter, more formal, and less specific than human-written feedback. In source differentiation, two faculty raters substantially outperformed GPT-3.5 (mean human accuracy 80.5% vs GPT-3.5 50.0%). Agreement between GPT and humans was low (kappa -0.237), while human-human agreement was moderate (kappa 0.502). The authors concluded GPT-3.5 did not match human experts for nuanced, context-specific resident feedback.
+F2_rq3_relevance: |
+  The study highlights key generative-AI methodological gaps relevant to RQ3: limited prompt/reporting detail, no reproducibility testing across repeated runs or model settings, no subgroup fairness analysis, and no empirical learner-impact or acceptability outcomes. It also shows dependence on dataset size/context for output quality and suggests model-version progression (GPT-3.5 to GPT-4) as an unresolved reproducibility/generalizability challenge.
+F3_confidence:
+  F3a_overall: "Medium-High: Most fields are explicitly reported; some mapping judgments were required for D1 content-validity and D2c indirect hallucination proxy."
+  F3b_items_for_verification: "Revision note: addressed major issue D1a/D1c (reclassified D1 evidence to absent), minor issue D2c_hallucination_assessment (added explicit classification metrics/clarification), and minor issue A5d_num_documents (specified GPT-3.5 and task wording); disagreed with none."
+  F3c_uncertain_flags: "D2c_hallucination_assessment; D1c_content_coverage"

@@ -1,0 +1,129 @@
+article_id: ahmad-2025
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: D1d/D4b kappa inconsistency
+  severity: minor
+  type: internal_inconsistency
+  current_value: D1d says 'kappa 0.941'; D4b says 'Cohen's kappa = 0.94'
+  recommended_value: Use consistent value. The fulltext Abstract says kappa = 0.94
+    (line 31), while the Results section says kappa = 0.941 (line 91). Either value
+    is defensible, but they should match within the extraction.
+  rationale: The Round 1 review recommended changing 0.941 to 0.94 (calling 0.941
+    'fabricated precision'). However, the fulltext Results section does report 0.941
+    verbatim. The v2 extraction changed D4b to 0.94 but left D1d as 0.941. Both values
+    appear in the source text, so neither is fabricated, but the extraction should
+    use a consistent value. Recommend standardizing to 0.94 (Abstract value) throughout,
+    with a note in F3b that Results reports 0.941.
+  source_passage: 'Abstract (line 31): ''kappa = 0.94''; Results (line 91): ''kappa
+    = 0.941'''
+  raised_by: fidelity-reviewer
+- item: D2c_hallucination_assessment
+  severity: minor
+  type: consistency
+  current_value: 'Yes (indirect: false-positive analysis as proxy).'
+  recommended_value: 'Yes (indirect: false-positive analysis as proxy): 10% discordance
+    between ChatGPT and faculty on 60-entry reference set (kappa 0.94); supplementary
+    subset showed 8% discordance (kappa 0.82).'
+  rationale: 'Other approved finals with indirect D2c coding include brief quantitative
+    details after the proxy label (e.g., Lyo-2025: ''false positives (mean 3.3) and
+    false negatives (mean 12)''; Bala-2025: ''24 model-predicted missed diagnoses
+    were generated, 19 accepted as correct''). Adding the concordance/discordance
+    metrics would improve cross-study synthesis consistency. However, this is a minor
+    stylistic point and the current coding is technically correct.'
+  source_passage: ''
+  raised_by: consistency-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: 'D2c correctly changed from ''No evidence reported'' to ''Yes (indirect: false-positive
+    analysis as proxy)'' per R1 framework-reviewer recommendation. The 10% discordance
+    rate (90% concordance on 60 entries) and the authors'' explicit note about ChatGPT
+    overestimating PBL domain both qualify as indirect false-positive evidence per
+    codebook Rule #8. This is now consistent with coding applied to other studies
+    (e.g., Kondo2025-jx, atsukawa-2025) where discordant classifications are coded
+    as D2c indirect evidence.'
+- reviewer: framework-reviewer
+  text: A1_doi correctly set to '10.1002/lary.32368' per R1 fidelity-reviewer recommendation,
+    sourced from bibliography metadata.
+- reviewer: framework-reviewer
+  text: D4b kappa correctly reported as 0.94 (not 0.941) per R1 fidelity-reviewer
+    correction. The fulltext abstract states 'kappa = 0.94' without a third decimal
+    place.
+- reviewer: framework-reviewer
+  text: D_summary appropriately includes D2 as secondary evidence, consistent with
+    the D2c upgrade.
+- reviewer: framework-reviewer
+  text: D1 mapping remains strong with prompt-rubric alignment and competency coverage
+    well documented.
+- reviewer: framework-reviewer
+  text: D2e quality assurance procedures thoroughly captured (session resets, memory
+    clearing, supplementary blinded review).
+- reviewer: fidelity-reviewer
+  text: 'Round 1 major issues addressed: A1_doi now correctly set to ''10.1002/lary.32368''
+    (sourced from bibliography metadata, as fulltext PDF did not display DOI). D2c
+    reclassified from ''No evidence reported'' to ''Yes (indirect: false-positive
+    analysis as proxy)'' per Rule #8.'
+- reviewer: fidelity-reviewer
+  text: 'Round 1 minor issue partially addressed: D4b kappa changed to 0.94 (but D1d
+    still has 0.941 creating minor inconsistency).'
+- reviewer: fidelity-reviewer
+  text: 'Primary concordance metrics verified: 90% concordance rate, kappa 0.94/0.941
+    for 60-entry reference set (both values present in fulltext).'
+- reviewer: fidelity-reviewer
+  text: 'Supplementary concordance verified: 92% concordance rate, kappa 0.82 (fulltext
+    line 126).'
+- reviewer: fidelity-reviewer
+  text: 'Feedback entry counts verified: 836 total (269 SIMPL-OR, 115 OSATS, 392 EOR)
+    for ChatGPT analysis (fulltext line 91).'
+- reviewer: fidelity-reviewer
+  text: 'Faculty-faculty agreement verified: concordance rate 87%, kappa 0.93 (fulltext
+    line 89).'
+- reviewer: fidelity-reviewer
+  text: Competency distributions from ChatGPT analysis verified against fulltext Table
+    1 and line 91.
+- reviewer: fidelity-reviewer
+  text: PBL overestimation finding confirmed in Discussion (fulltext line 132).
+- reviewer: fidelity-reviewer
+  text: Funding (NIH R25 DC021243) and no conflicts confirmed.
+- reviewer: fidelity-reviewer
+  text: Custom GPT workflow (Explore feature, Knowledge upload with 30 examples, session
+    resets every 60 entries) verified against fulltext lines 79-80.
+- reviewer: fidelity-reviewer
+  text: No fabricated data points detected (other than the minor kappa precision inconsistency).
+- reviewer: consistency-reviewer
+  text: 'All R1 issues fully addressed: A1_doi corrected to 10.1002/lary.32368, D2c
+    coded as ''Yes (indirect)'', D4b kappa corrected to 0.94.'
+- reviewer: consistency-reviewer
+  text: D_summary format matches approved finals.
+- reviewer: consistency-reviewer
+  text: B8_model_customization correctly and clearly coded for the ChatGPT Explore
+    workflow.
+- reviewer: consistency-reviewer
+  text: D2e quality assurance section is notably thorough with session resets, memory
+    clearing, supplementary blinded review.
+- reviewer: consistency-reviewer
+  text: YAML structure passes validation.
+- reviewer: consistency-reviewer
+  text: F3c appropriately retains D2b, B8, and D4e as uncertain flags.
+notes:
+- reviewer: framework-reviewer
+  text: All R1 major issues (A1_doi and D2c) have been correctly addressed. The D2c
+    change brings this extraction into consistency with the rest of the corpus. F3b
+    revision note accurately documents the changes made.
+- reviewer: fidelity-reviewer
+  text: Strong revision. All major Round 1 issues resolved. The only remaining issue
+    is the minor D1d/D4b kappa value inconsistency (0.941 vs 0.94), both of which
+    appear in the source text.
+- reviewer: consistency-reviewer
+  text: Strong extraction. The only minor point is the D2c detail level, which is
+    a stylistic preference rather than an error.

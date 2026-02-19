@@ -1,0 +1,17 @@
+article_id: Gin2024-ss
+iterations:
+- round: 1
+  extraction_file: extraction-v1.yaml
+  review_file: review-v1.yaml
+  verdict: approve
+  major_issues: 0
+  minor_issues: 3
+- round: 2
+  extraction_file: extraction-v2.yaml
+  review_file: review-v2.yaml
+  verdict: approve
+  major_issues: 0
+  minor_issues: 9
+final_status: approved
+final_round: 2
+final_file: extraction-final.yaml

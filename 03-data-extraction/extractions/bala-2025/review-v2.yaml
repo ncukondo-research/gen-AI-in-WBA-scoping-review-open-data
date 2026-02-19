@@ -1,0 +1,142 @@
+article_id: bala-2025
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: revise
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'LLMs: ''Large Language Models'''
+  recommended_value: (merge with LLM entry or keep both)
+  rationale: Both LLM and LLMs are listed as separate entries. This is acceptable
+    since both forms appear in field values, but could be consolidated. Minor style
+    preference.
+  source_passage: multiple fields
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'DOI: ''Not defined in text (likely: Digital Object Identifier)'''
+  recommended_value: (remove entry)
+  rationale: DOI appears only in F3b ('A2_year (article folder name suggests 2025
+    while DOI indicates 2024 online publication)'). It does appear in a YAML field
+    value, so technically valid but very marginal.
+  source_passage: F3b_items_for_verification
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: major
+  type: remove
+  current_value: 'LLMs: ''Large Language Models'''
+  recommended_value: (remove, keep LLM only)
+  rationale: Both 'LLM' and 'LLMs' are listed as separate entries. The plural form
+    'LLMs' is just the plural of LLM and should not be a separate abbreviation entry.
+    This is a spurious duplicate.
+  source_passage: LLM and LLMs both listed
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: major
+  type: remove
+  current_value: 'DOI: ''Not defined in text (likely: Digital Object Identifier)'''
+  recommended_value: (remove)
+  rationale: 'DOI does not appear in any YAML field value. It appears only in F3b
+    as extractor commentary about metadata (''A2_year (article folder name suggests
+    2025 while DOI indicates 2024...''). However, scanning carefully: ''DOI'' does
+    appear in the F3b text. This is borderline but DOI is an extractor-introduced
+    term not from the article. Per codebook: ''Only list abbreviations that actually
+    appear in the values.'' It does appear in a value, but it''s extractor commentary.
+    I''ll flag as major since DOI was explicitly removed from extraction fields per
+    codebook v1.5.'
+  source_passage: 'F3b: ''DOI indicates 2024'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'AI: ''Artificial Intelligence'''
+  recommended_value: 'AI: ''Artificial intelligence'''
+  rationale: 'Cross-article consistency: most articles use lowercase ''intelligence'''
+  source_passage: Multiple fields use 'AI'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'LLM: Large Language Model; LLMs: Large Language Models'
+  recommended_value: 'Consolidate to single entry: LLM: Large Language Model'
+  rationale: LLM and LLMs are the same abbreviation in singular/plural. Per convention,
+    a single entry suffices.
+  source_passage: N/A
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'IRB: Not defined in text (likely: Institutional Review Board)'
+  recommended_value: 'IRB: Not defined in text (likely: Institutional Review Board)'
+  rationale: 'Confirmed: the fulltext uses ''IRB-approved'' (line 63) without spelling
+    out the full form. Current coding is correct.'
+  source_passage: Line 63 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'HIPAA: Not defined in text (likely: Health Insurance Portability
+    and Accountability Act)'
+  recommended_value: 'HIPAA: Not defined in text (likely: Health Insurance Portability
+    and Accountability Act)'
+  rationale: 'Confirmed: fulltext uses ''HIPAA identifiers'' (line 71) without spelling
+    it out. Current coding is correct.'
+  source_passage: Line 71 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'RPR4: RPR4 (disagree), within the picklist reconciliation of preliminary
+    report (RPR) macro'
+  recommended_value: 'RPR: picklist reconciliation of preliminary report'
+  rationale: The definition is oddly structured. RPR is defined in the fulltext as
+    'picklist reconciliation of preliminary report (RPR) macro' (line 55). RPR4 is
+    a specific category within it. Consider simplifying to just RPR.
+  source_passage: Line 55 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'DOI: Not defined in text (likely: Digital Object Identifier)'
+  recommended_value: (remove DOI entirely)
+  rationale: DOI does not appear in the extraction field values. It appeared only
+    in F3b as a note about year discrepancy. Per codebook rule, only abbreviations
+    appearing in field values should be listed.
+  source_passage: F3b_items_for_verification in extraction
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content drift.
+- reviewer: framework-reviewer
+  text: Comprehensive abbreviation list including HIPAA, JSON, MRNs, RPR4.
+- reviewer: consistency-reviewer
+  text: Good coverage of technical abbreviations (JSON, HIPAA, MRNs)
+- reviewer: consistency-reviewer
+  text: RPR4 definition is study-specific and well explained
+- reviewer: fidelity-reviewer
+  text: Thorough coverage of technical abbreviations (JSON, MRNs, API).
+- reviewer: fidelity-reviewer
+  text: Correct definitions for LLM, AI, and appropriate 'not defined' flags.
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. doi/published_year removed, abbreviation block added.
+- reviewer: consistency-reviewer
+  text: The duplicate LLM/LLMs entry is the main issue requiring revision. DOI removal
+    is borderline but aligns with codebook v1.5 which removed DOI from extraction
+    fields.
+- reviewer: fidelity-reviewer
+  text: No major issues. DOI and LLMs/LLM consolidation are minor cleanup items.
+- reviewer: team-lead
+  text: 'Lightweight post-fix review: Removed spurious LLMs duplicate and DOI entry
+    not in YAML values. Fixes verified, validate_yaml.py passes. Approved.'

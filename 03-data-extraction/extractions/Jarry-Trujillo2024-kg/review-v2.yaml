@@ -1,0 +1,98 @@
+article_id: Jarry-Trujillo2024-kg
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'OCR: ''Not defined in text (likely: Optical Character Recognition)'''
+  recommended_value: (remove entry)
+  rationale: OCR appears only in F3a_overall and F3b fields. It does appear in YAML
+    field values, so technically valid per rules. Minor style question only.
+  source_passage: F3a_overall, F3b
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'RQ3: ''Not defined in text (likely: Research Question 3)'''
+  recommended_value: (remove or retain)
+  rationale: RQ3 appears in F2 field value text. Borderline but defensible.
+  source_passage: F2_rq3_relevance
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'OCR: ''Not defined in text (likely: Optical Character Recognition)'''
+  recommended_value: (remove)
+  rationale: OCR appears only in F3b ('OCR/formatting artifacts'). This is extractor-introduced
+    commentary, not a term from the article. However, it does appear in a field value.
+    Borderline.
+  source_passage: 'F3b: ''OCR/formatting artifacts'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'LLM: ''large language models'''
+  recommended_value: 'LLM: ''Large language model'''
+  rationale: 'Cross-article consistency: most articles use singular form and capitalize
+    ''Large'''
+  source_passage: Multiple field values use 'LLM'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'OCR: Not defined in text (likely: Optical Character Recognition)'
+  recommended_value: (remove OCR entirely)
+  rationale: OCR does not appear in any extraction field values. It appears only in
+    F3b as a comment about the fulltext rendering quality. Per codebook rule, only
+    abbreviations appearing in field values should be listed.
+  source_passage: F3b_items_for_verification in extraction
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'ICC: Not present in abbreviations list'
+  recommended_value: 'Consider adding ICC: Intraclass Correlation Coefficient'
+  rationale: 'ICC appears in the C2/FQ assessment section of the fulltext (line 96)
+    and is defined there. If ICC appears in any field value (checking: it does not
+    appear in the extraction field values), then it need not be listed. ICC does not
+    appear in extraction field values so this is not required.'
+  source_passage: N/A
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content changes.
+- reviewer: framework-reviewer
+  text: Good coverage of study-specific abbreviations (CE, EE, EDR, FQ, OPRS).
+- reviewer: consistency-reviewer
+  text: Good coverage of study-specific abbreviations (CE, EE, EDR, FQ, FONDECYT)
+- reviewer: consistency-reviewer
+  text: Properly formatted with consistent 'Not defined in text' pattern
+- reviewer: fidelity-reviewer
+  text: Accurate definitions for CE (Clinical-Expert), EE (Education-Expert), EDR
+    (Error Detection Rate), FQ (Feedback Quality).
+- reviewer: fidelity-reviewer
+  text: Correct identification of OPRS as defined in the text.
+- reviewer: fidelity-reviewer
+  text: Appropriate 'Not defined in text' coding for API, COI, FONDECYT, QA, RQ3,
+    WBA.
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. doi/published_year removed, abbreviation block added.
+- reviewer: consistency-reviewer
+  text: Clean and complete abbreviation section. Minor formatting alignment with cross-article
+    conventions would improve consistency.
+- reviewer: fidelity-reviewer
+  text: No major issues. OCR is a minor cleanup item. The abbreviation IQR is used
+    in the fulltext (defined as Interquartile Range) but does not appear in extraction
+    field values, so correctly omitted.

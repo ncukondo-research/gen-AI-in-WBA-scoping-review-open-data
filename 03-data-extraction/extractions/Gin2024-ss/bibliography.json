@@ -1,0 +1,161 @@
+[
+  {
+    "id": "Gin2024-ss",
+    "type": "article-journal",
+    "title": "Assessing supervisor versus trainee viewpoints of entrustment through cognitive and affective lenses: an artificial intelligence investigation of bias in feedback",
+    "author": [
+      {
+        "family": "Gin",
+        "given": "Brian C"
+      },
+      {
+        "family": "Ten Cate",
+        "given": "Olle"
+      },
+      {
+        "family": "O'Sullivan",
+        "given": "Patricia S"
+      },
+      {
+        "family": "Boscardin",
+        "given": "Christy"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          2,
+          23
+        ]
+      ]
+    },
+    "container-title": "Adv. Health Sci. Educ. Theory Pract.",
+    "DOI": "10.1007/s10459-024-10311-9",
+    "PMID": "38388855",
+    "ISSN": "1382-4996",
+    "URL": "http://dx.doi.org/10.1007/s10459-024-10311-9",
+    "abstract": "The entrustment framework redirects assessment from considering only trainees' competence to decision-making about their readiness to perform clinical tasks independently. Since trainees and supervisors both contribute to entrustment decisions, we examined the cognitive and affective factors that underly their negotiation of trust, and whether trainee demographic characteristics may bias them. Using a document analysis approach, we adapted large language models (LLMs) to examine feedback dialogs (N = 24,187, each with an associated entrustment rating) between medical student trainees and their clinical supervisors. We compared how trainees and supervisors differentially documented feedback dialogs about similar tasks by identifying qualitative themes and quantitatively assessing their correlation with entrustment ratings. Supervisors' themes predominantly reflected skills related to patient presentations, while trainees' themes were broader-including clinical performance and personal qualities. To examine affect, we trained an LLM to measure feedback sentiment. On average, trainees used more negative language (5.3% lower probability of positive sentiment, p < 0.05) compared to supervisors, while documenting higher entrustment ratings (+ 0.08 on a 1-4 scale, p < 0.05). We also found biases tied to demographic characteristics: trainees' documentation reflected more positive sentiment in the case of male trainees (+ 1.3%, p < 0.05) and of trainees underrepresented in medicine (UIM) (+ 1.3%, p < 0.05). Entrustment ratings did not appear to reflect these biases, neither when documented by trainee nor supervisor. As such, bias appeared to influence the emotive language trainees used to document entrustment more than the degree of entrustment they experienced. Mitigating these biases is nonetheless important because they may affect trainees' assimilation into their roles and formation of trusting relationships.",
+    "custom": {
+      "uuid": "ed9faa87-fa64-465a-8a8a-2a6b2f1ed7f5",
+      "created_at": "2026-02-09T01:09:41.299Z",
+      "timestamp": "2026-02-17T07:12:52.376Z",
+      "paperpile": {
+        "_id": "637c8a1a-8158-0bd6-879f-1fa771a35d22",
+        "affiliation": "Department of Pediatrics, University of California San Francisco, 550 16th St Floor 4, UCSF Box 0110, San Francisco, CA, 94158, USA. brian.gin@ucsf.edu. Utrecht Center for Research and Development of Health Professions Education, University Medical Center, Utrecht, the Netherlands. Department of Medicine, University of California San Francisco, San Francisco, USA. Department of Surgery, University of California San Francisco, San Francisco, USA. Department of Anesthesia, University of California San Francisco, San Francisco, USA.",
+        "attachments": [
+          {
+            "_id": "89a8349f-fb35-00c7-99d6-2f11e976a07b",
+            "article_pdf": 1,
+            "created": 1713752613.864883,
+            "filename": "All Papers/Other/Gin et al. 2024 - Assessing supervisor versus trainee viewpoints of entr ... lenses - an artificial intelligence investigation of bias in feedback.pdf",
+            "filesize": 1357468,
+            "gdrive_id": "1M08p-dEajA8w3-icJWJGzIeA3oA3zwOz",
+            "mimeType": "application/pdf",
+            "owner": "806F1DCECFEA11EAAB12182C9D9F4BF5",
+            "pdf_indexing_status": "parsed",
+            "pub_id": "637c8a1a-8158-0bd6-879f-1fa771a35d22",
+            "source_filename": "[article_pdf].pdf"
+          }
+        ],
+        "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.1007/s10459-024-10311-9",
+        "citekey": "Gin2024-ss",
+        "crawl_urls": [
+          "http://dx.doi.org/10.1007/s10459-024-10311-9",
+          "https://dx.doi.org/10.1007/s10459-024-10311-9",
+          "https://link.springer.com/10.1007/s10459-024-10311-9"
+        ],
+        "created": 1713752608.246236,
+        "dup_sha1": "84fd86da86e088e95bd3d309381ad51087e2df7d",
+        "folders": [],
+        "id_list": [
+          "sha1:53c5ada9befb30d58ea8e1e10e0b141a06a3b1ad",
+          "dup_sha1:84fd86da86e088e95bd3d309381ad51087e2df7d",
+          "doi:10.1007/s10459-024-10311-9",
+          "pmc:9028297",
+          "pmid:38388855",
+          "url:http://dx.doi.org/10.1007/s10459-024-10311-9",
+          "url:https://www.ncbi.nlm.nih.gov/pubmed/38388855",
+          "url:https://www.ncbi.nlm.nih.gov/pmc/articles/9028297",
+          "url:https://pubmed.ncbi.nlm.nih.gov/38388855",
+          "url:https://dx.doi.org/10.1007/s10459-024-10311-9",
+          "url:https://link.springer.com/10.1007/s10459-024-10311-9",
+          "webimport_sha1:e0110c0849fb66847a76c9ca38bc059232e02a3c"
+        ],
+        "incomplete": 0,
+        "issn_alt": "1573-1677",
+        "kind": "Research Article",
+        "labels": [],
+        "owner": "806F1DCECFEA11EAAB12182C9D9F4BF5",
+        "pdf_restricted": 0,
+        "pii": "10.1007/s10459-024-10311-9",
+        "pmc": "9028297",
+        "pubtype": "PP_ARTICLE",
+        "sha1": "53c5ada9befb30d58ea8e1e10e0b141a06a3b1ad",
+        "webimport_sha1s": [
+          "e0110c0849fb66847a76c9ca38bc059232e02a3c"
+        ]
+      },
+      "attachments": {
+        "directory": "Gin2024-ss-PMID38388855-ed9faa87",
+        "files": [
+          {
+            "filename": "fulltext.pdf",
+            "role": "fulltext"
+          },
+          {
+            "filename": "fulltext.md",
+            "role": "fulltext"
+          }
+        ]
+      },
+      "check": {
+        "checked_at": "2026-02-17T07:12:48.275Z",
+        "status": "metadata_outdated",
+        "findings": [
+          {
+            "type": "metadata_outdated",
+            "message": "Remote metadata has been updated since import",
+            "details": {
+              "updated_fields": [
+                "author",
+                "container-title",
+                "page",
+                "volume",
+                "issue"
+              ],
+              "field_diffs": [
+                {
+                  "field": "author",
+                  "local": "Gin, Brian C; Ten Cate, Olle; O'Sullivan, Patricia S; Boscardin, Christy",
+                  "remote": "Gin, Brian C.; ten Cate, Olle; O’Sullivan, Patricia S.; Boscardin, Christy"
+                },
+                {
+                  "field": "container-title",
+                  "local": "Adv. Health Sci. Educ. Theory Pract.",
+                  "remote": "Advances in Health Sciences Education"
+                },
+                {
+                  "field": "page",
+                  "local": null,
+                  "remote": "1571-1592"
+                },
+                {
+                  "field": "volume",
+                  "local": null,
+                  "remote": "29"
+                },
+                {
+                  "field": "issue",
+                  "local": null,
+                  "remote": "5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "language": "en"
+  }
+]

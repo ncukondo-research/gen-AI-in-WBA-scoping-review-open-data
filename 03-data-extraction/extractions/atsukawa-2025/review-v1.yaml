@@ -1,0 +1,148 @@
+article_id: atsukawa-2025
+round: 1
+reviewers:
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  framework-reviewer:
+    verdict: revise
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: medium
+overall_verdict: revise
+issues:
+- item: D3c_inter_model_agreement
+  severity: minor
+  type: consistency
+  current_value: Three LLMs (GPT-4o, Claude-3.5 Sonnet, Claude-3 Opus) were compared
+    on the same 100-report set using quantitative performance against the same human
+    references...
+  recommended_value: Three LLMs (GPT-4o, Claude-3.5 Sonnet, Claude-3 Opus) were compared
+    on the same 100-report set using quantitative performance against the same human
+    references...
+  rationale: F3c correctly flags uncertainty about whether this constitutes inter-model
+    agreement (D3c) vs model selection. The comparison uses model-vs-human metrics
+    rather than direct model-model agreement. Current coding is reasonable but the
+    boundary is interpretive.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D2e_quality_assurance
+  severity: minor
+  type: rephrase
+  current_value: Model-selection QA included repeated runs (three times per model
+    with majority answer used) and independent dual-radiologist review for comparison.
+  recommended_value: Model-selection QA included repeated runs (three times per model
+    with majority answer used) and independent dual-radiologist review for comparison.
+  rationale: The triple-run majority-vote approach is notable. Per codebook D3b threshold,
+    this could arguably be reproducibility evidence, but the codebook requires 'quantitative
+    metrics (ICC, kappa, percentage agreement, CV)' which are not separately reported
+    for the repeated runs. Current placement under D2e (QA) rather than D3b is correct
+    per the threshold rule.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D3c
+  severity: major
+  type: reclassify
+  current_value: Three LLMs compared on same 100-report set using quantitative performance
+    against human references
+  recommended_value: No evidence reported (reclassify to D4 comparative evidence)
+  rationale: 'The D3c definition asks about inter-model agreement: ''Were different
+    AI models compared on the same data? Report which models and agreement metrics.''
+    The Atsukawa study compared three models'' AGREEMENT WITH HUMAN RATERS (each model
+    vs radiologists), not agreement BETWEEN models directly. No model-to-model agreement
+    metric (e.g., kappa between GPT-4o and Claude-3.5 outputs) was reported. The comparison
+    of model-vs-human kappas across models is a D4-level finding (which model agrees
+    best with humans) rather than D3c internal structure evidence. D3c should be ''No
+    evidence reported,'' which makes D3a=No since no other D3 sub-items have evidence.'
+  source_passage: fulltext Table 2 and Methods/Statistical Analysis
+  raised_by: framework-reviewer
+- item: D3a
+  severity: major
+  type: reclassify
+  current_value: 'Yes'
+  recommended_value: 'No'
+  rationale: Consequent to D3c reclassification. The three-times-per-model repeated
+    runs with majority answer are a QA procedure (D2e) rather than a formal reproducibility
+    test (D3b) since no quantitative reproducibility metrics (ICC, kappa across runs)
+    were reported. D3a should be No.
+  source_passage: fulltext Methods
+  raised_by: framework-reviewer
+- item: D3b
+  severity: minor
+  type: clarification
+  current_value: No evidence reported
+  recommended_value: 'Clarify: three repeated runs per model with majority answer
+    selection described, but no quantitative reproducibility metrics reported. Correctly
+    coded as No evidence per Rule #6 threshold.'
+  rationale: 'The study ran each model three times and used majority vote, which is
+    a QA procedure. However, no ICC, kappa, or percentage agreement across the three
+    runs was reported, so this correctly does not meet the D3b threshold per Rule
+    #6.'
+  source_passage: 'fulltext Methods: ''three times and the most frequently generated
+    answer was determined'''
+  raised_by: framework-reviewer
+- item: D3c_inter_model_agreement
+  severity: minor
+  type: rephrase
+  current_value: Three LLMs (GPT-4o, Claude-3.5 Sonnet, Claude-3 Opus) were compared
+    on the same 100-report set using quantitative performance against the same human
+    references (kappa and accuracy; GPT-4o significantly outperformed alternatives
+    in reported pairwise tests).
+  recommended_value: 'Three LLMs (GPT-4o, Claude-3.5 Sonnet, Claude-3 Opus) were compared
+    on the same 100-report set against the same human references (kappa and accuracy
+    reported per model). GPT-4o showed highest kappa/accuracy across most criteria;
+    pairwise model comparison was performed. Note: this is comparative model benchmarking
+    against human reference rather than direct inter-model agreement testing.'
+  rationale: The extraction correctly captures the data but could more clearly note
+    that this is benchmarking against human ground truth rather than direct model-to-model
+    agreement. The D3c coding is borderline per codebook and the uncertainty flag
+    is appropriate.
+  source_passage: Results section comparing three LLMs
+  raised_by: fidelity-reviewer
+- item: D2e_quality_assurance
+  severity: minor
+  type: add_missing
+  current_value: Model-selection QA included repeated runs (three times per model
+    with majority answer used) and independent dual-radiologist review for comparison.
+  recommended_value: Model-selection QA included repeated runs (three times per model
+    with majority answer used) and independent dual-radiologist review for comparison.
+    Temperature was set to 0 for deterministic output.
+  rationale: The fulltext mentions temperature=0 setting which is a relevant QA detail
+    for output determinism.
+  source_passage: Methods section describing model parameters
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: consistency-reviewer
+  text: All required YAML fields present.
+- reviewer: consistency-reviewer
+  text: Correctly identifies D3a=Yes based on D3c evidence.
+- reviewer: consistency-reviewer
+  text: Good specificity in D4b with per-criterion kappa and accuracy values.
+- reviewer: consistency-reviewer
+  text: D4d discriminant ability correctly identified from temporal (first-term vs
+    last-term) comparisons.
+- reviewer: framework-reviewer
+  text: D4 mapping is thorough with criterion-level kappa and accuracy values
+- reviewer: framework-reviewer
+  text: D4d temporal discrimination (first vs last term) correctly identified
+- reviewer: framework-reviewer
+  text: D1 content mapping (six predefined criteria) is appropriate
+- reviewer: fidelity-reviewer
+  text: Accurate extraction of the six evaluation criteria (C1-C6) and their specific
+    kappa values
+- reviewer: fidelity-reviewer
+  text: Good capture of the longitudinal first-term vs last-term analysis with statistical
+    results
+- reviewer: fidelity-reviewer
+  text: Correct identification that Claude model access mode was unspecified
+notes:
+- reviewer: consistency-reviewer
+  text: One of the more complex extractions with multiple models and criteria. Well-handled
+    overall.
+- reviewer: framework-reviewer
+  text: The D3 reclassification is the primary issue. The repeated-runs procedure
+    is better classified under D2e QA. D_summary will need updating.
+- reviewer: fidelity-reviewer
+  text: Generally faithful extraction. The D3c coding is appropriately flagged as
+    uncertain.

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "atsukawa-2025",
+    "type": "article-journal",
+    "title": "Evaluation of radiology residents' reporting skills using large language models: an observational study",
+    "author": [
+      {
+        "family": "Atsukawa",
+        "given": "Natsuko"
+      },
+      {
+        "family": "Tatekawa",
+        "given": "Hiroyuki"
+      },
+      {
+        "family": "Oura",
+        "given": "Tatsushi"
+      },
+      {
+        "family": "Matsushita",
+        "given": "Shu"
+      },
+      {
+        "family": "Horiuchi",
+        "given": "Daisuke"
+      },
+      {
+        "family": "Takita",
+        "given": "Hirotaka"
+      },
+      {
+        "family": "Mitsuyama",
+        "given": "Yasuhito"
+      },
+      {
+        "family": "Omori",
+        "given": "Ayako"
+      },
+      {
+        "family": "Shimono",
+        "given": "Taro"
+      },
+      {
+        "family": "Miki",
+        "given": "Yukio"
+      },
+      {
+        "family": "Ueda",
+        "given": "Daiju"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          7
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          14
+        ]
+      ]
+    },
+    "container-title": "Japanese journal of radiology",
+    "container-title-short": "Jpn J Radiol",
+    "volume": "43",
+    "issue": "7",
+    "page": "1204-1212",
+    "DOI": "10.1007/s11604-025-01764-y",
+    "PMID": "40056344",
+    "PMCID": "PMC12204868",
+    "ISSN": "1867-1071",
+    "publisher-place": "Japan",
+    "custom": {
+      "uuid": "c3275e5f-b4ad-4347-bd5a-f0f32306b14b",
+      "created_at": "2026-02-15T04:20:24.740Z",
+      "timestamp": "2026-02-17T07:12:52.375Z",
+      "attachments": {
+        "directory": "atsukawa-2025-PMID40056344-c3275e5f",
+        "files": [
+          {
+            "filename": "fulltext.pdf",
+            "role": "fulltext"
+          },
+          {
+            "filename": "fulltext.md",
+            "role": "fulltext"
+          }
+        ]
+      },
+      "check": {
+        "checked_at": "2026-02-17T07:12:45.476Z",
+        "status": "metadata_outdated",
+        "findings": [
+          {
+            "type": "metadata_outdated",
+            "message": "Remote metadata has been updated since import",
+            "details": {
+              "updated_fields": [
+                "title",
+                "container-title",
+                "issued"
+              ],
+              "field_diffs": [
+                {
+                  "field": "title",
+                  "local": "Evaluation of radiology residents' reporting skills using large language models: an observational study",
+                  "remote": "Evaluation of radiology residents’ reporting skills using large language models: an observational study"
+                },
+                {
+                  "field": "container-title",
+                  "local": "Japanese journal of radiology",
+                  "remote": "Japanese Journal of Radiology"
+                },
+                {
+                  "field": "issued",
+                  "local": "2025-7",
+                  "remote": "2025-3-8"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "source": "PubMed",
+    "epub-date": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          8
+        ]
+      ]
+    }
+  }
+]

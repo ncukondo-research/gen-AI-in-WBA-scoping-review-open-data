@@ -1,0 +1,73 @@
+article_id: Gin2024-ss
+round: 1
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: D4b
+  severity: minor
+  type: clarification
+  current_value: Yes (association/correlation, not direct agreement)
+  recommended_value: Keep current coding but add clarification that comparators include
+    both trainee self-report and faculty supervisor ratings
+  rationale: 'The D4 coding correctly identifies this as association/correlation rather
+    than direct agreement. The multilevel ordinal logistic regression relating AI-derived
+    themes to entrustment ratings is appropriately classified. However, D4c should
+    more clearly distinguish that the trainee-documented ratings are self-report (weaker
+    comparator per Rule #9) while supervisor-documented ratings are faculty assessment
+    (stronger comparator).'
+  source_passage: fulltext lines 74-77, Table 1
+  raised_by: framework-reviewer
+- item: B1_ai_models
+  severity: minor
+  type: rephrase
+  current_value: Universal Sentence Encoder (USE) by Google; BERT-PubMed-based sentiment
+    classifier (trained on SST-2 and LMRD; final model retrained with gender-neutralized
+    LMRD)
+  recommended_value: Universal Sentence Encoder (USE) by Google; PubMedBERT-based
+    sentiment classifier (trained on SST-2 and LMRD; final model retrained with gender-neutralized
+    LMRD)
+  rationale: Fulltext uses 'PubMedBERT' not 'BERT-PubMed'. Minor naming precision
+    issue.
+  source_passage: Methods section describing model selection
+  raised_by: fidelity-reviewer
+- item: A5c_sample_size
+  severity: minor
+  type: add_missing
+  current_value: 552 trainees
+  recommended_value: 552 trainees; 4926 supervisors who documented feedback
+  rationale: The fulltext reports both 552 trainees and the supervisor count. Since
+    supervisors also participated in the study, this context aids interpretation.
+  source_passage: Results section describing participant demographics
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: 'Excellent D3f mapping: empirical bias analyses (gender pronoun bias in model,
+    subgroup sentiment differences by gender/UIM) correctly placed under Internal
+    Structure per Rule #11'
+- reviewer: framework-reviewer
+  text: 'Correct use of ''Not applicable (non-generative model)'' for B3 items per
+    Rule #10'
+- reviewer: framework-reviewer
+  text: D5a correctly coded as No since no empirical consequence/impact data reported
+- reviewer: fidelity-reviewer
+  text: Accurate extraction of the non-generative AI design with appropriate 'Not
+    applicable' coding for prompt-related fields
+- reviewer: fidelity-reviewer
+  text: Good capture of the D3f bias/fairness evidence including the pre-mitigation
+    algorithmic bias testing
+- reviewer: fidelity-reviewer
+  text: Correct identification of the mixed comparator strength for D4c
+notes:
+- reviewer: framework-reviewer
+  text: The D_summary is well-constructed and accurately reflects the evidence profile.
+    D1 content validity through expert-reviewed thematic coding is appropriately classified
+    as secondary evidence.
+- reviewer: fidelity-reviewer
+  text: No major fidelity issues found. The extraction accurately represents the fulltext
+    content across all categories.

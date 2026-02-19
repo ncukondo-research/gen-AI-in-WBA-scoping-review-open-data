@@ -1,0 +1,147 @@
+article_id: atsukawa-2025
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: D2e_quality_assurance
+  severity: minor
+  type: add_missing
+  current_value: Model-selection QA included repeated runs (three times per model
+    with majority answer used) and independent dual-radiologist review for comparison.
+  recommended_value: 'Model-selection QA included repeated runs (three times per model
+    with majority answer used) and independent dual-radiologist review for comparison.
+    Note: temperature setting not explicitly stated in fulltext body (only implied
+    by API usage).'
+  rationale: The R1 fidelity-reviewer recommended adding 'Temperature was set to 0
+    for deterministic output' to D2e, but the v2 extraction's F3b notes disagreement
+    with this recommendation, stating 'temperature was not stated in the provided
+    full text.' After reviewing the fulltext, I find no explicit mention of temperature=0
+    in the main text. The Methods section (line 73) describes using the GPT-4o API
+    with model version 'gpt-4o-2024-08-06' and running 'three times' with majority
+    vote, but does not specify temperature. The v2 extraction's decision to omit this
+    detail is correct per source fidelity principles. This is a minor note, not a
+    required change.
+  source_passage: fulltext line 73 (Methods section on LLM evaluation)
+  raised_by: framework-reviewer
+- item: F3b_items_for_verification
+  severity: minor
+  type: consistency
+  current_value: 'Addressed issues: D3c (major reclassified to ''No evidence reported'');
+    D3a (major changed to ''No''); D_summary updated for D3 consistency. Addressed
+    minor issues: retained D2e as QA and retained D3b as ''No evidence reported''
+    (codebook requires exact phrase for absent D-subitems). Disagreed with minor recommendation
+    to add ''Temperature was set to 0'' to D2e because this was not stated in the
+    provided full text. D3c rephrase minors were superseded by the major D3c reclassification.'
+  recommended_value: No change needed
+  rationale: 'The disagreement with the temperature=0 recommendation is verified correct:
+    I searched the fulltext and found no mention of ''temperature'' or ''Temperature''.
+    The extraction correctly declined this suggestion. Good source fidelity.'
+  source_passage: ''
+  raised_by: consistency-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: D3c correctly reclassified to 'No evidence reported' per R1 framework-reviewer
+    recommendation. The v1 extraction coded three-model comparison as D3c, but as
+    correctly identified, the Atsukawa study compared each model's agreement WITH
+    human raters (kappa per model vs radiologists), not agreement BETWEEN models directly.
+    No model-to-model kappa was reported. This is D4-level comparative evidence (which
+    model best matches humans), not D3c internal structure evidence.
+- reviewer: framework-reviewer
+  text: 'D3a correctly changed to ''No'' following D3c reclassification. No other
+    D3 sub-items have empirical evidence: the triple-run majority-vote procedure is
+    correctly classified under D2e (QA) rather than D3b (reproducibility) since no
+    quantitative test-retest metrics were reported per Rule #6.'
+- reviewer: framework-reviewer
+  text: D_summary updated appropriately to reflect D3 absence.
+- reviewer: framework-reviewer
+  text: D4 mapping remains thorough with criterion-level kappa and accuracy values
+    for GPT-4o against both radiologists.
+- reviewer: framework-reviewer
+  text: D4d temporal discrimination (first vs last term) correctly identified and
+    quantified with P-values.
+- reviewer: framework-reviewer
+  text: D1 mapping (six predefined criteria, expert review of 100 reports) remains
+    appropriate.
+- reviewer: framework-reviewer
+  text: F3b revision note accurately documents addressed issues and the temperature
+    disagreement.
+- reviewer: fidelity-reviewer
+  text: 'Round 1 major issues addressed: D3c reclassified from inter-model agreement
+    evidence to ''No evidence reported'' (correctly recognizing that model-vs-human
+    benchmarking is D4 evidence, not D3c inter-model agreement). D3a changed from
+    ''Yes'' to ''No''. D_summary updated accordingly.'
+- reviewer: fidelity-reviewer
+  text: 'Round 1 minor issues addressed: D3b correctly retained as ''No evidence reported''
+    (three-run majority-vote is QA, not formal reproducibility per Rule #6). Temperature=0
+    detail correctly NOT added to D2e (confirmed that ''temperature'' does not appear
+    in the provided fulltext). D3c minor rephrase superseded by major reclassification.'
+- reviewer: fidelity-reviewer
+  text: 'All GPT-4o kappa values verified against fulltext Table 2: vs Radiologist
+    1: C1=0.72, C2=0.67, C3=0.40, C4=0.41, C5=0.29, C6=0.74; vs Radiologist 2: C1=0.70,
+    C2=0.67, C3=0.43, C4=0.42, C5=0.43, C6=0.74.'
+- reviewer: fidelity-reviewer
+  text: 'Accuracy values verified: vs Rad1: 0.86, 0.89, 0.73, 0.69, 0.80, 0.98; vs
+    Rad2: 0.85, 0.89, 0.75, 0.69, 0.84, 0.98.'
+- reviewer: fidelity-reviewer
+  text: 'Inter-radiologist kappas verified: range 0.84-1.00 (Table 2: 0.90, 0.93,
+    0.90, 0.92, 0.84, 1.00).'
+- reviewer: fidelity-reviewer
+  text: 'Model selection pairwise comparisons verified: GPT-4o significantly outperformed
+    Claude-3.5 Sonnet and Claude-3 Opus against both radiologists (P values confirmed
+    in fulltext line 141).'
+- reviewer: fidelity-reviewer
+  text: 'Longitudinal results verified against Table 3: C1 P<0.001, C2 P=0.023, C3
+    P=0.004, C4 P=0.05, C5 P=0.14, C6 P=0.91.'
+- reviewer: fidelity-reviewer
+  text: 'Report counts verified: 7376 total, 40 prompt tuning, 100 model selection,
+    900 resident evaluation (fulltext Table 1 and Figure 1).'
+- reviewer: fidelity-reviewer
+  text: Participant count (9 first-year radiology residents) and radiologist counts
+    (2 expert raters with 11 and 16 years' experience; 23 total confirming radiologists)
+    verified.
+- reviewer: fidelity-reviewer
+  text: DOI 10.1007/s11604-025-01764-y confirmed.
+- reviewer: fidelity-reviewer
+  text: Funding (Guerbet and Iida Group Holdings) and no conflicts confirmed.
+- reviewer: fidelity-reviewer
+  text: No fabricated data points detected.
+- reviewer: consistency-reviewer
+  text: 'All R1 major issues fully addressed: D3c reclassified to ''No evidence reported'',
+    D3a changed to ''No'', D_summary updated.'
+- reviewer: consistency-reviewer
+  text: Correct and well-reasoned disagreement with the temperature=0 minor recommendation,
+    supported by fulltext verification.
+- reviewer: consistency-reviewer
+  text: 'D_summary format matches approved finals (''Primary: D4 (...); Secondary:
+    D1 (...), D2 (...); Absent: D3 (...), D5 (...)'').'
+- reviewer: consistency-reviewer
+  text: Null-value phrasing correct throughout D sub-items.
+- reviewer: consistency-reviewer
+  text: YAML structure passes validation.
+- reviewer: consistency-reviewer
+  text: D4d temporal discrimination (first vs last term) correctly identified and
+    well-documented.
+- reviewer: consistency-reviewer
+  text: D4b per-criterion kappa values with both radiologists provide excellent detail.
+notes:
+- reviewer: framework-reviewer
+  text: All R1 major issues have been correctly addressed. The D3c-to-D4 reclassification
+    was the critical change and has been well executed with consistent updates to
+    D3a, D3b, and D_summary. The temperature detail disagreement is defensible based
+    on source fidelity.
+- reviewer: fidelity-reviewer
+  text: Excellent revision. All Round 1 issues cleanly resolved. The D3c reclassification
+    and the correct decision to NOT add the temperature=0 claim demonstrate careful
+    attention to source fidelity.
+- reviewer: consistency-reviewer
+  text: Clean extraction. All 8 approved finals are consistent with this file's structure
+    and conventions.

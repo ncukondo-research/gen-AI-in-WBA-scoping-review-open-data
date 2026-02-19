@@ -1,0 +1,102 @@
+article_id: bany_abdelnabi-2025
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'RQ3: ''Not defined in text (likely: Research Question 3)'''
+  recommended_value: (remove or retain)
+  rationale: RQ3 appears in F2 value text. Defensible.
+  source_passage: F2_rq3_relevance
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'AI: ''artificial intelligence'''
+  recommended_value: 'AI: ''Artificial intelligence'''
+  rationale: 'Cross-article consistency: capitalizing ''Artificial'' aligns with majority
+    of other articles'
+  source_passage: Multiple fields use 'AI'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (absent)
+  recommended_value: 'WBA: ''Not defined in text (likely: Workplace-based assessment)'''
+  rationale: WBA appears in F2 field value. Most other articles include it.
+  source_passage: 'F2: ''AI in WBA'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'CoT: Chain-of-thought'
+  recommended_value: 'CoT: Chain-of-thought'
+  rationale: 'Confirmed: the fulltext defines ''Chain-of-thought (CoT)'' at line 45.
+    Current coding is correct. Note capitalization difference between extraction (''Chain-of-thought'')
+    and some fulltext instances (''chain of thought'') - minor style issue only.'
+  source_passage: Lines 45, 117 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'H&P1: Not defined in text (likely: History and Physical task 1)'
+  recommended_value: 'H&P1: Not defined in text (likely: History and Physical task
+    1)'
+  rationale: 'Confirmed: H&P1 is used in the methods (line 87) as a task label without
+    explicit definition beyond context. Current coding is appropriate.'
+  source_passage: Line 87 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'IRB: Not defined in text (likely: Institutional Review Board)'
+  recommended_value: 'IRB: Not defined in text (likely: Institutional Review Board)'
+  rationale: 'Confirmed: the fulltext uses ''IRB exempted by UCF IRB'' (line 93) without
+    spelling out the full form. Current coding is correct.'
+  source_passage: Line 93 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (not listed)
+  recommended_value: 'ML: Machine learning'
+  rationale: 'ML is defined in the fulltext (''machine learning (ML)'' at line 35)
+    and appears in the extraction field value A5_study_aim indirectly referenced.
+    However, checking the extraction: ML does not actually appear in any extraction
+    field value. So no addition needed.'
+  source_passage: N/A - not in field values
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content changes.
+- reviewer: framework-reviewer
+  text: Good abbreviation coverage including H&P, H&P1, H&P2, HPI, CoT, UCF, M3.
+- reviewer: consistency-reviewer
+  text: Good coverage of study-specific abbreviations (H&P, H&P1, H&P2, HPI, M3, UCF)
+- reviewer: consistency-reviewer
+  text: Clean formatting with consistent 'Not defined in text' pattern
+- reviewer: fidelity-reviewer
+  text: Accurate identification of defined vs. undefined abbreviations.
+- reviewer: fidelity-reviewer
+  text: Good coverage of prompt-technique abbreviations (CoT, H&P, HPI).
+- reviewer: fidelity-reviewer
+  text: Correct definition of UCF, M3, H&P from the fulltext.
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. doi/published_year removed, abbreviation block added.
+- reviewer: consistency-reviewer
+  text: Well-structured abbreviation list. The WBA omission is minor since it only
+    appears in extractor commentary (F2).
+- reviewer: fidelity-reviewer
+  text: No major issues. All abbreviations accurately sourced.

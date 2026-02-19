@@ -1,0 +1,147 @@
+[
+  {
+    "id": "Zhou2025-fj",
+    "type": "article-journal",
+    "title": "Differentiating between GPT-generated and human-written feedback for radiology residents",
+    "author": [
+      {
+        "family": "Zhou",
+        "given": "Zier"
+      },
+      {
+        "family": "Rizwan",
+        "given": "Arsalan"
+      },
+      {
+        "family": "Rogoza",
+        "given": "Nick"
+      },
+      {
+        "family": "Chung",
+        "given": "Andrew D"
+      },
+      {
+        "family": "Kwan",
+        "given": "Benjamin Ym"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          9,
+          1
+        ]
+      ]
+    },
+    "container-title": "Curr. Probl. Diagn. Radiol.",
+    "volume": "54",
+    "issue": "5",
+    "page": "574-578",
+    "DOI": "10.1067/j.cpradiol.2025.02.002",
+    "PMID": "39984362",
+    "ISSN": "0363-0188",
+    "URL": "http://dx.doi.org/10.1067/j.cpradiol.2025.02.002",
+    "abstract": "PURPOSE: Recent competency-based medical education (CBME) implementation within Canadian radiology programs has required faculty to conduct more assessments. The rise of narrative feedback in CBME, coinciding with the rise of large language models (LLMs), raises questions about the potential of these models to generate informative comments matching human experts and associated challenges. This study compares human-written feedback to GPT-3.5-generated feedback for radiology residents, and how well raters can differentiate between these sources. METHODS: Assessments were completed by 28 faculty members for 10 residents within a Canadian Diagnostic Radiology program (2019-2023). Comments were extracted from Elentra, de-identified, and parsed into sentences, of which 110 were randomly selected for analysis. 11 of these comments were entered into GPT-3.5, generating 110 synthetic comments that were mixed with actual comments. Two faculty raters and GPT-3.5 read each comment to predict whether it was human-written or GPT-generated. RESULTS: Actual comments from humans were often longer and more specific than synthetic comments, especially when describing clinical procedures and patient interactions. Source differentiation was more difficult when both feedback types were similarly vague. Low agreement (k=-0.237) between responses provided by GPT-3.5 and humans was observed. Human raters were also more accurate (80.5 %) at identifying actual and synthetic comments than GPT-3.5 (50 %). CONCLUSION: Currently, GPT-3.5 cannot match human experts in delivering specific, nuanced feedback for radiology residents. Compared to humans, GPT-3.5 also performs worse in distinguishing between actual and synthetic comments. These insights could guide the development of more sophisticated algorithms to produce higher-quality feedback, supporting faculty development.",
+    "publisher": "Elsevier BV",
+    "custom": {
+      "uuid": "d608eac0-30f8-49ac-8a9b-d5f2e6068e1b",
+      "created_at": "2026-02-09T01:09:41.237Z",
+      "timestamp": "2026-02-17T07:12:52.375Z",
+      "paperpile": {
+        "_id": "06bb3b43-3fb8-0489-8bd7-8fd328a21af4",
+        "accessed": {
+          "month": "9",
+          "day": "16",
+          "year": "2025"
+        },
+        "attachments": [
+          {
+            "_id": "349cf95a-9562-4806-9228-ad83dbc1adbd",
+            "article_pdf": 1,
+            "created": 1758000733.566,
+            "filename": "All Papers/Other/Zhou et al. 2025 - Differentiating between GPT-generated and human-written feedback for radiology residents.pdf",
+            "filesize": 2004560,
+            "gdrive_id": "1NxaiAJKkZS7-waDpoqC4AKh7AAmUlH9t",
+            "mimeType": "application/pdf",
+            "owner": "806F1DCECFEA11EAAB12182C9D9F4BF5",
+            "pub_id": "06bb3b43-3fb8-0489-8bd7-8fd328a21af4",
+            "source_filename": "1-s2.0-S0363018825000465-main.pdf"
+          }
+        ],
+        "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.1067/j.cpradiol.2025.02.002",
+        "citekey": "Zhou2025-fj",
+        "copyright": "http://creativecommons.org/licenses/by/4.0/",
+        "created": 1758000609.321,
+        "dup_sha1": "29b3afbffe9412b3755568e8cc452fcfc3bdad5c",
+        "folders": [],
+        "id_list": [
+          "sha1:687d4e3dee5585b031b68a985bfae54e65353211",
+          "dup_sha1:29b3afbffe9412b3755568e8cc452fcfc3bdad5c",
+          "doi:10.1067/j.cpradiol.2025.02.002",
+          "pmid:39984362",
+          "url:http://dx.doi.org/10.1067/j.cpradiol.2025.02.002",
+          "url:https://www.sciencedirect.com/science/article/pii/S0363018825000465?via%3Dihub",
+          "url:https://linkinghub.elsevier.com/retrieve/pii/S0363018825000465",
+          "url:https://www.ncbi.nlm.nih.gov/pubmed/39984362"
+        ],
+        "incomplete": 0,
+        "issn_alt": "1535-6302",
+        "kind": "Research Article",
+        "labels": [],
+        "owner": "806F1DCECFEA11EAAB12182C9D9F4BF5",
+        "pdf_restricted": 1,
+        "pubtype": "PP_ARTICLE",
+        "sha1": "687d4e3dee5585b031b68a985bfae54e65353211"
+      },
+      "attachments": {
+        "directory": "Zhou2025-fj-PMID39984362-d608eac0",
+        "files": [
+          {
+            "filename": "fulltext.pdf",
+            "role": "fulltext"
+          },
+          {
+            "filename": "fulltext.md",
+            "role": "fulltext"
+          }
+        ]
+      },
+      "check": {
+        "checked_at": "2026-02-17T07:12:46.886Z",
+        "status": "metadata_outdated",
+        "findings": [
+          {
+            "type": "metadata_outdated",
+            "message": "Remote metadata has been updated since import",
+            "details": {
+              "updated_fields": [
+                "author",
+                "container-title",
+                "issued"
+              ],
+              "field_diffs": [
+                {
+                  "field": "author",
+                  "local": "Zhou, Zier; Rizwan, Arsalan; Rogoza, Nick; Chung, Andrew D; Kwan, Benjamin Ym",
+                  "remote": "Zhou, Zier; Rizwan, Arsalan; Rogoza, Nick; Chung, Andrew D; Kwan, Benjamin YM"
+                },
+                {
+                  "field": "container-title",
+                  "local": "Curr. Probl. Diagn. Radiol.",
+                  "remote": "Current Problems in Diagnostic Radiology"
+                },
+                {
+                  "field": "issued",
+                  "local": "2025-9-1",
+                  "remote": "2025-9"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "language": "en"
+  }
+]

@@ -1,0 +1,149 @@
+study_id: Bany Abdelnabi-2025
+extraction_date: '2026-02-17'
+extractor: ai:codex-gpt-5
+A1_country: United States
+A2_specialty: General / non-specialty-specific
+A3_participants:
+  A3a_type: Medical students
+  A3b_training_level: M3 (third-year medical students in clerkships)
+  A3c_sample_size: 100 (completed; 120 offered participation)
+  A3d_num_documents: 'Unclear: students reviewed 2 prior H&P documents each, but total number of H&P documents analyzed is not explicitly reported.'
+A4_study_design: Mixed methods
+A5_study_aim: 'The study aimed to investigate integration of LLMs into medical education for clerkship H&P learning, specifically to test whether ChatGPT-4 and ChatGPT-3.5 could enhance M3 students'' H&P
+  skills via personalized feedback and critical-thinking support. The stated objectives were to assess impact on clinical reasoning and to explore effectiveness of prompting techniques (contextual, few-shot,
+  and chain-of-thought).
+
+  '
+B1_ai_models: GPT-4; GPT-3.5 Turbo (via OpenAI ChatGPT API)
+B2_api_or_interface: API; Web interface (custom Streamlit chatbot)
+B3_prompt_design:
+  B3a_prompt_reported: Yes (full text provided)
+  B3b_engineering_techniques: Role assignment; contextual prompting; few-shot prompting; chain-of-thought prompting; multi-shot follow-up queries
+  B3c_prompt_iteration: 'Yes: H&P1 used basic single-shot prompts; H&P2 added contextual/CoT/few-shot features and allowed up to 2 follow-up questions per section.'
+B4_ai_role: Feedback generation
+B5_input_data: 'Other: Student-written H&P note sections (free-text clinical documentation pasted section-by-section)'
+B6_output_data: Written feedback text; Structured section-by-section suggestions for improvement
+B7_comparator: 'Learner self-report (number: 100)'
+B8_model_customization: Off-the-shelf (no customization)
+C1_wba_tools: 'Other: History and Physical (H&P) note review during clerkship'
+C2_assessment_context: 'Formative clerkship learning activity at UCF College of Medicine: M3 students reviewed two previously submitted and graded H&P assignments using a custom LLM interface. H&P1 provided
+  non-interactive single-shot feedback; H&P2 allowed interactive follow-up questioning (up to 2 per section) with advanced prompting.
+
+  '
+D1_content:
+  D1a_evidence_present: 'Yes'
+  D1b_prompt_rubric_alignment: 'Prompts were explicitly structured by H&P sections and expected clinical documentation elements (e.g., HPI completeness, differential diagnosis quality, management plan,
+    organization, relevance), indicating alignment to assessment-relevant domains.
+
+    '
+  D1c_content_coverage: No evidence reported
+  D1d_expert_review: No evidence reported
+D2_response_process:
+  D2a_evidence_present: 'Yes'
+  D2b_reasoning_transparency: CoT prompting techniques used but reasoning quality not independently examined.
+  D2c_hallucination_assessment: 'Yes: 38% of students reported occasionally encountering hallucinations (false or logically incorrect information).'
+  D2d_data_security: 'Unclear: IRB exemption, consent, and anonymous 5-digit self-assigned codes were reported, but detailed privacy/de-identification safeguards for pasted H&P data were not specified.'
+  D2e_quality_assurance: No evidence reported
+D3_internal_structure:
+  D3a_evidence_present: 'No'
+  D3b_reproducibility: No evidence reported
+  D3c_inter_model_agreement: No evidence reported
+  D3d_internal_consistency: No evidence reported
+  D3e_parameter_effects: No evidence reported
+  D3f_bias_fairness: No evidence reported
+D4_relationship_to_other_variables:
+  D4a_evidence_present: 'No'
+  D4b_ai_human_agreement: No evidence reported
+  D4c_human_raters: No evidence reported
+  D4d_discriminant_ability: No evidence reported
+  D4e_comparison_other_measures: No evidence reported
+D5_consequences:
+  D5a_evidence_present: 'Yes'
+  D5b_learner_performance_impact: 'Empirical self-reported impact data indicated perceived learning benefit (e.g., improved critical thinking and case-based learning support), but no objective performance
+    outcome measures were reported.
+
+    '
+  D5c_stakeholder_acceptability: 'Student acceptability was reported quantitatively: 44% very satisfied, 37% neutral, 19% dissatisfied; 70% reported in-depth feedback, 76% relevance to learning, 83% efficiency,
+    and 88% empathetic/compassionate interaction.
+
+    '
+  D5d_unintended_consequences: 'Empirical risks/challenges were reported: 38% occasionally encountered hallucinations; 51% reported substantial response variability with small prompt changes; 47% found
+    CoT prompting difficult.
+
+    '
+D_summary: 'Primary: D5 (empirical stakeholder acceptability and perceived educational impact, plus unintended consequences), D2 (hallucination and prompt-sensitivity response-process evidence); Secondary:
+  D1 (prompt-content alignment to H&P assessment domains); Absent: D3 (no psychometric/internal-structure metrics), D4 (no AI-human comparator evidence).'
+E1_limitations: '- Self-reported survey data may be biased (e.g., social desirability, overestimation of engagement/effectiveness).
+
+  - Participant demographic was narrow (M3 students), limiting generalizability.
+
+  - Limited LLM scope (general-purpose models; no broad comparison with specialized models).
+
+  - Survey framing/response options may have influenced findings.
+
+  - Structured survey may not fully capture nuance of student experiences.
+
+  '
+E2_future_research: '- Use mixed-method designs combining surveys with qualitative interviews.
+
+  - Add objective measures of engagement and learning outcomes.
+
+  - Examine attitudes toward AI feedback versus human faculty feedback.
+
+  - Include broader trainee populations across education stages and medical fields.
+
+  - Study custom-trained/fine-tuned medical-education LLMs.
+
+  - Conduct longitudinal studies of long-term effects on clinical reasoning/problem-solving.
+
+  '
+E3_funding_coi: 'Partially funded by the Department of Medicine at University of Central Florida College of Medicine (Pilot Funding Program). Conflicts of interest: Not reported.'
+F1_key_findings_summary: 'In this mixed-methods clerkship study, 100 M3 students used a custom interface connected to GPT-3.5/GPT-4 to receive section-wise feedback on H&P notes. Students reported generally
+  positive educational value, including perceived personalization, critical-thinking support, and case-based learning facilitation, with high ratings for relevance, efficiency, and satisfaction. At the
+  same time, the study identified practical risks: self-reported hallucinations and sensitivity of outputs to small prompt changes. The findings support feasibility and acceptability for formative use,
+  while highlighting reliability and design challenges.
+
+  '
+F2_rq3_relevance: 'The study highlights generative-AI-specific methodological gaps relevant to RQ3:
+
+  - Strong prompt dependence (H&P1 vs H&P2 differences; 51% report response variability with prompt changes).
+
+  - Limited response-process assurance despite real-world deployment (hallucination reported by 38%).
+
+  - Lack of objective learning-effect measures and absence of expert comparator benchmarking.
+
+  - No internal-structure psychometric evidence (reproducibility/reliability/fairness metrics absent), a gap made explicit by Downing-framework mapping.
+
+  '
+F3_confidence:
+  F3a_overall: 'Medium-High: Most fields are directly stated in methods/results/appendices; uncertainty remains for specialty labeling and extent of data-privacy procedures.'
+  F3b_items_for_verification: '- A4_specialty: H&P activity spans clerkship context and may be coded as general vs a specific specialty.
+
+    - A5d_num_documents: total analyzed H&P document count is implied but not explicitly enumerated.
+
+    - D1a/D1b: prompt-structure evidence is present, but formal content-validity evaluation is not.
+
+    - D2d: privacy/security details beyond anonymity/IRB exemption are limited.
+
+    '
+  F3c_uncertain_flags: '- A4_specialty
+
+    - A5d_num_documents
+
+    - D1a_evidence_present
+
+    - D2d_data_security
+
+    '
+abbreviations:
+  AI: artificial intelligence
+  API: 'Not defined in text (likely: Application Programming Interface)'
+  CoT: Chain-of-thought
+  H&P: History and Physical Examination
+  H&P1: H&P review task 1 (basic single-shot prompting)
+  H&P2: H&P review task 2 (contextual/CoT/few-shot prompting with follow-up)
+  HPI: History of Presenting Illness
+  IRB: 'Not defined in text (likely: Institutional Review Board)'
+  LLM: Large Language Model
+  M3: 3rd year of medical school
+  UCF: University of Central Florida

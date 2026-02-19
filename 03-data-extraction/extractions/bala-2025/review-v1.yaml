@@ -1,0 +1,78 @@
+article_id: bala-2025
+round: 1
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: D4c
+  severity: minor
+  type: clarification
+  current_value: 14 radiology residents with on-call experience rated model predictions;
+    3 senior radiology residents adjudicated...
+  recommended_value: 'Explicitly flag per Rule #9 that resident raters provide weaker
+    comparator than independent attending-expert raters'
+  rationale: 'D4c should more prominently note that the primary comparators are residents
+    (not attending faculty), which represents a weaker ground truth per Rule #9. The
+    extraction mentions this but could be more explicit.'
+  source_passage: fulltext Methods
+  raised_by: framework-reviewer
+- item: A2_year
+  severity: minor
+  type: rephrase
+  current_value: '2024'
+  recommended_value: 2024 (online publication date; article folder uses 2025 likely
+    reflecting print/volume date)
+  rationale: The extraction correctly notes this discrepancy in F3b. The DOI resolves
+    to a 2024 online publication. Folder naming uses 2025. Current coding of 2024
+    is correct per DOI metadata. Adding a note would aid verification.
+  source_passage: DOI metadata and article header
+  raised_by: fidelity-reviewer
+- item: D4b_ai_human_agreement
+  severity: minor
+  type: rephrase
+  current_value: 'AI outputs were compared against human judgments: 19/24 predictions
+    judged correct by resident raters using >=50% consensus (prediction accuracy 79.2%);
+    sensitivity for true missed diagnoses 79.2%; interrater reliability among human
+    raters Fleiss'' kappa = 0.43.'
+  recommended_value: 'AI outputs were compared against human judgments: 19/24 predictions
+    judged correct by resident raters using >=50% consensus (prediction accuracy 79.2%);
+    sensitivity for true missed diagnoses 79.2% (19/24); interrater reliability among
+    human raters Fleiss'' kappa = 0.43.'
+  rationale: 'Minor: adding the fraction 19/24 to the sensitivity claim for clarity,
+    since the same 19/24 produces both the accuracy and sensitivity figures. This
+    is not an error but aids interpretation.'
+  source_passage: Results section
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: 'D5 correctly identified: empirical stakeholder acceptability (satisfaction
+    scores, preference data) and unintended consequences (incorrect flagging of chronic
+    findings)'
+- reviewer: framework-reviewer
+  text: 'D2c indirect false-positive proxy correctly applied per Rule #8'
+- reviewer: framework-reviewer
+  text: D1 content mapping appropriately notes task-specific rather than rubric-based
+    alignment
+- reviewer: framework-reviewer
+  text: A2_year uncertainty flagged (folder suggests 2025, DOI indicates 2024)
+- reviewer: fidelity-reviewer
+  text: Accurate extraction of the iterative prompt-tuning methodology (train/validation/test
+    subsets)
+- reviewer: fidelity-reviewer
+  text: Good capture of the two-prompt sequential design
+- reviewer: fidelity-reviewer
+  text: Correct identification of both D4 and D5 evidence including stakeholder satisfaction
+    scores
+- reviewer: fidelity-reviewer
+  text: Appropriate flagging of the year discrepancy in F3b
+notes:
+- reviewer: framework-reviewer
+  text: Overall a well-mapped extraction. The study provides good D4+D5 evidence with
+    appropriate caveats about comparator quality.
+- reviewer: fidelity-reviewer
+  text: Strong fidelity. All statistics verified. No fabricated data points.

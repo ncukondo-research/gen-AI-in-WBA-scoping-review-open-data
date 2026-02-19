@@ -1,0 +1,160 @@
+study_id: Lyo-2025
+extraction_date: '2026-02-17'
+extractor: ai:codex-gpt-5
+A1_country: Not reported (dataset-based study)
+A2_specialty: Radiology; Neuroradiology
+A3_participants:
+  A3a_type: Not applicable (document-level analysis of radiology report pairs; outputs evaluated by expert neuroradiologists)
+  A3b_training_level: Not applicable (document-level analysis)
+  A3c_sample_size: Not applicable (document-level analysis)
+  A3d_num_documents: 100 paired reports (50 synthetic neuroradiology pairs; 50 ReXVal pairs)
+A4_study_design:
+  A4a_data_collection: Retrospective
+  A4b_analytical_approach: Quantitative
+A5_study_aim: 'The study hypothesized that an LLM could use paired preliminary and finalized radiology reports to identify discrepancies, grade severity, classify discrepancy type, and synthesize tailored
+  review topics for trainees. The stated goal was to convert revision data into actionable educational feedback for AI-augmented precision radiology education.
+
+  '
+B1_ai_models: OpenAI GPT-4 Turbo API (GPT4-1104-preview); GPT-3.5 mentioned only in preliminary testing
+B2_api_or_interface: API
+B3_prompt_design:
+  B3a_prompt_reported: Partially (key elements described)
+  B3b_engineering_techniques: Zero-shot, one-shot, few-shot prompting; role/context/conditional/output instructions; chained prompting; elements of zero-shot chain-of-thought (thought generation); temperature=0
+  B3c_prompt_iteration: 'Yes: preliminary prompt/model testing and tuning were described (including GPT-3.5 incoherence checks and deterministic temperature setting), though single prompt instances were
+    ultimately used per task'
+B4_ai_role: Report comparison / discrepancy detection; Scoring / grading (severity/type classification); Feedback generation
+B5_input_data: Radiology reports (paired preliminary and finalized report text/impressions); discrepancy lists plus finalized report for teaching-point generation
+B6_output_data: Identified discrepancies / errors; categorization/classification labels (severity and type); structured counts; written feedback text (teaching points and review topics)
+B7_comparator: 'Expert human raters (number: 3) for synthesized dataset; Faculty evaluations/expert annotations (existing) from ReXVal dataset'
+B8_model_customization: Off-the-shelf (no customization)
+C1_wba_tools: Radiology report review
+C2_assessment_context: 'Formative education context based on differences between trainee preliminary reports and attending-finalized reports. In this study, evaluation used synthesized neuroradiology report
+  pairs and open-source ReXVal report pairs (not live clinical trainee reports).
+
+  '
+D1_content:
+  D1a_evidence_present: 'Yes'
+  D1b_prompt_rubric_alignment:
+    approach: Domain-specific prompt alignment
+    key_finding: Prompts used explicit severity and type categories modeled after institutional attending discrepancy attestation macros.
+    detail: Severity/type categories and prompt definitions were explicitly specified (Table 1), and severity criteria were modeled after institutional attending discrepancy attestation macros.
+  D1c_content_coverage:
+    approach: Construct coverage assessment
+    key_finding: Discrepancies were classified across predefined severity and type domains to evaluate coverage of intended discrepancy constructs.
+    detail: The study evaluated whether outputs covered intended discrepancy domains by classifying each discrepancy across predefined severity (major/minor/addition/stylistic/other) and type (perceptual/interpretive/typographic/other) categories.
+  D1d_expert_review:
+    approach: Expert panel review
+    key_finding: Three neuroradiologists reviewed outputs, and teaching-point relevance was rated relevant in 84.5% of cases.
+    detail: Three subspecialty-trained neuroradiologists reviewed model outputs, rated discrepancy detection/classification, and rated teaching-point relevance (Likert 1-5; 84.5% relevant).
+D2_response_process:
+  D2a_evidence_present: 'Yes'
+  D2b_reasoning_transparency: CoT prompting techniques used but reasoning quality not independently examined.
+  D2c_hallucination_assessment:
+    approach: False-positive analysis as proxy
+    key_finding: Against expert ratings, average false positives were 3.3 and false negatives were 12, indicating limited unsupported discrepancy outputs.
+    detail: 'Yes (indirect: false-positive analysis as proxy): false positives (mean 3.3) and false negatives (mean 12) were quantified against expert ratings.'
+  D2d_data_security:
+    approach: Synthetic data used
+    key_finding: Public model privacy constraints prevented deidentified institutional-report use, so external and synthetic datasets were analyzed under IRB exemption.
+    detail: Institutional policy prohibited use of deidentified real reports with public OpenAI and no approved closed instance was available; therefore external/synthetic datasets were used; IRB exemption reported.
+  D2e_quality_assurance:
+    approach: Expert output review
+    key_finding: Three expert radiologists independently graded outputs in randomized order, with additional five-times repeated inference reproducibility checks.
+    detail: Outputs were independently graded by three expert radiologists in randomized order, with additional 5x repeat-inference reproducibility analysis.
+D3_internal_structure:
+  D3a_evidence_present: 'Yes'
+  D3b_reproducibility:
+    approach: Repeated inference runs
+    key_finding: Five repeated runs showed discrepancy-count ICC(2,1)=0.690, coefficient of variation=0.35, and maximal-severity weighted kappa=0.94.
+    detail: 'Reproducibility tested via five repeated runs per report: discrepancy count ICC(2,1)=0.690 and coefficient of variation=0.35; maximal severity Fleiss'' kappa=0.718 and weighted kappa=0.94.'
+  D3c_inter_model_agreement: No evidence reported
+  D3d_internal_consistency: No evidence reported
+  D3e_parameter_effects: No evidence reported
+  D3f_bias_fairness: No evidence reported
+D4_relationship_to_other_variables:
+  D4a_evidence_present: 'Yes'
+  D4b_ai_human_agreement:
+    approach: Multi-metric agreement analysis
+    key_finding: AI-human correlations were moderate to strong across datasets, with weighted overall F1 of 0.66 for severity and 0.64 for type.
+    detail: 'AI-human association/agreement reported: synthetic dataset correlation r=0.778 (p<0.001); RexVal correlations r=0.588 (all discrepancies) and r=0.581 (clinically significant), p<0.001;
+      Fleiss'' kappa severity=0.346 and type=0.340 among radiologists, increasing to 0.432 (severity) and 0.395 (type) when AI included; weighted kappa severity 0.622 (radiologists) and 0.669 (with AI);
+      weighted overall F1=0.66 (severity), 0.64 (type).'
+  D4c_human_raters: Three neuroradiology subspecialty-trained radiologists served as primary human comparators; ReXVal also provided expert radiologist annotations (number not reported).
+  D4d_discriminant_ability: No evidence reported
+  D4e_comparison_other_measures: No evidence reported
+D5_consequences:
+  D5a_evidence_present: 'Yes'
+  D5b_learner_performance_impact: No evidence reported
+  D5c_stakeholder_acceptability:
+    approach: Expert relevance rating
+    key_finding: Expert radiologists judged teaching points relevant in 84.5% of cases, with higher relevance at greater maximal discrepancy severity.
+    detail: Expert radiologists rated LLM-generated teaching points as relevant in 84.5% of cases; relevance increased with maximal discrepancy severity (Spearman rho=0.76, p<0.001).
+  D5d_unintended_consequences: No evidence reported
+D_summary: 'Primary: D4 (substantial AI-human comparison metrics across two datasets), D3 (quantitative reproducibility evidence; inter-model/internal-consistency/parameter/fairness sub-items absent). Secondary:
+  D1 (category/prompt alignment and expert content review), D2 (quality assurance workflow, indirect hallucination proxy, data-governance constraints), D5 (faculty acceptability of teaching points; learner-impact
+  and unintended-consequences sub-items absent).'
+E1_limitations: '- Could not use real trainee reports due to institutional data-governance constraints and lack of approved closed GPT instance.
+
+  - Datasets were synthetic/open-source, limited in subspecialty scope, and may not represent real trainee preliminary reports.
+
+  - ReXVal includes report impressions and auto-generated reports rather than true trainee preliminary reports.
+
+  - Distribution of discrepancy types was not explicitly balanced.
+
+  - Prompting strategy used single instances of zero-/one-/few-shot prompts and may not be optimal.
+
+  - Classification reliability considered insufficient by authors for formal trainee assessment.
+
+  - Text-only approach omits image-level context that may affect discrepancy severity interpretation.
+
+  - No resident/learner feedback on output usability; output length may deter uptake.
+
+  '
+E2_future_research: '- Evaluate performance on real institutional report data using locally approved/secure LLM deployments.
+
+  - Compare alternative prompting strategies (more elaborate CoT, decomposition, ensembling), RAG, and fine-tuning.
+
+  - Test hypotheses about LLM objectivity using stricter definitions, consensus adjudication, and repeated human+LLM analyses.
+
+  - Explore multimodal models integrating report text with images to improve educational accuracy and capability.
+
+  - Optimize output format for trainee consumption and empirically evaluate impact on learning outcomes.
+
+  - Expand discrepancy taxonomies and longitudinal aggregation for individualized/cohort-level educational profiling.
+
+  '
+E3_funding_coi: 'Funding not reported; Competing interests: no conflicts of interest reported.'
+F1_key_findings_summary:
+  summary: GPT-4 Turbo compared paired preliminary and finalized radiology reports to detect and classify discrepancies, achieving moderate classification performance (weighted F1 0.64-0.66) and teaching-point relevance rated at 84.5%.
+  detail: 'GPT-4 Turbo was used to compare paired preliminary/final radiology reports, detect discrepancies, classify severity/type, and generate trainee review topics. Across synthetic and
+    ReXVal datasets, AI outputs showed moderate-to-strong positive association with expert assessments and moderate classification performance (weighted F1 about 0.64-0.66), with higher performance in consensus
+    cases. Reproducibility testing showed moderate-to-good reliability for discrepancy counts and high reliability for maximal severity (weighted kappa 0.94). Expert radiologists judged generated teaching
+    points relevant in 84.5% of cases, with higher relevance in cases containing more severe discrepancies.
+
+    '
+F2_rq3_relevance: '- Provides explicit reproducibility metrics (ICC/kappa/coefficient of variation), addressing an internal-structure validity area often underreported in prior AI-workplace-based assessment studies.
+
+  - Demonstrates prompt-sensitive/chained generative workflow and acknowledges dependence on prompt strategy and model settings (temperature), highlighting generative-AI-specific methodological variability.
+
+  - Reveals implementation barriers tied to privacy/governance constraints that force use of synthetic/open datasets, limiting ecological validity.
+
+  - Identifies key gaps: no demographic bias/fairness subgroup testing (D3f), no learner outcome impact evidence (D5b), and no direct trainee acceptability data.
+
+  '
+F3_confidence:
+  F3a_overall: 'High: most required fields are explicitly reported with quantitative results; uncertainty is limited to country attribution and some prompt-detail granularity because appendices/supplements
+    were referenced rather than fully reproduced in the provided full text.'
+  F3b_items_for_verification: 'A3_country (dataset-origin geography not explicitly stated); B3a/B3c (extent of full prompt text and iteration depends on Appendix A/supplement access); D2c (coded as indirect
+    hallucination proxy via false positives per rule #8). Human verification (2026-02-18): study_id changed from ''Lyo-2024'' to ''Lyo-2025'' for consistency with project directory name and bibliography.json
+    id.'
+  F3c_uncertain_flags: A3_country; B3a_prompt_reported; B3c_prompt_iteration
+abbreviations:
+  AI: Artificial intelligence
+  API: 'Not defined in text (likely: Application Programming Interface)'
+  CoT: Chain of thought
+  F1: 'Not defined in text (likely: F1 score)'
+  ICC: Intraclass correlation coefficient
+  IRB: Institutional Review Board
+  LLM: Large language model
+  RAG: Retrieval augmented generation
+  ReXVal: Radiology Report Expert Evaluation

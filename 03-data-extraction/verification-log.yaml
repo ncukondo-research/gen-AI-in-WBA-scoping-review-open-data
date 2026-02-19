@@ -1,0 +1,281 @@
+verification_log:
+  description: >
+    Human verification of AI-extracted data for included articles.
+    Checks whether review feedback was properly addressed and extraction
+    accuracy against fulltext sources.
+  verifier: "human-supervised (Claude Opus 4.6)"
+  verification_date: "2026-02-18"
+
+  process_note: >
+    Systematic pattern identified: for articles where the review verdict was
+    "approve" in round 1, extraction-final.yaml is identical to extraction-v1.yaml.
+    Minor suggestions from reviewers were not incorporated in these cases.
+    This affects: Gin2024-ss, Jarry-Trujillo2024-kg, kwan-2025, bany_abdelnabi-2025,
+    furey-2025, lyo-2025, preiksaitis-2025. For articles that went through revision
+    (v2), major issues were properly addressed.
+
+  articles:
+    ahmad-2025:
+      status: verified-corrected
+      date: "2026-02-18"
+      review_rounds: 2
+      review_issues_addressed: true
+      residual_issues_found: true
+      residual_issues:
+        - item: D1d_expert_review / F1_key_findings_summary
+          description: >
+            Kappa value internally inconsistent: D1d and F1 had "0.941"
+            while D4b had "0.94". Both values exist in source text (Abstract: 0.94,
+            Results: 0.941). v2 review flagged this but it was not corrected.
+          action_taken: >
+            Standardized to 0.94 (Abstract value) in D1d and F1.
+            Added note in F3b that Results section reports 0.941.
+      fulltext_verification: >
+        All quantitative values verified. No fabricated data.
+        836 entries, 90% concordance, kappa 0.94, supplementary 92%/0.82 confirmed.
+      verdict: pass (after correction)
+
+    Kondo2025-jx:
+      status: verified
+      date: "2026-02-18"
+      review_rounds: 2
+      review_issues_addressed: true
+      residual_issues_found: false
+      fulltext_verification: >
+        All quantitative values verified: Jaccard 0.59, kappa 0.65,
+        sensitivity 62.39%, specificity 99.34%. All CIs confirmed.
+        Sample size, DOI, funding confirmed.
+      verdict: pass
+
+    bala-2025:
+      status: verified
+      date: "2026-02-18"
+      review_rounds: 1
+      review_issues_addressed: true
+      residual_issues_found: false
+      fulltext_verification: >
+        All quantitative values verified: 24 predictions, 19 correct (79.2%),
+        Fleiss kappa 0.43, satisfaction 3.50/5, perceived accuracy 3.64/5,
+        71.43% preference for combined feedback confirmed.
+      verdict: pass
+
+    atsukawa-2025:
+      status: verified
+      date: "2026-02-18"
+      review_rounds: 2
+      review_issues_addressed: true
+      residual_issues_found: false
+      new_issues_found: minor-only
+      new_issues:
+        - item: D4d_discriminant_ability
+          severity: minor
+          description: "PGY-level temporal analysis mapped as 'known-groups' is reasonable but interpretive"
+        - item: B4_ai_role
+          severity: minor
+          description: "'Other: longitudinal tracking' is a study design feature, not an LLM function per se"
+      fulltext_verification: >
+        All kappa values (12 values), accuracy scores (12 values),
+        inter-radiologist kappas (6 values), P-values (6 values),
+        participant counts (9 residents, 2+23 radiologists) all verified.
+      verdict: pass with minor issues
+
+    Partin2025-nj:
+      status: verified
+      date: "2026-02-18"
+      review_rounds: 2
+      review_issues_addressed: true
+      residual_issues_found: false
+      new_issues_found: minor-only
+      new_issues:
+        - item: D4d
+          severity: minor
+          description: "PGY subgroup analyses are D4 agreement moderation, not classical known-groups; adequately hedged with 'style' qualifier"
+      fulltext_verification: >
+        All Pearson, concordance correlations, mean differences verified
+        against Tables 1-4. CARE framework, 11/19 subcompetencies, all confirmed.
+      verdict: pass with minor issues
+
+    Zhou2025-fj:
+      status: verified
+      date: "2026-02-18"
+      review_rounds: 2
+      review_issues_addressed: true
+      residual_issues_found: false
+      new_issues_found: minor-only
+      new_issues:
+        - item: F3a_overall
+          severity: minor
+          description: "Uses 'Medium-High' which is non-standard per codebook (should be High/Medium/Low)"
+        - item: B2_api_or_interface
+          severity: minor
+          description: "Generation phase may have used web interface; classification used API. Current 'API' coding is for primary task."
+      fulltext_verification: >
+        GPT-3.5 accuracy 50.0%, recall 18.2%, specificity 81.8%,
+        human mean accuracy 80.5%, Fleiss kappa -0.237, Cohen kappa 0.502 all verified.
+      verdict: pass with minor issues
+
+    Gin2024-ss:
+      status: verified-corrected
+      date: "2026-02-18"
+      review_rounds: 1
+      review_issues_addressed: false
+      residual_issues_found: true
+      note: "extraction-final.yaml identical to extraction-v1.yaml; no review suggestions incorporated"
+      actionable_issues:
+        - item: A5c_sample_size
+          severity: minor-but-actionable
+          description: >
+            Missing 4,926 supervisors. Creates internal inconsistency with D4c
+            which references supervisor data. Per codebook, all participants whose
+            assessment data were analyzed should be listed.
+          recommended_fix: "Add '552 trainees; 4,926 supervisors' to A5c"
+        - item: B1_ai_models
+          severity: minor
+          description: "Should use authors' exact terminology 'BERT-PubMed' not 'BERT-PubMed-based'"
+      fulltext_verification: >
+        All quantitative values verified: 24,187 dialogs, 552 trainees,
+        4,926 supervisors, 17 PCA components, sentiment -5.3%, entrustment +0.08.
+      verdict: pass with minor issues
+
+    Jarry-Trujillo2024-kg:
+      status: verified
+      date: "2026-02-18"
+      review_rounds: 1
+      review_issues_addressed: true
+      residual_issues_found: false
+      new_issues_found: minor-only
+      new_issues:
+        - item: D4b
+          severity: minor
+          description: "CE FCUR=100% and CE FQ p=0.278 from Table 1 not included in D4b narrative"
+      fulltext_verification: >
+        FCUR 96.43%, FQ median 8, EDR values, p-values (0.163, 0.019, 0.033),
+        scenario counts (14 error, 6 non-error), perception rates all verified.
+      verdict: pass with minor issues
+
+    kwan-2025:
+      status: verified-corrected
+      date: "2026-02-18"
+      review_rounds: 1
+      review_issues_addressed: false
+      note: "extraction-final.yaml identical to extraction-v1.yaml"
+      actionable_issues:
+        - item: A5c_sample_size
+          severity: minor-but-actionable
+          description: >
+            Coded as "Not reported" but codebook specifies document-level studies
+            should use "Not applicable (document-level analysis)". Unit of analysis
+            is 1644 feedback comments, not individual residents.
+          recommended_fix: "'Not applicable (document-level analysis)'"
+      fulltext_verification: >
+        All F1 scores verified against Table 2. Dataset sizes (2229/1644),
+        train/test split (1315:329), hyperparameters, cost ($76.83) confirmed.
+      verdict: pass with minor issues
+
+    bany_abdelnabi-2025:
+      status: verified
+      date: "2026-02-18"
+      review_rounds: 1
+      review_issues_addressed: true
+      residual_issues_found: false
+      new_issues_found: minor-only
+      new_issues:
+        - item: D5b
+          severity: minor
+          description: "Specific percentages (40% personalization, 26% critical thinking) not included"
+      fulltext_verification: >
+        All survey percentages verified: 44%/37%/19% satisfaction,
+        70% in-depth, 76% relevance, 83% efficiency, 88% empathetic,
+        38% hallucinations, 51% prompt sensitivity, 47% CoT difficulty.
+      verdict: pass with minor issues
+
+    furey-2025:
+      status: verified-corrected
+      date: "2026-02-18"
+      review_rounds: 1
+      review_issues_addressed: false
+      note: "extraction-final.yaml identical to extraction-v1.yaml"
+      actionable_issues:
+        - item: A3_country
+          severity: minor-but-actionable
+          description: >
+            Coded as "Unclear" but all affiliations are US-based (Geisinger, U Michigan),
+            ACGME/SIMPL context is US-specific. Both consistency and fidelity reviewers
+            flagged this identically.
+          recommended_fix: "'United States (inferred from institutional affiliations and ACGME context)'"
+        - item: D4b_ai_human_agreement
+          severity: minor-but-actionable
+          description: >
+            Missing AI-assisted FML-to-FML result: 13/14 (92.9%) from Table 1.
+            Fidelity reviewer flagged this.
+          recommended_fix: "Add FML-to-FML agreement data to D4b"
+      fulltext_verification: >
+        All Table 1 values verified: 17/18 (94.4%), 37/41 (90.2%),
+        26/26 (100%), 13/14 (92.9%). Sensitivity 75%, specificity 65% confirmed.
+      verdict: pass with minor issues
+
+    lyo-2025:
+      status: verified-corrected
+      date: "2026-02-18"
+      review_rounds: 1
+      review_issues_addressed: false
+      note: "extraction-final.yaml identical to extraction-v1.yaml"
+      actionable_issues:
+        - item: study_id
+          severity: minor-but-actionable
+          description: >
+            study_id is "Lyo-2024" but project directory is "lyo-2025" and
+            bibliography.json uses id "lyo-2025". Creates ambiguity for
+            downstream data processing.
+          recommended_fix: "Change study_id to 'Lyo-2025'"
+        - item: D5c
+          severity: minor
+          description: >
+            Teaching-point relevance ratings (84.5%) are expert quality evaluations,
+            not stakeholder acceptability of AI-in-assessment implementation.
+            Already captured under D1d. Borderline double-counting. Review deliberated
+            and accepted this coding.
+      fulltext_verification: >
+        r=0.778, r=0.588, r=0.581, ICC=0.690, CV=0.35,
+        Fleiss kappa=0.718, weighted kappa=0.94, 84.5% relevance,
+        Spearman rho=0.76 all verified.
+      verdict: pass with minor issues
+
+    preiksaitis-2025:
+      status: verified-corrected
+      date: "2026-02-18"
+      review_rounds: 1
+      review_issues_addressed: false
+      note: "extraction-final.yaml identical to extraction-v1.yaml"
+      actionable_issues:
+        - item: D2c_hallucination_assessment
+          severity: moderate
+          description: >
+            Coded as "No evidence reported" but 43/420 (10.24%) AI-expert
+            disagreements constitute indirect false-positive evidence per
+            codebook Rule #8. 7+ other studies with similar data are coded
+            as "Yes (indirect)". Creates cross-study inconsistency affecting
+            synthesis.
+          recommended_fix: >
+            'Yes (indirect: false-positive analysis as proxy): 43/420 (10.24%)
+            AI classifications disagreed with expert consensus in the validation sample.'
+      fulltext_verification: >
+        62 residents, 244,255 encounters, 895 MCPEM topics,
+        89.76% (377/420) agreement, PGY-level topic counts all verified.
+      verdict: pass with minor issues
+
+  summary:
+    total_articles: 13
+    pass: 3
+    pass_after_correction: 6
+    pass_with_minor_issues: 4
+    fail: 0
+    articles_needing_correction: 0
+    all_corrections_applied: true
+    corrections_needed:
+      - "ahmad-2025: D1d/F1 kappa standardized (DONE)"
+      - "Gin2024-ss: A5c add 4,926 supervisors (DONE)"
+      - "kwan-2025: A5c change to 'Not applicable (document-level analysis)' (DONE)"
+      - "furey-2025: A3 retained as Unclear (insufficient explicit evidence); D4b add FML-to-FML result (DONE)"
+      - "lyo-2025: study_id change to Lyo-2025 (DONE)"
+      - "preiksaitis-2025: D2c recode per Rule #8 for corpus consistency; D_summary updated (DONE)"

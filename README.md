@@ -15,7 +15,8 @@ The review employed AI tools (Claude Code with Claude Opus 4.6 via Anthropic API
 │   ├── press-review.md                    # PRESS 2015 peer review evaluation
 │   ├── validate-search.md                 # Search recall validation
 │   ├── review-articles-dual.md            # Dual-AI batch screening orchestration
-│   └── review-articles.md                 # Base screening workflow
+│   ├── review-articles.md                 # Base screening workflow
+│   └── extract-data.md                    # Iterative extraction with 3-reviewer validation
 │
 ├── 01-search-strategy-development/        # Search strategy development phase
 │   ├── README.md                          # Detailed process documentation
@@ -29,7 +30,13 @@ The review employed AI tools (Claude Code with Claude Opus 4.6 via Anthropic API
 │   ├── screening-templates/               # AI reviewer instruction templates
 │   └── scripts/                           # Orchestration scripts (batch, parallel)
 │
-└── 03-data-extraction/                    # Data extraction phase (forthcoming)
+└── 03-data-extraction/                    # Data extraction phase
+    ├── README.md                          # Detailed process documentation
+    ├── extraction-codebook.md             # Complete extraction field definitions
+    ├── validity-sub-items.yaml            # Downing's framework sub-item mapping
+    ├── extractions/                       # Per-article extraction data (13 articles)
+    ├── restructuring-reviews/             # Field restructuring review archives
+    └── scripts/                           # Validation and workflow scripts
 ```
 
 ## How AI Was Used
@@ -42,7 +49,7 @@ AI tools were used throughout the review under human oversight, following the jo
 |-----------|------|------|
 | AI coding assistant | [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Orchestration of all AI-assisted tasks |
 | AI model (reviewer 1) | Claude Opus 4.6 (Anthropic) | Search development, PRESS review, screening, extraction |
-| AI model (reviewer 2) | GPT-5.3-Codex (OpenAI) | Independent screening reviewer |
+| AI model (reviewer 2) | GPT-5.3-Codex (OpenAI) | Independent screening reviewer, initial data extraction |
 | Search management | [Search-Hub](https://github.com/ncukondo/search-hub) | Multi-database query execution and session tracking |
 | Reference management | [Reference-Manager](https://github.com/ncukondo/reference-manager) | Citation management and fulltext retrieval |
 
@@ -63,6 +70,7 @@ All AI outputs were reviewed by human researchers before adoption:
 - **PRESS peer review**: Both AI-generated and human PRESS reviews were conducted
 - **Co-author review**: Independent audit by information specialist (YK)
 - **Article screening**: Dual-AI screening with human adjudication for all disagreements; TK made final inclusion/exclusion decisions
+- **Data extraction**: Codex initial extraction validated by 3 specialized Claude reviewer agents; TK performed final human verification of all 13 extractions
 
 ## Related Resources
 

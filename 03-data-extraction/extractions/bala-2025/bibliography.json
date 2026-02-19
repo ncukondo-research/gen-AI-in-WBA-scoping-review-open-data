@@ -1,0 +1,71 @@
+[
+  {
+    "id": "bala-2025",
+    "type": "article-journal",
+    "title": "Enhancing radiology training with GPT-4: Pilot analysis of automated feedback in trainee preliminary reports",
+    "author": [
+      {
+        "family": "Bala",
+        "given": "Wasif"
+      },
+      {
+        "family": "Li",
+        "given": "Hanzhou"
+      },
+      {
+        "family": "Moon",
+        "given": "John"
+      },
+      {
+        "family": "Trivedi",
+        "given": "Hari"
+      },
+      {
+        "family": "Gichoya",
+        "given": "Judy"
+      },
+      {
+        "family": "Balthazar",
+        "given": "Patricia"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          3
+        ]
+      ]
+    },
+    "container-title": "Current Problems in Diagnostic Radiology",
+    "container-title-short": "Current Problems in Diagnostic Radiology",
+    "volume": "54",
+    "issue": "2",
+    "page": "151-158",
+    "DOI": "10.1067/j.cpradiol.2024.08.003",
+    "ISSN": "0363-0188",
+    "URL": "http://dx.doi.org/10.1067/j.cpradiol.2024.08.003",
+    "publisher": "Elsevier BV",
+    "custom": {
+      "uuid": "3ac848e4-3340-4284-9aff-adb462307ad0",
+      "created_at": "2026-02-15T03:52:22.008Z",
+      "timestamp": "2026-02-17T07:12:52.375Z",
+      "attachments": {
+        "directory": "bala-2025-3ac848e4",
+        "files": [
+          {
+            "filename": "fulltext.md",
+            "role": "fulltext"
+          }
+        ]
+      },
+      "check": {
+        "checked_at": "2026-02-17T07:12:46.886Z",
+        "status": "ok",
+        "findings": []
+      }
+    },
+    "source": "Crossref",
+    "language": "en"
+  }
+]

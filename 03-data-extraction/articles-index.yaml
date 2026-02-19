@@ -1,0 +1,118 @@
+articles:
+- ref_key: Gin2024-ss
+  title: 'Assessing supervisor versus trainee viewpoints of entrustment through cognitive
+    and affective lenses: an artificial intelligence investigation of bias in feedback'
+  first_author: Gin Brian C
+  year: '2024'
+  doi: 10.1007/s10459-024-10311-9
+  pmid: '38388855'
+  has_fulltext: true
+  artifact_count: 24
+- ref_key: Jarry-Trujillo2024-kg
+  title: 'Surgeons vs ChatGPT: Assessment and feedback performance based on real surgical
+    scenarios'
+  first_author: Jarry Trujillo Cristián
+  year: '2024'
+  doi: 10.1016/j.jsurg.2024.03.012
+  pmid: '38749814'
+  has_fulltext: true
+  artifact_count: 2
+- ref_key: Kondo2025-jx
+  title: 'AI''s accuracy in extracting learning experiences from clinical practice
+    logs: Observational study'
+  first_author: Kondo Takeshi
+  year: '2025'
+  doi: 10.2196/68697
+  pmid: '41092407'
+  has_fulltext: true
+  artifact_count: 1
+- ref_key: Partin2025-nj
+  title: Evaluating the agreement between ChatGPT and the Clinical Competency Committee
+    in assigning ACGME milestones for family medicine residents
+  first_author: Partin Michael
+  year: '2025'
+  doi: 10.22454/FamMed.2025.363712
+  pmid: '40663416'
+  has_fulltext: true
+  artifact_count: 1
+- ref_key: Zhou2025-fj
+  title: Differentiating between GPT-generated and human-written feedback for radiology
+    residents
+  first_author: Zhou Zier
+  year: '2025'
+  doi: 10.1067/j.cpradiol.2025.02.002
+  pmid: '39984362'
+  has_fulltext: true
+  artifact_count: 10
+- ref_key: ahmad-2025
+  title: 'Evaluating Resident Feedback Using a Large Language Model: Are We Missing
+    Core Competencies?'
+  first_author: Ahmad Syed Ameen
+  year: '2025'
+  doi: 10.1002/lary.32368
+  pmid: ''
+  has_fulltext: true
+  artifact_count: 0
+- ref_key: atsukawa-2025
+  title: 'Evaluation of radiology residents'' reporting skills using large language
+    models: an observational study'
+  first_author: Atsukawa Natsuko
+  year: '2025'
+  doi: 10.1007/s11604-025-01764-y
+  pmid: '40056344'
+  has_fulltext: true
+  artifact_count: 12
+- ref_key: bala-2025
+  title: 'Enhancing radiology training with GPT-4: Pilot analysis of automated feedback
+    in trainee preliminary reports'
+  first_author: Bala Wasif
+  year: '2025'
+  doi: 10.1067/j.cpradiol.2024.08.003
+  pmid: ''
+  has_fulltext: true
+  artifact_count: 0
+- ref_key: bany_abdelnabi-2025
+  title: 'Usefulness of Large Language Models (LLMs) for Student Feedback on H&amp;P
+    During Clerkship: Artificial Intelligence for Personalized Learning'
+  first_author: Bany Abdelnabi Ahmad A
+  year: '2025'
+  doi: 10.1145/3712298
+  pmid: ''
+  has_fulltext: true
+  artifact_count: 12
+- ref_key: furey-2025
+  title: Can Artificial Intelligence Coach Faculty to Utilize Growth Mindset Language?
+    A Qualitative Analysis of Feedback Statements
+  first_author: Furey Michael J.
+  year: '2025'
+  doi: 10.1016/j.jss.2025.01.029
+  pmid: ''
+  has_fulltext: true
+  artifact_count: 5
+- ref_key: kwan-2025
+  title: Leveraging Large Language Models to Evaluate the Quality of Narrative Feedback
+    for Surgery Residents in Competency-Based Medical Education
+  first_author: Kwan Benjamin Y.M.
+  year: '2025'
+  doi: 10.1097/as9.0000000000000608
+  pmid: ''
+  has_fulltext: true
+  artifact_count: 2
+- ref_key: lyo-2025
+  title: 'From Revisions to Insights: Converting Radiology Report Revisions into Actionable
+    Educational Feedback Using Generative AI Models'
+  first_author: Lyo Shawn
+  year: '2025'
+  doi: 10.1007/s10278-024-01233-4
+  pmid: '39160366'
+  has_fulltext: true
+  artifact_count: 0
+- ref_key: preiksaitis-2025
+  title: 'Quantifying Emergency Medicine Residency Learning Curves Using Natural Language
+    Processing: Retrospective Cohort Study'
+  first_author: Preiksaitis Carl
+  year: '2025'
+  doi: 10.2196/82326
+  pmid: '41364786'
+  has_fulltext: true
+  artifact_count: 0

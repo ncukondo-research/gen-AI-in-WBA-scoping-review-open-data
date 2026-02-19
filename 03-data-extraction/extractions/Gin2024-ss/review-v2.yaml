@@ -1,0 +1,140 @@
+article_id: Gin2024-ss
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'RQ3: ''Not defined in text (likely: Research Question 3)'''
+  recommended_value: (remove entry)
+  rationale: RQ3 appears only in F2_rq3_relevance where it is part of the field key
+    name, not a value abbreviation. However, it does appear in the prose text of F2
+    ('relevant to RQ3'), so this is borderline acceptable. Minor style issue only.
+  source_passage: comparison with backup
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'ID: ''Not defined in text (likely: identifier)'''
+  recommended_value: (remove or retain)
+  rationale: ID appears as part of 'study ID 20-32478' in D2d. This is borderline;
+    'ID' is used as an abbreviation in the value text, so listing it is defensible.
+  source_passage: D2d_data_security field value
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'ID: ''Not defined in text (likely: identifier)'''
+  recommended_value: (remove)
+  rationale: Scanning the YAML field values, 'ID' does not appear as an abbreviation
+    in any field value. The codebook says 'Do NOT include abbreviations absent from
+    the current extraction's field values.'
+  source_passage: No field value contains the abbreviation 'ID'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'RQ3: ''Not defined in text (likely: Research Question 3)'''
+  recommended_value: (remove)
+  rationale: 'RQ3 appears only in F2_rq3_relevance field content, which is the extractor''s
+    own commentary using the project''s research question label. The field key itself
+    is ''F2_rq3_relevance'' but looking at the value text, ''RQ3'' does appear in
+    it. Actually, scanning F2: ''relevant to RQ3''. This is borderline since RQ3 is
+    a project term, not an article term. However per codebook rule, it appears in
+    field values, so listing it is technically correct.'
+  source_passage: 'F2: ''relevant to RQ3'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'QA: ''Not defined in text (likely: quality assurance)'''
+  recommended_value: 'QA: ''Not defined in text (likely: Quality assurance)'''
+  rationale: Cross-article consistency in capitalization of the likely expansion
+  source_passage: D2e uses 'QA' implicitly in heading context
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'BERT: Not defined in text (likely: Bidirectional Encoder Representations
+    from Transformers)'
+  recommended_value: 'BERT: Bidirectional Encoder Representations from Transformers'
+  rationale: 'The fulltext references section (Devlin et al., 2019) includes ''BERT:
+    Pre-training of Deep Bidirectional Transformers for Language Understanding'',
+    and the text mentions ''BERT-PubMed-a specialized version of the LLM, BERT'' with
+    the citation. While not an inline parenthetical definition like ''(BERT)'', the
+    term is sufficiently defined through the cited title. However, this is borderline
+    and the ''Not defined in text'' coding is also defensible.'
+  source_passage: Line 143, 333 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'EPA: Not defined in text (likely: Entrustable Professional Activities)'
+  recommended_value: 'EPA: Not defined in text (likely: Entrustable Professional Activities)'
+  rationale: 'Confirmed: EPA does not appear as an abbreviation in the main text body.
+    The term ''EPAs'' appears only in a reference title (Marty et al., 2021). Current
+    coding is correct.'
+  source_passage: Line 363 (reference only)
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'OR: odds ratio'
+  recommended_value: 'OR: Not defined in text (likely: Odds ratio)'
+  rationale: The fulltext uses 'OR' in Table 2 headers alongside beta coefficients
+    but does not explicitly spell out 'odds ratio (OR)' in running text. However,
+    the context makes the meaning unambiguous from the table legend.
+  source_passage: Table 2, line 200 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'PCA: principal component analysis'
+  recommended_value: 'PCA: principal component analysis'
+  rationale: 'Confirmed defined at line 59: ''principal component analysis (PCA)''.
+    Current value is correct but capitalization differs from article (lower case in
+    article). Minor style issue only.'
+  source_passage: Line 59 (Methods section)
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields are identical between new and backup (only doi/published_year
+    removed, abbreviations added). No content drift.
+- reviewer: framework-reviewer
+  text: Abbreviation list is comprehensive and well-sourced, covering medical, statistical,
+    and technical terms used in YAML values.
+- reviewer: consistency-reviewer
+  text: Comprehensive coverage of domain-specific abbreviations including USE, SST-2,
+    LMRD, O-SCORE
+- reviewer: consistency-reviewer
+  text: Proper 'Not defined in text' coding for abbreviations the article doesn't
+    define
+- reviewer: fidelity-reviewer
+  text: Comprehensive abbreviation list covering all domains (medical, statistical,
+    technical).
+- reviewer: fidelity-reviewer
+  text: Correct identification of non-defined abbreviations like QA, WBA, RQ3, US,
+    ID.
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. Only doi/published_year removed, abbreviation block added. No
+    extraction content changes detected.
+- reviewer: consistency-reviewer
+  text: RQ3 appears in multiple articles' F2 values as a project-level abbreviation.
+    It is technically present in YAML values, so listing it is acceptable, though
+    it is an extractor-introduced term. The ID issue is the clearest candidate for
+    removal. Overall the abbreviation list is thorough and well-formatted.
+- reviewer: fidelity-reviewer
+  text: No major issues. The O-SCORE abbreviation is correctly listed and the Modified
+    O-SCORE is mentioned in the text without explicit expansion as Ottawa Surgical
+    Competency Operating Room Evaluation.

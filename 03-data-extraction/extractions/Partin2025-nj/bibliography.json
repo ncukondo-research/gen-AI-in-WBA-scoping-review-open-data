@@ -1,0 +1,161 @@
+[
+  {
+    "id": "Partin2025-nj",
+    "type": "article-journal",
+    "title": "Evaluating the agreement between ChatGPT and the Clinical Competency Committee in assigning ACGME milestones for family medicine residents",
+    "author": [
+      {
+        "family": "Partin",
+        "given": "Michael"
+      },
+      {
+        "family": "Dambro",
+        "given": "Anthony B"
+      },
+      {
+        "family": "Newman",
+        "given": "Roland"
+      },
+      {
+        "family": "Shang",
+        "given": "Yimeng"
+      },
+      {
+        "family": "Kong",
+        "given": "Lan"
+      },
+      {
+        "family": "Clebak",
+        "given": "Karl T"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          6
+        ]
+      ]
+    },
+    "container-title": "Fam. Med.",
+    "volume": "57",
+    "issue": "6",
+    "page": "424-429",
+    "DOI": "10.22454/FamMed.2025.363712",
+    "PMID": "40663416",
+    "ISSN": "1938-3800",
+    "URL": "http://dx.doi.org/10.22454/FamMed.2025.363712",
+    "abstract": "BACKGROUND AND OBJECTIVES: Although artificial intelligence models have existed for decades, the demand for application of these tools within health care and especially medical education are exponentially expanding. Pressure is mounting to increase direct observation and faculty feedback for resident learners, which can create administrative burdens for a Clinical Competency Committee (CCC). This study aimed to assess the feasibility of utilizing a large language model (ChatGPT) in family medicine residency evaluation by comparing the agreement between ChatGPT and the CCC for the Accreditation Council for Graduate Medical Education (ACGME) family medicine milestone levels and examining potential biases in milestone assignment. METHODS: Written faculty feedback for 24 residents from July 2022 to December 2022 at our institution was collated and de-identified. Using standardized prompts for each query, we used ChatGPT to assign milestone levels based on faculty feedback for 11 ACGME subcompetencies. We analyzed these levels for correlation and agreement between actual levels assigned by the CCC. RESULTS: Using Pearson's correlation coefficient, we found an overall positive and strong correlation between ChatGPT and the CCC for competencies of patient care, medical knowledge, communication, and professionalism. We found no significant difference in correlation or mean difference in milestone level between male and female residents. No significant difference existed between residents with a high faculty feedback word count versus a low word count. CONCLUSIONS: This study demonstrates the feasibility for tools like ChatGPT to assist in the evaluation process of family medicine residents without apparent bias based on gender or word count.",
+    "publisher": "Fam Med",
+    "custom": {
+      "uuid": "4f31950e-50c7-4c6b-a62e-5183ff96de47",
+      "created_at": "2026-02-09T01:09:41.240Z",
+      "timestamp": "2026-02-17T07:12:52.375Z",
+      "paperpile": {
+        "_id": "e655b420-4ddf-04d4-a013-5389a5ea45c4",
+        "accessed": {
+          "year": "2025",
+          "month": "8",
+          "day": "8"
+        },
+        "attachments": [
+          {
+            "_id": "38305593-edc6-4187-8cb4-10fbf3167610",
+            "article_pdf": 1,
+            "created": 1754612709.029,
+            "filename": "All Papers/Other/Partin et al. 2025 - Evaluating the agreement between ChatGPT and the Cl ... Committee in assigning ACGME milestones for family medicine residents.pdf",
+            "filesize": 85480,
+            "gdrive_id": "1UdddQRB6PYOzme03g0CRShcxVSGNaGUj",
+            "mimeType": "application/pdf",
+            "pub_id": "e655b420-4ddf-04d4-a013-5389a5ea45c4",
+            "source_filename": "partin20240368docx-2025-06-06-17-53.pdf"
+          }
+        ],
+        "autoCleaned": 1,
+        "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.22454/FamMed.2025.363712",
+        "citekey": "Partin2025-nj",
+        "created": 1754612703.609,
+        "dup_sha1": "3fd1abf25f3afb4090b88b75c7d2d498a4e455b5",
+        "folders": [],
+        "id_list": [
+          "sha1:2e1488bf14010987c2585ba86e5c4151afde57f7",
+          "dup_sha1:3fd1abf25f3afb4090b88b75c7d2d498a4e455b5",
+          "doi:10.22454/FamMed.2025.363712",
+          "pmc:PMC12295611",
+          "pmid:40663416",
+          "url:http://dx.doi.org/10.22454/FamMed.2025.363712",
+          "url:https://pubmed.ncbi.nlm.nih.gov/40663416/",
+          "url:https://www.ncbi.nlm.nih.gov/pubmed/40663416",
+          "url:https://journals.stfm.org/familymedicine/2025/june/partin-0368/",
+          "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12295611"
+        ],
+        "incomplete": 0,
+        "issn_alt": "0742-3225",
+        "kind": "Research Article",
+        "labels": [],
+        "owner": "806F1DCECFEA11EAAB12182C9D9F4BF5",
+        "pdf_restricted": 0,
+        "pmc": "PMC12295611",
+        "pubtype": "PP_ARTICLE",
+        "sha1": "2e1488bf14010987c2585ba86e5c4151afde57f7",
+        "subfolders": [
+          "All Papers/P"
+        ]
+      },
+      "attachments": {
+        "directory": "Partin2025-nj-PMID40663416-4f31950e",
+        "files": [
+          {
+            "filename": "fulltext.pdf",
+            "role": "fulltext"
+          },
+          {
+            "filename": "fulltext.md",
+            "role": "fulltext"
+          }
+        ]
+      },
+      "check": {
+        "checked_at": "2026-02-17T07:12:44.346Z",
+        "status": "metadata_outdated",
+        "findings": [
+          {
+            "type": "metadata_outdated",
+            "message": "Remote metadata has been updated since import",
+            "details": {
+              "updated_fields": [
+                "title",
+                "author",
+                "container-title",
+                "issued"
+              ],
+              "field_diffs": [
+                {
+                  "field": "title",
+                  "local": "Evaluating the agreement between ChatGPT and the Clinical Competency Committee in assigning ACGME milestones for family medicine residents",
+                  "remote": "Evaluating the Agreement Between ChatGPT and the Clinical Competency Committee in Assigning ACGME Milestones for Family Medicine Residents"
+                },
+                {
+                  "field": "author",
+                  "local": "Partin, Michael; Dambro, Anthony B; Newman, Roland; Shang, Yimeng; Kong, Lan; Clebak, Karl T",
+                  "remote": "Partin, Michael; Dambro, Anthony B.; Newman, Roland; Shang, Yimeng; Kong, Lan; Clebak, Karl T."
+                },
+                {
+                  "field": "container-title",
+                  "local": "Fam. Med.",
+                  "remote": "Family Medicine"
+                },
+                {
+                  "field": "issued",
+                  "local": "2025-6",
+                  "remote": "2025-6-6"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "language": "en"
+  }
+]

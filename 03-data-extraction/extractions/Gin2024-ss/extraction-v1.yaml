@@ -1,0 +1,88 @@
+study_id: "Gin-2024"
+extraction_date: "2026-02-17"
+extractor: "ai:codex-gpt-5"
+doi: "10.1007/s10459-024-10311-9"
+published_year: "2024"
+
+A1_country: "United States"
+A2_specialty: "General / non-specialty-specific (required clerkships: pediatrics; internal medicine; obstetrics/gynecology; neurology/psychiatry; surgery; family/community medicine; anesthesia)"
+A3_participants:
+  A3a_type: "Medical students; clinical supervisors"
+  A3b_training_level: "Clerkship-year medical students"
+  A3c_sample_size: "552 trainees"
+  A3d_num_documents: "24,187 feedback dialogs/narratives (with entrustment ratings)"
+A4_study_design: "Observational: retrospective cohort / analysis"
+A5_study_aim: |
+  The study aimed to use LLM-based NLP to compare supervisor versus trainee documentation of entrustment-related feedback dialogs and examine cognitive themes, affective language (sentiment), and bias. The authors state they examined: "(1) the thematic content used to justify entrustment ratings, (2) the sentiment of the language used, and (3) the susceptibility of entrustment ratings and sentiment to potential sources of bias, including gender and UIM status."
+
+B1_ai_models: "Universal Sentence Encoder (USE) by Google; BERT-PubMed-based sentiment classifier (trained on SST-2 and LMRD; final model retrained with gender-neutralized LMRD)"
+B2_api_or_interface: "Other: Local Python/TensorFlow implementation (no cloud interface reported)"
+B3_prompt_design:
+  B3a_prompt_reported: "Not applicable (non-generative model)"
+  B3b_engineering_techniques: "Not applicable (non-generative model)"
+  B3c_prompt_iteration: "Not applicable (non-generative model)"
+B4_ai_role: "Feedback analysis / coding; Other: sentiment quantification and bias analysis of feedback narratives"
+B5_input_data: "Narrative feedback / free-text comments"
+B6_output_data: "Categorization / classification labels; Numerical scores / ratings (sentiment probability, PCA-derived theme projections)"
+B7_comparator: "Other: AI-derived theme/sentiment outputs were statistically related to existing human-documented entrustment ratings (supervisor- and trainee-documented); no direct AI-vs-human same-task rating agreement design"
+B8_model_customization: "Custom training: BERT-PubMed sentiment classifier trained and retrained with gender-neutralized training data; USE used off-the-shelf"
+
+C1_wba_tools: "Narrative feedback forms (general / institution-specific tool not named); EPA (Entrustable Professional Activities)-related entrustment-supervision rating via Modified O-SCORE scale"
+C2_assessment_context: |
+  Workplace observations of clerkship medical students across required clinical rotations in a US medical school (2020-2021), with feedback dialogs documented by either trainee or supervisor after observed tasks (e.g., physical exam, history-taking, oral presentation, procedures). Entrustment ratings (1-4 supervision scale) were recorded adjacent to narratives. Formative vs summative use is Unclear: ad-hoc entrustment observations are described, and discussion references expanding formative/summative uses generally.
+
+D1_content:
+  D1a_evidence_present: "Yes"
+  D1b_prompt_rubric_alignment: "No evidence reported"
+  D1c_content_coverage: "AI theme extraction used USE embeddings plus PCA, retaining 17 components representing 33% of thematic variance; authors then identified coherent themes from 99th/1st percentile narrative subsets per component."
+  D1d_expert_review: "A panel of expert human coders (medical education authors) independently coded component-linked narrative subsets and iterated to consensus on theme labels (Supplemental Table S2)."
+D2_response_process:
+  D2a_evidence_present: "Yes"
+  D2b_reasoning_transparency: "No evidence reported"
+  D2c_hallucination_assessment: "No evidence reported"
+  D2d_data_security: "AI/statistical computation was run locally (TensorFlow/Python; Stata), with no cloud/shared resources; identities were de-identified/replaced by random tokens; participant data were not used to train AI models; IRB approval reported (study ID 20-32478)."
+  D2e_quality_assurance: "Quality control included iterative human-coder consensus for theme assignment and explicit algorithmic-bias mitigation by neutralizing gendered pronouns in training/analysis data before final sentiment modeling."
+D3_internal_structure:
+  D3a_evidence_present: "Yes"
+  D3b_reproducibility: "No evidence reported"
+  D3c_inter_model_agreement: "No evidence reported"
+  D3d_internal_consistency: "No evidence reported"
+  D3e_parameter_effects: "No evidence reported"
+  D3f_bias_fairness: |
+    The study performed empirical bias/fairness analyses. It found model-level gendered pronoun bias in sentiment prediction before mitigation (approximately -5% for female pronouns and -10% for gender-neutral vs male pronouns), then retrained with gender-neutralized data. In study data, sentiment differed by trainee gender and UIM status (e.g., male +1.3% positive sentiment; UIM +1.2 to +1.3% in relevant contrasts), while entrustment ratings showed no significant subgroup differences.
+D4_relationship_to_other_variables:
+  D4a_evidence_present: "Yes"
+  D4b_ai_human_agreement: "Yes (association/correlation, not direct agreement): AI-derived theme components were related to human entrustment ratings using multilevel ordinal logistic regression (reported beta coefficients and odds ratios, e.g., trainee oral presentation theme β=0.47, OR 1.60; supervisor oral presentation theme β=0.31, OR 1.37)."
+  D4c_human_raters: "Human comparators were trainees (n=552) and supervisors (n=4926) who documented entrustment ratings and narratives; this is mixed comparator strength because trainee-documented ratings function partly as self-report while supervisor ratings represent faculty assessment."
+  D4d_discriminant_ability: "AI-derived outputs differentiated known groups/conditions (supervisor vs trainee writer; male vs female; UIM vs non-UIM) and identified differential theme-entrustment associations by group."
+  D4e_comparison_other_measures: "No evidence reported"
+D5_consequences:
+  D5a_evidence_present: "No"
+  D5b_learner_performance_impact: "No evidence reported"
+  D5c_stakeholder_acceptability: "No evidence reported"
+  D5d_unintended_consequences: "No evidence reported"
+
+D_summary: "Primary: D4 (associations between AI-derived themes and human entrustment ratings via multilevel regression) and D3 (empirical bias/fairness analyses including subgroup effects and pre-mitigation algorithmic bias testing); Secondary: D1 (expert-reviewed thematic coding/coverage), D2 (data security, de-identification, QA procedures); Absent: D5 (no empirical impact/acceptability/consequence outcomes of AI use)."
+
+E1_limitations: |
+  - Asymmetry in documentation volume (many more trainee than supervisor narratives).
+  - No paired supervisor-and-trainee documentation of the same feedback dialog; comparisons were across similar tasks/contexts using multilevel modeling.
+  - Possible selection bias in who documented feedback.
+  - Single-institution, clerkship-year medical student sample limits transferability/generalizability.
+  - LLM transfer-learning limitations: susceptibility to bias and generalizability constraints from training data.
+E2_future_research: |
+  - Assess transferability/generalizability of findings in other settings and trainee levels.
+  - Examine why trainee documentation sentiment is more negative than supervisor documentation.
+  - Investigate links between trainee emotional state and prioritization of entrustment-related factors.
+  - Clarify the significance of specific gender-related thematic differences.
+  - Apply/test methods in residency contexts where entrustment conditions differ.
+E3_funding_coi: "Funding: Not reported. Conflicts of interest: authors declared no competing interests."
+
+F1_key_findings_summary: |
+  This retrospective AI-assisted document analysis of 24,187 clerkship feedback dialogs found that supervisors and trainees emphasized different entrustment-linked themes, with overlap mainly in oral presentations and patient communication. Trainee-written narratives had lower positive sentiment than supervisor-written narratives (about -5.3%), yet trainees documented slightly higher entrustment ratings (+0.08 on a 1-4 scale). Statistical bias analyses showed sentiment differences by trainee gender and UIM status, while entrustment ratings did not show corresponding subgroup differences. The authors conclude that bias appears more evident in emotive language than in entrustment rating levels.
+F2_rq3_relevance: |
+  The study highlights methodological challenges relevant to RQ3: (1) non-generative LLM/NLP pipelines (embedding + classifier) can still be highly informative for WBA narrative analysis; (2) algorithmic bias detection and mitigation (gender-neutral retraining) materially affects interpretability; (3) large-scale narrative analysis requires hybrid AI-human coding workflows; (4) despite strong D4-style association evidence, reproducibility/reliability metrics (D3b-D3e) and consequential outcomes (D5) remain major evidence gaps.
+F3_confidence:
+  F3a_overall: "Medium-High: Most fields are directly stated; moderate uncertainty remains in mapping this non-generative NLP design to some intervention-oriented codebook items (especially B3/B7 and D5 boundary)."
+  F3b_items_for_verification: "B7, D4d, and D5a-D5d may benefit from second-pass review due to interpretive boundaries between association analyses, known-groups discrimination, and consequences evidence."
+  F3c_uncertain_flags: "B2_api_or_interface; C2 formative vs summative designation; D4d discriminant ability classification."

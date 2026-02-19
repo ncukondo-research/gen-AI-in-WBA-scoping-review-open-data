@@ -1,0 +1,118 @@
+article_id: kwan-2025
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: revise
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'US: ''Not defined in text (likely: United States)'''
+  recommended_value: (remove entry)
+  rationale: US does not appear in YAML field values for this Canadian study.
+  source_passage: Scanned all field values
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: major
+  type: remove
+  current_value: 'US: ''Not defined in text (likely: United States)'''
+  recommended_value: (remove)
+  rationale: 'US does not appear in any YAML field value. The study is set in Canada.
+    Scanning all fields: not found.'
+  source_passage: No field value contains 'US'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'AI: ''artificial intelligence'''
+  recommended_value: 'AI: ''Artificial intelligence'''
+  rationale: Cross-article consistency
+  source_passage: Multiple fields use 'AI'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'EPA: ''entrustable professional activities'''
+  recommended_value: 'EPA: ''Entrustable Professional Activities'''
+  rationale: Cross-article consistency in capitalization
+  source_passage: Multiple fields use 'EPA'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'GPT: ''generative pre-trained transformer'''
+  recommended_value: 'GPT: ''Generative pre-trained transformer'''
+  rationale: Cross-article consistency
+  source_passage: Multiple fields
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'CoT: Not defined in text (likely: Chain-of-Thought)'
+  recommended_value: 'CoT: Not defined in text (likely: Chain-of-Thought)'
+  rationale: 'Confirmed: the fulltext uses ''Chain-of-Thought'' as a section heading
+    and in text (line 105, 145, 165) but does not use the abbreviation ''CoT''. The
+    abbreviation appears in the extraction field values (B3b, D2b). Since ''CoT''
+    is used in extraction but not defined with that abbreviation in the article, the
+    ''Not defined in text'' coding is correct.'
+  source_passage: Lines 105, 145, 165 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'US: Not defined in text (likely: United States)'
+  recommended_value: (remove US entirely or verify it appears in field values)
+  rationale: 'Checking extraction field values: US appears in E1 cost context (''$76.83
+    US'', ''$3,700 US'') - this is a currency denominator from the fulltext, not an
+    abbreviation per se. However, it is borderline. If ''US'' does not appear in any
+    extraction field value, it should be removed.'
+  source_passage: Line 258 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'GPT: generative pre-trained transformer'
+  recommended_value: 'GPT: generative pre-trained transformer'
+  rationale: 'Checking fulltext: GPT is used extensively but the definition ''generative
+    pre-trained transformer'' is not spelled out in the Kwan fulltext. This may need
+    ''Not defined in text'' coding. However, GPT as a well-known product name may
+    not require explicit article definition. Minor style issue.'
+  source_passage: Not found spelled out in fulltext
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content changes.
+- reviewer: framework-reviewer
+  text: Good abbreviation coverage including QuAL, CBME, EPA, CoT, F1, GPT.
+- reviewer: consistency-reviewer
+  text: Good inclusion of QuAL and F1 definitions
+- reviewer: consistency-reviewer
+  text: Clean, well-organized abbreviation section
+- reviewer: fidelity-reviewer
+  text: Accurate definitions for QuAL (Quality of Assessment for Learning), CBME,
+    EPA, F1.
+- reviewer: fidelity-reviewer
+  text: API correctly defined as 'application programming interface' matching fulltext
+    line 85.
+- reviewer: fidelity-reviewer
+  text: Good coverage of all field-value abbreviations.
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. doi/published_year removed, abbreviation block added. One minor
+    over-inclusion.
+- reviewer: consistency-reviewer
+  text: The spurious 'US' entry is the main issue. This study is Canadian and US does
+    not appear in field values.
+- reviewer: fidelity-reviewer
+  text: No major issues. US and GPT definition sourcing are minor points.
+- reviewer: team-lead
+  text: 'Lightweight post-fix review: Removed spurious US entry not in YAML values.
+    Fixes verified, validate_yaml.py passes. Approved.'

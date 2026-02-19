@@ -1,0 +1,101 @@
+article_id: preiksaitis-2025
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'DIF: ''Not defined in text (likely: Differential item functioning)'''
+  recommended_value: (remove or retain)
+  rationale: DIF appears in F2_rq3_relevance value text ('DIF-equivalent'). Technically
+    present in field values, so defensible.
+  source_passage: F2_rq3_relevance
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'AI: ''Not defined in text (likely: Artificial Intelligence)'''
+  recommended_value: 'AI: ''Not defined in text (likely: Artificial intelligence)'''
+  rationale: 'Cross-article consistency in capitalization. Also verify: the article
+    likely does define AI somewhere; if so, the ''Not defined in text'' framing may
+    be incorrect. However, this is a source-fidelity issue, not consistency.'
+  source_passage: Multiple fields use 'AI'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (absent)
+  recommended_value: 'WBA: ''Not defined in text (likely: Workplace-based assessment)'''
+  rationale: WBA appears in F2 field value.
+  source_passage: 'F2: ''AI-in-WBA evidence synthesis'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'AI: Not defined in text (likely: Artificial Intelligence)'
+  recommended_value: 'AI: Not defined in text (likely: Artificial Intelligence)'
+  rationale: 'Confirmed: searching the fulltext, ''AI'' is not defined with explicit
+    parenthetical expansion. The term appears but not with ''artificial intelligence
+    (AI)'' inline. Current coding is correct.'
+  source_passage: Throughout fulltext (no definition found)
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'EHR: Not defined in text (likely: Electronic health record)'
+  recommended_value: 'EHR: Not defined in text (likely: Electronic health record)'
+  rationale: 'Confirmed: the fulltext uses ''electronic health records'' in the keywords
+    (line 11) but does not explicitly define ''EHR'' with parenthetical expansion.
+    Current coding is correct.'
+  source_passage: Line 11 (keywords only)
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'COVID-19: Not defined in text (likely: Coronavirus disease 2019)'
+  recommended_value: 'COVID-19: Not defined in text (likely: Coronavirus disease 2019)'
+  rationale: 'Confirmed: COVID-19 is used in the fulltext without explicit definition.
+    As a universally recognized term, this is appropriate.'
+  source_passage: fulltext.md
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content changes.
+- reviewer: framework-reviewer
+  text: Very comprehensive abbreviation list covering all relevant medical (ED, EM,
+    ESI, PGY, MCPEM, SNOMED CT), technical (API, RAG, NLP, IR, IE), and regulatory
+    (HIPAA, IRB) terms.
+- reviewer: consistency-reviewer
+  text: Excellent comprehensive coverage including domain-specific terms (MCPEM, SNOMED
+    CT, ESI, EHR, IE, IR)
+- reviewer: consistency-reviewer
+  text: Most abbreviations properly annotated with source-fidelity status
+- reviewer: consistency-reviewer
+  text: COVID-19 included appropriately
+- reviewer: fidelity-reviewer
+  text: Excellent comprehensive coverage of abbreviations including domain-specific
+    ones (SNOMED CT, MCPEM, ESI, IE, IR).
+- reviewer: fidelity-reviewer
+  text: Correct definitions for ESI, HIPAA, MCPEM, SNOMED CT, ED, EM, IRB, PGY, API,
+    NLP, RAG.
+- reviewer: fidelity-reviewer
+  text: Appropriate identification of non-defined abbreviations (AI, DIF, EHR, QA,
+    WBA).
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. doi/published_year removed, abbreviation block added.
+- reviewer: consistency-reviewer
+  text: Wait - WBA IS already listed. Let me recheck. Yes, WBA is listed on line 119.
+    My error. Retracting the add_missing issue. This is a clean file.
+- reviewer: fidelity-reviewer
+  text: No major issues. Thorough and well-sourced abbreviation list.

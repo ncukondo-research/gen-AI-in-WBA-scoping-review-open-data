@@ -1,0 +1,132 @@
+article_id: Zhou2025-fj
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: D2c_hallucination_assessment
+  severity: minor
+  type: clarification
+  current_value: 'Yes (indirect: false-positive analysis as proxy): In source-classification,
+    GPT-3.5 had 50.0% accuracy, 18.2% recall for AI-generated comments, and 81.8%
+    specificity for human-written comments, indicating frequent source-misattribution
+    errors.'
+  recommended_value: Current coding is acceptable but should be noted in F3b as an
+    interpretive stretch.
+  rationale: 'The R1 review raised a valid concern that the Zhou study''s source-differentiation
+    task (identifying human vs AI comments) is not a standard false-positive analysis
+    of AI assessment outputs against a clinical ground truth. The ''false positive''
+    here is GPT-3.5 misclassifying comment sources, not fabricating clinical content.
+    However, the v2 extraction has addressed this by adding explicit classification
+    metrics and clarifying what the proxy refers to (source-misattribution errors).
+    The coding is now internally consistent with Rule #8''s intent (AI outputs not
+    matching ground truth), though the ground truth here is comment source rather
+    than clinical accuracy. This is a reasonable interpretive stretch that should
+    remain flagged in F3c (which it already is). No change needed.'
+  source_passage: fulltext Table 2 and Results section
+  raised_by: framework-reviewer
+- item: D2c
+  severity: minor
+  type: clarification
+  current_value: 'Yes (indirect: false-positive analysis as proxy): In source-classification,
+    GPT-3.5 had 50.0% accuracy, 18.2% recall for AI-generated comments, and 81.8%
+    specificity for human-written comments, indicating frequent source-misattribution
+    errors.'
+  recommended_value: 'Keep current but note in F3b that this is a broader application
+    of Rule #8: the ''false positives'' here are source-misattribution errors in a
+    classification task rather than hallucinated clinical content.'
+  rationale: The Round 1 framework-reviewer noted that source-differentiation misclassification
+    differs from clinical content hallucination. The v2 extraction added classification
+    metrics (which is good) but the conceptual distinction could be noted. This is
+    an interpretive mapping issue rather than a factual error.
+  source_passage: 'Table 2 in fulltext: GPT-3.5 accuracy 50.0%, recall 18.2%, specificity
+    81.8%'
+  raised_by: fidelity-reviewer
+- item: F3a_overall
+  severity: minor
+  type: consistency
+  current_value: 'Medium-High: Most fields are explicitly reported; some mapping judgments
+    were required for D1 content-validity and D2c indirect hallucination proxy.'
+  recommended_value: No change needed (informational note only)
+  rationale: The confidence level 'Medium-High' is not one of the codebook's standard
+    values (High, Medium, Low). However, other approved finals also use non-standard
+    confidence (e.g., Gin-2024 uses 'Medium-High'). Since the approved corpus already
+    contains this pattern, no change is strictly required. Flagging for awareness
+    only.
+  source_passage: ''
+  raised_by: consistency-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: D1a correctly changed to 'No' per R1 framework-reviewer recommendation. The
+    content comparison between human and GPT comments (length, specificity, clinical
+    detail) is correctly reclassified as study findings rather than content validity
+    evidence. D1b, D1c, D1d all correctly set to 'No evidence reported'.
+- reviewer: framework-reviewer
+  text: 'D_summary updated to reflect D1 absence: now correctly lists D1 as absent.'
+- reviewer: framework-reviewer
+  text: D2c clarified with explicit metrics per R1 consistency-reviewer feedback.
+- reviewer: framework-reviewer
+  text: A5d clarified per R1 fidelity-reviewer feedback.
+- reviewer: framework-reviewer
+  text: D4 mapping remains accurate with kappa values and accuracy metrics properly
+    reported.
+- reviewer: fidelity-reviewer
+  text: 'Round 1 major issue addressed: D1a reclassified from ''Yes'' to ''No''; D1c
+    changed from content-characteristic comparison to ''No evidence reported''. This
+    correctly recognizes that descriptive quality comparison is study findings, not
+    content validity evidence.'
+- reviewer: fidelity-reviewer
+  text: 'Round 1 minor issues addressed: D2c now includes specific classification
+    metrics (50.0% accuracy, 18.2% recall, 81.8% specificity); A5d now specifies ''GPT-3.5''
+    for synthetic comments.'
+- reviewer: fidelity-reviewer
+  text: 'All statistics verified against fulltext Table 2: human raters mean accuracy
+    80.5%, GPT-3.5 accuracy 50.0%, Fleiss'' kappa -0.237, Cohen''s kappa (human-human)
+    0.502.'
+- reviewer: fidelity-reviewer
+  text: 'Human rater individual values confirmed: Human1 78.2% accuracy, Human2 82.7%
+    accuracy.'
+- reviewer: fidelity-reviewer
+  text: 'Comment length statistics confirmed: human median 16 words (range 4-51),
+    synthetic median 11 words (range 3-28).'
+- reviewer: fidelity-reviewer
+  text: 'Funding sources confirmed: Queen''s University Radiology Research Grant and
+    Canadian Radiological Foundation 2024 award.'
+- reviewer: fidelity-reviewer
+  text: DOI 10.1067/j.cpradiol.2025.02.002 confirmed.
+- reviewer: fidelity-reviewer
+  text: No fabricated data points detected.
+- reviewer: consistency-reviewer
+  text: 'All R1 issues fully addressed: D1a reclassified to ''No'', D2c expanded with
+    specific metrics (50% accuracy, 18.2% recall, 81.8% specificity), A5d rephrased
+    to specify GPT-3.5.'
+- reviewer: consistency-reviewer
+  text: 'D_summary format consistent with approved finals (''Primary: D4 (...). Secondary:
+    D2 (...). Absent: D1 (...), D3 (...), D5 (...)'').'
+- reviewer: consistency-reviewer
+  text: Null-value phrasing correct across all D sub-items.
+- reviewer: consistency-reviewer
+  text: YAML structure passes validation.
+- reviewer: consistency-reviewer
+  text: F3c correctly retains D2c and D1c as uncertain flags.
+notes:
+- reviewer: framework-reviewer
+  text: All R1 major issues have been correctly addressed. The D1 reclassification
+    was the primary change and is well executed. The D2c coding remains an interpretive
+    boundary case but is adequately flagged.
+- reviewer: fidelity-reviewer
+  text: Good revision. The D1 reclassification is the key structural improvement.
+    The D2c coding remains an interpretive mapping choice that should be applied consistently
+    across studies.
+- reviewer: consistency-reviewer
+  text: Well-handled revision. D2c now includes quantitative detail consistent with
+    other indirect-proxy codings (e.g., Lyo-2025, Bala-2025). The unusual study design
+    (source differentiation) is appropriately flagged.

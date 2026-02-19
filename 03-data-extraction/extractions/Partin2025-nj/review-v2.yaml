@@ -1,0 +1,104 @@
+article_id: Partin2025-nj
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: E3_funding_coi
+  severity: minor
+  type: consistency
+  current_value: 'Funding: Not reported. COI: Not reported.'
+  recommended_value: No change needed
+  rationale: 'This was flagged in R1. The v2 extraction now uses ''Funding: Not reported.
+    COI: Not reported.'' which is consistent with the pattern used in Gin-2024 (''Funding:
+    Not reported. Conflicts of interest: authors declared no competing interests.'').
+    Acceptable variation. No action needed.'
+  source_passage: ''
+  raised_by: consistency-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: 'D3f correctly reclassified from subgroup analyses to ''No evidence reported''
+    per R1 framework-reviewer recommendation. The gender/PGY/word-count subgroup analyses
+    are correctly treated as D4 agreement moderation rather than D3f bias detection.
+    This is the correct interpretation: the study examines whether AI-CCC correlation
+    varies by subgroup (D4 moderation), not whether AI outputs themselves are systematically
+    biased (D3f).'
+- reviewer: framework-reviewer
+  text: D3a correctly changed to 'No' following D3f reclassification, since no other
+    D3 sub-items have empirical evidence.
+- reviewer: framework-reviewer
+  text: 'D_summary updated appropriately: now reads ''Primary: D4 (extensive AI-CCC
+    association/agreement metrics, including subgroup moderation-style analyses).
+    Secondary: D1 (prompt-rubric alignment), D2 (de-identification/process controls).
+    Absent: D3 (no internal-structure evidence reported across D3b-D3f) and D5 (consequences
+    evidence).'' This accurately reflects the reclassification.'
+- reviewer: framework-reviewer
+  text: D4d correctly captures the PGY-level known-groups style analyses showing differential
+    AI-CCC relationships across training levels.
+- reviewer: framework-reviewer
+  text: A5c rephrased to '24 residents' per R1 feedback.
+- reviewer: framework-reviewer
+  text: E3 standardized per R1 feedback.
+- reviewer: framework-reviewer
+  text: F2 appropriately notes the bias/fairness subgroup analyses as a gap area and
+    the reproducibility concern.
+- reviewer: fidelity-reviewer
+  text: 'Round 1 major issues successfully addressed: D3f reclassified from bias/fairness
+    evidence to ''No evidence reported'' (subgroup analyses correctly moved to D4
+    context); D3a changed from ''Yes'' to ''No''; D_summary updated accordingly.'
+- reviewer: fidelity-reviewer
+  text: 'Round 1 minor issues addressed: A5c rephrased to ''24 residents''; E3 standardized
+    to ''Funding: Not reported. COI: Not reported.'''
+- reviewer: fidelity-reviewer
+  text: 'All Pearson correlation values verified against Table 1 in fulltext: 15/16
+    domains 0.6-1.0, ICS1=0.57.'
+- reviewer: fidelity-reviewer
+  text: 'Concordance correlation coefficients verified: moderate-strong in 13/16 domains,
+    weak in ICS1/ICS2/aggregate ICS.'
+- reviewer: fidelity-reviewer
+  text: Mean difference overall 0.58 confirmed (fulltext line 67).
+- reviewer: fidelity-reviewer
+  text: 'PGY subgroup patterns confirmed against Table 3: PGY-1 weakest, PGY-2 strongest,
+    PGY-3 moderate-high. Mean differences verified: PGY-1 greatest (e.g., 1.15 all
+    aggregate), PGY-3 negative for several domains.'
+- reviewer: fidelity-reviewer
+  text: 'Gender subgroup values verified against Table 2: professionalism Pearson
+    female 0.46 vs male 0.80.'
+- reviewer: fidelity-reviewer
+  text: De-identification procedures (names/pronouns replaced, PHI removed, random
+    IDs, password-protected spreadsheet) confirmed against fulltext Methods.
+- reviewer: fidelity-reviewer
+  text: DOI 10.22454/FamMed.2025.363712 confirmed.
+- reviewer: fidelity-reviewer
+  text: No fabricated data points detected.
+- reviewer: consistency-reviewer
+  text: 'All R1 issues fully addressed: D3f reclassified from D3 to D4 context, D3a
+    changed to ''No'', D_summary updated, A5c rephrased to ''24 residents'', E3 standardized.'
+- reviewer: consistency-reviewer
+  text: 'D_summary format (''Primary: D4 (...). Secondary: D1, D2. Absent: D3 (...)
+    and D5 (...)'') matches approved finals.'
+- reviewer: consistency-reviewer
+  text: 'Null-value phrasing correct: D sub-items all use ''No evidence reported''.'
+- reviewer: consistency-reviewer
+  text: YAML structure passes validation.
+- reviewer: consistency-reviewer
+  text: F3b clearly documents all R1 issues addressed and notes no disagreements.
+notes:
+- reviewer: framework-reviewer
+  text: All R1 major issues have been correctly addressed. The D3f-to-D4 reclassification
+    was the critical change, and it has been executed properly with consistent updates
+    to D3a and D_summary.
+- reviewer: fidelity-reviewer
+  text: Excellent revision. All Round 1 issues cleanly resolved. The D3f-to-D4 reclassification
+    is the key structural improvement and was handled correctly.
+- reviewer: consistency-reviewer
+  text: Clean extraction with zero remaining issues. Fully consistent with approved
+    corpus.

@@ -1,0 +1,135 @@
+article_id: Partin2025-nj
+round: 3
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'PGY: ''postgraduate years'''
+  recommended_value: 'PGY: ''postgraduate year'''
+  rationale: Standard expansion is singular 'postgraduate year' (PGY-1 = postgraduate
+    year 1). Minor style issue.
+  source_passage: standard usage
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'AI: ''artificial intelligence'''
+  recommended_value: 'AI: ''Artificial intelligence'''
+  rationale: Cross-article consistency
+  source_passage: Multiple fields
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'PGY: ''postgraduate years'''
+  recommended_value: 'PGY: ''Postgraduate year'''
+  rationale: 'Cross-article consistency: singular form and capitalization'
+  source_passage: A3b uses 'PGY-1 to PGY-3'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (absent)
+  recommended_value: 'LLM: ''Not defined in text (likely: Large language model)'''
+  rationale: LLM appears in F2 field value.
+  source_passage: Not applicable - retracted
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (absent)
+  recommended_value: 'WBA: ''Not defined in text (likely: Workplace-based assessment)'''
+  rationale: 'WBA appears in F2 field value: ''text-only WBA inputs'''
+  source_passage: 'F2: ''text-only WBA inputs'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'CARE: context, action, result, example'
+  recommended_value: 'CARE: context, action, result, example'
+  rationale: 'Confirmed: the fulltext defines CARE as ''CARE (context, action, result,
+    example) prompt engineering framework'' (line 45). Current coding is correct.'
+  source_passage: Line 45 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'PGY: postgraduate years'
+  recommended_value: 'PGY: postgraduate years'
+  rationale: 'Confirmed: the fulltext defines ''postgraduate years (PGY) 1 to 3''
+    (line 43). Current coding is correct. Note: singular vs plural (''year'' vs ''years'')
+    is a minor style difference.'
+  source_passage: Line 43 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'PHI: Not defined in text (likely: Protected Health Information)'
+  recommended_value: 'PHI: protected health information'
+  rationale: 'The fulltext states ''no discoverable clinical scenarios or patient
+    protected health information was included'' (line 43). While the abbreviation
+    ''PHI'' itself is not used with parenthetical expansion, the full phrase appears.
+    However, checking extraction: PHI appears in D2d field value. The fulltext uses
+    the full phrase without abbreviating it. ''Not defined in text'' is defensible
+    since the abbreviation PHI is never introduced with the parenthetical.'
+  source_passage: Line 43 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'CI: Not present in abbreviations list'
+  recommended_value: Consider adding CI if it appears in field values
+  rationale: 'Checking: the fulltext defines CI as ''confidence interval'' in table
+    abbreviations (line 104). CI appears in extraction field D4b (''95% CI''). However,
+    looking again at the abbreviations list - CI is not listed. This should be added
+    since it appears in field values.'
+  source_passage: Line 104 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (not listed)
+  recommended_value: 'CI: confidence interval'
+  rationale: CI appears in the D4b field value and is defined in the fulltext table
+    abbreviations (line 104). Should be added.
+  source_passage: Line 104 of fulltext.md; D4b field value
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content drift.
+- reviewer: framework-reviewer
+  text: 'Comprehensive abbreviation list including domain-specific terms: CARE, ICS,
+    MK, PBLI, PC, Prof, SBP, PHI.'
+- reviewer: consistency-reviewer
+  text: Good coverage of ACGME competency-domain abbreviations (ICS, MK, PC, Prof,
+    SBP, PBLI)
+- reviewer: consistency-reviewer
+  text: CARE framework properly defined
+- reviewer: consistency-reviewer
+  text: Well-organized section
+- reviewer: fidelity-reviewer
+  text: Comprehensive list including domain-specific competency abbreviations (PC,
+    MK, Prof, ICS, SBP, PBLI).
+- reviewer: fidelity-reviewer
+  text: Accurate definitions matching fulltext table abbreviation sections.
+- reviewer: fidelity-reviewer
+  text: Correct identification of CARE framework definition.
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. doi/published_year removed, abbreviation block added.
+- reviewer: consistency-reviewer
+  text: Well-structured with domain-specific abbreviations. Minor capitalization alignment
+    needed.
+- reviewer: fidelity-reviewer
+  text: No major issues. CI is a minor missing abbreviation.

@@ -1,0 +1,146 @@
+article_id: Kondo2025-jx
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: revise
+    confidence: high
+overall_verdict: revise
+issues:
+- item: D3a
+  severity: minor
+  type: clarification
+  current_value: 'Unclear: preliminary inter-model comparison was described, but no
+    quantitative reproducibility/inter-model agreement metrics were reported.'
+  recommended_value: 'No'
+  rationale: 'The R1 review flagged D3a as borderline. After verifying the fulltext
+    (line 165), the model comparison is described as: ''Trial prompts and randomly
+    selected student records were entered into each web platform, and the extracted
+    results were compared in terms of validity. Validity was evaluated from the perspective
+    of whether the output followed the expected format, whether the output matched
+    the experience items expected from the text, and whether the output was reproducible.
+    ChatGPT by OpenAI produced the most valid outputs, so it was selected for this
+    study.'' No quantitative inter-model metrics (kappa, ICC, percentage agreement
+    between models) are reported. Per codebook Rule #6, mentioning reproducibility
+    as a model selection criterion without reporting quantitative metrics does NOT
+    meet the threshold. D3a should be ''No'' rather than ''Unclear''. The current
+    ''Unclear'' coding is conservative but inconsistent with the strict codebook threshold
+    rule applied to other articles (e.g., atsukawa-2025 D3a=No). For cross-study consistency,
+    recommend changing to ''No''.'
+  source_passage: fulltext line 165
+  raised_by: framework-reviewer
+- item: D3a
+  severity: minor
+  type: clarification
+  current_value: 'Unclear: preliminary inter-model comparison was described, but no
+    quantitative reproducibility/inter-model agreement metrics were reported.'
+  recommended_value: 'No'
+  rationale: 'Per codebook Rule #6, mentioning reproducibility as a model selection
+    criterion without quantitative metrics does not meet threshold. The fulltext (Methods,
+    line 165) states ''extracted results were compared in terms of validity'' across
+    ChatGPT, Gemini, and Claude but provides no quantitative inter-model metrics.
+    Coding as ''Unclear'' is defensible but ''No'' would be more consistent with the
+    codebook threshold rule and with D3b-D3f all being ''No evidence reported''. The
+    D_summary already acknowledges this ambiguity. Not a major issue because the current
+    coding errs on the side of transparency.'
+  source_passage: 'fulltext line 165: ''Trial prompts and randomly selected student
+    records were entered into each web platform, and the extracted results were compared
+    in terms of validity.'''
+  raised_by: fidelity-reviewer
+- item: D3a_evidence_present
+  severity: major
+  type: consistency
+  current_value: 'Unclear: preliminary inter-model comparison was described, but no
+    quantitative reproducibility/inter-model agreement metrics were reported.'
+  recommended_value: 'No'
+  rationale: All 8 approved extraction-final.yaml files use either 'Yes' or 'No' for
+    D3a_evidence_present. None uses 'Unclear:...' The codebook specifies D3a should
+    be 'Yes' if any sub-item D3b-D3f has empirical evidence, 'No' otherwise. Since
+    D3b-D3f are all 'No evidence reported', D3a must be 'No'. The qualifier about
+    the preliminary model comparison is already well-captured in D_summary and F2_rq3_relevance.
+    Move any clarifying note about the qualitative model comparison to F3b_items_for_verification
+    or F2.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D_summary
+  severity: minor
+  type: consistency
+  current_value: 'Primary: D4 (...). Secondary: D1 (...), D2 (...). D3 status: Unclear
+    at source level because preliminary inter-model comparison was described qualitatively,
+    but no quantitative reproducibility/internal-structure metrics (including bias/fairness
+    analysis) were reported. Absent: D5 (...)'
+  recommended_value: 'Primary: D4 (agreement/association with student-corrected reference
+    using kappa, Jaccard, sensitivity/specificity). Secondary: D1 (MCC template alignment
+    and domain coverage), D2 (indirect false-positive proxy, anonymization/privacy
+    handling, quality checks). Absent: D3 (no quantitative reproducibility/internal-structure
+    metrics reported), D5 (no empirical impact/acceptability/consequences data).'
+  rationale: 'Consequent to D3a change: D_summary should use ''Absent: D3'' consistently
+    with other approved finals (e.g., Gin-2024, Jarry-Trujillo-2024, furey-2025) rather
+    than the special ''D3 status: Unclear'' phrasing. The qualifier about the qualitative
+    model comparison can be kept parenthetically.'
+  source_passage: ''
+  raised_by: consistency-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: D3a was updated from v1 'No' to v2 'Unclear' based on R1 reviewer feedback,
+    which was a reasonable interim response. The issue now is consistency across the
+    corpus.
+- reviewer: framework-reviewer
+  text: B1_ai_models correctly rephrased to emphasize GPT-4 Turbo as primary model
+    per R1 feedback.
+- reviewer: framework-reviewer
+  text: B4_ai_role correctly simplified to 'Clinical experience tracking' per R1 feedback.
+- reviewer: framework-reviewer
+  text: 'D2c indirect false-positive proxy coding is consistent with codebook Rule
+    #8.'
+- reviewer: framework-reviewer
+  text: D_summary correctly reflects the Unclear D3 status.
+- reviewer: fidelity-reviewer
+  text: Round 1 issues (B1 rephrase, B4 restriction to 'Clinical experience tracking',
+    D3a reconsideration) were all properly addressed in v2.
+- reviewer: fidelity-reviewer
+  text: 'All quantitative metrics verified against fulltext: Jaccard 0.59 (95% CI
+    0.46-0.71), Cohen kappa 0.65 (95% CI 0.53-0.76), sensitivity 62.39% (95% CI 49.96%-74.81%),
+    specificity 99.34% (95% CI 98.77%-99.92%).'
+- reviewer: fidelity-reviewer
+  text: 'Category-specific sensitivity/specificity values confirmed: symptoms 45.43%/98.75%,
+    examinations 46.76%/98.84%, procedures 56.36%/98.92%.'
+- reviewer: fidelity-reviewer
+  text: Sample size (20 students, 40 datasets) confirmed against fulltext line 212.
+- reviewer: fidelity-reviewer
+  text: DOI 10.2196/68697, funding grants (23K27816 and 25K06542), and no conflicts
+    confirmed.
+- reviewer: fidelity-reviewer
+  text: No fabricated data points detected.
+- reviewer: consistency-reviewer
+  text: 'All R1 issues addressed: B1_ai_models rephrased, B4_ai_role narrowed, D3a
+    updated.'
+- reviewer: consistency-reviewer
+  text: YAML structure passes validation; all required fields present.
+- reviewer: consistency-reviewer
+  text: D sub-items correctly use 'No evidence reported' throughout.
+- reviewer: consistency-reviewer
+  text: 'D4c appropriately flags student self-report as weaker comparator, consistent
+    with Rule #9.'
+- reviewer: consistency-reviewer
+  text: F3b clearly documents which R1 issues were addressed and how.
+notes:
+- reviewer: framework-reviewer
+  text: The only remaining issue is the D3a 'Unclear' vs 'No' coding. This is a minor
+    consistency issue rather than a major framework misclassification. If the team
+    decides 'Unclear' is acceptable as a conservative coding, this is defensible but
+    creates an inconsistency with atsukawa-2025 which has a similar situation (qualitative
+    model comparison without quantitative metrics) coded as D3a=No. Recommend standardizing
+    both to 'No' with the qualitative mention noted in F2.
+- reviewer: fidelity-reviewer
+  text: Clean extraction. The D3a 'Unclear' vs 'No' distinction is the only remaining
+    debatable point, but it is a minor stylistic/threshold judgment rather than a
+    factual error.
+- reviewer: consistency-reviewer
+  text: The D3a issue is the sole remaining inconsistency with the approved corpus.
+    All other aspects are well-aligned.

@@ -1,0 +1,175 @@
+[
+  {
+    "id": "Jarry-Trujillo2024-kg",
+    "type": "article-journal",
+    "title": "Surgeons vs ChatGPT: Assessment and feedback performance based on real surgical scenarios",
+    "author": [
+      {
+        "family": "Jarry Trujillo",
+        "given": "Cristián"
+      },
+      {
+        "family": "Vela Ulloa",
+        "given": "Javier"
+      },
+      {
+        "family": "Escalona Vivas",
+        "given": "Gabriel"
+      },
+      {
+        "family": "Grasset Escobar",
+        "given": "Eugenio"
+      },
+      {
+        "family": "Villagrán Gutiérrez",
+        "given": "Ignacio"
+      },
+      {
+        "family": "Achurra Tirado",
+        "given": "Pablo"
+      },
+      {
+        "family": "Varas Cohen",
+        "given": "Julián"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          1
+        ]
+      ]
+    },
+    "container-title": "J. Surg. Educ.",
+    "volume": "81",
+    "issue": "7",
+    "page": "960-966",
+    "DOI": "10.1016/j.jsurg.2024.03.012",
+    "PMID": "38749814",
+    "ISSN": "1931-7204",
+    "URL": "http://dx.doi.org/10.1016/j.jsurg.2024.03.012",
+    "abstract": "INTRODUCTION: Artificial intelligence tools are being progressively integrated into medicine and surgical education. Large language models, such as ChatGPT, could provide relevant feedback aimed at improving surgical skills. The purpose of this study is to assess ChatGPT´s ability to provide feedback based on surgical scenarios. METHODS: Surgical situations were transformed into texts using a neutral narrative. Texts were evaluated by ChatGPT 4.0 and 3 surgeons (A, B, C) after a brief instruction was delivered: identify errors and provide feedback accordingly. Surgical residents were provided with each of the situations and feedback obtained during the first stage, as written by each surgeon and ChatGPT, and were asked to assess the utility of feedback (FCUR) and its quality (FQ). As control measurement, an Education-Expert (EE) and a Clinical-Expert (CE) were asked to assess FCUR and FQ. RESULTS: Regarding residents' evaluations, 96.43% of times, outputs provided by ChatGPT were considered useful, comparable to what surgeons' B and C obtained. Assessing FQ, ChatGPT and all surgeons received similar scores. Regarding EE's assessment, ChatGPT obtained a significantly higher FQ score when compared to surgeons A and B (p = 0.019; p = 0.033) with a median score of 8 vs. 7 and 7.5, respectively; and no difference respect surgeon C (score of 8; p = 0.2). Regarding CE´s assessment, surgeon B obtained the highest FQ score while ChatGPT received scores comparable to that of surgeons A and C. When participants were asked to identify the source of the feedback, residents, CE, and EE perceived ChatGPT's outputs as human-provided in 33.9%, 28.5%, and 14.3% of cases, respectively. CONCLUSION: When given brief written surgical situations, ChatGPT was able to identify errors with a detection rate comparable to that of experienced surgeons and to generate feedback that was considered useful for skill improvement in a surgical context performing as well as surgical instructors across assessments made by general surgery residents, an experienced surgeon, and a nonsurgeon feedback expert.",
+    "publisher": "Elsevier BV",
+    "custom": {
+      "uuid": "dbc62c15-cb3b-41b0-855f-c497259a938e",
+      "created_at": "2026-02-09T01:09:41.254Z",
+      "timestamp": "2026-02-17T07:12:52.375Z",
+      "paperpile": {
+        "_id": "960ad386-fbc4-06b1-a44f-de568b06966f",
+        "accessed": {
+          "year": "2024",
+          "month": "11",
+          "day": "26"
+        },
+        "attachments": [
+          {
+            "_id": "9e8ad918-538f-4a00-9e83-ca8df842985f",
+            "article_pdf": 1,
+            "created": 1732576718.7359998,
+            "filename": "All Papers/Other/Jarry Trujillo et al. 2024 - Surgeons vs ChatGPT - Assessment and feedback performance based on real surgical scenarios.pdf",
+            "filesize": 814363,
+            "gdrive_id": "1Zf83OLECTyjOeQYI5v2OhFKSzIHcGkbl",
+            "mimeType": "application/pdf",
+            "pub_id": "960ad386-fbc4-06b1-a44f-de568b06966f",
+            "source_filename": "1-s2.0-S1931720424001582-main.pdf"
+          }
+        ],
+        "autoCleaned": 1,
+        "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.1016/j.jsurg.2024.03.012",
+        "citekey": "Jarry-Trujillo2024-kg",
+        "created": 1732576288.941,
+        "dup_sha1": "754b87ec59efa3c1fe197b86f3427e59757432dc",
+        "folders": [],
+        "id_list": [
+          "sha1:8526fba87fe3107e1efb1a5c62570ff1deaf7f7f",
+          "dup_sha1:754b87ec59efa3c1fe197b86f3427e59757432dc",
+          "doi:10.1016/j.jsurg.2024.03.012",
+          "pmid:38749814",
+          "url:http://dx.doi.org/10.1016/j.jsurg.2024.03.012",
+          "url:https://www.sciencedirect.com/science/article/pii/S1931720424001582",
+          "url:https://linkinghub.elsevier.com/retrieve/pii/S1931720424001582",
+          "url:https://www.ncbi.nlm.nih.gov/pubmed/38749814"
+        ],
+        "incomplete": 0,
+        "issn_alt": "1878-7452",
+        "kind": "Research Article",
+        "labels": [],
+        "owner": "806F1DCECFEA11EAAB12182C9D9F4BF5",
+        "pdf_restricted": 1,
+        "pubtype": "PP_ARTICLE",
+        "sha1": "8526fba87fe3107e1efb1a5c62570ff1deaf7f7f",
+        "subfolders": [
+          "All Papers/J"
+        ]
+      },
+      "attachments": {
+        "directory": "Jarry-Trujillo2024-kg-PMID38749814-dbc62c15",
+        "files": [
+          {
+            "filename": "fulltext.pdf",
+            "role": "fulltext"
+          },
+          {
+            "filename": "fulltext.md",
+            "role": "fulltext"
+          }
+        ]
+      },
+      "check": {
+        "checked_at": "2026-02-17T07:12:48.275Z",
+        "status": "metadata_outdated",
+        "findings": [
+          {
+            "type": "metadata_outdated",
+            "message": "Remote metadata has been updated since import",
+            "details": {
+              "updated_fields": [
+                "title",
+                "container-title",
+                "page",
+                "volume",
+                "issue",
+                "issued"
+              ],
+              "field_diffs": [
+                {
+                  "field": "title",
+                  "local": "Surgeons vs ChatGPT: Assessment and feedback performance based on real surgical scenarios",
+                  "remote": "Surgeons vs ChatGPT: Assessment and Feedback Performance Based on Real Surgical Scenarios"
+                },
+                {
+                  "field": "container-title",
+                  "local": "J. Surg. Educ.",
+                  "remote": "Journal of Surgical Education"
+                },
+                {
+                  "field": "page",
+                  "local": "960-966",
+                  "remote": null
+                },
+                {
+                  "field": "volume",
+                  "local": "81",
+                  "remote": null
+                },
+                {
+                  "field": "issue",
+                  "local": "7",
+                  "remote": null
+                },
+                {
+                  "field": "issued",
+                  "local": "2024-7-1",
+                  "remote": "2024-5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "language": "en"
+  }
+]

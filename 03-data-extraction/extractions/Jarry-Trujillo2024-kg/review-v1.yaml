@@ -1,0 +1,113 @@
+article_id: Jarry-Trujillo2024-kg
+round: 1
+reviewers:
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: medium
+overall_verdict: approve
+issues:
+- item: study_id
+  severity: minor
+  type: standardize
+  current_value: Jarry-Trujillo-2024
+  recommended_value: Jarry-Trujillo-2024
+  rationale: Hyphenated multi-word last name is correctly handled. No change needed.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: B2_api_or_interface
+  severity: minor
+  type: consistency
+  current_value: Not reported
+  recommended_value: Not reported
+  rationale: Correctly coded as Not reported. Consistent with codebook convention
+    for non-D items.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D2c
+  severity: minor
+  type: clarification
+  current_value: 'Yes (indirect: false-positive analysis as proxy)'
+  recommended_value: Current coding is acceptable but could be more precisely characterized
+  rationale: 'The false-positive proxy coding per Rule #8 is applied consistently.
+    The study reports that AI and surgeons correctly classified all 6 non-error and
+    14 error scenarios, which is more of an accuracy/classification analysis than
+    a false-positive analysis per se. The coding is defensible but the evidence is
+    better described as ''correct classification rate'' rather than ''false-positive
+    analysis.'' Maintaining current coding for consistency.'
+  source_passage: fulltext Methods and Results sections
+  raised_by: framework-reviewer
+- item: D5c
+  severity: minor
+  type: clarification
+  current_value: Residents judged ChatGPT feedback useful in 96.43% of assessments...
+  recommended_value: Keep current coding; note that resident raters were evaluating
+    perceived utility rather than true stakeholder acceptability of implementation
+  rationale: D5c coding as empirical acceptability is reasonable since quantitative
+    perception data from residents exists. However, these are ratings of feedback
+    quality/usefulness in a research setting rather than acceptance of AI-in-assessment
+    implementation. This is a borderline but acceptable interpretation.
+  source_passage: fulltext Results
+  raised_by: framework-reviewer
+- item: B2_api_or_interface
+  severity: minor
+  type: rephrase
+  current_value: Not reported
+  recommended_value: Not reported (likely web interface based on ChatGPT 4.0 commercial
+    version description)
+  rationale: The fulltext states 'ChatGPT 4.0 (commercial version, August 2023)' which
+    typically implies web interface, but is not explicitly stated. Current coding
+    of 'Not reported' is acceptable but could note the inference.
+  source_passage: Methods section describing AI tool
+  raised_by: fidelity-reviewer
+- item: D3a_evidence_present
+  severity: minor
+  type: rephrase
+  current_value: 'No'
+  recommended_value: 'No'
+  rationale: The extraction reports ICC = 0.56 in F3b_items_for_verification but does
+    not include it in D3. The ICC 0.56 for the FQ scale is actually interobserver
+    reliability of the human-rated FQ scoring instrument, not AI reliability per se,
+    so D3a = No is correct. This is a note for verification rather than a change needed.
+  source_passage: Results section reporting ICC
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: consistency-reviewer
+  text: 'D2c correctly coded as indirect false-positive proxy per codebook rule #8.'
+- reviewer: consistency-reviewer
+  text: All required YAML fields present.
+- reviewer: consistency-reviewer
+  text: D5c stakeholder acceptability correctly identified from resident usefulness
+    ratings.
+- reviewer: consistency-reviewer
+  text: Good detail in F3b items for verification.
+- reviewer: framework-reviewer
+  text: 'D1 mapping is well done: prompt-rubric alignment (OPRS-based), content coverage
+    (scenario selection rationale), and expert review (CE and EE)'
+- reviewer: framework-reviewer
+  text: 'D3a correctly coded as No per Rule #6 threshold'
+- reviewer: framework-reviewer
+  text: D5a correctly coded as Yes based on empirical resident perception data
+- reviewer: fidelity-reviewer
+  text: Accurate capture of the error detection metrics (14/14 errors identified,
+    6/6 non-errors correctly classified)
+- reviewer: fidelity-reviewer
+  text: Good extraction of Education Expert vs Clinical Expert rating distinctions
+- reviewer: fidelity-reviewer
+  text: Appropriate coding of D5c stakeholder acceptability from resident usefulness
+    ratings
+notes:
+- reviewer: consistency-reviewer
+  text: A5 coding uses document-level analysis convention appropriately. All sub-items
+    present.
+- reviewer: framework-reviewer
+  text: Overall a strong extraction with appropriate framework mappings.
+- reviewer: fidelity-reviewer
+  text: Extraction is generally faithful to the fulltext. The prompt text in the original
+    paper appears partially garbled due to OCR/figure rendering, which the extraction
+    acknowledges. No hallucinated data points found.

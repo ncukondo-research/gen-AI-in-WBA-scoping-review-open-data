@@ -1,0 +1,99 @@
+study_id: "Ahmad-2025"
+extraction_date: "2026-02-17"
+extractor: "ai:codex-gpt-5"
+doi: "10.1002/lary.32368"
+published_year: "2025"
+
+A1_country: "United States"
+A2_specialty: "Otolaryngology-Head and Neck Surgery"
+A3_participants:
+  A3a_type: "Residents"
+  A3b_training_level: "OHNS residents (specific PGY levels not reported)"
+  A3c_sample_size: "Not applicable (document-level analysis)"
+  A3d_num_documents: "836 feedback entries (60 for faculty-ChatGPT concordance testing; 776 additionally analyzed by ChatGPT)"
+A4_study_design: "Observational: retrospective cohort / analysis"
+A5_study_aim: |
+  "Herein, we trained ChatGPT to evaluate the quality and content of feedback for OHNS residents via (1) SIMPL-OR, (2) OSATS, and (3) EOR surveys."
+  The authors also aimed to show commercially available LLMs can process large assessment volumes and to examine whether different feedback formats provide different assessment insights.
+
+B1_ai_models: "ChatGPT-4o"
+B2_api_or_interface: "Web interface (ChatGPT 'Explore' custom GPT feature)"
+B3_prompt_design:
+  B3a_prompt_reported: "Partially (key elements described)"
+  B3b_engineering_techniques: "Role/instruction prompting aligned to faculty rubric; custom GPT 'Knowledge' upload with 30 labeled examples and written justifications (few-shot style exemplars); structured competency definitions provided"
+  B3c_prompt_iteration: "Yes: new Explore session started every 60 entries; same training information reloaded; memory cleared before each session"
+B4_ai_role: "Feedback analysis / coding; Competency mapping / milestone assignment"
+B5_input_data: "Narrative feedback / free-text comments from SIMPL-OR, OSATS, and EOR evaluations"
+B6_output_data: "Categorization / classification labels (encouraging, corrective, specific; six ACGME core competencies); Structured report / summary (aggregated counts/proportions)"
+B7_comparator: "Expert human raters (number: 2) for initial 60-entry concordance set; additional expert human review by 2 blinded study team members on supplementary 60-entry subset"
+B8_model_customization: "Custom training: ChatGPT Explore instance configured with instructions plus uploaded training document containing 30 example entries and justification text"
+
+C1_wba_tools: "Narrative feedback forms (general / institution-specific: SIMPL-OR; OSATS; EOR surveys)"
+C2_assessment_context: |
+  Retrospective analysis of workplace-based surgical resident feedback at a single OHNS program (2017-2021).
+  SIMPL-OR entries were completed within 72 hours post-procedure, OSATS within 7 days of key indicator procedures, and EOR comments reflected longitudinal 3-month rotation performance.
+  The study analyzed only narrative/dictated-written comments (not Likert/structured score components).
+
+D1_content:
+  D1a_evidence_present: "Yes"
+  D1b_prompt_rubric_alignment: |
+    ChatGPT was given "the same prompt given to faculty members" under Instructions, and faculty/AI coding used ACGME core competency definitions adapted from NEJM language.
+    This indicates explicit alignment of AI instructions with the assessment framework used by human raters.
+  D1c_content_coverage: |
+    The study explicitly evaluated whether feedback addressed six ACGME competencies and reported competency distributions across SIMPL-OR, OSATS, and EOR.
+    Coverage of intended domains was central to both manual and AI analyses.
+  D1d_expert_review: |
+    Two blinded faculty manually coded 60 entries, reconciled discrepancies, and ChatGPT outputs were compared against this expert reference (90% concordance; kappa 0.941).
+    A supplementary 60-entry human re-review further checked concordance on discrepant domains.
+D2_response_process:
+  D2a_evidence_present: "Yes"
+  D2b_reasoning_transparency: "Unclear: Authors report ChatGPT outputs included reasoning and references to feedback text, but reasoning quality was not independently and systematically evaluated."
+  D2c_hallucination_assessment: "Yes (indirect: false-positive analysis as proxy)."
+  D2d_data_security: "Feedback entries were anonymized with respect to resident and faculty identifiers before analysis."
+  D2e_quality_assurance: |
+    Multiple QA steps were reported: initial faculty-faculty agreement check, ChatGPT-faculty concordance testing before scaling, session resets every 60 entries, memory clearing between sessions, and supplementary blinded human recoding of a random subset.
+D3_internal_structure:
+  D3a_evidence_present: "No"
+  D3b_reproducibility: "No evidence reported"
+  D3c_inter_model_agreement: "No evidence reported"
+  D3d_internal_consistency: "No evidence reported"
+  D3e_parameter_effects: "No evidence reported"
+  D3f_bias_fairness: "No evidence reported"
+D4_relationship_to_other_variables:
+  D4a_evidence_present: "Yes"
+  D4b_ai_human_agreement: |
+    AI-human agreement was directly assessed on 60 entries with concordance rate 90% and Cohen's kappa = 0.94.
+    Supplementary subset review showed concordance rate 92% with kappa = 0.82 for selected discrepant domains.
+  D4c_human_raters: "Two blinded faculty raters (J.X.C., D.G.) served as primary expert comparators; two blinded study team members (S.A.A., J.X.C.) performed supplementary validation."
+  D4d_discriminant_ability: "No evidence reported"
+  D4e_comparison_other_measures: "AI-derived categorizations were compared across established assessment modalities (SIMPL-OR, OSATS, EOR) with statistical testing of between-tool differences."
+D5_consequences:
+  D5a_evidence_present: "No"
+  D5b_learner_performance_impact: "No evidence reported"
+  D5c_stakeholder_acceptability: "No evidence reported"
+  D5d_unintended_consequences: "No evidence reported"
+
+D_summary: "Primary: D4 (strong AI-human agreement evidence via kappa and concordance); Secondary: D1 (prompt/rubric alignment and competency coverage), D2 (anonymization and multi-step QA workflow); Absent: D3 (no reproducibility/internal-structure psychometric evidence including fairness testing), D5 (no empirical impact/acceptability/consequence outcomes)."
+
+E1_limitations: |
+  - Single-institution OHNS setting, limiting generalizability.
+  - Analysis restricted to narrative text; structured/Likert components were excluded.
+  - ChatGPT session memory loss over large batches required repeated session resets, reducing efficiency.
+  - Variability across sessions due to temperature/response stochasticity; tighter parameter control noted as API-dependent.
+  - Authors caution ChatGPT may overestimate some domains (notably PBL), requiring human oversight.
+E2_future_research: |
+  - Conduct multi-institutional studies to assess generalizability across training cultures.
+  - Evaluate API-based implementations (including parameter control) for studies focused on AI replacing rather than augmenting human raters.
+  - Further investigate LLM utility as an adjunct versus replacement in assessment workflows.
+E3_funding_coi: "Funding: NIH/National Institute of Health grant R25 DC021243. Conflicts of interest: none declared. Commercial AI tool used: ChatGPT-4o."
+
+F1_key_findings_summary: |
+  The study used ChatGPT-4o to code 836 resident feedback narratives from SIMPL-OR, OSATS, and EOR tools in an OHNS program. AI-human concordance on a 60-entry reference set was high (90%, kappa 0.941), with supplementary subset concordance also high (92%, kappa 0.82). Across 776 additional entries, feedback quality and competency coverage differed significantly by modality (except SBP), with SIMPL-OR generally more specific/corrective and EOR broader in professionalism/communication-related domains. Authors conclude multimodal feedback is important and LLMs are useful adjuncts with human oversight.
+F2_rq3_relevance: |
+  This study highlights generative-AI-specific workflow constraints: ChatGPT memory decay across large batches, need for repeated session resets, and session-to-session variability linked to stochastic generation settings.
+  It demonstrates pragmatic custom-GPT adaptation (instruction + uploaded exemplars) for large-scale qualitative coding, but leaves key methodological gaps: no formal hallucination analysis, no reproducibility metrics across repeated runs, no inter-model comparisons, and no subgroup bias/fairness testing.
+  These gaps are directly relevant to Downing-based validity mapping and indicate where future WBA-AI studies should strengthen internal structure and consequences evidence.
+F3_confidence:
+  F3a_overall: "High: Most fields were explicitly reported with clear quantitative results and methods."
+  F3b_items_for_verification: "Revision note: Addressed major issues A1_doi (set to 10.1002/lary.32368 from bibliography metadata) and D2c (coded as Yes, indirect false-positive proxy), plus minor D4b precision (kappa 0.94). Minor D2b_reasoning_transparency and B8_model_customization recommendations already matched current values (no text change). No disagreements with reviewer recommendations."
+  F3c_uncertain_flags: "D2b_reasoning_transparency; B8_model_customization; D4e_comparison_other_measures (interpreted as cross-tool comparison rather than external outcome measure)."

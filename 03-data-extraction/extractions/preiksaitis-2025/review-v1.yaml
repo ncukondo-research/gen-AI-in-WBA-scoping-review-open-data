@@ -1,0 +1,149 @@
+article_id: preiksaitis-2025
+round: 1
+reviewers:
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: study_id
+  severity: minor
+  type: standardize
+  current_value: Preiksaitis-2025
+  recommended_value: Preiksaitis-2025
+  rationale: Title case, consistent with most files. No change needed.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: B3a_prompt_reported
+  severity: minor
+  type: consistency
+  current_value: 'No'
+  recommended_value: 'No'
+  rationale: Correctly coded. This is one of the few studies where prompts were not
+    reported at all. Consistent with codebook option.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D4d_discriminant_ability
+  severity: minor
+  type: consistency
+  current_value: 'Unclear: AI-derived exposure metrics differed by PGY level...'
+  recommended_value: 'Unclear: AI-derived exposure metrics differed by PGY level...'
+  rationale: Using 'Unclear:' is appropriate here since the study did not frame PGY
+    differences as known-groups validity testing. Consistent with codebook guidance
+    for ambiguous situations.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D2c
+  severity: minor
+  type: missing_evidence
+  current_value: No evidence reported
+  recommended_value: 'Consider: the 89.76% agreement implies ~10% disagreement which
+    per Rule #8 could be coded as indirect false-positive proxy'
+  rationale: 'The study reports 89.76% agreement (377/420) between AI and expert consensus.
+    The ~10% disagreement represents AI classifications not matching expert ground
+    truth. Per Rule #8, false-positive rates may serve as indirect hallucination proxy.
+    However, the 420 validated encounters represent only a validation subset, and
+    the primary study does not frame the disagreements as errors or false positives
+    per se. The coding as ''No evidence reported'' is conservative but defensible.
+    For corpus-wide consistency, consider whether the same threshold applied to other
+    studies (e.g., Kondo, Bala) should apply here.'
+  source_passage: 'fulltext Validation Methodology: ''89.76% (377/420)'''
+  raised_by: framework-reviewer
+- item: D4d
+  severity: minor
+  type: clarification
+  current_value: 'Unclear: AI-derived exposure metrics differed by PGY level...'
+  recommended_value: Current coding is appropriate; the PGY-level differences reflect
+    expected progression patterns but were not framed as known-groups validity testing
+  rationale: The extraction correctly identifies this as Unclear rather than asserting
+    discriminant ability. The study shows expected progression (increasing topics,
+    complexity by PGY) but does not frame this as validation of the AI assessment
+    tool itself.
+  source_passage: fulltext Results
+  raised_by: framework-reviewer
+- item: D4b_ai_human_agreement
+  severity: minor
+  type: correct_value
+  current_value: AI classifications agreed with expert consensus 89.76% (377/420)
+    in the manual validation sample.
+  recommended_value: AI classifications agreed with expert consensus 89.76% (377/420)
+    in the manual validation sample of 500 randomly selected encounters.
+  rationale: Adding the total validation sample size (500 encounters) for context.
+    The 377/420 denominator reflects that 80 of 500 encounters had no rater agreement
+    or were excluded from the calculation (the fulltext states 420 as the denominator
+    for the agreement calculation).
+  source_passage: 'Validation section: ''manual review of 500 randomly selected encounters...model''s
+    classifications agreeing with the expert consensus 89.76% (377/420) of the time'''
+  raised_by: fidelity-reviewer
+- item: B3a_prompt_reported
+  severity: minor
+  type: rephrase
+  current_value: 'No'
+  recommended_value: No (pipeline architecture described; specific prompts not provided;
+    Multimedia Appendix 1 referenced for technical details)
+  rationale: 'Minor: clarifying that while prompts are not reported in the main text,
+    the appendix is referenced for pipeline details.'
+  source_passage: 'Methods: ''A comprehensive description of the NLP architecture,
+    model configuration, and validation methodology is provided in Multimedia Appendix
+    1.'''
+  raised_by: fidelity-reviewer
+- item: D4d_discriminant_ability
+  severity: minor
+  type: rephrase
+  current_value: 'Unclear: AI-derived exposure metrics differed by PGY level (e.g.,
+    increasing topic coverage and acuity across training years), but the study did
+    not explicitly frame this as known-groups validity testing of an assessment score.'
+  recommended_value: 'Unclear: AI-derived exposure metrics showed expected progression
+    by PGY level (e.g., increasing topic coverage PGY1 376.7 to PGY4 565.9; increasing
+    acuity from ESI 2.94 to 2.79; high-acuity cases from 16% to 30.9%), but the study
+    did not explicitly frame this as known-groups validity testing.'
+  rationale: Adding the specific numbers strengthens the extraction and allows downstream
+    synthesis.
+  source_passage: Table 2 and Results section
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: consistency-reviewer
+  text: All required YAML fields present.
+- reviewer: consistency-reviewer
+  text: D1 content evidence well-identified with framework alignment (MCPEM) and quantified
+    coverage.
+- reviewer: consistency-reviewer
+  text: D2d data security appropriately detailed (HIPAA-compliant, deidentified).
+- reviewer: consistency-reviewer
+  text: B8 correctly codes RAG customization with pipeline description.
+- reviewer: framework-reviewer
+  text: 'D1 mapping is strong: MCPEM framework alignment, coverage quantification,
+    and expert validation all correctly captured'
+- reviewer: framework-reviewer
+  text: D2d HIPAA-compliant environment and de-identification correctly documented
+- reviewer: framework-reviewer
+  text: B8 RAG methodology correctly identified
+- reviewer: framework-reviewer
+  text: D4 agreement metric (89.76%) appropriately captured with expert consensus
+    as comparator
+- reviewer: fidelity-reviewer
+  text: Accurate extraction of the RAG pipeline description
+- reviewer: fidelity-reviewer
+  text: Good capture of the validation methodology (4 physicians, 500 encounters,
+    89.76%)
+- reviewer: fidelity-reviewer
+  text: Correct identification of the HIPAA-compliant Gemini instance
+- reviewer: fidelity-reviewer
+  text: Appropriate flagging of C1_wba_tools uncertainty
+notes:
+- reviewer: consistency-reviewer
+  text: Clean extraction. The RAG-based approach is unique in the set and correctly
+    captured.
+- reviewer: framework-reviewer
+  text: The D2c consistency question is minor. Overall framework mapping is accurate
+    and well-reasoned.
+- reviewer: fidelity-reviewer
+  text: Strong fidelity. All numbers verified. The interrater reliability kappa=0.71
+    among physician reviewers is correctly omitted from D4b (it describes human-human,
+    not AI-human, reliability) but could optionally be noted in D4c.

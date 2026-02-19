@@ -1,0 +1,23 @@
+article_id: Partin2025-nj
+iterations:
+- round: 1
+  extraction_file: extraction-v1.yaml
+  review_file: review-v1.yaml
+  verdict: revise
+  major_issues: 2
+  minor_issues: 3
+- round: 2
+  extraction_file: extraction-v2.yaml
+  review_file: review-v2.yaml
+  verdict: approve
+  major_issues: 0
+  minor_issues: 1
+- round: 3
+  extraction_file: extraction-v3.yaml
+  review_file: review-v3.yaml
+  verdict: approve
+  major_issues: 0
+  minor_issues: 10
+final_status: approved
+final_round: 3
+final_file: extraction-final.yaml

@@ -1,0 +1,131 @@
+article_id: furey-2025
+round: 1
+reviewers:
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: study_id
+  severity: minor
+  type: standardize
+  current_value: furey-2025
+  recommended_value: Furey-2025
+  rationale: Inconsistent capitalization with other study_ids (e.g., 'Gin-2024', 'Jarry-Trujillo-2024').
+    Standardize to title case.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: A3_country
+  severity: minor
+  type: consistency
+  current_value: 'Unclear: Data came from six regional medical campuses and a national
+    SIMPL dataset, but study-country for all assessment records was not explicitly
+    stated.'
+  recommended_value: United States (implied from institutional context; not all data
+    sources explicitly confirmed)
+  rationale: The Unclear coding is cautious and defensible, but given US-based affiliations,
+    SIMPL (US system), and regional campuses, 'United States' with a note would be
+    more consistent with how other files handle partial geographic information.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D2c_hallucination_assessment
+  severity: minor
+  type: consistency
+  current_value: 'Yes: authors reported AI context/content fabrication; 10 of 42 AI-generated
+    outputs were excluded because content/context changed and could add untrue information.'
+  recommended_value: 'Yes: authors reported AI context/content fabrication; 10 of
+    42 AI-generated outputs were excluded because content/context changed and could
+    add untrue information.'
+  rationale: This is direct hallucination/fabrication evidence (similar to bany_abdelnabi).
+    Coding as 'Yes:' is correct. Consider adding '(direct)' label for synthesis consistency.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D2c
+  severity: minor
+  type: clarification
+  current_value: 'Yes: authors reported AI context/content fabrication; 10 of 42 AI-generated
+    outputs were excluded...'
+  recommended_value: Current coding is correct and well-supported; this is direct
+    hallucination evidence rather than indirect proxy
+  rationale: 'Unlike most other studies where D2c is coded as indirect proxy, this
+    study provides direct evidence of AI content fabrication (context/content changes
+    in 10/42 outputs). The coding could be more precisely labeled as ''Yes (direct:
+    AI-generated content fabrication identified and quantified)'' rather than just
+    ''Yes'' to distinguish it from indirect false-positive proxy studies. This is
+    a minor enhancement.'
+  source_passage: 'fulltext Methods: ''10 AI-assisted statements were not included...
+    significantly altered by AI, with changes to both the context and content'''
+  raised_by: framework-reviewer
+- item: A3_country
+  severity: minor
+  type: rephrase
+  current_value: 'Unclear: Data came from six regional medical campuses and a national
+    SIMPL dataset, but study-country for all assessment records was not explicitly
+    stated.'
+  recommended_value: 'United States (inferred: all author affiliations are US-based
+    [Geisinger Wyoming Valley Medical Center, Geisinger Medical Center, University
+    of Michigan]; SIMPL is a US national system; ACGME context is US-specific)'
+  rationale: While not explicitly stated as 'United States' in the text, all affiliations
+    are US institutions and the SIMPL operative evaluation system is a US-based national
+    platform. The inference is very strong. The 'Unclear' coding is overly cautious.
+  source_passage: Author affiliations lines 14-19; Methods section referencing SIMPL
+    and ACGME
+  raised_by: fidelity-reviewer
+- item: D4b_ai_human_agreement
+  severity: minor
+  type: rephrase
+  current_value: Human reviewers agreed 17/18 (94.4%) AI-modified FML->GML statements
+    were GML; original GML agreement 37/41 (90.2%); original FML agreement 26/26 (100%).
+    For AI-use detection, agreement was 18/32 (56.3%) for AI-modified statements and
+    30/67 (44.8%) for originals; sensitivity 75%, specificity 65%.
+  recommended_value: 'Human reviewers agreed 17/18 (94.4%) AI-modified FML->GML statements
+    were GML; original GML agreement 37/41 (90.2%); original FML agreement 26/26 (100%).
+    AI-assisted FML to FML: 13/14 (92.9%). For AI-use detection, agreement was 18/32
+    (56.3%) for AI-modified statements and 30/67 (44.8%) for originals; sensitivity
+    75%, specificity 65%.'
+  rationale: The extraction omits the AI-assisted FML-to-FML result (13/14, 92.9%)
+    which is reported in Table 1 of the fulltext. This is a minor omission as the
+    FML-to-GML conversion is the primary outcome.
+  source_passage: 'Table 1: AI-assisted FML to FML = 14 total, 13 (92.9%) agreement'
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: consistency-reviewer
+  text: All required YAML fields present.
+- reviewer: consistency-reviewer
+  text: D2c correctly identifies fabrication/context drift as hallucination evidence.
+- reviewer: consistency-reviewer
+  text: Good detail in D4b with multiple agreement metrics.
+- reviewer: consistency-reviewer
+  text: E3 includes thorough AI declaration and COI information.
+- reviewer: framework-reviewer
+  text: D2c is one of the strongest hallucination evidence examples in the corpus,
+    with explicit fabrication identification
+- reviewer: framework-reviewer
+  text: D4 mapping correctly captures the unusual metric structure (GML classification
+    agreement rather than typical scoring agreement)
+- reviewer: framework-reviewer
+  text: D1 construct alignment (growth mindset language codebook) appropriately mapped
+- reviewer: framework-reviewer
+  text: D5a correctly coded as No (no empirical consequence data)
+- reviewer: fidelity-reviewer
+  text: Accurate capture of the 10-statement exclusion for context/content drift
+- reviewer: fidelity-reviewer
+  text: Good identification of D2c hallucination evidence from fabrication/context
+    drift
+- reviewer: fidelity-reviewer
+  text: Correct extraction of sensitivity 75% and specificity 65% for AI-use detection
+notes:
+- reviewer: consistency-reviewer
+  text: Study_id capitalization should be standardized. Otherwise clean and well-structured.
+- reviewer: framework-reviewer
+  text: The AI-authorship detection metrics (sensitivity 75%, specificity 65%) are
+    appropriately classified under D4 rather than D5.
+- reviewer: fidelity-reviewer
+  text: Faithful extraction overall. The country inference is strong and the FML-to-FML
+    omission is minor.

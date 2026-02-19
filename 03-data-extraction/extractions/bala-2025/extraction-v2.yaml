@@ -1,0 +1,127 @@
+study_id: Bala-2024
+extraction_date: '2026-02-17'
+extractor: ai:codex-gpt-5
+A1_country: United States
+A2_specialty: Diagnostic Radiology
+A3_participants:
+  A3a_type: Radiology residents (trainees); resident evaluators had on-call experience
+  A3b_training_level: Not reported
+  A3c_sample_size: Not applicable (document-level analysis); survey evaluators n=14 (of 52 invited)
+  A3d_num_documents: 18,749 unique report pairs identified; 500 (250 train/250 validation) used for iterative prompt tuning/evaluation; final test evaluation on 10 RPR4 reports
+A4_study_design: 'Other: IRB-approved single-institution cross-sectional retrospective analysis with survey-based evaluation'
+A5_study_aim: '“The goal of this study was to examine the accuracy, satisfaction, and utility of LLM-generated feedback for radiology residents'' preliminary reports.”
+
+  The study aimed to test whether GPT-4 could supplement traditional feedback by identifying missed diagnoses in resident preliminary radiology reports.
+
+  '
+B1_ai_models: GPT-4 via OpenAI API (gpt-4-0314 model version; updated 3/14/23)
+B2_api_or_interface: API
+B3_prompt_design:
+  B3a_prompt_reported: Yes (full text provided)
+  B3b_engineering_techniques: Iterative prompt tuning; one-/few-shot prompting with examples; two sequential prompts; system prompts for standardized output; structured output format constraints; explicit
+    exclusion rules (e.g., chronic/unchanged findings)
+  B3c_prompt_iteration: 'Yes: iterative testing/refinement on training subset with qualitative validation on validation subset before final test evaluation'
+B4_ai_role: Report comparison / discrepancy detection; Feedback generation
+B5_input_data: Radiology reports (resident preliminary reports plus attending final report impressions)
+B6_output_data: Identified discrepancies / errors (missed diagnoses/differentials); Categorization/classification-style outputs (diagnosis lists and discrepancy lists)
+B7_comparator: 'Learner self-report (number: 14) for correctness of model-predicted missed diagnoses (50% consensus threshold); Expert review of user-suggested false negatives (number: 3 senior radiology
+  residents, majority vote); Faculty-confirmed RPR4 discrepancy status used for selecting test reports'
+B8_model_customization: 'Off-the-shelf (no customization): no fine-tuning reported; prompt tuning/engineering applied'
+C1_wba_tools: Radiology report review
+C2_assessment_context: 'Formative on-call radiology feedback context: resident preliminary reports were compared with attending final report impressions.
+
+  AI outputs were reviewed by residents in an evaluation interface and survey to assess perceived utility/accuracy for supplemental feedback.
+
+  '
+D1_content:
+  D1a_evidence_present: 'Yes'
+  D1b_prompt_rubric_alignment: 'Unclear: no formal competency rubric or workplace-based assessment scoring framework was used; prompts were aligned to task-specific discrepancy detection (missed diagnoses/differentials
+    between preliminary and final impressions).'
+  D1c_content_coverage: Prompt design explicitly targeted clinically significant missed diagnoses/differentials and attempted exclusion of chronic/clinically inconsequential findings; qualitative prompt-output
+    checks were performed.
+  D1d_expert_review: Resident reviewers (n=14) judged correctness of model outputs; three senior radiology residents independently reviewed user-suggested misses with majority vote adjudication.
+D2_response_process:
+  D2a_evidence_present: 'Yes'
+  D2b_reasoning_transparency: No evidence reported
+  D2c_hallucination_assessment: 'Yes (indirect: false-positive analysis as proxy): 24 model-predicted missed diagnoses were generated, 19 accepted as correct (implying 5 incorrect predictions); table examples
+    include incorrect model outputs.'
+  D2d_data_security: Data were de-identified (manual + regex removal of HIPAA identifiers including names, medical record numbers, dates of service); critical-findings communication references removed;
+    IRB-approved processing via API.
+  D2e_quality_assurance: Prompts were qualitatively evaluated for accuracy/coherence/adherence; outputs checked on validation subset; correctness determined by predefined >=50% user-consensus threshold;
+    additional false-negative suggestions adjudicated by 3 senior residents.
+D3_internal_structure:
+  D3a_evidence_present: 'No'
+  D3b_reproducibility: No evidence reported
+  D3c_inter_model_agreement: No evidence reported
+  D3d_internal_consistency: No evidence reported
+  D3e_parameter_effects: No evidence reported
+  D3f_bias_fairness: No evidence reported
+D4_relationship_to_other_variables:
+  D4a_evidence_present: 'Yes'
+  D4b_ai_human_agreement: 'AI outputs were compared against human judgments: 19/24 predictions judged correct by resident raters using >=50% consensus (prediction accuracy 79.2%); sensitivity for true missed
+    diagnoses 79.2%; interrater reliability among human raters Fleiss’ kappa = 0.43.'
+  D4c_human_raters: 14 radiology residents with on-call experience rated model predictions; 3 senior radiology residents adjudicated user-suggested missed diagnoses. Comparator strength is weaker than independent
+    attending-expert gold-standard double rating of all items.
+  D4d_discriminant_ability: No evidence reported
+  D4e_comparison_other_measures: No evidence reported
+D5_consequences:
+  D5a_evidence_present: 'Yes'
+  D5b_learner_performance_impact: No evidence reported
+  D5c_stakeholder_acceptability: 'Resident acceptability/perception data reported: mean satisfaction 3.50/5; perceived accuracy 3.64/5; 71.43% preferred combined traditional + LLM feedback; recommendation
+    likelihood mean 3.50/5.'
+  D5d_unintended_consequences: 'Empirical risk signal reported: model sometimes incorrectly flagged clinically insignificant/chronic findings as missed diagnoses; approximately 20% prediction error observed
+    in final evaluation.'
+D_summary: 'Primary: D4 (AI-human comparison metrics including consensus-based accuracy/sensitivity and kappa) and D5 (stakeholder acceptability with quantitative survey outcomes); Secondary: D1 (task-content
+  alignment and expert content review), D2 (de-identification and quality assurance workflow; indirect false-positive proxy for hallucination); Absent: D3 (no reproducibility, inter-model reliability, internal
+  consistency, parameter-effects, or fairness/differential item functioning analyses).'
+E1_limitations: '- Small final evaluation sample (10 test reports) and small evaluator sample (14 residents).
+
+  - Single-institution setting limits generalizability; external validation needed.
+
+  - Voluntary survey participation may introduce participation/selection bias.
+
+  - Potential bias in resident judgments due to experience level or case familiarity.
+
+  - Prompt-tuned but not fine-tuned model may have limited performance on subtle/complex discrepancies.
+
+  '
+E2_future_research: '- Compare LLM-generated outputs with simpler text discrepancy algorithms.
+
+  - Explore integrating fine-tuning with prompt tuning.
+
+  - Validate model outputs at external institutions.
+
+  - Evaluate impact of alternative consensus thresholds for adjudicating correctness.
+
+  '
+E3_funding_coi: Not reported
+F1_key_findings_summary: 'This pilot single-institution study evaluated GPT-4 (gpt-4-0314 via API) for identifying missed diagnoses in radiology resident preliminary reports by comparing trainee and attending
+  report impressions. In the final test subset (10 RPR4 reports), the model produced 24 candidate misses, of which 19 were judged correct by resident raters, yielding 79.2% prediction accuracy and 79.2%
+  sensitivity. Resident perceptions were cautiously positive, with mean satisfaction 3.50/5 and perceived accuracy 3.64/5; most respondents preferred hybrid traditional + LLM feedback. The authors conclude
+  LLMs may augment conventional feedback but require refinement and broader validation.
+
+  '
+F2_rq3_relevance: '- Highlights prompt sensitivity/task-specific prompt customization as a central methodological dependency for generative AI in workplace-based assessment.
+
+  - Uses a weaker comparator structure (resident consensus and adjudication) rather than fully independent expert gold-standard ratings for all items.
+
+  - Demonstrates indirect error/hallucination-proxy handling via false/incorrect outputs, but lacks explicit hallucination framework.
+
+  - Shows major evidence gaps under Downing domains not well covered by simple performance framing: no reproducibility/test-retest reporting across runs or versions, no inter-model agreement, and no subgroup
+  fairness (differential item functioning-equivalent) analysis.
+
+  - Notes model-version dependence (gpt-4-0314) and absence of fine-tuning, relevant to cross-version reproducibility and transportability.
+
+  '
+F3_confidence:
+  F3a_overall: 'High: most fields were explicitly reported; validity mapping is direct for D1/D2/D4/D5 and clearly absent for D3 per codebook thresholds.'
+  F3b_items_for_verification: 'A2_year (article folder name suggests 2025 while DOI indicates 2024 online publication); D2c (coded as indirect hallucination proxy from incorrect predictions per rule #8);
+    D4c (comparator strength interpretation because raters were residents rather than independent attending experts).'
+  F3c_uncertain_flags: B4_ai_role (classified as both discrepancy detection and feedback generation); D1b_prompt_rubric_alignment (task alignment present but no formal rubric-based alignment).
+abbreviations:
+  AI: Artificial Intelligence
+  API: 'Not defined in text (likely: Application Programming Interface)'
+  HIPAA: 'Not defined in text (likely: Health Insurance Portability and Accountability Act)'
+  IRB: 'Not defined in text (likely: Institutional Review Board)'
+  LLM: Large Language Model
+  RPR4: Reconciliation of Preliminary Report category 4 (disagree)

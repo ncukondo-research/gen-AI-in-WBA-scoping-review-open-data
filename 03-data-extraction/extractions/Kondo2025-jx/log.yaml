@@ -1,0 +1,26 @@
+article_id: Kondo2025-jx
+iterations:
+- round: 1
+  extraction_file: extraction-v1.yaml
+  review_file: review-v1.yaml
+  verdict: revise
+  major_issues: 1
+  minor_issues: 2
+- round: 2
+  extraction_file: extraction-v2.yaml
+  review_file: review-v2.yaml
+  verdict: revise
+  major_issues: 1
+  minor_issues: 3
+- round: 3
+  extraction_file: extraction-v3.yaml
+  review_file: review-v3.yaml
+  verdict: approve
+  major_issues: 0
+  minor_issues: 5
+final_version: extraction-v2.yaml
+final_status: approved
+final_round: 3
+approved_at_round: 2
+force_accepted: false
+final_file: extraction-final.yaml

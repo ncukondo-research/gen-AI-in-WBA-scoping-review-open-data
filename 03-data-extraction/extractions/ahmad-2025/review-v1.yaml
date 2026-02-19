@@ -1,0 +1,129 @@
+article_id: ahmad-2025
+round: 1
+reviewers:
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  framework-reviewer:
+    verdict: revise
+    confidence: medium
+  fidelity-reviewer:
+    verdict: revise
+    confidence: high
+overall_verdict: revise
+issues:
+- item: A1_doi
+  severity: minor
+  type: verify
+  current_value: Not reported
+  recommended_value: Verify DOI availability
+  rationale: F3b correctly flags this for verification. All other files have DOIs.
+    If the article is published, DOI should be obtainable from bibliography.json.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D2b_reasoning_transparency
+  severity: minor
+  type: consistency
+  current_value: 'Unclear: Authors report ChatGPT outputs included reasoning and references
+    to feedback text, but reasoning quality was not independently and systematically
+    evaluated.'
+  recommended_value: 'Unclear: Authors report ChatGPT outputs included reasoning and
+    references to feedback text, but reasoning quality was not independently and systematically
+    evaluated.'
+  rationale: This is a valid and well-reasoned 'Unclear' coding. Other files with
+    similar situations use slightly different phrasing. The Atsukawa file says 'LLM
+    outputs included a brief rationale for each criterion; however, reasoning quality
+    was not independently evaluated.' Consider standardizing the phrasing pattern.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: B8_model_customization
+  severity: minor
+  type: consistency
+  current_value: 'Custom training: ChatGPT Explore instance configured with instructions
+    plus uploaded training document containing 30 example entries and justification
+    text'
+  recommended_value: 'Custom training: ChatGPT Explore instance configured with instructions
+    plus uploaded training document containing 30 example entries and justification
+    text'
+  rationale: Correctly coded. The Explore/Knowledge upload is distinct from API fine-tuning
+    but represents meaningful customization. Flagged in F3c appropriately.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D2c
+  severity: major
+  type: missing_evidence
+  current_value: No evidence reported
+  recommended_value: 'Yes (indirect: false-positive analysis as proxy)'
+  rationale: 'The study reports 90% concordance with 10% discordance between ChatGPT
+    and faculty on the 60-entry reference set. The supplementary review showed 92%
+    concordance with 8% discordance. These discordant classifications represent AI
+    outputs not matching expert ground truth, which per Rule #8 should be coded as
+    indirect false-positive analysis as proxy for hallucination. Additionally, the
+    authors explicitly note ChatGPT ''may overestimate some domains (notably PBL),
+    requiring human oversight,'' which describes content fabrication/over-attribution.
+    This should be coded consistently with other studies where discordant classifications
+    were coded as D2c evidence.'
+  source_passage: fulltext Results section (90% concordance); fulltext Discussion
+    (PBL overestimation)
+  raised_by: framework-reviewer
+- item: A1_doi
+  severity: major
+  type: correct_value
+  current_value: Not reported
+  recommended_value: 10.1002/lary.32368
+  rationale: The DOI is available in the bibliography.json file for this article and
+    is a standard published article identifier. While the fulltext PDF rendering may
+    not display the DOI prominently, the bibliography metadata clearly provides it.
+    The extraction should use available metadata.
+  source_passage: 'bibliography.json: DOI field'
+  raised_by: fidelity-reviewer
+- item: D4b_ai_human_agreement
+  severity: minor
+  type: correct_value
+  current_value: AI-human agreement was directly assessed on 60 entries with concordance
+    rate 90% and Cohen's kappa = 0.941. Supplementary subset review showed concordance
+    rate 92% with kappa = 0.82 for selected discrepant domains.
+  recommended_value: AI-human agreement was directly assessed on 60 entries with concordance
+    rate 90% and Cohen's kappa = 0.94. Supplementary subset review showed concordance
+    rate 92% with kappa = 0.82 for selected discrepant domains.
+  rationale: The fulltext reports kappa = 0.94, not 0.941. The third decimal place
+    appears to be fabricated precision not present in the source.
+  source_passage: 'Abstract and Results: ''ChatGPT evaluated entries with 90% concordance
+    with faculty (kappa = 0.94)'''
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: consistency-reviewer
+  text: All required YAML fields present.
+- reviewer: consistency-reviewer
+  text: Thorough D4 evidence with both primary and supplementary concordance metrics.
+- reviewer: consistency-reviewer
+  text: D2e quality assurance section is detailed and well-structured.
+- reviewer: framework-reviewer
+  text: D4 mapping is excellent with strong kappa values clearly reported
+- reviewer: framework-reviewer
+  text: D1 prompt-rubric alignment well documented (same prompt as faculty; ACGME
+    competency definitions)
+- reviewer: framework-reviewer
+  text: D2e QA procedures thoroughly captured (session resets, memory clearing, supplementary
+    blinded review)
+- reviewer: framework-reviewer
+  text: D4e cross-tool comparison coding is reasonable
+- reviewer: fidelity-reviewer
+  text: Accurate extraction of the multi-format comparison (SIMPL-OR, OSATS, EOR)
+    with correct statistics
+- reviewer: fidelity-reviewer
+  text: Good capture of the custom GPT workflow (Explore feature, Knowledge upload,
+    session resets)
+- reviewer: fidelity-reviewer
+  text: Correct identification of the QA procedures including session memory management
+notes:
+- reviewer: consistency-reviewer
+  text: The DOI absence is unusual and should be verified. Overall well-structured
+    extraction.
+- reviewer: framework-reviewer
+  text: 'The D2c issue affects consistency across the corpus. Multiple other studies
+    with similar discordance rates are coded as D2c=Yes (indirect), so ahmad-2025
+    should be treated consistently per Rule #8.'
+- reviewer: fidelity-reviewer
+  text: The DOI issue is the only major fidelity concern. All other statistics and
+    claims verified against fulltext.

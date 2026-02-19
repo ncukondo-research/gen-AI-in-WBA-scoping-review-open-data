@@ -1,0 +1,109 @@
+article_id: Partin2025-nj
+round: 1
+reviewers:
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  framework-reviewer:
+    verdict: revise
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: revise
+issues:
+- item: D3a_evidence_present
+  severity: minor
+  type: consistency
+  current_value: 'Yes'
+  recommended_value: 'Yes'
+  rationale: D3a is Yes because D3f has empirical subgroup bias analyses. This is
+    consistent with the codebook rule that D3a=Yes if any sub-item D3b-D3f has empirical
+    evidence. Correctly coded.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: E3_funding_coi
+  severity: minor
+  type: rephrase
+  current_value: Not reported
+  recommended_value: 'Funding: Not reported. COI: Not reported.'
+  rationale: Other files (e.g., Gin, Jarry-Trujillo) provide more structured formatting
+    with separate Funding/COI lines. Standardize for synthesis consistency.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D3f
+  severity: major
+  type: reclassify
+  current_value: Subgroup analyses compared AI-CCC relationships by gender, PGY, and
+    word-count groups...
+  recommended_value: 'Reclassify gender/PGY/word-count subgroup analyses: These are
+    subgroup comparisons of D4 agreement metrics, not D3f bias/fairness analyses of
+    AI outputs per se'
+  rationale: 'The subgroup analyses in Partin compare the RELATIONSHIP between AI
+    and CCC scores across gender/PGY/word-count groups (i.e., whether AI-CCC agreement
+    differs by subgroup). This is not the same as D3f, which asks whether ''AI assessment
+    outputs differ systematically across demographic groups'' (i.e., statistical bias
+    in the AI outputs themselves). The study does not report whether AI milestone
+    scores themselves were systematically higher or lower for one gender versus another
+    independent of CCC scores. The analyses examine whether the AI-CCC CORRELATION
+    varies by subgroup, which is more accurately a D4-level subgroup moderation analysis.
+    Per Rule #11, statistical detection of bias in AI outputs belongs under D3f, but
+    these analyses test for differential validity (D4 moderation), not differential
+    AI output. This should be reclassified from D3f to D4 subgroup analysis, and D3a
+    should be changed to No.'
+  source_passage: fulltext Tables 2-4; Discussion paragraphs on gender and PGY
+  raised_by: framework-reviewer
+- item: D3a
+  severity: major
+  type: reclassify
+  current_value: 'Yes'
+  recommended_value: 'No'
+  rationale: Consequent to the D3f reclassification above, D3a should be No since
+    no other D3 sub-items have empirical evidence. The extraction currently codes
+    D3a=Yes solely based on D3f, and if D3f is reclassified, D3a becomes No.
+  source_passage: See D3f issue above
+  raised_by: framework-reviewer
+- item: A5c_sample_size
+  severity: minor
+  type: rephrase
+  current_value: '24'
+  recommended_value: 24 residents
+  rationale: Adding the unit for consistency with other extractions.
+  source_passage: Methods section
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: consistency-reviewer
+  text: All required YAML fields present.
+- reviewer: consistency-reviewer
+  text: D3f bias/fairness subgroup analyses correctly identified and coded.
+- reviewer: consistency-reviewer
+  text: D4b provides detailed per-domain metrics.
+- reviewer: consistency-reviewer
+  text: Good F2 relevance observations linking to Downing framework gaps.
+- reviewer: framework-reviewer
+  text: D4 mapping is thorough with appropriate metrics (Pearson, concordance, mean
+    difference, paired t-test)
+- reviewer: framework-reviewer
+  text: D1 prompt-rubric alignment is well documented (ACGME milestones pasted verbatim)
+- reviewer: framework-reviewer
+  text: D2d data security/de-identification appropriately captured
+- reviewer: fidelity-reviewer
+  text: Accurate extraction of the correlation/concordance statistics across 16 domains
+- reviewer: fidelity-reviewer
+  text: Good capture of subgroup analyses (gender, PGY, word count) and their results
+- reviewer: fidelity-reviewer
+  text: Correct identification of the CARE framework and sequential prompting approach
+- reviewer: fidelity-reviewer
+  text: Accurate representation of the ICS domain weakness findings
+notes:
+- reviewer: consistency-reviewer
+  text: B2 inferred as 'Web interface' from 'new chat in ChatGPT' description - flagged
+    in F3b appropriately.
+- reviewer: framework-reviewer
+  text: The D3f vs D4d boundary is the key issue. The Partin study subgroup analyses
+    examine whether AI-CCC agreement varies by group (differential validity = D4),
+    not whether AI scores are systematically biased by group independent of comparator
+    (statistical bias = D3f). D_summary will need updating if D3 is reclassified.
+- reviewer: fidelity-reviewer
+  text: Strong fidelity throughout. All statistics verified against fulltext. No fabricated
+    data points detected.

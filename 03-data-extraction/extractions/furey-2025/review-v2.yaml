@@ -1,0 +1,269 @@
+article_id: furey-2025
+round: 2
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: medium
+  consistency-reviewer:
+    verdict: revise
+    confidence: high
+  fidelity-reviewer:
+    verdict: revise
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'AAS: ''Not defined in text (likely: Association for Academic Surgery)'''
+  recommended_value: (remove entry)
+  rationale: AAS does not appear to be used in any YAML field value. It may be from
+    the article text but not from extraction values. Need to verify.
+  source_passage: Scanned all field values
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'ASC: ''Annual Academic Surgical Congress'''
+  recommended_value: (remove entry)
+  rationale: ASC does not appear to be used in any YAML field value. May be from article
+    metadata but not extraction content.
+  source_passage: Scanned all field values
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'DO: ''Not defined in text (likely: Doctor of Osteopathic Medicine)'''
+  recommended_value: (remove entry)
+  rationale: DO does not appear in YAML field values. Likely from author credentials
+    in article.
+  source_passage: Scanned all field values
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'ML: ''Not defined in text (likely: Machine learning)'''
+  recommended_value: (remove entry)
+  rationale: ML does not appear in YAML field values.
+  source_passage: Scanned all field values
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'MS: ''Not defined in text (likely: Master of Science)'''
+  recommended_value: (remove entry)
+  rationale: MS does not appear in YAML field values. Likely from author credentials.
+  source_passage: Scanned all field values
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'NV: ''Not defined in text (likely: Nevada)'''
+  recommended_value: (remove entry)
+  rationale: NV does not appear in YAML field values. Likely from author affiliation.
+  source_passage: Scanned all field values
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'PM: ''Not defined in text (likely: Post meridiem)'''
+  recommended_value: (remove entry)
+  rationale: PM does not appear in YAML field values. Source unknown.
+  source_passage: Scanned all field values
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: major
+  type: remove
+  current_value: 'AAS: ''Not defined in text (likely: Association for Academic Surgery)'''
+  recommended_value: (remove)
+  rationale: 'AAS does not appear in any YAML field value. Scanning all fields: not
+    found.'
+  source_passage: No field value contains 'AAS'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: major
+  type: remove
+  current_value: 'ASC: ''Annual Academic Surgical Congress'''
+  recommended_value: (remove)
+  rationale: ASC does not appear in any YAML field value.
+  source_passage: No field value contains 'ASC'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: major
+  type: remove
+  current_value: 'DO: ''Not defined in text (likely: Doctor of Osteopathic Medicine)'''
+  recommended_value: (remove)
+  rationale: DO does not appear in any YAML field value.
+  source_passage: No field value contains 'DO'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: major
+  type: remove
+  current_value: 'ML: ''Not defined in text (likely: Machine learning)'''
+  recommended_value: (remove)
+  rationale: 'ML does not appear in any YAML field value. Scanning all fields: not
+    found.'
+  source_passage: No field value contains 'ML'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: major
+  type: remove
+  current_value: 'MS: ''Not defined in text (likely: Master of Science)'''
+  recommended_value: (remove)
+  rationale: MS does not appear in any YAML field value.
+  source_passage: No field value contains 'MS'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: major
+  type: remove
+  current_value: 'NV: ''Not defined in text (likely: Nevada)'''
+  recommended_value: (remove)
+  rationale: NV does not appear in any YAML field value.
+  source_passage: No field value contains 'NV'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: major
+  type: remove
+  current_value: 'PM: ''Not defined in text (likely: Post meridiem)'''
+  recommended_value: (remove)
+  rationale: PM does not appear in any YAML field value.
+  source_passage: No field value contains 'PM'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (absent)
+  recommended_value: 'LLM: ''Not defined in text (likely: Large language model)'''
+  rationale: 'LLM appears in F2 field value (''no internal-structure psychometrics
+    (reproducibility, parameter effects, fairness) and no empirical consequential
+    validity (learner outcomes/acceptability)'') - actually checking again: F2 doesn''t
+    use LLM. Checking E2: ''LLM feedback'' - no. Checking E1: no. Checking F1: no.
+    Actually scanning: ''LLM-feedback contexts'' in E1. Yes, LLM appears in E1_limitations.'
+  source_passage: 'E1: ''LLM-feedback contexts'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (absent)
+  recommended_value: 'WBA: ''Not defined in text (likely: Workplace-based assessment)'''
+  rationale: WBA appears in F2 field value.
+  source_passage: 'F2: ''WBA studies'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'AAS: Not defined in text (likely: Association for Academic Surgery)'
+  recommended_value: (remove AAS entirely or verify it appears in field values)
+  rationale: AAS does not appear in any extraction field value. It appears only in
+    the meeting-presentation section of the fulltext and possibly in F3b. Per codebook
+    rule, only abbreviations appearing in field values should be listed.
+  source_passage: Line 187 of fulltext.md (meeting disclosure only)
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'ASC: Annual Academic Surgical Congress'
+  recommended_value: (remove ASC entirely or verify it appears in field values)
+  rationale: ASC does not appear in any extraction field value. It appears only in
+    the meeting-presentation disclosure. Per codebook rule, only abbreviations from
+    field values should be listed.
+  source_passage: Line 177 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'DO: Not defined in text (likely: Doctor of Osteopathic Medicine)'
+  recommended_value: (remove DO entirely)
+  rationale: DO appears only in author credentials (Michael J. Furey, DO). It does
+    not appear in any extraction field value.
+  source_passage: Author line of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'ML: Not defined in text (likely: Machine learning)'
+  recommended_value: (remove ML entirely)
+  rationale: 'ML does not appear in any extraction field value. Checking extraction:
+    not found in any field.'
+  source_passage: N/A
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'MS: Not defined in text (likely: Master of Science)'
+  recommended_value: (remove MS entirely)
+  rationale: MS appears only in author credentials. It does not appear in any extraction
+    field value.
+  source_passage: Author line of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'NV: Not defined in text (likely: Nevada)'
+  recommended_value: (remove NV entirely)
+  rationale: NV appears only in the meeting presentation location ('Las Vegas, NV').
+    It does not appear in any extraction field value.
+  source_passage: Line 177 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'PM: Not defined in text (likely: Post meridiem)'
+  recommended_value: (remove PM entirely)
+  rationale: PM appears only in the meeting time ('1:40 PM'). It does not appear in
+    any extraction field value.
+  source_passage: Line 183 of fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: major
+  type: correct_value
+  current_value: 'SIMPL: System for Improving and Measuring Procedural Learning Operating
+    Room system'
+  recommended_value: 'SIMPL: Society for Improving Medical Professional Learning'
+  rationale: The fulltext defines SIMPL in the Acknowledgments as 'Society for Improving
+    Medical Professional Learning (SIMPL)' (line 161). The current definition 'System
+    for Improving and Measuring Procedural Learning Operating Room system' appears
+    to be a fabricated conflation. The SIMPL website and the fulltext both use 'Society
+    for Improving Medical Professional Learning'.
+  source_passage: 'Line 161 of fulltext.md: ''Society for Improving Medical Professional
+    Learning (SIMPL)'''
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'ACGME: Accreditation Council for Graduate Medical Education'
+  recommended_value: 'ACGME: Accreditation Council for Graduate Medical Education'
+  rationale: 'Confirmed: defined in the fulltext (line 53). Current coding is correct.'
+  source_passage: Line 53 of fulltext.md
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content drift.
+- reviewer: framework-reviewer
+  text: Core abbreviations (FML, FSs, GML, SIMPL, ACGME, IRB) are correctly identified.
+- reviewer: consistency-reviewer
+  text: Good study-specific abbreviations (FML, FSs, GML, SIMPL)
+- reviewer: fidelity-reviewer
+  text: Correct definitions for FML, FSs, GML as defined in the article.
+- reviewer: fidelity-reviewer
+  text: Appropriate coding for IRB as not defined in text.
+notes:
+- reviewer: framework-reviewer
+  text: 'Multiple abbreviations appear to have been extracted from the article text/metadata
+    rather than from YAML field values. These are minor issues (not hallucinated definitions,
+    just over-inclusion) but should be trimmed per codebook rule 12: ''Only list abbreviations
+    that actually appear in the values of the current extraction.'' Verdict remains
+    approve because these are all minor severity.'
+- reviewer: consistency-reviewer
+  text: 'This article has the most spurious entries of any file (7 abbreviations not
+    found in any field value: AAS, ASC, DO, ML, MS, NV, PM). These appear to have
+    been extracted from the article''s author credential lines or conference metadata
+    rather than from YAML field values. Requires revision to remove all 7.'
+- reviewer: fidelity-reviewer
+  text: 'One major issue: SIMPL definition is incorrect. Several minor issues involve
+    abbreviations listed that do not appear in extraction field values (AAS, ASC,
+    DO, ML, MS, NV, PM). These should be removed per codebook rule #12.'
+- reviewer: team-lead
+  text: 'Lightweight post-fix review: Removed 7 spurious abbreviation entries not
+    in YAML values; corrected SIMPL definition to match fulltext. Fixes verified,
+    validate_yaml.py passes. Approved.'

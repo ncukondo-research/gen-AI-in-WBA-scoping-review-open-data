@@ -1,0 +1,106 @@
+article_id: bany_abdelnabi-2025
+round: 1
+reviewers:
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: D2c_hallucination_assessment
+  severity: minor
+  type: consistency
+  current_value: 'Yes: 38% of students reported occasionally encountering hallucinations
+    (false or logically incorrect information).'
+  recommended_value: 'Yes: 38% of students reported occasionally encountering hallucinations
+    (false or logically incorrect information).'
+  rationale: 'This is direct hallucination evidence (not indirect proxy), yet coded
+    simply as ''Yes:'' while other files distinguish ''Yes (indirect: false-positive
+    analysis as proxy)''. The distinction is correct here since this is self-reported
+    hallucination observation, not proxy. But for synthesis consistency, it may be
+    worth labeling as ''Yes (direct: student-reported hallucinations)''.'
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D4a_evidence_present
+  severity: minor
+  type: verify
+  current_value: 'No'
+  recommended_value: 'No'
+  rationale: Correctly coded. There is no AI-human comparison in this study. The AI
+    generates feedback but is not compared against expert ratings. Consistent with
+    codebook definition.
+  source_passage: ''
+  raised_by: consistency-reviewer
+- item: D1a
+  severity: minor
+  type: clarification
+  current_value: 'Yes'
+  recommended_value: Consider whether prompt-section alignment alone meets D1 threshold
+    without expert content review
+  rationale: 'D1a is coded as Yes based on D1b prompt alignment to H&P sections. This
+    is a borderline case: the prompts were structured by H&P sections and expected
+    clinical elements, which shows intentional content alignment. However, no expert
+    review (D1d) or formal coverage evaluation (D1c) was done. The coding is defensible
+    because the prompt design explicitly targets assessment-relevant H&P domains,
+    but it represents weaker D1 evidence than studies with expert content review.'
+  source_passage: fulltext Section 3, Appendix prompts
+  raised_by: framework-reviewer
+- item: D5c_stakeholder_acceptability
+  severity: minor
+  type: rephrase
+  current_value: 'Student acceptability was reported quantitatively: 44% very satisfied,
+    37% neutral, 19% dissatisfied; 70% reported in-depth feedback, 76% relevance to
+    learning, 83% efficiency, and 88% empathetic/compassionate interaction.'
+  recommended_value: 'Student acceptability was reported quantitatively: 44% very
+    satisfied, 37% neutral, 19% dissatisfied; 70% found feedback in-depth, 76% found
+    it relevant to learning, 83% found it efficient, and 88% found interaction empathetic/compassionate.'
+  rationale: Minor rephrasing for clarity. The percentages are accurate against the
+    fulltext.
+  source_passage: Results section survey data
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: consistency-reviewer
+  text: All required YAML fields present.
+- reviewer: consistency-reviewer
+  text: D5 evidence correctly identified across all three sub-items (D5b, D5c, D5d).
+- reviewer: consistency-reviewer
+  text: D2b correctly uses codebook-specified phrase 'CoT prompting techniques used
+    but reasoning quality not independently examined.'
+- reviewer: consistency-reviewer
+  text: One of the few studies with D5 evidence across multiple sub-items.
+- reviewer: framework-reviewer
+  text: D2c hallucination evidence correctly captured from student self-report (38%
+    occasional hallucinations)
+- reviewer: framework-reviewer
+  text: 'D5 mapping is excellent: empirical acceptability (satisfaction percentages),
+    perceived impact (self-reported learning benefit), and unintended consequences
+    (hallucinations, prompt sensitivity)'
+- reviewer: framework-reviewer
+  text: D4a correctly coded as No (no AI-human comparator design)
+- reviewer: framework-reviewer
+  text: 'D2b CoT correctly coded per codebook note: ''CoT prompting techniques used
+    but reasoning quality not independently examined'''
+- reviewer: fidelity-reviewer
+  text: Accurate extraction of the mixed-methods design with both quantitative survey
+    and qualitative components
+- reviewer: fidelity-reviewer
+  text: Good capture of the H&P1 vs H&P2 design difference (non-interactive vs interactive)
+- reviewer: fidelity-reviewer
+  text: Correct identification of the hallucination reporting (38%) and prompt sensitivity
+    (51%)
+- reviewer: fidelity-reviewer
+  text: Appropriate coding of D4 as absent (no AI-human agreement comparison)
+notes:
+- reviewer: consistency-reviewer
+  text: Good extraction of a study with an unusual profile (strong D5, no D4). Well-handled.
+- reviewer: framework-reviewer
+  text: This is one of the few studies with strong D5 evidence and no D4 evidence,
+    which is correctly reflected in the D_summary.
+- reviewer: fidelity-reviewer
+  text: Extraction faithfully represents all reported statistics and methodological
+    details.

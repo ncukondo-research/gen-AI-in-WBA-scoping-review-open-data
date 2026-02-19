@@ -1,0 +1,78 @@
+article_id: Kondo2025-jx
+round: 3
+reviewers:
+  framework-reviewer:
+    verdict: approve
+    confidence: high
+  consistency-reviewer:
+    verdict: approve
+    confidence: high
+  fidelity-reviewer:
+    verdict: approve
+    confidence: high
+overall_verdict: approve
+issues:
+- item: abbreviations
+  severity: minor
+  type: remove
+  current_value: 'RQ3: ''Not defined in text (likely: Research Question 3)'''
+  recommended_value: (remove or retain)
+  rationale: RQ3 appears in F2 value text. Defensible.
+  source_passage: F2_rq3_relevance
+  raised_by: framework-reviewer
+- item: abbreviations
+  severity: minor
+  type: rephrase
+  current_value: 'LLM: ''large language model'''
+  recommended_value: 'LLM: ''Large language model'''
+  rationale: Cross-article consistency in capitalization
+  source_passage: Multiple fields use 'LLM'
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: add_missing
+  current_value: (absent)
+  recommended_value: 'WBA: ''Not defined in text (likely: Workplace-based assessment)'''
+  rationale: 'WBA appears in F2 field value: ''AI validation in WBA'''
+  source_passage: 'F2: ''AI validation in WBA'''
+  raised_by: consistency-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'CI: Not defined in text (likely: Confidence interval)'
+  recommended_value: 'CI: Not defined in text (likely: Confidence interval)'
+  rationale: 'CI appears in extraction field values (D4b: ''95% CI''). Checking fulltext:
+    CI is used in the article but may not be explicitly defined with parenthetical
+    expansion. Current coding appears correct.'
+  source_passage: fulltext.md
+  raised_by: fidelity-reviewer
+- item: abbreviations
+  severity: minor
+  type: correct_value
+  current_value: 'MCC: Model Core Curriculum for Medical Education'
+  recommended_value: 'MCC: Model Core Curriculum for Medical Education'
+  rationale: 'Confirmed: the fulltext defines MCC as related to Model Core Curriculum
+    (lines 47, 51, 65). The exact phrase ''Model Core Curriculum for Medical Education''
+    may be slightly expanded from the article''s usage, but is accurate.'
+  source_passage: Lines 47, 51, 65 of fulltext.md
+  raised_by: fidelity-reviewer
+commendations:
+- reviewer: framework-reviewer
+  text: All non-abbreviation fields identical to backup. No content drift.
+- reviewer: framework-reviewer
+  text: 'Concise abbreviation list with appropriate entries: MCC, LLM, CI, API.'
+- reviewer: consistency-reviewer
+  text: Clean and concise abbreviation list appropriate for the scope of this study
+- reviewer: consistency-reviewer
+  text: MCC properly defined with full institutional name
+- reviewer: fidelity-reviewer
+  text: Clean, focused abbreviation list appropriate for the extraction content.
+- reviewer: fidelity-reviewer
+  text: Correct identification of non-defined abbreviations (API, CI, RQ3, WBA).
+notes:
+- reviewer: framework-reviewer
+  text: Clean update. doi/published_year removed, abbreviation block added.
+- reviewer: consistency-reviewer
+  text: Compact but complete abbreviation list. No major issues.
+- reviewer: fidelity-reviewer
+  text: No major issues. Well-compiled list.
