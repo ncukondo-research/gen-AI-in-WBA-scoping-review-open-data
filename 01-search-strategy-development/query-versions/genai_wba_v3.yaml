@@ -1,0 +1,172 @@
+# yaml-language-server: $schema=./query.schema.json
+name: genai_wba_v3
+description: >
+  v3: Refined from v2 based on results assessment (~15-25% precision, 764 unique).
+  Changes to concept-wba: (1) Removed broad terms that captured AI-competency and
+  exam-taking noise: "clinical competenc*" (matched AI-demonstrating-competence
+  articles), "formative assessment*" (too broad), "performance assessment*" (matched
+  AI performance benchmarks), "clinical evaluation*" (ambiguous), "clinical supervision"
+  (too broad), "competence assessment*" (too broad). (2) Added specific WBA terms:
+  "competency-based assessment*" (replaces clinical competenc*), "programmatic
+  assessment" (CBME-specific), "EPAs" (plural, more specific to medical education).
+  (3) Kept all WBA tool names, feedback compound terms, clinical records terms.
+  Concepts 1-2 unchanged.
+
+query:
+  - id: concept-genai
+    field: title_abstract
+    terms:
+      keywords:
+        - "generative artificial intelligence"
+        - "generative AI"
+        - "large language model*"
+        - "LLM"
+        - "LLMs"
+        - "ChatGPT"
+        - "GPT-4"
+        - "GPT-4o"
+        - "GPT-3.5"
+        - "GPT4"
+        - "GPT-4V"
+        - "Claude"
+        - "Gemini"
+        - "LLaMA"
+        - "Llama 2"
+        - "Llama 3"
+        - "multimodal AI"
+        - "AI chatbot*"
+        - "foundation model*"
+        - "text generat*"
+      mesh:
+        - "Natural Language Processing"
+    operator: OR
+
+  - id: concept-meded
+    field: title_abstract
+    terms:
+      keywords:
+        - "medical education"
+        - "clinical education"
+        - "graduate medical education"
+        - "undergraduate medical education"
+        - "postgraduate medical education"
+        - "health profession* education"
+        - "residency training"
+        - "residency"
+        - "medical student*"
+        - "resident physician*"
+        - "clinical clerkship*"
+        - "clinical training"
+        - "clinical teach*"
+        - "trainee*"
+        - "medical trainee*"
+      mesh:
+        - "Education, Medical"
+        - "Education, Medical, Graduate"
+        - "Education, Medical, Undergraduate"
+        - "Education, Medical, Continuing"
+        - "Internship and Residency"
+        - "Students, Medical"
+        - "Clinical Clerkship"
+      eric:
+        - "Medical Education"
+        - "Medical Students"
+        - "Clinical Experience"
+        - "Graduate Medical Education"
+    operator: OR
+
+  - id: concept-wba
+    field: title_abstract
+    terms:
+      keywords:
+        # WBA-specific terms
+        - "workplace-based assessment*"
+        - "workplace based assessment*"
+        - "work-based assessment*"
+        - "work based assessment*"
+        - "WBA"
+        # Specific WBA tools
+        - "Mini-CEX"
+        - "mini clinical evaluation exercise*"
+        - "DOPS"
+        - "direct observation of procedural skill*"
+        - "direct observation*"
+        - "entrustable professional activit*"
+        - "EPA"
+        - "EPAs"
+        - "multisource feedback"
+        - "multi-source feedback"
+        - "360-degree feedback"
+        # CBME / competency-based assessment
+        - "competency-based medical education"
+        - "competency based medical education"
+        - "competency-based assessment*"
+        - "competency based assessment*"
+        - "CBME"
+        - "programmatic assessment"
+        # Feedback in assessment context
+        - "narrative feedback"
+        - "narrative assessment*"
+        - "assessment feedback"
+        - "supervisor* feedback"
+        - "assessment scoring"
+        # Clinical records assessment
+        - "clinical note*"
+        - "medical record*"
+        - "chart review*"
+      mesh:
+        - "Clinical Competence"
+        - "Educational Measurement"
+        - "Competency-Based Education"
+        - "Formative Feedback"
+      eric:
+        - "Clinical Experience"
+        - "Competency Based Education"
+        - "Performance Based Assessment"
+        - "Formative Evaluation"
+    operator: OR
+
+filters:
+  year_from: 2022
+  language:
+    - en
+
+providers:
+  arxiv:
+    replaces:
+      concept-genai:
+        field: title_abstract
+        terms:
+          keywords:
+            - "generative AI"
+            - "large language model"
+            - "LLM"
+            - "ChatGPT"
+            - "GPT-4"
+            - "GPT-3.5"
+            - "Gemini"
+            - "LLaMA"
+        operator: OR
+      concept-meded:
+        field: title_abstract
+        terms:
+          keywords:
+            - "medical education"
+            - "clinical education"
+            - "medical student"
+            - "residency"
+            - "health professions education"
+        operator: OR
+      concept-wba:
+        field: title_abstract
+        terms:
+          keywords:
+            - "workplace-based assessment"
+            - "clinical competence"
+            - "competency-based assessment"
+            - "Mini-CEX"
+            - "entrustable professional"
+            - "narrative feedback"
+            - "clinical note"
+            - "assessment feedback"
+        operator: OR

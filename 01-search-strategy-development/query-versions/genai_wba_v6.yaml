@@ -1,0 +1,184 @@
+# yaml-language-server: $schema=./query.schema.json
+name: genai_wba_v6
+description: >
+  v6: Refined from v5 based on PRESS 2015 review of session 20260212_genaiwbav5_5bfdca
+  (AI reviewer 1, Claude Opus 4.6). Element 4 (Text Word Search) was Partially Adequate.
+  Changes: (1) HIGH: Added 'DeepSeek' to concept-genai and arXiv replacement block —
+  prominent in 2025 medical education literature, may not co-occur with generic LLM
+  terms. Added 1 new PubMed hit and 15 new ERIC hits. (2) MEDIUM: 'o1-preview' and
+  'o1-mini' were tested but EXCLUDED — the hyphenated terms caused ~131 false positives
+  in ERIC because ERIC's Lucene API parses hyphens as boolean NOT (e.g., 'o1-preview'
+  becomes 'o1 NOT preview'). Moreover, these terms added 0 new captures in PubMed,
+  Scopus, and arXiv — articles discussing o1/o3 models are already captured by broader
+  terms ('large language model*', 'LLM', 'generative AI'). (3) LOW-MEDIUM: 'Grok' was
+  tested but EXCLUDED — caused an additional ~146 false positives in ERIC because the
+  API matches case-insensitively and 'grok' is an informal English verb meaning 'to
+  understand' used in education literature. The 5 legitimate Grok-model articles in the
+  result set are already captured by broader terms. All other terms unchanged from v5.
+
+query:
+  - id: concept-genai
+    field: title_abstract
+    terms:
+      keywords:
+        - "generative artificial intelligence"
+        - "generative AI"
+        - "large language model*"
+        - "LLM"
+        - "LLMs"
+        - "ChatGPT"
+        - "GPT-4"
+        - "GPT-4o"
+        - "GPT-3.5"
+        - "GPT4"
+        - "GPT-4V"
+        - "GPT-5"
+        - "Claude"
+        - "Gemini"
+        - "LLaMA"
+        - "Llama 2"
+        - "Llama 3"
+        - "DeepSeek"
+        - "multimodal AI"
+        - "AI chatbot*"
+        - "foundation model*"
+        - "text generat*"
+      mesh:
+        - "Natural Language Processing"
+        - "Generative Artificial Intelligence"
+        - "Large Language Models"
+        - "Chatbot"
+    operator: OR
+
+  - id: concept-meded
+    field: title_abstract
+    terms:
+      keywords:
+        - "medical education"
+        - "clinical education"
+        - "graduate medical education"
+        - "undergraduate medical education"
+        - "postgraduate medical education"
+        - "health profession* education"
+        - "residency training"
+        - "residency"
+        - "medical student*"
+        - "resident physician*"
+        - "clinical clerkship*"
+        - "clinical training"
+        - "clinical teach*"
+        - "trainee*"
+        - "medical trainee*"
+      mesh:
+        - "Education, Medical"
+        - "Education, Medical, Graduate"
+        - "Education, Medical, Undergraduate"
+        - "Education, Medical, Continuing"
+        - "Internship and Residency"
+        - "Students, Medical"
+        - "Clinical Clerkship"
+      eric:
+        - "Medical Education"
+        - "Medical Students"
+        - "Clinical Experience"
+        - "Graduate Medical Education"
+    operator: OR
+
+  - id: concept-wba
+    field: title_abstract
+    terms:
+      keywords:
+        # WBA-specific terms
+        - "workplace-based assessment*"
+        - "workplace based assessment*"
+        - "work-based assessment*"
+        - "work based assessment*"
+        - "WBA"
+        # Specific WBA tools
+        - "Mini-CEX"
+        - "mini clinical evaluation exercise*"
+        - "DOPS"
+        - "direct observation of procedural skill*"
+        - "direct observation*"
+        - "entrustable professional activit*"
+        - "EPA"
+        - "EPAs"
+        - "multisource feedback"
+        - "multi-source feedback"
+        - "360-degree feedback"
+        # CBME / competency-based assessment
+        - "competency-based medical education"
+        - "competency based medical education"
+        - "competency-based assessment*"
+        - "competency based assessment*"
+        - "CBME"
+        - "programmatic assessment"
+        - "milestone*"
+        # Feedback in assessment context
+        - "narrative feedback"
+        - "narrative assessment*"
+        - "assessment feedback"
+        - "supervisor* feedback"
+        - "assessment scoring"
+        # Clinical records assessment
+        - "clinical note*"
+        - "medical record*"
+        - "chart review*"
+      mesh:
+        - "Clinical Competence"
+        - "Educational Measurement"
+        - "Competency-Based Education"
+        - "Formative Feedback"
+      eric:
+        - "Clinical Experience"
+        - "Competency Based Education"
+        - "Performance Based Assessment"
+        - "Formative Evaluation"
+    operator: OR
+
+filters:
+  year_from: 2022
+  language:
+    - en
+
+providers:
+  arxiv:
+    replaces:
+      concept-genai:
+        field: title_abstract
+        terms:
+          keywords:
+            - "generative AI"
+            - "large language model"
+            - "LLM"
+            - "ChatGPT"
+            - "GPT-4"
+            - "GPT-3.5"
+            - "GPT-5"
+            - "Gemini"
+            - "LLaMA"
+            - "DeepSeek"
+        operator: OR
+      concept-meded:
+        field: title_abstract
+        terms:
+          keywords:
+            - "medical education"
+            - "clinical education"
+            - "medical student"
+            - "residency"
+            - "health professions education"
+        operator: OR
+      concept-wba:
+        field: title_abstract
+        terms:
+          keywords:
+            - "workplace-based assessment"
+            - "competency-based assessment"
+            - "Mini-CEX"
+            - "entrustable professional"
+            - "narrative feedback"
+            - "clinical note"
+            - "assessment feedback"
+            - "milestone"
+        operator: OR

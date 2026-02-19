@@ -1,0 +1,203 @@
+# yaml-language-server: $schema=./query.schema.json
+name: genai_wba_v8
+description: >
+  v8: Minor cleanup from v7 based on co-author review by Yuki Kataoka (YK).
+  Single change: removed 3 redundant child MeSH terms from concept-meded
+  ('Education, Medical, Graduate', 'Education, Medical, Undergraduate',
+  'Education, Medical, Continuing'). These are already subsumed by the parent
+  term 'Education, Medical'[mh] via PubMed's automatic MeSH explosion. YK's
+  MeSH analysis confirmed this redundancy. Empirical verification confirmed
+  zero impact on search results across all databases. Other YK proposals
+  (Block 1 GPT* wildcard consolidation, Block 2 free keyword additions) were
+  tested but NOT adopted: GPT* introduces false positives from 'General
+  Practice Training' abbreviation in GP/family medicine literature; Block 2
+  keyword additions (clerkship*, clinical rotation*, clinical supervisor*,
+  medical curriculum) had zero PubMed impact and only added out-of-scope
+  Scopus articles. See session 20260213_genaiwbav7_d5dcc5 notes for full
+  verification details.
+
+query:
+  - id: concept-genai
+    field: title_abstract
+    terms:
+      keywords:
+        - "generative artificial intelligence"
+        - "generative AI"
+        - "large language model*"
+        - "ChatGPT"
+        - "GPT-4"
+        - "GPT-4o"
+        - "GPT-3.5"
+        - "GPT4"
+        - "GPT-4V"
+        - "GPT-4.1"
+        - "GPT-4.5"
+        - "GPT-5"
+        - "Claude"
+        - "Gemini"
+        - "LLaMA"
+        - "Llama 2"
+        - "Llama 3"
+        - "DeepSeek"
+        - "multimodal AI"
+        - "AI chatbot*"
+        - "foundation model*"
+        - "text generat*"
+      mesh:
+        - "Natural Language Processing"
+        - "Generative Artificial Intelligence"
+        - "Large Language Models"
+        - "Chatbot"
+    operator: OR
+
+  - id: concept-meded
+    field: title_abstract
+    terms:
+      keywords:
+        - "medical education"
+        - "clinical education"
+        - "graduate medical education"
+        - "undergraduate medical education"
+        - "postgraduate medical education"
+        - "health profession* education"
+        - "residency training"
+        - "residency"
+        - "medical student*"
+        - "resident physician*"
+        - "clinical clerkship*"
+        - "clinical training"
+        - "clinical teach*"
+        - "trainee*"
+        - "medical trainee*"
+      mesh:
+        - "Education, Medical"
+        - "Internship and Residency"
+        - "Students, Medical"
+        - "Clinical Clerkship"
+      eric:
+        - "Medical Education"
+        - "Medical Students"
+        - "Clinical Experience"
+        - "Graduate Medical Education"
+    operator: OR
+
+  - id: concept-wba
+    field: title_abstract
+    terms:
+      keywords:
+        # WBA-specific terms (full forms only, abbreviations removed)
+        - "workplace-based assessment*"
+        - "workplace based assessment*"
+        - "work-based assessment*"
+        - "work based assessment*"
+        # Specific WBA tools (full forms only)
+        - "Mini-CEX"
+        - "mini clinical evaluation exercise*"
+        - "direct observation of procedural skill*"
+        - "direct observation*"
+        - "entrustable professional activit*"
+        - "multisource feedback"
+        - "multi-source feedback"
+        - "360-degree feedback"
+        # CBME / competency-based assessment (full forms only)
+        - "competency-based medical education"
+        - "competency based medical education"
+        - "competency-based assessment*"
+        - "competency based assessment*"
+        - "programmatic assessment"
+        - "milestone*"
+        # Feedback in assessment context
+        - "narrative feedback"
+        - "narrative assessment*"
+        - "assessment feedback"
+        - "supervisor* feedback"
+        - "assessment scoring"
+        # Clinical records assessment
+        - "clinical note*"
+        - "medical record*"
+        - "chart review*"
+      mesh:
+        - "Clinical Competence"
+        - "Educational Measurement"
+        - "Competency-Based Education"
+        - "Formative Feedback"
+      eric:
+        - "Clinical Experience"
+        - "Competency Based Education"
+        - "Performance Based Assessment"
+        - "Formative Evaluation"
+    operator: OR
+
+filters:
+  year_from: 2022
+  language:
+    - en
+
+providers:
+  eric:
+    replaces:
+      concept-genai:
+        field: title_abstract
+        terms:
+          keywords:
+            - "generative artificial intelligence"
+            - "generative AI"
+            - "large language model*"
+            - "ChatGPT"
+            - "GPT-4"
+            - "GPT-4o"
+            - "GPT-3.5"
+            - "GPT4"
+            - "GPT-4V"
+            - "GPT-5"
+            - "Claude"
+            - "Gemini"
+            - "LLaMA"
+            - "Llama 2"
+            - "Llama 3"
+            - "DeepSeek"
+            - "multimodal AI"
+            - "AI chatbot*"
+            - "foundation model*"
+            - "text generat*"
+        operator: OR
+  arxiv:
+    replaces:
+      concept-genai:
+        field: title_abstract
+        terms:
+          keywords:
+            - "generative AI"
+            - "large language model"
+            - "ChatGPT"
+            - "GPT-4"
+            - "GPT-4.1"
+            - "GPT-3.5"
+            - "GPT-5"
+            - "Gemini"
+            - "LLaMA"
+            - "DeepSeek"
+        operator: OR
+      concept-meded:
+        field: title_abstract
+        terms:
+          keywords:
+            - "medical education"
+            - "clinical education"
+            - "medical student"
+            - "residency"
+            - "health professions education"
+        operator: OR
+      concept-wba:
+        field: title_abstract
+        terms:
+          keywords:
+            - "workplace-based assessment"
+            - "competency-based assessment"
+            - "Mini-CEX"
+            - "entrustable professional"
+            - "narrative feedback"
+            - "clinical note"
+            - "assessment feedback"
+            - "milestone"
+        operator: OR

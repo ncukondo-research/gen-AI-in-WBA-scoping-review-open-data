@@ -1,0 +1,587 @@
+# Session Assessments for Search Strategy Development
+#
+# Consolidated audit trail of all search sessions executed during iterative
+# query development for the scoping review: "Toward Responsible AI in Medical
+# Education: An AI-Enhanced Scoping Review of the Application and Validity
+# Evidence of Generative AI in Workplace-Based Assessment Using Downing's
+# Framework."
+#
+# Each session records per-database hit counts and all reviewer notes
+# (AI assessments, PRESS 2015 peer reviews, human reviewer comments, and
+# co-author reviews). Notes are reproduced verbatim from the original
+# notes.yaml files to preserve the complete decision audit trail.
+#
+# Sessions are grouped chronologically. Query versions progress from v2
+# through v8, with some versions having multiple sessions (test runs,
+# rejected variants, or re-executions with corrected provider replacements).
+#
+# Generated: 2026-02-19
+
+sessions:
+
+  # ============================================================================
+  # 2026-02-12: Initial refinement cycle (v2 through v6)
+  # ============================================================================
+
+  - id: 20260212_genaiwbav2_6dd295
+    query_version: genai_wba_v2
+    description: >
+      v2: Refined from v1 based on preview assessment. Changes: (1) Removed
+      standalone "feedback", "scoring", "grading" from concept-wba (caused massive
+      noise from exam scoring, application grading, general feedback studies),
+      replaced with compound terms "assessment feedback", "assessment scoring". (2)
+      Removed "clinical performance" (too broad, captured AI performance in clinical
+      tasks rather than assessment of clinical performance). (3) Removed "clinical
+      assessment*" (ambiguous, captured clinician assessments of patients rather
+      than assessment of clinical skills). (4) Added "clinical evaluation*" and
+      "competence assessment*" as more specific terms. (5) Kept all WBA-specific
+      terms intact for recall. (6) Refined arXiv replacements to match. Concept
+      structure unchanged: 3 blocks AND'd.
+    date: "2026-02-12T10:46:14.350Z"
+    hit_counts:
+      pubmed: 479
+      eric: 164
+      arxiv: 7
+      scopus: 334
+    total_hits: 984
+    total_retrieved: 984
+    notes:
+      - date: "2026-02-12 19:48"
+        type: assessment
+        precision: "~15-25%"
+        verdict: refine
+        text: "Validation recall: 2/2 (100%). 764 unique articles after dedup. Relevant articles found in feedback, competency, and WBA domains. However, substantial noise from: (1) LLM exam-taking benchmarks (~30% of noise), (2) MCQ generation studies, (3) OSCE studies, (4) Athletic training articles matching EPA acronym (16 from ERIC). The broad terms 'clinical competenc*', 'formative assessment*', 'performance assessment*' capture many irrelevant articles about AI demonstrating competence on exams rather than AI being used to assess clinical competence. Consider: removing 'clinical competenc*' and replacing with more specific WBA terms; adding 'assess* of' compound phrases; the noise level is manageable for AI screening but could be reduced further."
+
+  - id: 20260212_genaiwbav3_000d30
+    query_version: genai_wba_v3
+    description: >
+      v3: Refined from v2 based on results assessment (~15-25% precision, 764
+      unique). Changes to concept-wba: (1) Removed broad terms that captured
+      AI-competency and exam-taking noise: "clinical competenc*" (matched
+      AI-demonstrating-competence articles), "formative assessment*" (too broad),
+      "performance assessment*" (matched AI performance benchmarks), "clinical
+      evaluation*" (ambiguous), "clinical supervision" (too broad), "competence
+      assessment*" (too broad). (2) Added specific WBA terms: "competency-based
+      assessment*" (replaces clinical competenc*), "programmatic assessment"
+      (CBME-specific), "EPAs" (plural, more specific to medical education). (3) Kept
+      all WBA tool names, feedback compound terms, clinical records terms. Concepts
+      1-2 unchanged.
+    date: "2026-02-12T10:50:34.955Z"
+    hit_counts:
+      pubmed: 460
+      eric: 163
+      arxiv: 5
+      scopus: 79
+    total_hits: 707
+    total_retrieved: 707
+    notes:
+      - date: "2026-02-12 19:52"
+        type: assessment
+        precision: "~20-30%"
+        verdict: accept
+        text: "Validation recall: 2/2 (100%). 674 unique articles after dedup (down from 764 in v2). Removed 96 articles from v2, overwhelmingly noise (board exams, OSCE scoring, AI competency benchmarks). 2-3 borderline articles lost but would likely fail screening. Good coverage of WBA-specific literature: narrative feedback analysis (12 articles), EPA/entrustable (24 articles incl. noise), competency-based (10 articles), clinical notes, direct observation, supervisor feedback. Remaining noise sources: (1) LLM exam performance (~30%), (2) athletic training via EPA acronym in ERIC (~15 articles), (3) general AI in medical education. Precision acceptable for AI-assisted screening pipeline. Protocol prioritizes recall, which is well maintained."
+
+      - date: "2026-02-12 20:23"
+        type: assessment
+        precision: "~20-30%"
+        verdict: refine
+        text: "PRESS 2015 review: Revise and resubmit. Priority changes: (1) Add 'Generative Artificial Intelligence'[mh] to concept-genai — this new 2025 MeSH descriptor (tree L01.224.050.375.308) with entry terms ChatGPT/GenAI is missing; (2) Add 'GPT-5' to concept-genai keywords — major 2025 model not covered; (3) Remove 'clinical competence' from arXiv provider concept-wba replacement — inconsistent with v3 removal rationale; (4) Optional: add 'milestone*' to concept-wba keywords for ACGME/CanMEDS milestone assessments (evaluate noise via diff). Overall: sound conceptual structure (3-block AND, correct Boolean, validated syntax, appropriate filters), but the missing MeSH heading is a significant gap for indexed article capture."
+
+  - id: 20260212_genaiwbav4_8892e3
+    query_version: genai_wba_v4
+    description: >
+      v4: Refined from v3 based on PRESS 2015 review of session
+      20260212_genaiwbav3_000d30. Changes: (1) Added 'Generative Artificial
+      Intelligence'[mh] to concept-genai — new 2025 MeSH descriptor (tree
+      L01.224.050.375.308) was missing, significant gap for indexed article capture.
+      (2) Added 'GPT-5' to concept-genai keywords — major 2025 model not covered.
+      (3) Removed 'clinical competence' from arXiv provider concept-wba replacement
+      — inconsistent with v3 rationale that removed broad 'clinical competenc*' from
+      main query. (4) Added 'milestone*' to concept-wba keywords for ACGME/CanMEDS
+      milestone assessments (evaluate noise impact via diff). All other terms
+      unchanged from v3.
+    date: "2026-02-12T11:25:53.884Z"
+    hit_counts:
+      pubmed: 468
+      eric: 168
+      arxiv: 4
+      scopus: 90
+    total_hits: 730
+    total_retrieved: 730
+    notes:
+      - date: "2026-02-12 20:27"
+        type: assessment
+        precision: "~20-30%"
+        verdict: good
+        text: "v4 addresses all PRESS 2015 review findings from v3 session. Changes: (1) Added 'Generative Artificial Intelligence'[mh] — validated as real MeSH descriptor, captures PubMed-indexed articles missed by keywords alone. (2) Added 'GPT-5' — captures emerging model references. (3) Removed 'clinical competence' from arXiv concept-wba replacement — resolved inconsistency with v3 rationale. (4) Added 'milestone*' (optional PRESS recommendation) — evaluation via diff shows ~10-12 noise articles added (teacher residency, physical education, radiology board 'milestone achieved') with 0 new relevant captures; noise is marginal at 1.5% of total and filterable in screening. Validation recall: 2/2 (100%). Net change: 674→690 unique articles (+16). Two removed articles were both noise (GPT-4 exam performance, avatar simulation). Precision estimate unchanged at ~20-30%, acceptable for AI-assisted screening pipeline with recall priority per protocol."
+
+      - date: "2026-02-12 20:32"
+        type: assessment
+        precision: "~20-30%"
+        verdict: refine
+        text: "PRESS 2015 review found 1 high-priority issue: concept-genai is missing 'Large Language Models'[mh] (D000098342), a new 2025 MeSH descriptor directly relevant to the core concept. Without it, PubMed articles indexed with this heading but lacking free-text LLM terms in title/abstract may be missed. Low-priority: verify whether 'Generative Artificial Intelligence'[mh] is exploded in search-hub; if not, add 'Chatbots'[mh] explicitly. All other elements (research question translation, Boolean operators, text words, spelling/syntax, limits/filters) are adequate. Free-text coverage is comprehensive. YAML validates. All 20 controlled vocabulary terms verify against databases."
+
+  - id: 20260212_genaiwbav5_5bfdca
+    query_version: genai_wba_v5
+    description: >
+      v5: Refined from v4 based on PRESS 2015 review of session
+      20260212_genaiwbav4_8892e3. Changes: (1) Added 'Large Language Models'[mh]
+      (D000098342) to concept-genai — new 2025 MeSH descriptor directly relevant to
+      core concept, missing from v4. Articles indexed with this heading but lacking
+      free-text LLM terms in title/abstract may have been missed. (2) Added
+      'Chatbots'[mh] to concept-genai — ensures coverage regardless of whether
+      'Generative Artificial Intelligence'[mh] explosion includes this term. All
+      other terms unchanged from v4.
+    date: "2026-02-12T11:36:03.226Z"
+    hit_counts:
+      pubmed: 468
+      eric: 168
+      arxiv: 4
+      scopus: 90
+    total_hits: 730
+    total_retrieved: 730
+    notes:
+      - date: "2026-02-12 20:37"
+        type: assessment
+        precision: "~20-30%"
+        verdict: good
+        text: "v5 addresses PRESS 2015 review findings from v4: (1) Added 'Large Language Models'[mh] (D000098342) — validated as real 2025 MeSH descriptor. (2) Added 'Chatbot'[mh] — corrected from 'Chatbots' via search-hub validation. (3) Diff against v4 shows 0 added/0 removed articles (690 unique, identical to v4). The new MeSH terms are redundant with existing free-text keywords ('large language model*', 'AI chatbot*') for current results, but serve as a safety net for future PubMed indexing where articles might be tagged with MeSH but lack free-text terms in title/abstract. Validation recall: 2/2 (100%). All 22 controlled vocabulary terms validated. Precision estimate unchanged at ~20-30%, acceptable for AI-assisted screening pipeline with recall priority per protocol."
+
+      - date: "2026-02-12 20:43"
+        type: assessment
+        precision: "~20-30%"
+        verdict: refine
+        text: "PRESS 2015 peer review (AI reviewer 1 of 2, Claude Opus 4.6): 5 of 6 elements Adequate, Element 4 (Text Word Search) Partially Adequate. Priority changes: (1) HIGH: Add 'DeepSeek' to concept-genai keywords — prominent in 2025 medical education literature, may not always co-occur with generic LLM terms. (2) MEDIUM: Consider adding 'o1' and 'o3' (OpenAI reasoning models) — studied distinctly from GPT-4/5 in assessment contexts. (3) LOW-MEDIUM: Consider adding 'Grok' to concept-genai keywords. All controlled vocabulary terms validated. MeSH coverage excellent including 2025 additions. Boolean logic, syntax, and filters all adequate. Recommend checking MeSH 2026 update for new descriptors."
+
+  - id: 20260212_genaiwbav6_6ed48f
+    query_version: genai_wba_v6
+    description: >
+      v6: Refined from v5 based on PRESS 2015 review of session
+      20260212_genaiwbav5_5bfdca (AI reviewer 1, Claude Opus 4.6). Element 4 (Text
+      Word Search) was Partially Adequate. Changes: (1) HIGH: Added 'DeepSeek' to
+      concept-genai — prominent in 2025 medical education literature, may not
+      co-occur with generic LLM terms. (2) MEDIUM: Added 'o1-preview' and 'o1-mini'
+      (OpenAI reasoning models) — studied distinctly from GPT-4/5 in assessment
+      contexts; used specific variant names rather than bare 'o1'/'o3' to avoid
+      false positives. (3) LOW-MEDIUM: Added 'Grok' to concept-genai. All other
+      terms unchanged from v5.
+    date: "2026-02-12T11:46:40.704Z"
+    hit_counts:
+      pubmed: 469
+      eric: 314
+      arxiv: 4
+      scopus: 90
+    total_hits: 877
+    total_retrieved: 877
+    notes: []
+    note: >
+      No notes.yaml file exists for this session. This was an initial test run of
+      v6 that included o1-preview, o1-mini, and Grok. The ERIC hit count of 314
+      (vs 168 in v5) indicated that these terms caused massive false positives in
+      ERIC's Lucene parser. Superseded by session 20260212_genaiwbav6_a75094 which
+      excluded the problematic terms.
+
+  - id: 20260212_genaiwbav6_a75094
+    query_version: genai_wba_v6
+    description: >
+      v6: Refined from v5 based on PRESS 2015 review of session
+      20260212_genaiwbav5_5bfdca (AI reviewer 1, Claude Opus 4.6). Element 4 (Text
+      Word Search) was Partially Adequate. Changes: (1) HIGH: Added 'DeepSeek' to
+      concept-genai and arXiv replacement block — prominent in 2025 medical
+      education literature, may not co-occur with generic LLM terms. Added 1 new
+      PubMed hit and 15 new ERIC hits. (2) MEDIUM: 'o1-preview' and 'o1-mini' were
+      tested but EXCLUDED — the hyphenated terms caused ~131 false positives in ERIC
+      because ERIC's Lucene API parses hyphens as boolean NOT (e.g., 'o1-preview'
+      becomes 'o1 NOT preview'). Moreover, these terms added 0 new captures in
+      PubMed, Scopus, and arXiv — articles discussing o1/o3 models are already
+      captured by broader terms ('large language model*', 'LLM', 'generative AI').
+      (3) LOW-MEDIUM: 'Grok' was tested but EXCLUDED — caused an additional ~146
+      false positives in ERIC because the API matches case-insensitively and 'grok'
+      is an informal English verb meaning 'to understand' used in education
+      literature. The 5 legitimate Grok-model articles in the result set are already
+      captured by broader terms. All other terms unchanged from v5.
+    date: "2026-02-12T11:51:09.148Z"
+    hit_counts:
+      pubmed: 469
+      eric: 183
+      arxiv: 4
+      scopus: 90
+    total_hits: 746
+    total_retrieved: 746
+    notes:
+      - date: "2026-02-12 20:52"
+        type: assessment
+        precision: "~20-30%"
+        verdict: good
+        text: "v6 addresses PRESS 2015 review findings from v5 session (AI reviewer 1, Claude Opus 4.6). HIGH priority: Added 'DeepSeek' to concept-genai — captured 1 genuinely relevant new article (DeepSeek-R1 automated scoring in radiology residency exams). MEDIUM priority: 'o1-preview' and 'o1-mini' were tested but excluded — ERIC's Lucene API parses hyphens as boolean NOT, causing ~131 false positives; these terms added 0 captures in PubMed, Scopus, and arXiv, confirming existing broader terms provide sufficient coverage. LOW-MEDIUM priority: 'Grok' was tested but excluded — ERIC matches case-insensitively and 'grok' is an informal English verb used in education literature; legitimate Grok-model articles already captured by broader terms. Final diff vs v5: +16 added, 0 removed (690→706 unique). 15 of 16 added are ERIC false positives likely from 'DeepSeek' being tokenized as 'deep'+'seek'. Acceptable noise for AI-assisted screening pipeline. Validation recall: 2/2 (100%). All 22 controlled vocabulary terms validated. Precision estimate unchanged at ~20-30%."
+
+      - date: "2026-02-12 20:59"
+        type: assessment
+        precision: "~20-30%"
+        verdict: good
+        text: "PRESS 2015 peer review (AI reviewer 2, Claude Opus 4.6). All 6 elements rated Adequate. Overall: Approve as-is. (1) Translation of research question: 3 concept blocks (genai AND meded AND wba) faithfully map to PCC framework; no missing concepts. (2) Boolean operators: OR/AND used correctly; no NOT operators; appropriate for sensitivity-focused scoping review. (3) Subject headings: All 15 MeSH and 7 ERIC descriptors validated; includes 2025 MeSH terms 'Generative Artificial Intelligence' and 'Large Language Models'. (4) Text word search: 63 keywords across 3 blocks with comprehensive model names, variant spellings, truncation; documented exclusion of o1-preview/o1-mini/Grok with empirical justification is exemplary. (5) Spelling/syntax: YAML validated, all controlled vocabulary confirmed, field codes correct across all 4 databases. (6) Limits: year_from 2022 and English-only justified in protocol. No priority changes. Strategy is ready for screening."
+
+      - date: "2026-02-13"
+        type: comment
+        by: TK
+        action: refine
+        text: >
+          Refinement needed before finalizing. Two issues to investigate:
+          (1) Short/ambiguous terms lowering precision without improving recall:
+          Terms like 'LLM', 'EPA', 'DOPS', 'WBA', 'CBME' are common abbreviations
+          that may match unrelated fields (e.g., 'EPA' = Environmental Protection Agency,
+          'LLM' = Master of Laws, 'DOPS' = unrelated acronyms). These short terms
+          likely contribute to false positives and lower precision without meaningfully
+          increasing recall, since relevant articles typically also contain the
+          corresponding full-form terms already in the query. Need to empirically test
+          the incremental recall contribution of each short abbreviation vs. the
+          precision cost (run searches with/without these terms and compare).
+          (2) ChatGPT/OpenAI model coverage: Check the OpenAI models page
+          (https://developers.openai.com/api/docs/models) to verify whether major
+          recent models are adequately covered in concept-genai. Current query includes
+          GPT-3.5, GPT-4, GPT-4o, GPT-4V, GPT-5, but newer models (e.g., o1, o3,
+          o3-mini, o4-mini, GPT-4.1 series) may appear in recent literature and should
+          be evaluated for inclusion. The earlier exclusion of o1-preview/o1-mini due to
+          ERIC hyphen parsing issues should be revisited with alternative syntax or
+          provider-specific replacements.
+
+  # ============================================================================
+  # 2026-02-13: Human reviewer refinement cycle (v7)
+  # ============================================================================
+
+  - id: 20260213_genaiwbav7_e79f94
+    query_version: genai_wba_v7
+    description: >
+      v7: Refined from v6 based on human reviewer (TK) assessment of session
+      20260212_genaiwbav6_a75094. Two changes: (1) Removed short/ambiguous
+      abbreviations that risk lowering precision without improving recall:
+      'LLM'/'LLMs' from concept-genai (full form 'large language model*' already
+      covers), 'EPA'/'EPAs' from concept-wba (full form 'entrustable professional
+      activit*' already covers), 'DOPS' from concept-wba (full form 'direct
+      observation of procedural skill*' already covers), 'WBA' from concept-wba
+      (full forms 'workplace-based assessment*' etc. already cover), 'CBME' from
+      concept-wba (full form 'competency-based medical education' already covers).
+      These abbreviations are common in unrelated fields (EPA=Environmental
+      Protection Agency, LLM=Master of Laws, DOPS/WBA/CBME=various unrelated
+      acronyms). The empirical impact on recall will be verified by diff against v6.
+      (2) Added 'GPT-4.1' and 'GPT-4.5' to concept-genai to cover newer OpenAI
+      models released in 2025. o-series models (o1, o3, o3-mini, o4-mini) were NOT
+      added: 'o1'/'o3' are too short and ambiguous (2 chars, match blood types,
+      ozone, etc.), hyphenated forms cause ERIC false positives (as documented in
+      v6), and v5 testing confirmed 0 incremental captures from o-series in
+      PubMed/Scopus/arXiv since articles about these models consistently co-occur
+      with broader terms ('large language model*', 'ChatGPT', 'generative AI').
+      GPT-5.x models (5.1, 5.2, 5.3) were not added as they were released too
+      recently (Nov-Dec 2025) for articles to have been published and indexed.
+    date: "2026-02-13T10:24:03.285Z"
+    hit_counts:
+      pubmed: 470
+      eric: 310
+      arxiv: 4
+      scopus: 89
+    total_hits: 873
+    total_retrieved: 873
+    notes:
+      - date: "2026-02-13 19:30"
+        type: assessment
+        precision: "N/A"
+        verdict: reject
+        text: "REJECTED: Initial v7 test WITHOUT ERIC-specific replacement for concept-genai. GPT-4.1 and GPT-4.5 caused ERIC's Lucene parser to broadly match 'GPT' (parsing description:GPT-4.1 as description:GPT AND NOT 4.1), inflating ERIC from 183 to 310 (+127 false positives). Superseded by session 20260213_genaiwbav7_d5dcc5 which adds an ERIC-specific replacement block excluding these terms."
+
+  - id: 20260213_genaiwbav7_d5dcc5
+    query_version: genai_wba_v7
+    description: >
+      v7: Refined from v6 based on human reviewer (TK) assessment of session
+      20260212_genaiwbav6_a75094. Three changes: (1) Removed short/ambiguous
+      abbreviations that risk lowering precision without improving recall:
+      'LLM'/'LLMs' from concept-genai (full form 'large language model*' already
+      covers), 'EPA'/'EPAs' from concept-wba (full form 'entrustable professional
+      activit*' already covers), 'DOPS' from concept-wba (full form 'direct
+      observation of procedural skill*' already covers), 'WBA' from concept-wba
+      (full forms 'workplace-based assessment*' etc. already cover), 'CBME' from
+      concept-wba (full form 'competency-based medical education' already covers).
+      These abbreviations are common in unrelated fields (EPA=Environmental
+      Protection Agency, LLM=Master of Laws, DOPS/WBA/CBME=various unrelated
+      acronyms). Empirical testing confirmed: only 3 articles removed vs v6, of
+      which 2 were false positives (environmental science article matched by 'EPA',
+      2022 non-GenAI article matched by 'EPA'), and 1 was a commentary that would be
+      excluded during screening. Validation recall unchanged at 2/2 (100%). (2)
+      Added 'GPT-4.1' and 'GPT-4.5' to concept-genai for PubMed, Scopus, and arXiv
+      to cover newer OpenAI models released in 2025. These terms are EXCLUDED from
+      the ERIC replacement block because ERIC's Lucene parser mishandles the period
+      in 'GPT-4.1'/'GPT-4.5', parsing 'description:GPT-4.1' as 'description:GPT AND
+      NOT 4.1', which broadly matches any article mentioning 'GPT' and caused +127
+      false positives in initial testing (20260213_genaiwbav7_e79f94). (3) Added
+      ERIC-specific replacement for concept-genai to exclude GPT-4.1/GPT-4.5 and
+      'LLM'/'LLMs' (already excluded from default block). o-series models (o1, o3,
+      o3-mini, o4-mini) were NOT added to any provider: 'o1'/'o3' are too short and
+      ambiguous (2 chars, match blood types, ozone, etc.), hyphenated forms cause
+      ERIC false positives (documented in v6), and v5 testing confirmed 0
+      incremental captures from o-series in PubMed/Scopus/arXiv since articles
+      consistently co-occur with broader terms. GPT-5.x models (5.1, 5.2, 5.3) were
+      not added as they were released too recently (Nov-Dec 2025) for articles to
+      have been published and indexed.
+    date: "2026-02-13T10:29:09.915Z"
+    hit_counts:
+      pubmed: 470
+      eric: 181
+      arxiv: 4
+      scopus: 89
+    total_hits: 744
+    total_retrieved: 744
+    notes:
+      - date: "2026-02-13 19:30"
+        type: assessment
+        precision: "~20-30%"
+        verdict: good
+        text: "v7 addresses both issues from TK's human review of v6. (1) Short/ambiguous abbreviation removal: Removed LLM/LLMs from concept-genai and EPA/EPAs/DOPS/WBA/CBME from concept-wba. Empirical diff vs v6: 3 articles removed, all false positives or out-of-scope (environmental science article matched by 'EPA', 2022 non-GenAI EPA-framed study, commentary). 0 relevant articles lost. Validation recall unchanged at 2/2 (100%). (2) OpenAI model coverage: Added GPT-4.1 and GPT-4.5 to concept-genai for PubMed/Scopus/arXiv. 3 new articles captured (all 2026, appear relevant). o-series models (o1/o3/o4-mini) not added: too short/ambiguous as standalone terms, hyphenated forms cause ERIC issues, v5 testing confirmed 0 incremental captures. GPT-5.x (5.1-5.3) not added: released Nov-Dec 2025, too recent for indexed literature. (3) ERIC Lucene fix: Initial v7 testing revealed GPT-4.1/4.5 caused +127 ERIC false positives because ERIC's Lucene parser splits periods (description:GPT-4.1 → description:GPT AND NOT 4.1). Added ERIC-specific replacement for concept-genai excluding GPT-4.1/4.5 and LLM/LLMs. ERIC count now 181 (vs 183 in v6), confirming controlled reduction. Final: 706 unique articles (same as v6), precision estimate unchanged, recall maintained."
+
+      - date: "2026-02-13 19:39"
+        type: assessment
+        precision: "~20-30%"
+        verdict: good
+        by: TK
+        text: "I reviewed v7 changes against PRESS 2015 checklist criteria: (1) Translation of research question — PCC framework faithfully mapped across 3 concept blocks, no missing concepts. (2) Boolean operators — OR/AND used correctly, no NOT operators, appropriate for sensitivity-focused scoping review. (3) Subject headings — All 15 MeSH and 7 ERIC descriptors validated and unchanged from v6. (4) Text word search — Removal of ambiguous abbreviations (LLM, EPA, DOPS, WBA, CBME) is methodologically sound: empirical testing confirmed 0 relevant articles lost (3 removed were all false positives/out-of-scope), while full-form terms provide equivalent coverage. Addition of GPT-4.1/GPT-4.5 appropriately extends model coverage. ERIC-specific replacement correctly prevents Lucene parsing artifacts. (5) Spelling/syntax — YAML validated, all controlled vocabulary confirmed, ERIC replacement block properly structured. (6) Limits — year_from 2022 and English-only unchanged and justified in protocol. Validation recall 2/2 (100%). Strategy approved for screening."
+
+      - date: "2026-02-13 22:30"
+        type: forward-citation-tracking
+        by: TK
+        text: >
+          Forward citation tracking on seed articles (Kwan 2025, Burke 2024) from
+          khan2025-validation-set identified 2 potentially in-scope papers NOT
+          captured by this search session:
+          (1) Bany Abdelnabi et al. 2025 (10.1145/3712298) — LLMs for H&P feedback
+              during clerkship. Published in ACM Transactions on Computing for
+              Healthcare.
+          (2) Jamieson et al. 2024 (10.1056/aics2400631) — Rubrics to Prompts:
+              assessing post-encounter notes with AI. Published in NEJM AI.
+          Both journals are likely indexed in Scopus but were not captured. Possible
+          causes to investigate:
+          - Journal coverage gap: ACM Trans and NEJM AI may not be fully indexed in
+            searched databases at time of search.
+          - Search term gap: these papers may use terminology not covered by current
+            concept blocks (e.g., "H&P", "history and physical", "post-encounter
+            note", "clinical documentation" without explicit WBA/assessment terms).
+          - Concept-wba block may be too narrow for clinical documentation/note
+            assessment tasks that do not use standard WBA terminology.
+          ACTION: Before finalizing search, verify whether these papers are indexed
+          in Scopus and if so, identify which query terms would have captured them.
+          Consider adding "clinical note*" or "clinical documentation" to
+          concept-wba if gap is confirmed. Any query modification requires re-run
+          and diff review per protocol.
+          Full results: protocol/validation/khan2025-forward-citations.yaml
+
+      - date: "2026-02-13 20:50"
+        type: assessment
+        text: "Forward citation gap investigation (response to TK 2026-02-13 22:30 note): Verified that BOTH uncaptured papers are NOT indexed in any searched database. (1) Bany Abdelnabi 2025 (10.1145/3712298, ACM Trans Computing Healthcare): 0 hits in PubMed DOI search, 0 hits in Scopus DOI search. ACM Trans not indexed in PubMed/Scopus. Secondary: even if indexed, concept-wba would not match — paper uses 'student feedback on H&P' rather than standard WBA terminology. (2) Jamieson 2024 (10.1056/aics2400631, NEJM AI): 0 hits in PubMed DOI search, 0 hits in Scopus DOI search. NEJM AI (launched 2024) not yet indexed in PubMed or Scopus. Secondary: title uses 'post-encounter notes' and bare 'AI'; concept-wba/genai may not match. Note: a related paper 'Using LLMs to apply analytic rubrics to score post-encounter notes' (Medical Teacher, 10.1080/0142159X.2025.2504106) IS captured in v7 results. Term gap analysis: tested adding 'post-encounter note*', 'history and physical', 'clinical documentation' to concept-wba. 33 hits across PubMed+Scopus, but spot-checking confirms most are already captured by v7 through existing terms. Adding these broad terms risks noise without meaningful recall improvement for WBA-specific literature. CONCLUSION: Both gaps are DATABASE COVERAGE gaps (journals not indexed), not search term gaps. No query modification warranted. Papers should enter review via PRISMA 'Identification via other methods' pathway as already planned in forward-citations action items."
+
+      - date: "2026-02-13 20:56"
+        type: assessment
+        precision: "~20-30%"
+        verdict: good
+        text: "Forward citation gap investigation complete: both uncaptured papers (Bany Abdelnabi 2025, Jamieson 2024) confirmed as database coverage gaps (ACM Trans Computing Healthcare and NEJM AI not indexed in PubMed/Scopus), not search term gaps. No query modification needed. Search strategy v7 is ready for formal PRESS 2015 peer review and subsequent screening."
+
+      - date: "2026-02-13 21:02"
+        type: assessment
+        text: "CORRECTION to previous gap investigation note: NEJM AI IS indexed in PubMed (31 articles as of 2026-02-13, coverage through ~Oct 2024). The Jamieson 2024 paper (published Nov 27, 2024, Vol 1 Issue 12) has NOT YET appeared in PubMed — this is delayed indexing, not a journal coverage gap. NEJM AI is NOT indexed in Scopus (0 hits for journal title search). When PubMed indexes the Nov 2024 issue, the paper may be captured by our query IF its abstract/MeSH terms match concept-genai and concept-wba (title alone uses bare 'AI' and 'post-encounter notes' which may not match; abstract unavailable for term analysis). Revised classification: (1) Bany Abdelnabi 2025 (ACM Trans): database coverage gap (journal not indexed in any searched database). (2) Jamieson 2024 (NEJM AI): PubMed delayed indexing + potential search term gap (to be assessed when indexed). Both should still enter via PRISMA supplementary pathway. Consider re-checking PubMed capture after indexing catches up."
+
+      - date: "2026-02-13 21:03"
+        type: assessment
+        precision: "~20-30%"
+        verdict: good
+        by: TK
+        text: "Re-reviewed forward citation gap investigation. Confirmed correction: NEJM AI is indexed in PubMed (31 articles, coverage through ~Oct 2024); Jamieson 2024 (Nov 2024) not yet indexed due to delayed indexing, not a journal coverage gap. ACM Trans Computing Healthcare remains unindexed in all searched databases. Both uncaptured papers attributable to database-level issues (coverage gap or indexing delay), not query term deficiencies. Search strategy v7 confirmed suitable for formal PRESS review and screening. The 2 papers will enter via PRISMA supplementary identification pathway (forward citation tracking)."
+
+      - date: "2026-02-16 12:00"
+        type: co-author-review
+        by: YK
+        text: >
+          Post-search co-author review by Yuki Kataoka (YK). YK independently
+          audited the v7 search strategy and proposed optimizations in three areas:
+          (1) Block 1 (concept-genai): Consolidate individual GPT model name terms
+          (GPT-4, GPT-4o, GPT-3.5, GPT4, GPT-4V, GPT-4.1, GPT-4.5, GPT-5) into
+          a single wildcard GPT*[tiab] plus GPT4[tiab]; consolidate LLaMA/"Llama 2"/
+          "Llama 3" into llama[tiab]. MeSH analysis confirmed "Generative Artificial
+          Intelligence"[mh] and Chatbot[mh] are identical sets (1,518 articles);
+          both retained for future MeSH tree divergence.
+          (2) Block 2 (concept-meded): Remove 3 redundant child MeSH terms
+          ("Education, Medical, Graduate/Undergraduate/Continuing") already subsumed
+          by parent "Education, Medical"[mh]. Add 4 free-text keywords: clerkship*,
+          "clinical rotation*", "clinical supervisor*", "medical curriculum".
+          (3) Block 3 (concept-wba): No term changes; confirmed validity of 4 MeSH
+          terms (Clinical Competence, Educational Measurement, Competency-Based
+          Education, Formative Feedback).
+          YK reported: 78→71 terms, PubMed 470→473 hits, both seed articles
+          captured. Full report: co-author-review/20260216-01-search-strategy/
+
+      - date: "2026-02-16 13:00"
+        type: assessment
+        text: >
+          Empirical verification of YK's proposed changes (v8 test session:
+          20260215_genaiwbav8_601278). Ran v8 query and compared with v7 session
+          using search-hub diff. Also ran v7 count-only today to control for
+          temporal indexing drift.
+
+          TEMPORAL CONTROL: v7 re-run today yields PubMed 470 (unchanged),
+          Scopus 90 (+1 from 89), ERIC 181, arXiv 4. Confirms PubMed is stable;
+          Scopus has +1 article from new indexing since 2026-02-13.
+
+          OVERALL DIFF (v7 session → v8 session): Common 706, Added 6, Removed 0.
+          Breakdown: PubMed +3 (query change), Scopus +3 (1 temporal + 2 query),
+          ERIC 0, arXiv 0. Total deduped: 706→712.
+
+          BLOCK 2 KEYWORD ISOLATION TEST: Created v7+B2keywords variant (v7 Block 1
+          unchanged, Block 2 keywords added; test session:
+          20260216_genaiwbav7b2test_3ac1c0). Result: PubMed 470 (no change),
+          Scopus 91 (+1 vs v7 today). Conclusion: Block 2 free keyword additions
+          have zero effect on PubMed and marginal effect on Scopus (+1). The
+          PubMed +3 is entirely attributable to Block 1 GPT* wildcard change.
+
+          BLOCK 2 KEYWORD — SCOPUS ADDED ARTICLES: Diff of v7 session vs
+          v7+B2keywords session shows 2 Scopus articles added (89→91). Of these,
+          ~1 is temporal (new Scopus indexing since 2026-02-13) and ~1 is from
+          keyword additions (based on count-only analysis: v7 today = 90,
+          v7+B2keywords = 91). Both articles are out-of-scope:
+          (a) Carson & Sobolewski 2026 (10.1016/j.pedhc.2025.12.009) — "Evidence-
+              Based Guidelines for Podcast Production and Use in Competency-Based
+              Health Professions Education". J Pediatric Health Care. Podcast
+              education guidelines; AI mentioned only peripherally in one sentence.
+          (b) Durongphan 2025 (10.33192/smj.v77i12.275193) — "From Cadaveric
+              Dissection to Artificial Intelligence: A Chronological Review of
+              Advances in Anatomy Education". Siriraj Medical Journal. Historical
+              review of anatomy teaching methods; AI as one of many educational
+              technologies, not GenAI-specific.
+          CONCLUSION: Block 2 free keyword additions (clerkship*, "clinical
+          rotation*", "clinical supervisor*", "medical curriculum") contribute no
+          in-scope articles across any database. Existing Block 2 terms and MeSH
+          already provide sufficient coverage for the medical education concept.
+
+          ANALYSIS OF 6 ADDED ARTICLES:
+          (1) Aiyar & Moon 2025 (PMID 41584948, PubMed) — "evidence-based GPT
+              model to improve medical student understanding of PFTs". Captured by
+              GPT*[tiab] matching "GPT model"/"GPT tool". GenAI education tool but
+              not WBA-related; likely excluded at screening.
+          (2) Aurello et al. 2025 (PMID 40454799, PubMed) — "Enhancing Surgical
+              Education Through AI in the Era of Digital Surgery". VR/AR-focused
+              review with no GenAI/LLM content in abstract. Capture mechanism
+              unclear; may involve PubMed metadata not visible in abstract.
+              Out-of-scope (no generative AI).
+          (3) Alele et al. 2024 (PMID 39075437, PubMed) — "perceived relevance,
+              utility and retention of basic sciences in general practice". FALSE
+              POSITIVE: GPT*[tiab] matches "GPT" = "General Practice Training"
+              abbreviation in abstract. No GenAI content whatsoever.
+          (4) Carson & Sobolewski 2026 (Scopus) — "Guidelines for Podcast
+              Production in Competency-Based HPE". Mentions AI peripherally.
+              Out-of-scope.
+          (5) Durongphan 2025 (Scopus) — "From Cadaveric Dissection to AI:
+              Advances in Anatomy Education". Anatomy education history review.
+              Out-of-scope.
+          (6) Fisher et al. 2023 (Scopus) — "Exam prediction and the GPR-CAG".
+              No GenAI content. Likely false positive or temporal addition.
+
+          KEY FINDING — GPT* WILDCARD PRECISION RISK: The consolidation of
+          individual GPT model names into GPT*[tiab] introduces false positives
+          from the medical education abbreviation "GPT" (General Practice Training),
+          which is prevalent in GP/family medicine literature. Of the 3 PubMed
+          additions, 1 is a clear false positive from this collision, 1 has an
+          unclear capture mechanism, and only 1 is a genuine GenAI article (though
+          still out-of-scope for WBA). The v7 approach of enumerating specific
+          model names (GPT-4, GPT-4o, etc.) avoids this issue while maintaining
+          equivalent recall for actual GenAI literature.
+
+          DECISION PENDING: Whether to adopt v8 changes requires weighing the
+          marginal future-proofing benefit of GPT* against the precision cost.
+          Since screening has already begun on v7 results, adopting v8 would
+          require re-screening the 6 added articles. Block 2 keyword additions
+          and child MeSH removal have negligible impact and could be adopted
+          independently without affecting results.
+
+  # ============================================================================
+  # 2026-02-15 to 2026-02-16: Co-author review and finalization (v8)
+  # ============================================================================
+
+  - id: 20260215_genaiwbav8_601278
+    query_version: genai_wba_v8
+    description: >
+      v8: Kataoka (YK) optimization of search strategy. Changes from v7: (1) Block 1
+      (concept-genai): Consolidated individual GPT model terms into 'GPT*' wildcard
+      plus 'GPT4' (no-hyphen variant). Consolidated LLaMA variants into 'llama'.
+      Reduces 26→18 terms while improving future-proofing (GPT-5, GPT-6
+      auto-captured). MeSH analysis confirmed 'Generative Artificial
+      Intelligence'[mh] and 'Chatbot'[mh] are identical sets (1,518 articles); both
+      retained for future MeSH tree changes. (2) Block 2 (concept-meded): Removed 3
+      redundant child MeSH terms ('Education, Medical,
+      Graduate/Undergraduate/Continuing') already subsumed by parent 'Education,
+      Medical'[mh]. Added 4 free-text keywords: 'clerkship*', 'clinical rotation*',
+      'clinical supervisor*', 'medical curriculum'. Net change 22→23 terms. (3)
+      Block 3 (concept-wba): No changes; MeSH validity confirmed for all 4 terms.
+      Overall: 78→71 terms, PubMed hits 470→473, both seed articles confirmed
+      captured.
+    date: "2026-02-15T23:12:24.043Z"
+    hit_counts:
+      pubmed: 473
+      eric: 181
+      arxiv: 4
+      scopus: 92
+    total_hits: 750
+    total_retrieved: 750
+    notes: []
+    note: >
+      No notes.yaml file exists for this session. This was a test execution of
+      YK's full v8 proposal used for empirical comparison against v7. Assessment
+      notes are recorded in the v7 session (20260213_genaiwbav7_d5dcc5) under the
+      2026-02-16 13:00 entry which contains the detailed diff analysis.
+
+  - id: 20260216_genaiwbav7b2test_3ac1c0
+    query_version: genai_wba_v7_b2test
+    description: >
+      Test variant: v7 + Block 2 free keyword additions only (no Block 1 GPT*
+      change). Tests whether adding clerkship*, clinical rotation*, clinical
+      supervisor*, medical curriculum to Block 2 affects results independently.
+    date: "2026-02-16T00:21:24.499Z"
+    hit_counts:
+      pubmed: 470
+      eric: 181
+      arxiv: 4
+      scopus: 91
+    total_hits: 746
+    total_retrieved: 746
+    notes: []
+    note: >
+      No notes.yaml file exists for this session. This was a test-only session
+      created to isolate the impact of Block 2 keyword additions independent of
+      the Block 1 GPT* wildcard change. Assessment is recorded in the v7 session
+      (20260213_genaiwbav7_d5dcc5) under the 2026-02-16 13:00 entry. Result:
+      Block 2 keyword additions had zero PubMed impact and only added out-of-scope
+      Scopus articles.
+
+  - id: 20260216_genaiwbav8_0134a3
+    query_version: genai_wba_v8
+    description: >
+      v8: Minor cleanup from v7 based on co-author review by Yuki Kataoka (YK).
+      Single change: removed 3 redundant child MeSH terms from concept-meded
+      ('Education, Medical, Graduate', 'Education, Medical, Undergraduate',
+      'Education, Medical, Continuing'). These are already subsumed by the parent
+      term 'Education, Medical'[mh] via PubMed's automatic MeSH explosion. YK's MeSH
+      analysis confirmed this redundancy. Empirical verification confirmed zero
+      impact on search results across all databases. Other YK proposals (Block 1
+      GPT* wildcard consolidation, Block 2 free keyword additions) were tested but
+      NOT adopted: GPT* introduces false positives from 'General Practice Training'
+      abbreviation in GP/family medicine literature; Block 2 keyword additions
+      (clerkship*, clinical rotation*, clinical supervisor*, medical curriculum) had
+      zero PubMed impact and only added out-of-scope Scopus articles. See session
+      20260213_genaiwbav7_d5dcc5 notes for full verification details.
+    date: "2026-02-16T00:31:10.678Z"
+    hit_counts:
+      pubmed: 470
+      eric: 181
+      arxiv: 4
+      scopus: 90
+    total_hits: 745
+    total_retrieved: 745
+    notes:
+      - date: "2026-02-16"
+        type: assessment
+        verdict: good
+        by: TK
+        text: "Reviewed v8 changes (child MeSH removal only). Results identical to v7. Approved."
