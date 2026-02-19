@@ -82,7 +82,7 @@ All AI outputs were reviewed by human researchers before adoption:
 
 ## Related Resources
 
-- **Study Protocol**: [OSF registration] (link to be added)
+- **Study Protocol**: [OSF registration](https://osf.io/nux2e/)
 - **Manuscript Repository**: (private during review; to be made public upon acceptance)
 - **Search-Hub**: https://github.com/ncukondo/search-hub
 
