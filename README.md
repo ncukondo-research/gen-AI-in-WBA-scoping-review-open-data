@@ -10,6 +10,9 @@ The review employed AI tools (Claude Code with Claude Opus 4.6 via Anthropic API
 
 ```
 .
+├── protocol.md                            # Study protocol (scoping review methodology)
+├── prisma-scr-checklist.md                # PRISMA-ScR reporting checklist
+│
 ├── ai-skill-definitions/                  # AI prompt definitions (all phases)
 │   ├── develop-search-strategy.md         # Iterative query development workflow
 │   ├── press-review.md                    # PRESS 2015 peer review evaluation
@@ -38,6 +41,11 @@ The review employed AI tools (Claude Code with Claude Opus 4.6 via Anthropic API
     ├── restructuring-reviews/             # Field restructuring review archives
     └── scripts/                           # Validation and workflow scripts
 ```
+
+## Protocol and Reporting
+
+- [`protocol.md`](protocol.md): The full study protocol describing the scoping review methodology, including the PCC framework, inclusion/exclusion criteria, AI-assisted review procedures, and data management plan. This protocol guided all phases of the review documented in this repository.
+- [`prisma-scr-checklist.md`](prisma-scr-checklist.md): Completed PRISMA-ScR (Preferred Reporting Items for Systematic Reviews and Meta-Analyses extension for Scoping Reviews) checklist, indicating where each reporting item is addressed in the manuscript.
 
 ## How AI Was Used
 
