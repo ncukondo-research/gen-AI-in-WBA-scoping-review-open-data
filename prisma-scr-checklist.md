@@ -21,9 +21,9 @@ Tricco AC, et al. (2018) PRISMA Extension for Scoping Reviews (PRISMA-ScR): Chec
 | 15 | METHODS — Risk of Bias Across Studies | N/A — Not applicable for scoping reviews. | N/A |
 | 16 | METHODS — Additional Analyses | N/A — Not applicable for scoping reviews. | N/A |
 | 17 | RESULTS — Selection of Sources of Evidence | Give numbers of sources of evidence screened, assessed for eligibility, and included in the review. | p. 4 (Figure 1) |
-| 18 | RESULTS — Characteristics of Sources of Evidence | For each source of evidence, present characteristics for which data were charted. | p. 5 (Table 1) |
+| 18 | RESULTS — Characteristics of Sources of Evidence | For each source of evidence, present characteristics for which data were charted. | p. 5 (Table 2) |
 | 19 | RESULTS — Critical Appraisal Within Sources (Optional) | If done, present data on critical appraisal of included sources of evidence. | Not conducted |
-| 20 | RESULTS — Results of Individual Sources of Evidence | For each included source of evidence, present the relevant data that were charted. | p. 5 (Tables 2–3) |
+| 20 | RESULTS — Results of Individual Sources of Evidence | For each included source of evidence, present the relevant data that were charted. | p. 5 (Table 3) |
 | 21 | RESULTS — Synthesis of Results | Summarize and/or present the charting results as they relate to the review questions. | p. 6 |
 | 22 | RESULTS — Risk of Bias Across Studies | N/A — Not applicable for scoping reviews. | N/A |
 | 23 | RESULTS — Additional Analyses | N/A — Not applicable for scoping reviews. | N/A |
