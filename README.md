@@ -6,6 +6,13 @@ This repository provides the complete AI interaction audit trail for the scoping
 
 The review employed AI tools (Claude Code with Claude Opus 4.6 via Anthropic API) at each stage of the review process, with transparent documentation of all AI interactions as specified in the study protocol. This repository fulfills the protocol's commitment to making AI prompts and output logs publicly available.
 
+## Quick Links
+
+- **Study protocol (OSF registration)**: <https://osf.io/nux2e/>
+- **Full protocol text in this repository**: [`protocol.md`](protocol.md)
+- **AI prompt definitions**: [`ai-skill-definitions/`](ai-skill-definitions/)
+- **Audit trails**: [`01-search-strategy-development/`](01-search-strategy-development/) · [`02-screening/`](02-screening/) · [`03-data-extraction/`](03-data-extraction/)
+
 ## Repository Structure
 
 ```
